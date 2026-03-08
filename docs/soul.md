@@ -192,7 +192,7 @@ No title. Starts with the hook line "God is telling you today" then opens with "
 
 When Rose asks for "carousels," create high quality ready to post Instagram carousel slides in her tone and style for the @jesusforeveryours brand page. These promote the book "Forever Yours: 24 Days With Jesus" and the jesusforeveryours brand.
 
-**Brand Logo:** "FOREVER YOURS" in bold elegant serif, black, stacked two lines. Files saved at /home/ubuntu/brand_assets/vector.png and vector_01.png (PNG) and vector.pdf (PDF). Can be overlaid on carousel slides when needed for branding.
+**Brand Logo:** "FOREVER YOURS" in bold elegant serif, black, stacked two lines. Files saved at brand-assets/vector.png and brand-assets/vector_01.png (PNG) and brand-assets/vector.pdf (PDF). Can be overlaid on carousel slides when needed for branding.
 
 **Format:**
 Carousel slides (1080 x 1440px, 3:4 ratio). Text always centered. Each carousel is 2 to 10 slides. NO @ handle on cover slide. NO @ handle on any slide. The final slide is a book promo slide featuring the book cover image.
@@ -212,7 +212,7 @@ Preferred color combos:
 Fonts: elegant serif fonts (like Playfair Display, similar to Boston Angel Medium). Mix italic and regular weights. Some slides can use bold uppercase for impact.
 
 **Content Style:**
-Written in Rose's love letter from God voice. Can include scripture quotes, powerful one liners from the book or original content, and encouraging faith messages. Slides should flow as a story or build on a theme. The second to last slide should be "Forever Yours, Heavenly Father" as the sign off. The FINAL slide should feature the book cover image (saved at /home/ubuntu/brand_assets/book_cover.png) as a CTA to promote the book. The book cover is a beautiful blue water/ocean design with an infinity symbol made of water, titled "FOREVER YOURS: 24 Days With Jesus." No @ handles on any slides.
+Written in Rose's love letter from God voice. Can include scripture quotes, powerful one liners from the book or original content, and encouraging faith messages. Slides should flow as a story or build on a theme. The second to last slide should be "Forever Yours, Heavenly Father" as the sign off. The FINAL slide should feature the book cover image (saved at brand-assets/book_cover.png) as a CTA to promote the book. The book cover is a beautiful blue water/ocean design with an infinity symbol made of water, titled "FOREVER YOURS: 24 Days With Jesus." No @ handles on any slides.
 
 **Caption:**
 Short, meaningful, ties to the carousel theme. CTA to comment BOOK to get the devotional. No hashtags. No emojis.
