@@ -1,0 +1,129 @@
+CAROUSEL LOG - @jesusforeveryours
+========================================
+
+1. "Trust His Timing"
+   Text color: Chocolate brown (#5C3A1E)
+   BOOK accent: Deep gold (#B8860B)
+   Hooks: "Stop scrolling. This is your sign." / "God has a message for you right now."
+   Files: carousels/01-trust-his-timing/slide_1.png through slide_14.png
+
+2. "I Am Fighting For You"
+   Text color: Forest green (#2D4A3E)
+   BOOK accent: Burgundy (#8B1A1A)
+   Hooks: "Read this if you feel like giving up." / "This is God speaking directly to you."
+   Files: carousels/02-i-am-fighting-for-you/slide_1.png through slide_14.png
+
+3. "I Chose You Before You Chose Me"
+   Text color: Ocean blue (#0077A8)
+   BOOK accent: Deep purple (#5B2C8A)
+   Hooks: "You need to hear this right now." / "God wrote this for your heart."
+   Files: carousels/03-i-chose-you-before-you-chose-me/slide_1.png through slide_14.png
+
+4. "You Are Enough"
+   Text color: Dusty rose/mauve (#8B4A6B)
+   BOOK accent: Rich teal (#1A7A6D)
+   Hooks: "This was meant to find you today." / "God wants to remind you of something."
+   Files: carousels/04-you-are-enough/slide_1.png through slide_14.png
+
+5. "Let Go Of What Hurt You"
+   Text color: Deep plum (#4A1942)
+   BOOK accent: Warm copper (#B87333)
+   Hooks: "Save this before you scroll past." / "God is asking you to let something go."
+   Files: carousels/05-let-go-of-what-hurt-you/slide_1.png through slide_14.png
+
+6. "He Hears Every Prayer"
+   Text color: Warm amber (#B5651D)
+   BOOK accent: Deep navy (#1B2A4A)
+   Hooks: "If you have been praying and waiting, read this." / "God heard you. Every single time."
+   Files: carousels/06-he-hears-every-prayer/slide_1.png through slide_14.png
+
+7. "Do Not Be Afraid"
+   Text color: Slate blue (#3D5A80)
+   BOOK accent: Crimson red (#A4243B)
+   Hooks: "If fear has been keeping you up at night, read this." / "God has something to say about your anxiety."
+   Files: carousels/07-do-not-be-afraid/slide_1.png through slide_14.png
+
+8. "I Will Never Leave You"
+   Text color: Warm terracotta (#C75B39)
+   BOOK accent: Deep emerald (#1A6B4A)
+   Hooks: "If you have ever felt abandoned, this is for you." / "God wants you to know He is still here."
+   Files: carousels/08-i-will-never-leave-you/slide_1.png through slide_14.png
+
+9. "Rest In Me"
+   Text color: Sage green (#6B8E6B)
+   BOOK accent: Dusty rose (#C48A8A)
+   Hooks: "If you are exhausted and running on empty, read this." / "God is not asking you to do more."
+   Files: carousels/09-rest-in-me/slide_1.png through slide_14.png
+
+10. "I Know Your Heart"
+    Text color: Deep burgundy (#6B1A2A)
+    BOOK accent: Warm gold (#C4A035)
+    Hooks: "You do not have to explain yourself to God." / "He already knows what you are carrying."
+    Files: carousels/10-i-know-your-heart/slide_1.png through slide_14.png
+
+11. "My Grace Is Enough"
+    Text color: Soft navy (#2A3D5C)
+    BOOK accent: Warm coral (#D4735E)
+    Hooks: "If you have been trying to be perfect, stop." / "God has something better than perfection for you."
+    Files: carousels/11-my-grace-is-enough/slide_1.png through slide_14.png
+
+12. "I Have A Plan For You"
+    Text color: Golden amber (#A67C3D)
+    BOOK accent: Deep plum (#5A1A4A)
+    Hooks: "If life feels like it is going nowhere, read this." / "God is not lost. He knows where He is taking you."
+    Files: carousels/12-i-have-a-plan-for-you/slide_1.png through slide_14.png
+
+13. "Come Back To Me"
+    Text color: Deep olive (#4A5A2A)
+    BOOK accent: Warm rose (#C45A6B)
+    Hooks: "If you have been running from God, read this." / "He is not angry. He is waiting."
+    Files: carousels/13-come-back-to-me/slide_1.png through slide_14.png
+
+14. "Nothing Can Separate You"
+    Text color: Rich plum (#5A2A5C)
+    BOOK accent: Bright gold (#D4A017)
+    Hooks: "Nothing you have done can change this." / "This is the promise that changes everything."
+    Files: carousels/14-nothing-can-separate-you/slide_1.png through slide_14.png
+
+15. "God's Plan For Your Life"
+    Text color: Rich teal (#1A6B6B)
+    BOOK accent: Deep amber (#B8651A)
+    Hooks: "Your story is not over." / "The best chapter is still being written."
+    Files: carousels/15-gods-plan-for-your-life/slide_1.png through slide_14.png
+
+========================================
+USED COLORS (text): chocolate brown, forest green, ocean blue, dusty rose/mauve, deep plum, warm amber, slate blue, warm terracotta, sage green, deep burgundy, soft navy, golden amber, deep olive, rich plum, rich teal
+
+USED BOOK ACCENTS: deep gold, burgundy, deep purple, rich teal, warm copper, deep navy, crimson red, deep emerald, dusty rose, warm gold, warm coral, deep plum, warm rose, bright gold, deep amber
+
+USED HOOKS:
+"Stop scrolling. This is your sign."
+"God has a message for you right now."
+"Read this if you feel like giving up."
+"This is God speaking directly to you."
+"You need to hear this right now."
+"God wrote this for your heart."
+"This was meant to find you today."
+"God wants to remind you of something."
+"Save this before you scroll past."
+"God is asking you to let something go."
+"If you have been praying and waiting, read this."
+"God heard you. Every single time."
+"If fear has been keeping you up at night, read this."
+"God has something to say about your anxiety."
+"If you have ever felt abandoned, this is for you."
+"God wants you to know He is still here."
+"If you are exhausted and running on empty, read this."
+"God is not asking you to do more."
+"You do not have to explain yourself to God."
+"He already knows what you are carrying."
+"If you have been trying to be perfect, stop."
+"God has something better than perfection for you."
+"If life feels like it is going nowhere, read this."
+"God is not lost. He knows where He is taking you."
+"If you have been running from God, read this."
+"He is not angry. He is waiting."
+"Nothing you have done can change this."
+"This is the promise that changes everything."
+"Your story is not over."
+"The best chapter is still being written."
