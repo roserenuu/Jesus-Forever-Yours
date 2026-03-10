@@ -1,0 +1,22 @@
+{
+  "carousel_number": 0,
+  "topic": "Topic Name",
+  "text_color": "#HEXCODE",
+  "text_color_name": "color name",
+  "book_accent_color": "#HEXCODE",
+  "book_accent_name": "accent color name",
+  "hook1": "Hook line one.",
+  "hook2": "Hook line two.",
+  "letter_lines": [
+    "Line 1",
+    "Line 2",
+    "Line 3",
+    "Line 4",
+    "Line 5",
+    "Line 6",
+    "Line 7",
+    "Line 8",
+    "Line 9"
+  ],
+  "book_cover_path": "/home/ubuntu/brand_assets/book_cover.png"
+}
