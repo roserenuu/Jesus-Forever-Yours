@@ -11,17 +11,22 @@ description: >
 
 # JFY Carousel Creator
 
-## Overview
-
 This skill generates complete Instagram carousels for the @jesusforeveryours brand page. Each carousel is a 14-slide love letter from God to "My Child," ending with a CTA slide that promotes Rose's book "Forever Yours: 24 Days With Jesus."
 
 ## Workflow (follow in order)
+
+### Step 0 — Mandatory Anti-Repetition Review
+Before starting any new content, run the Instagram analysis script to fetch the latest 20 posts from @jesusforeveryours. Review the topics and hooks used to ensure the new carousel is 100% unique.
+```bash
+python /home/ubuntu/skills/jfy-carousel-creator/scripts/analyze_instagram.py
+```
+Check the output at `/home/ubuntu/brand_assets/instagram_history.json`.
 
 ### Step 1 — Determine the next carousel number
 Read `/home/ubuntu/brand_assets/carousel_log.txt` and find the highest carousel number. The new carousel is that number + 1.
 
 ### Step 2 — Choose topic, text color, BOOK accent color, and hooks
-- **Topic:** Must be unique. Never repeat any topic from the completed list.
+- **Topic:** Must be unique. Never repeat any topic from the Instagram history or the log.
 - **Text color:** Elegant color on white background. Never repeat previously used text colors.
 - **BOOK accent color:** Contrasting color for the word "BOOK" on the CTA slide. Never repeat previously used accent colors.
 - **Hooks:** Two unique, scroll-stopping lines for slides 1 and 2.
@@ -82,3 +87,4 @@ Send Rose:
 ## Error Handling
 - **Font missing:** Download using `curl` from Google Fonts.
 - **Book cover missing:** Ask Rose to upload `book_cover.png` to `/home/ubuntu/brand_assets/`.
+- **Instagram access error:** If the `instagram` MCP fails, manually check the @jesusforeveryours page via browser to ensure uniqueness.
