@@ -1,6 +1,7 @@
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg" style="position:absolute;inset:0;background-image:url('{{ 'hero-bg.jpg' | asset_url }}');background-size:cover;background-position:center;z-index:0;"></div>
+  {%- assign hero_bg = 'hero-bg.jpg' | asset_url -%}
+  <div class="hero-bg" style="position:absolute;inset:0;background-image:url({{ hero_bg }});background-size:cover;background-position:center;z-index:0;"></div>
   <div class="hero-content">
     <!-- Logo as main hero element -->
     <img src="{{ 'logo-white.png' | asset_url }}" alt="Forever Yours" class="hero-logo"/>
@@ -32,7 +33,7 @@
 
 <!-- BOOK SOLO -->
 <section style="background:#000;line-height:0;overflow:hidden;">
-  <img src="{{ \'book-cover.jpg\' | asset_url }}" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;display:block;max-width:100%;" class="reveal"/>
+  <img src="{{ 'book-cover.jpg' | asset_url }}" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;display:block;max-width:100%;" class="reveal"/>
 </section>
 
 <!-- SCRIPTURE -->
