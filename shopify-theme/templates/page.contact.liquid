@@ -1,0 +1,91 @@
+<!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow reveal">Contact</p>
+    <h1 class="reveal d1">We would love<br/>to <em>hear from you.</em></h1>
+    <p class="reveal d2">Whether you have a question about the book, a partnership idea, or just want to say hello. We are here.</p>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <div class="contact-wrap">
+
+    <!-- LEFT -->
+    <div class="contact-info reveal">
+      <h2>Get in <em>touch.</em></h2>
+      <p>We do our best to respond to every message within 2 to 3 business days. Thank you for your patience and for being part of this community.</p>
+
+      <div class="contact-detail">
+        <p class="contact-detail-label">Email</p>
+        <p class="contact-detail-value"><a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a></p>
+      </div>
+
+      <div class="contact-detail">
+        <p class="contact-detail-label">Instagram</p>
+        <p class="contact-detail-value"><a href="https://instagram.com/jesusforeveryours" target="_blank">@jesusforeveryours</a></p>
+      </div>
+
+      <div class="contact-detail">
+        <p class="contact-detail-label">Response Time</p>
+        <p class="contact-detail-value">2 to 3 business days</p>
+      </div>
+
+      <div class="topics">
+        <p class="topics-label">We welcome inquiries about</p>
+        <span class="topic-tag">General Questions</span>
+        <span class="topic-tag">Wholesale</span>
+        <span class="topic-tag">Press</span>
+        <span class="topic-tag">Collaborations</span>
+      </div>
+    </div>
+
+    <!-- RIGHT — SHOPIFY CONTACT FORM -->
+    <div class="contact-form reveal d1">
+      {% form 'contact' %}
+        {%- if form.posted_successfully? -%}
+          <div class="form-success">
+            <p>"Thank you for reaching out.<br/>We will be in touch soon."</p>
+          </div>
+        {%- else -%}
+          {%- if form.errors -%}
+            <div style="padding:16px;background:#fdf0f0;border:1px solid #e0c0c0;margin-bottom:20px;font-size:13px;color:#c0392b;">
+              {{ form.errors | default_errors }}
+            </div>
+          {%- endif -%}
+
+          <div class="form-row">
+            <label for="ContactFormName">Your Name</label>
+            <input type="text" id="ContactFormName" name="contact[name]"
+              placeholder="Rose Renuu" autocomplete="name" value="{{ form.name }}">
+          </div>
+
+          <div class="form-row">
+            <label for="ContactFormEmail">Email Address</label>
+            <input type="email" id="ContactFormEmail" name="contact[email]"
+              placeholder="hello@email.com" autocomplete="email" required
+              value="{{ form.email }}">
+          </div>
+
+          <div class="form-row">
+            <label for="ContactFormTopic">Topic</label>
+            <select id="ContactFormTopic" name="contact[topic]">
+              <option value="" disabled selected>Select a topic</option>
+              <option value="General Question">General Question</option>
+              <option value="Order Question">Order Question</option>
+              <option value="Wholesale">Wholesale</option>
+              <option value="Press">Press</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="ContactFormMessage">Message</label>
+            <textarea id="ContactFormMessage" name="contact[body]"
+              placeholder="Write your message here...">{{ form.body }}</textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message</button>
+        {%- endif -%}
+      {% endform %}
+    </div>
+
+  </div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {%- if page_title == blank -%}
+      Forever Yours | 24-Day Devotional by Rose Renuu
+    {%- else -%}
+      {{ page_title }} — Forever Yours
+    {%- endif -%}
+  </title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- else -%}
+    <meta name="description" content="Forever Yours is a 24-day devotional filled with personal love letters from God to you, paired with Scripture and journaling space. By Rose Renuu. Hardcover $20 | Digital $10.">
+  {%- endif -%}
+
+  <meta name="keywords" content="Christian devotional, love letters from God, 24 day devotional, Rose Renuu, Forever Yours, faith, Jesus, Bible devotional">
+  <meta name="author" content="Rose Renuu">
+  <meta property="og:title" content="{{ page_title | default: 'Forever Yours | 24-Day Devotional by Rose Renuu' }}">
+  <meta property="og:description" content="{{ page_description | default: '24 intimate love letters from God\'s heart to yours. Draw closer to Jesus every single day.' }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title | default: 'Forever Yours | 24-Day Devotional by Rose Renuu' }}">
+  <meta name="twitter:description" content="{{ page_description | default: '24 intimate love letters from God\'s heart to yours.' }}">
+
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {{ content_for_header }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="{{ routes.root_url }}" class="nav-logo" aria-label="Forever Yours Home">
+    <img src="{{ 'logo-black.png' | asset_url }}" alt="Forever Yours" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+    <span style="display:none;font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:#141210;letter-spacing:.04em;">Forever Yours</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="{{ routes.root_url }}"{% if request.path == '/' %} style="color:var(--black)"{% endif %}>Home</a></li>
+    <li><a href="/products/forever-yours-24-days-with-jesus">Hardcover</a></li>
+    <li><a href="/products/forever-yours-24-days-with-jesus-digital">Digital</a></li>
+    <li><a href="/pages/sample">Sample</a></li>
+    <li><a href="/pages/testimony">Testimony</a></li>
+    <li><a href="/pages/contact">Contact</a></li>
+  </ul>
+
+  <a href="/products/forever-yours-24-days-with-jesus" class="nav-cta">Order Now</a>
+
+  <button class="ham-btn" id="hamBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+  <a href="{{ routes.root_url }}">Home</a>
+  <a href="/products/forever-yours-24-days-with-jesus">Hardcover — $20</a>
+  <a href="/products/forever-yours-24-days-with-jesus-digital">Digital — $10</a>
+  <a href="/pages/sample">Read a Sample</a>
+  <a href="/pages/testimony">Rose's Testimony</a>
+  <a href="/pages/contact">Contact</a>
+  <a href="/products/forever-yours-24-days-with-jesus" class="drawer-cta">Order Now</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<main id="MainContent">
+  {{ content_for_layout }}
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <a href="{{ routes.root_url }}" class="footer-logo">
+    <img src="{{ 'logo-black.png' | asset_url }}" alt="Forever Yours" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+    <span style="display:none;font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:#141210;">Forever Yours</span>
+  </a>
+  <ul class="footer-links">
+    <li><a href="https://instagram.com/jesusforeveryours" target="_blank" rel="noopener">@jesusforeveryours</a></li>
+    <li><a href="https://instagram.com/roserenuu" target="_blank" rel="noopener">@roserenuu</a></li>
+    <li><a href="https://tiktok.com/@roserenuu" target="_blank" rel="noopener">TikTok</a></li>
+    <li><a href="/products/forever-yours-24-days-with-jesus">Shop</a></li>
+    <li><a href="/pages/privacy-policy">Privacy</a></li>
+    <li><a href="/pages/terms-of-service">Terms</a></li>
+    <li><a href="/pages/shipping-policy">Shipping</a></li>
+  </ul>
+  <p class="footer-copy">© {{ 'now' | date: '%Y' }} Rose Renuu LLC. All rights reserved.</p>
+</footer>
+
+{{ 'theme.js' | asset_url | script_tag }}
+</body>
+</html>

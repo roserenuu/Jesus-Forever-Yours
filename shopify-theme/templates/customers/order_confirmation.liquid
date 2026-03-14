@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Order Confirmation Email — Forever Yours</title>
+  <style>
+    body { margin: 0; padding: 0; background: #F1EDE6; font-family: Georgia, serif }
+    .wrapper { max-width: 600px; margin: 0 auto; background: #FFFFFF }
+    .header { background: #141210; padding: 36px; text-align: center }
+    .header img { height: 28px; width: auto }
+    .confirm-strip { background: #7C6A54; padding: 20px 48px; text-align: center }
+    .confirm-strip p { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; color: #FFFFFF; margin: 0 }
+    .hero-section { padding: 52px 48px 36px; text-align: center }
+    .hero-section h1 { font-size: 34px; font-weight: normal; color: #141210; line-height: 1.15; margin: 0 0 16px }
+    .hero-section h1 em { font-style: italic; color: #7C6A54 }
+    .hero-section p { font-size: 17px; font-style: italic; color: #6A6058; line-height: 1.7; margin: 0 }
+    .order-box { margin: 0 48px 36px; border: 1px solid #E8E0D5 }
+    .order-box-header { background: #F8F6F3; padding: 16px 24px; font-family: Arial, sans-serif; font-size: 10px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; color: #9A9080 }
+    .order-row { display: flex; justify-content: space-between; padding: 16px 24px; border-top: 1px solid #E8E0D5; font-size: 16px; font-style: italic; color: #6A6058 }
+    .order-total { display: flex; justify-content: space-between; padding: 16px 24px; border-top: 2px solid #E8E0D5; font-size: 18px; color: #141210; font-weight: normal }
+    .body-section { padding: 0 48px 36px }
+    .body-section p { font-size: 17px; font-style: italic; color: #6A6058; line-height: 1.8; margin: 0 0 16px }
+    .note-box { background: #F1EDE6; padding: 28px; margin-bottom: 36px }
+    .note-box p { font-size: 17px; font-style: italic; color: #141210; line-height: 1.75; margin: 0 0 12px }
+    .note-box .sig { color: #7C6A54; margin: 0 }
+    .cta-section { padding: 0 48px 48px; text-align: center }
+    .cta-btn { display: inline-block; background: #141210; color: #FFFFFF; font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; padding: 18px 40px; text-decoration: none }
+    .footer { background: #F1EDE6; padding: 28px 48px; text-align: center }
+    .footer p { font-family: Arial, sans-serif; font-size: 11px; color: #A09888; line-height: 1.6; margin: 0 }
+    .footer a { color: #7C6A54; text-decoration: none }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="{{ shop.url }}/cdn/shop/files/logo-black.png" alt="Forever Yours"/>
+    </div>
+    <div class="confirm-strip">
+      <p>Order Confirmed</p>
+    </div>
+    <div class="hero-section">
+      <h1>Your order is<br/><em>on its way.</em></h1>
+      <p>Thank you so much. We are so excited for you to receive your copy of Forever Yours.</p>
+    </div>
+    <div class="order-box">
+      <div class="order-box-header">Order Summary</div>
+      <div class="order-row"><span>Forever Yours — Hardcover</span><span>$20.00</span></div>
+      <div class="order-row"><span>Shipping</span><span>Calculated</span></div>
+      <div class="order-total"><span>Total</span><span>$20.00</span></div>
+    </div>
+    <div class="body-section">
+      <p>Your hardcover book is being printed and will ship within 4 to 6 weeks. You will receive a second email with your tracking number once it is on its way.</p>
+      <p>While you wait you can download the digital PDF version for $10 and start reading today.</p>
+      <div class="note-box">
+        <p>"This book came from my darkest season and I wrote every letter praying it would find the right hands. Thank you for trusting me with your heart. I hope these 24 days remind you how deeply and personally God loves you."</p>
+        <p class="sig">Rose Renuu</p>
+      </div>
+    </div>
+    <div class="cta-section">
+      <p style="font-size:17px;font-style:italic;color:#6A6058;margin-bottom:24px;">Start reading today while you wait.</p>
+      <a href="{{ shop.url }}/products/forever-yours-24-days-with-jesus-digital" class="cta-btn">Download Digital $10</a>
+    </div>
+    <div class="footer">
+      <p>Questions? Email us at <a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a><br/>
+      <a href="{{ shop.url }}">jesusforeveryours.com</a></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "general": {
+    "password_page": {
+      "login_form_heading": "Enter using password",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "login_prompt": "Have a password?"
+    }
+  },
+  "newsletter": {
+    "label": "Email address",
+    "placeholder": "Your email address",
+    "submit": "Join",
+    "success": "Thank you for joining. Check your inbox."
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "Add to Cart",
+      "sold_out": "Sold Out",
+      "unavailable": "Unavailable"
+    }
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty.",
+    "checkout": "Checkout",
+    "subtotal": "Subtotal"
+  },
+  "404": {
+    "title": "Page Not Found",
+    "subheading": "This page has wandered off.",
+    "link": "Return Home"
+  }
+}

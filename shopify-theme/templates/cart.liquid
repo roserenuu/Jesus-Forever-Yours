@@ -1,0 +1,36 @@
+<section class="hero">
+    <p class="eyebrow">Your Cart</p>
+    <h1>Almost <em>there.</em></h1>
+  </section>
+  <div class="cart-wrap">
+    <div>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="{{ 'book-mock-1.jpg' | asset_url }}" alt="Forever Yours Hardcover"/>
+          <div>
+            <p class="cart-item-title">Forever Yours</p>
+            <p class="cart-item-sub">Hardcover Edition</p>
+            <span class="cart-item-remove">Remove</span>
+          </div>
+          <p class="cart-item-price">$20</p>
+        </div>
+      </div>
+      <div class="upsell">
+        <p>Want to start reading today while you wait for your hardcover?</p>
+        <a href="/products/forever-yours-24-days-with-jesus-digital">Add the Digital Version for $10 →</a>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p class="summary-title">Order Summary</p>
+      <div class="summary-row"><span>Subtotal</span><span>$20.00</span></div>
+      <div class="summary-row"><span>Shipping</span><span>Calculated at checkout</span></div>
+      <div class="summary-total"><span>Total</span><span>$20.00</span></div>
+      <a href="https://jesusforeveryours.com/products/forever-yours-24-days-with-jesus" class="checkout-btn">Proceed to Checkout</a>
+      <a href="{{ routes.root_url }}" class="continue">Continue Shopping</a>
+      <div class="trust">
+        <span class="trust-item">🔒 Secure Checkout</span>
+        <span class="trust-item">✓ 500 Reviews</span>
+        <span class="trust-item">♥ Made with Love</span>
+      </div>
+    </div>
+  </div>

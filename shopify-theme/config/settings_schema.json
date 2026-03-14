@@ -1,0 +1,104 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Forever Yours",
+    "theme_version": "1.0.0",
+    "theme_author": "Rose Renuu",
+    "theme_documentation_url": "https://jesusforeveryours.com",
+    "theme_support_url": "mailto:support@jesusforeveryours.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_white",
+        "label": "White",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "color_linen",
+        "label": "Linen",
+        "default": "#F1EDE6"
+      },
+      {
+        "type": "color",
+        "id": "color_walnut",
+        "label": "Walnut (Accent)",
+        "default": "#7C6A54"
+      },
+      {
+        "type": "color",
+        "id": "color_black",
+        "label": "Black",
+        "default": "#141210"
+      }
+    ]
+  },
+  {
+    "name": "Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo_black",
+        "label": "Logo (dark, for light backgrounds)"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_white",
+        "label": "Logo (light, for dark/hero backgrounds)"
+      },
+      {
+        "type": "range",
+        "id": "logo_height",
+        "min": 20,
+        "max": 60,
+        "step": 2,
+        "unit": "px",
+        "label": "Logo height",
+        "default": 28
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_jfy",
+        "label": "Instagram — @jesusforeveryours",
+        "default": "https://instagram.com/jesusforeveryours"
+      },
+      {
+        "type": "text",
+        "id": "instagram_rose",
+        "label": "Instagram — @roserenuu",
+        "default": "https://instagram.com/roserenuu"
+      },
+      {
+        "type": "text",
+        "id": "tiktok",
+        "label": "TikTok",
+        "default": "https://tiktok.com/@roserenuu"
+      }
+    ]
+  },
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "newsletter_heading",
+        "label": "Newsletter heading",
+        "default": "Stay connected."
+      },
+      {
+        "type": "textarea",
+        "id": "newsletter_subheading",
+        "label": "Newsletter subheading",
+        "default": "Daily love letters, scripture and faith for your feed."
+      }
+    ]
+  }
+]
