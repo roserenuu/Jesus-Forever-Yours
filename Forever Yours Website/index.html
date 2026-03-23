@@ -5,7 +5,7 @@
   <!-- SEO -->
   <title>Forever Yours | 24 Days With Jesus | A Devotional by Rose Renuu</title>
   <meta name="description" content="Forever Yours is a 24-day devotional of intimate love letters written from God's heart to yours. Written by Rose Renuu. Available in hardcover and digital."/>
-  <meta name="keywords" content="Christian devotional, love letters from God, 24 day devotional, Rose Renuu, faith devotional, Jesus devotional, Christian book"/>
+  <meta name="keywords" content="Christian devotional, love letters from God, 24 day devotional, Rose Renuu, faith devotional, Jesus devotional, Christian book, Christian book for men, Christian book for women, Christian gift for teens, devotional for all ages"/>
   <meta name="author" content="Rose Renuu"/>
   <link rel="canonical" href="https://jesusforeveryours.com/"/>
 
@@ -374,8 +374,6 @@
       .about-txt { padding: 48px 24px; }
       .about-stats { flex-direction: column; align-items: center; gap: 20px; }
 
-      /* Footer stacks to 1 column on small screens */
-      .site-footer > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 28px !important; text-align: center !important; }
     }
 
   </style>
@@ -437,16 +435,6 @@
       .book-info h2 { font-size: 28px !important; }
       .about-txt h2 { font-size: 26px !important; }
 
-      /* Homepage review carousel - wider on mobile */
-      .testimonials-section { padding: 56px 16px !important; }
-      .testimonials-section > div { max-width: 100% !important; }
-      #homeCarouselTrack > div > div { padding: 36px 20px !important; }
-
-      /* Homepage footer - stack columns on mobile */
-      .site-footer { padding: 40px 24px 32px !important; }
-      .site-footer > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; }
-      .site-footer > div > div[style*="justify-content:space-between"] { gap: 16px !important; }
-      .site-footer > div > div[style*="border-top"] { flex-direction: column !important; text-align: center !important; gap: 8px !important; }
     }
   </style>
 
@@ -1037,6 +1025,72 @@
   }
 </style>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Rose Renuu LLC",
+      "url": "https://jesusforeveryours.com",
+      "logo": "https://jesusforeveryours.com/images/logo.png",
+      "sameAs": [
+        "https://instagram.com/jesusforeveryours",
+        "https://instagram.com/roserenuu",
+        "https://tiktok.com/@roserenuu",
+        "https://youtube.com/@roserenuu"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Forever Yours by Rose Renuu",
+      "url": "https://jesusforeveryours.com",
+      "description": "Forever Yours is a 24-day Christian devotional of intimate love letters written from God's heart to yours."
+    },
+    {
+      "@type": "Book",
+      "name": "Forever Yours: 24 Days With Jesus",
+      "author": {
+        "@type": "Person",
+        "name": "Rose Renuu"
+      },
+      "description": "A 24-day Christian devotional of intimate love letters from God paired with Scripture and journaling space. For men, women, and teens of all ages.",
+      "genre": ["Christian devotional", "Faith", "Spirituality", "Religion"],
+      "audience": {"@type": "Audience", "audienceType": "Men, women, and teens of all ages"},
+      "inLanguage": "en",
+      "numberOfPages": 24,
+      "bookFormat": ["Hardcover", "EBook"],
+      "image": "https://jesusforeveryours.com/images/book-cover.jpg",
+      "url": "https://jesusforeveryours.com",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "500",
+        "bestRating": "5"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "price": "20.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jesusforeveryours.com/hardcover",
+          "itemCondition": "https://schema.org/NewCondition"
+        },
+        {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://jesusforeveryours.com/digital",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 </head>
 <body>
   <!-- NAV -->
@@ -1345,7 +1399,6 @@
     // Nav scroll effect + Sticky bar + Back to top
     var siteNav = document.querySelector('.site-nav');
     var stickyBar = document.getElementById('stickyBar');
-    var btt = document.getElementById('backToTop');
     window.addEventListener('scroll', function() {
       var sy = window.scrollY;
       if (siteNav) {
@@ -1356,10 +1409,6 @@
       if (stickyBar) {
         if (sy > 500) { stickyBar.classList.add('visible'); }
         else { stickyBar.classList.remove('visible'); }
-      }
-      if (btt) {
-        if (sy > 800) { btt.style.display = 'flex'; }
-        else { btt.style.display = 'none'; }
       }
     }, {passive: true});
 
@@ -1454,7 +1503,6 @@
   }
 </script>
 <!-- Back to Top -->
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:24px;right:24px;z-index:9990;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;border:none;cursor:pointer;font-size:18px;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(20,18,16,0.2);transition:opacity .3s,transform .3s;">&#8593;</button>
 
 <footer class="site-footer" style="padding:64px 56px 48px;background:var(--black);color:var(--linen);">
     <div style="max-width:1000px;margin:0 auto;">
@@ -1546,6 +1594,41 @@ setTimeout(showPopup,8000);
 .book-btn, .cta-btn-dark, .cta-btn-outline, .checkout-btn,
 .form-submit, .sticky-bar-btn, .related-btn, .hero-cta, .buy-btn, .product-btn {
   border-radius: 50px !important;
+}
+
+/* ===== MOBILE OVERRIDES — MUST BE LAST ===== */
+@media(max-width: 960px) {
+  /* Match hardcover page review padding exactly */
+  .testimonials-section {
+    padding: 72px 24px !important;
+  }
+  #homeCarouselTrack > div > div {
+    padding: 40px 28px !important;
+  }
+}
+@media(max-width: 768px) {
+  /* Footer: 4-col to 2x2 */
+  .site-footer {
+    padding: 40px 24px 32px !important;
+  }
+  .site-footer > div > div:nth-child(2) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px 20px !important;
+  }
+  .site-footer > div > div:last-child {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+@media(max-width: 480px) {
+  /* Footer: 2-col to 1-col */
+  .site-footer > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
 }
 </style>
 <script>
