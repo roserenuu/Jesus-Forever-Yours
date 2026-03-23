@@ -19,7 +19,7 @@
     body{background:var(--white);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(20,18,16,0.25);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .3s,backdrop-filter .3s}
+    nav{position:fixed;top:0;left:0;right:0;z-index:200;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:transparent;transition:background .3s}
     nav.scrolled{background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(20,18,16,0.04)}
     .nav-logo img{height:28px;width:auto;display:block;filter:brightness(0) invert(1);transition:filter .3s}
     nav.scrolled .nav-logo img{filter:none;mix-blend-mode:multiply}
@@ -191,9 +191,7 @@
     /* RESPONSIVE */
     @media(max-width:960px){
       nav{padding:0 20px}
-      .nav-links{display:none!important}
-      .nav-cta{display:none!important}
-      .nav-burger{display:block!important}
+      .nav-links{display:none}
       .intro{grid-template-columns:1fr;padding:72px 24px;gap:48px}
       .book-feature{grid-template-columns:1fr}
       .book-img{min-height:360px}
@@ -249,3 +247,8 @@
   .mobile-overlay a{font-family:'Jost',sans-serif;font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}
   .mobile-overlay a:hover{color:var(--walnut)}
   .mobile-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:32px;cursor:pointer;color:var(--text);padding:8px}
+  @media(max-width:960px){
+    nav{padding:0 20px}
+    .nav-burger{display:block}
+    .nav-cta{display:none}
+  }
