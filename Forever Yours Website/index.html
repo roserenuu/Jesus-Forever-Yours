@@ -1537,20 +1537,17 @@ setTimeout(showPopup,8000);
 }
 
 /* ===== MOBILE OVERRIDES — MUST BE LAST ===== */
-@media(max-width: 768px) {
+@media(max-width: 960px) {
+  /* Match hardcover page review padding exactly */
   .testimonials-section {
-    padding: 48px 12px !important;
-  }
-  .testimonials-section > div {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-  #homeCarouselTrack > div {
-    padding: 0 4px !important;
+    padding: 72px 24px !important;
   }
   #homeCarouselTrack > div > div {
-    padding: 32px 16px !important;
+    padding: 40px 28px !important;
   }
+}
+@media(max-width: 768px) {
+  /* Footer: 4-col to 2x2 */
   .site-footer {
     padding: 40px 24px 32px !important;
   }
@@ -1566,12 +1563,7 @@ setTimeout(showPopup,8000);
   }
 }
 @media(max-width: 480px) {
-  .testimonials-section {
-    padding: 40px 8px !important;
-  }
-  #homeCarouselTrack > div > div {
-    padding: 28px 12px !important;
-  }
+  /* Footer: 2-col to 1-col */
   .site-footer > div > div:nth-child(2) {
     grid-template-columns: 1fr !important;
     text-align: center !important;
