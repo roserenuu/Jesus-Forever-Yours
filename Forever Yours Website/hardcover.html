@@ -207,6 +207,7 @@
     .about-section { background: var(--white); padding: 100px 56px }
     .about-inner { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px }
     .about-img { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); overflow: hidden }
+    .about-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to bottom, transparent, var(--white)); pointer-events: none }
     .about-img img { width: 100%; display: block; object-fit: cover; max-height: 700px }
     .about-txt .eyebrow { margin-bottom: 16px; justify-content: center }
     .about-txt h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px,3vw,36px); font-weight: 400; color: var(--black); line-height: 1.2; margin-bottom: 20px; text-align: center }

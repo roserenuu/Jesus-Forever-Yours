@@ -86,6 +86,8 @@
     /* ROSE + CLOSING */
     .closing { background: var(--linen); padding: 0 0 100px }
     .closing-inner { max-width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px }
+    .closing-img-wrap { width: 100%; position: relative; overflow: hidden }
+    .closing-img-wrap::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to bottom, transparent, var(--linen)); pointer-events: none }
     .closing-img { width: 100%; display: block; object-fit: cover; max-height: 700px }
     .closing-txt { padding: 0 56px; max-width: 680px; text-align: center; }
     .closing-txt h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px,3vw,40px); font-weight: 400; color: var(--black); line-height: 1.15; margin-bottom: 24px }
@@ -640,7 +642,9 @@
   <!-- CLOSING -->
   <section class="closing" style="padding-top:0;">
     <div class="closing-inner">
-      <img src="images/rose-photo.jpg" alt="Rose Renuu" class="closing-img reveal" />
+      <div class="closing-img-wrap">
+        <img src="images/rose-photo.jpg" alt="Rose Renuu" class="closing-img reveal" />
+      </div>
       <div class="closing-txt reveal d1">
         <h2>He used my pain<br/>to <em>heal others.</em></h2>
         <p>After that encounter I felt a nudge to share devotional love notes in the voice of God on social media. I didn't feel ready. I was still healing. But I had a new fire and I said yes. Messages started pouring in from people saying God was speaking to them. That became the Love Notes from God series and eventually Forever Yours.</p>
