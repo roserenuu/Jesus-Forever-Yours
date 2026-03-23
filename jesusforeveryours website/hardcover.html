@@ -533,6 +533,31 @@
     </div>
   </section>
 
+  <!-- EMAIL SIGNUP -->
+  <section style="padding:90px 24px;background:#F1EDE6;text-align:center;border-top:1px solid #E8E0D5;">
+    <div class="reveal" style="max-width:520px;margin:0 auto;">
+      <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#7C6A54;display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;">
+        <span style="width:24px;height:1px;background:#7C6A54;display:inline-block;"></span>
+        Free Gift
+      </p>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,42px);font-weight:400;line-height:1.1;color:#141210;margin-bottom:14px;">
+        Get a free Love Letter<br/><em style="font-style:italic;color:#7C6A54;">delivered to your inbox</em>
+      </h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;color:#6A6058;margin-bottom:36px;line-height:1.6;">
+        Sign up and receive a personal love letter from God straight to your inbox.
+      </p>
+      <form onsubmit="event.preventDefault();var b=this.querySelector('button');var i=this.querySelector('input');b.textContent='You are on the list!';b.style.background='#7C6A54';i.value='';i.placeholder='Thank you!';i.disabled=true;" style="max-width:380px;margin:0 auto 14px;">
+        <input type="email" placeholder="Your email address" required
+          style="display:block;width:100%;padding:15px 18px;border:1px solid #C8B89A;font-family:'Jost',sans-serif;font-size:13px;color:#141210;background:#F1EDE6;outline:none;-webkit-appearance:none;border-radius:0;box-sizing:border-box;margin-bottom:10px;"/>
+        <button type="submit"
+          style="display:block;width:100%;background:#141210;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:16px;border:none;cursor:pointer;-webkit-appearance:none;border-radius:0;">
+          Send Me a Love Letter
+        </button>
+      </form>
+      <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">No spam. Just love letters.</p>
+    </div>
+  </section>
+
   <script>
     const els = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver(entries => {
