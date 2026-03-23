@@ -49,7 +49,7 @@
       --stone-l:#C0B8AE;
       --text:#141210;
       --text-m:#6A6058;
-      --text-l:#A09888;
+      --text-l:#7A7062;
     }
     html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden;}body{overflow-x:hidden;}
     body{background:var(--white);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
@@ -278,6 +278,22 @@
     @media(max-width:768px){
       .trust-badges{flex-direction:column;align-items:center;gap:14px;padding:20px 24px}
       .sample-cta{padding:72px 24px}
+    }
+
+    /* SKIP LINK */
+    .skip-link{position:absolute;top:-100px;left:16px;background:var(--black);color:var(--white);padding:12px 24px;z-index:99999;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.1em;text-decoration:none;border-radius:0 0 8px 8px;transition:top .2s}
+    .skip-link:focus{top:0}
+    /* SR ONLY */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* FOCUS STYLES */
+    *:focus-visible{outline:2px solid var(--walnut);outline-offset:2px}
+
+    /* REDUCED MOTION */
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+      .marquee-track{animation:none!important}
+      .reveal{opacity:1!important;transform:none!important;transition:none!important}
     }
 
     /* REVEAL */
@@ -583,11 +599,15 @@
     cursor: pointer !important;
     outline: none !important;
   }
-  .site-nav-mobile-btn:focus,
+  .site-nav-mobile-btn:focus-visible {
+    background: none !important;
+    box-shadow: none !important;
+    outline: 2px solid #7C6A54 !important;
+    outline-offset: 2px !important;
+  }
   .site-nav-mobile-btn:active {
     background: none !important;
     box-shadow: none !important;
-    outline: none !important;
   }
 
   /* Mobile general fixes */
@@ -1093,8 +1113,10 @@
 
 </head>
 <body>
+  <!-- SKIP LINK -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- NAV -->
-  <nav class="site-nav">
+  <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html"><img class="site-nav-logo" src="images/logo.png" alt="Forever Yours"/></a>
     <ul class="site-nav-links">
       <li><a href="index.html">Home</a></li>
@@ -1119,9 +1141,11 @@
   <div class="site-nav-spacer"></div>
 
 
+<main id="main-content">
+
 <!-- HERO — Sunset -->
 <section class="hero-cinema">
-  <img src="images/logo.png" alt="Forever Yours" class="hero-logo"/>
+  <img src="images/logo.png" alt="Forever Yours" class="hero-logo" width="360" height="120"/>
   <p class="hero-eyebrow">24 DAYS WITH JESUS OUT NOW</p>
 </section>
 
@@ -1208,14 +1232,14 @@
   <div style="max-width:1000px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:56px;">
       <h2 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:400;color:var(--black);margin-bottom:8px;">Words from <em style="font-style:italic;color:var(--walnut);">readers like you.</em></h2>
-      <p class="reveal" style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);white-space:nowrap;"><span style="color:#D4A843;">★★★★★</span> &nbsp; <span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
+      <p class="reveal" style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);white-space:nowrap;"><span style="color:#D4A843;" role="img" aria-label="5 out of 5 stars">★★★★★</span> &nbsp; <span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
     </div>
     <div class="reveal d2" style="overflow:hidden;position:relative;">
       <div id="homeCarouselTrack" style="display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1);">
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"Forever Yours is the devotional I did not know I needed. The way Scripture comes alive in these pages is something special. I have already gifted it to three friends!"</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Michelle K.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1224,7 +1248,7 @@
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"This book brought me back to a deeper relationship with God. I had been going through the motions but the words in these pages helped me feel His presence again."</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Sarah M.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1233,7 +1257,7 @@
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"Short, powerful, and straight to the heart. Perfect for busy mornings. I am on my second time reading through it and it is just as powerful every time."</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Jennifer L.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1242,7 +1266,7 @@
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"I read a lot of Christian books and this one hits different. The love letters feel so personal, like God is speaking directly to you. I finished it in a week because I could not put it down."</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Stephanie R.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1251,7 +1275,7 @@
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"My teenage daughter and I are going through this together. It has opened up conversations about faith that I have been praying for. Such a gift."</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Patricia E.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1260,7 +1284,7 @@
 
         <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
           <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;">★★★★★</div>
+            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
             <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"I have a hard time sitting still for devotionals but this one grabbed my attention from day one. It feels like a friend reminding you how loved you are."</p>
             <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Olivia C.</p>
             <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
@@ -1269,7 +1293,11 @@
 
       </div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:32px;" id="homeCarouselDots"></div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:32px;">
+      <button onclick="moveHomeCarousel(-1)" aria-label="Previous review" style="width:44px;height:44px;border-radius:50%;border:1px solid var(--linen2);background:var(--white);cursor:pointer;font-size:16px;color:var(--text-m);display:flex;align-items:center;justify-content:center;transition:all .3s;">&larr;</button>
+      <div id="homeCarouselDots" style="display:flex;align-items:center;gap:8px;"></div>
+      <button onclick="moveHomeCarousel(1)" aria-label="Next review" style="width:44px;height:44px;border-radius:50%;border:1px solid var(--linen2);background:var(--white);cursor:pointer;font-size:16px;color:var(--text-m);display:flex;align-items:center;justify-content:center;transition:all .3s;">&rarr;</button>
+    </div>
   </div>
 </section>
 
@@ -1359,7 +1387,8 @@
       Sign up and receive a personal love letter from God straight to your inbox.
     </p>
     <div id="emailFormWrap" style="max-width:420px;margin:0 auto;">
-      <input type="email" id="emailInput" placeholder="Your email address" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:12px;text-align:center;transition:border-color .3s;border-radius:50px;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"/>
+      <label for="emailInput" class="sr-only">Email address</label>
+      <input type="email" id="emailInput" placeholder="Your email address" autocomplete="email" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:12px;text-align:center;transition:border-color .3s;border-radius:50px;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"/>
       <button id="emailBtn" onclick="handleEmailSubmit()" style="width:100%;padding:16px 20px;background:#141210;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s;border-radius:50px" onmouseover="this.style.background='#7C6A54'" onmouseout="this.style.background='#141210'">Send Me a Love Letter</button>
     </div>
     <div id="emailSuccess" style="display:none;">
@@ -1368,6 +1397,8 @@
     <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#A09888;margin-top:16px;">No spam. Just love letters.</p>
   </div>
 </section>
+
+</main>
 
 <!-- STICKY BAR -->
 <div class="sticky-bar" id="stickyBar">
@@ -1463,7 +1494,7 @@
         for (var i = 0; i < total; i++) {
           var d = document.createElement('div');
           d.className = 'hc-dot';
-          d.style.cssText = 'width:6px;height:6px;border-radius:50%;cursor:pointer;transition:background .3s;display:inline-block;background:' + (i===0?'#D4A843':'#E8E0D5');
+          d.style.cssText = 'width:10px;height:10px;border-radius:50%;cursor:pointer;transition:background .3s;display:inline-block;background:' + (i===0?'#D4A843':'#E8E0D5');
           (function(idx){ d.addEventListener('click', function(){ goTo(idx); }); })(i);
           dotsWrap.appendChild(d);
         }
@@ -1477,6 +1508,16 @@
       }, {passive:true});
 
       window.moveHomeCarousel = function(dir) { goTo(current + dir); };
+      // Keyboard arrow support
+      var carouselSection = track.closest('section');
+      if (carouselSection) {
+        carouselSection.setAttribute('role', 'region');
+        carouselSection.setAttribute('aria-label', 'Reader reviews carousel');
+        carouselSection.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') { goTo(current - 1); e.preventDefault(); }
+          if (e.key === 'ArrowRight') { goTo(current + 1); e.preventDefault(); }
+        });
+      }
       setInterval(function(){ goTo(current + 1); }, 15000);
     }
   });
@@ -1503,7 +1544,7 @@
 </script>
 <!-- Back to Top -->
 
-<footer class="site-footer" style="padding:64px 56px 80px;background:var(--black);color:var(--linen);">
+<footer class="site-footer" style="padding:64px 56px 120px;background:var(--black);color:var(--linen);">
     <div style="max-width:1000px;margin:0 auto;">
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:48px;">
         <div>
