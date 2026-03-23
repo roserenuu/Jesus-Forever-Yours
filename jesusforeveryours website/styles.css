@@ -232,3 +232,15 @@
   .faq-item.open .faq-icon{transform:rotate(45deg)}
   @media(max-width:960px){section[style*="padding:90px 56px"]{padding:72px 24px!important}}
 
+
+  /* HAMBURGER MENU */
+  .nav-burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .nav-burger span{display:block;width:22px;height:2px;background:var(--black);margin:5px 0;transition:transform .3s,opacity .3s}
+  .mobile-overlay{display:none;position:fixed;inset:0;z-index:199;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:32px}
+  .mobile-overlay.open{display:flex}
+  .mobile-overlay a{font-family:'Jost',sans-serif;font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none;transition:color .3s}
+  .mobile-overlay a:hover{color:var(--walnut)}
+  .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--text);padding:8px}
+  @media(max-width:960px){
+    .nav-burger{display:block}
+  }
