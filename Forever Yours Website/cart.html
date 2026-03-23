@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Get Your Copy — Forever Yours: 24 Days With Jesus</title>
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    :root {
+      --white: #FFFFFF; --snow: #F8F6F3; --linen: #F1EDE6; --linen2: #E8E0D5;
+      --black: #141210; --walnut: #7C6A54; --walnut-l: #A89278; --stone: #9A9080;
+      --text: #141210; --text-m: #6A6058; --text-l: #A09888;
+    }
+    body { font-family: 'Jost', sans-serif; background: var(--snow); color: var(--text); -webkit-font-smoothing: antialiased }
+    .hero { background: var(--white); padding: 64px 56px 48px; text-align: center; border-bottom: 1px solid var(--linen2) }
+    .eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .35em; text-transform: uppercase; color: var(--walnut); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px }
+    
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,3.5vw,44px); font-weight: 400; color: var(--black); line-height: 1.1 }
+    .hero h1 em { font-style: italic; color: var(--walnut) }
+    .cart-wrap { max-width: 1000px; margin: 0 auto; padding: 60px 56px; display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: start }
+    .cart-items { background: var(--white); padding: 40px }
+    .cart-item { display: grid; grid-template-columns: 100px 1fr auto; gap: 24px; align-items: center; padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--linen2) }
+    .cart-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0 }
+    .cart-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover }
+    .cart-item-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 400; color: var(--black); margin-bottom: 6px }
+    .cart-item-sub { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--stone); margin-bottom: 12px }
+    .cart-item-remove { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-l); cursor: pointer; text-decoration: underline }
+    .cart-item-price { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--black); text-align: right }
+    .cart-summary { background: var(--white); padding: 40px; position: sticky; top: 24px }
+    .summary-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--black); margin-bottom: 28px }
+    .summary-row { display: flex; justify-content: space-between; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .08em; color: var(--text-m); padding: 12px 0; border-bottom: 1px solid var(--linen2) }
+    .summary-total { display: flex; justify-content: space-between; font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; color: var(--black); padding: 20px 0 28px }
+    .checkout-btn { display: block; width: 100%; background: var(--black); color: var(--white); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 18px; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: background .3s; margin-bottom: 12px ;border-radius:50px}
+    .checkout-btn:hover { background: var(--walnut) }
+    .continue { display: block; text-align: center; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-l); text-decoration: none; margin-top: 12px }
+    .continue:hover { color: var(--walnut) }
+    .trust { display: flex; justify-content: center; gap: 20px; margin-top: 24px; flex-wrap: wrap }
+    .trust-item { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-l); display: flex; align-items: center; gap: 6px }
+    .upsell { background: var(--linen); padding: 20px; margin-top: 0; padding-top: 64px; border-top: 1px solid var(--linen2) }
+    .upsell p { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; color: var(--text-m); margin-bottom: 10px }
+    .upsell a { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--walnut); text-decoration: underline; text-underline-offset: 3px }
+    @media(max-width:960px) {
+      .hero { padding: 48px 24px 36px }
+      .cart-wrap { grid-template-columns: 1fr; padding: 40px 24px }
+      .cart-item { grid-template-columns: 80px 1fr auto }
+    }
+  
+  /* NAV */
+  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: rgba(248,246,243,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linen2); padding: 0 56px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+  .site-nav-logo { height: 24px; width: auto; mix-blend-mode: multiply; text-decoration: none; }
+  .site-nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .site-nav-links a { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: var(--text-m); text-decoration: none; transition: color .3s; }
+  .site-nav-links a:hover { color: var(--walnut); }
+  .site-nav-cta { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 10px 22px; text-decoration: none; transition: background .3s; white-space: nowrap; }
+  .site-nav-cta:hover { background: var(--walnut); }
+  .site-nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .site-nav-mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--snow); border-bottom: 1px solid var(--linen2); z-index: 999; padding: 24px 56px; flex-direction: column; gap: 20px; }
+  .site-nav-mobile-menu a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-m); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--linen2); }
+  .site-nav-mobile-menu a:last-child { border-bottom: none; }
+  .site-nav-mobile-menu.open { display: flex; }
+  .site-nav-spacer { height: 64px; }
+  @media(max-width:960px) {
+    .site-nav { padding: 0 24px; }
+    .site-nav-links { display: none; }
+    .site-nav-cta { display: none; }
+    .site-nav-mobile-btn { display: block; }
+    .site-nav-mobile-menu { padding: 24px; }
+  }
+
+  /* FOOTER */
+  .site-footer { background: var(--linen); border-top: 1px solid var(--linen2); padding: 56px 56px 40px; }
+  .site-footer-inner { max-width: 1200px; margin: 0 auto; }
+  .site-footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .site-footer-logo { height: 28px; width: auto; mix-blend-mode: multiply; margin-bottom: 16px; display: block; }
+  .site-footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.65; }
+  .site-footer-col h4 { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .25em; text-transform: uppercase; color: var(--stone); margin-bottom: 16px; }
+  .site-footer-col ul { list-style: none; }
+  .site-footer-col ul li { margin-bottom: 10px; }
+  .site-footer-col ul li a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .1em; color: var(--text-m); text-decoration: none; transition: color .3s; }
+  .site-footer-col ul li a:hover { color: var(--walnut); }
+  .site-footer-bottom { border-top: 1px solid var(--linen2); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .site-footer-copy { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .1em; color: var(--text-l); }
+  .site-footer-social { display: flex; gap: 20px; }
+  .site-footer-social a { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-l); text-decoration: none; transition: color .3s; }
+  .site-footer-social a:hover { color: var(--walnut); }
+  @media(max-width:960px) {
+    .site-footer { padding: 48px 24px 32px; }
+    .site-footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .site-footer-bottom { flex-direction: column; text-align: center; }
+  }
+  @media(max-width:480px) {
+    .site-footer-top { grid-template-columns: 1fr; }
+  }
+.site-footer
+.site-footer-social
+
+    a:visited { text-decoration: none; }
+    .site-nav-links a:visited { color: #6A6058 !important; }
+    .site-nav-cta:visited { color: #FFFFFF !important; }
+    .site-nav-mobile-menu a:visited { color: #6A6058 !important; }
+    .btn-primary:visited, .cta-btn-dark:visited { color: #FFFFFF !important; }
+    .btn-secondary:visited, .cta-btn-outline:visited { color: #6A6058 !important; }
+    .btn-dark:visited, .book-btn:visited, .related-btn:visited { color: #141210 !important; }
+    .btn-ghost-w:visited { color: #FFFFFF !important; }
+    .site-footer a, .site-footer a:link, .site-footer a:visited, .site-footer a:active { color: #6A6058 !important; text-decoration: none !important; }
+    .site-footer-social a, .site-footer-social a:link, .site-footer-social a:visited, .site-footer-social a:active { color: #A09888 !important; }
+    .hero-sub a:visited { color: inherit !important; }
+    .contact-detail-value a:visited { color: #7C6A54 !important; }
+    .form-submit:visited { color: #FFFFFF !important; }
+    .sticky-bar a:visited { color: #FFFFFF !important; }
+
+  </style>
+<style>
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(248,246,243,0.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #E8E0D5;padding:0 56px;height:64px;display:flex;align-items:center;justify-content:space-between;}
+    .site-nav-logo{height:24px;width:auto;mix-blend-mode:multiply;text-decoration:none;display:block;}
+    .site-nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+    .site-nav-links a{font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#6A6058;text-decoration:none;transition:color .3s;}
+    .site-nav-links a:hover{color:#7C6A54;}
+    .site-nav-cta{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#fff;padding:10px 22px;text-decoration:none;transition:background .3s;white-space:nowrap;}
+    .site-nav-cta:hover{background:#7C6A54;}
+    .site-nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+    .site-nav-mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#F8F6F3;border-bottom:1px solid #E8E0D5;z-index:9998;padding:24px;flex-direction:column;gap:0;}
+    .site-nav-mobile-menu a{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6A6058;text-decoration:none;padding:16px 0;border-bottom:1px solid #E8E0D5;display:block;}
+    .site-nav-mobile-menu a:last-child{border-bottom:none;}
+    .site-nav-mobile-menu.open{display:flex;}
+    .site-nav-spacer{height:64px;display:block;}
+    .site-footer{background:#F1EDE6;border-top:1px solid #E8E0D5;padding:56px 56px 40px;}
+    .site-footer-inner{max-width:1200px;margin:0 auto;}
+    .site-footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+    .site-footer-logo{height:22px;width:auto;mix-blend-mode:multiply;margin-bottom:16px;display:block;}
+    .site-footer-tagline{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;font-weight:300;color:#6A6058;line-height:1.65;}
+    .site-footer-col h4{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#9A9080;margin-bottom:16px;}
+    .site-footer-col ul{list-style:none;}
+    .site-footer-col ul li{margin-bottom:10px;}
+    .site-footer-col ul li a{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;color:#6A6058;text-decoration:none;transition:color .3s;}
+    .site-footer-col ul li a:hover{color:#7C6A54;}
+    .site-footer-bottom{border-top:1px solid #E8E0D5;padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+    .site-footer-copy{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.1em;color:#A09888;}
+    .site-footer-social{display:flex;gap:20px;}
+    .site-footer-social a{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;transition:color .3s;}
+    .site-footer-social a:hover{color:#7C6A54;}
+    
+    @media(max-width:960px){
+      .site-nav{padding:0 24px;}
+      .site-nav-links{display:none;}
+      .site-nav-cta{display:none;}
+      .site-nav-mobile-btn{display:block;}
+      .site-footer{padding:48px 24px 32px;}
+      .site-footer-top{grid-template-columns:1fr;gap:24px;text-align:center;}
+      .site-footer-col h4{margin-bottom:12px;}
+      .site-footer-col ul li{margin-bottom:8px;}
+      .site-footer-logo{margin:0 auto 12px;}
+      .site-footer-bottom{flex-direction:column;text-align:center;gap:16px;}
+      .site-footer-social{justify-content:center;}
+    }
+    @media(max-width:480px){.site-footer-top{grid-template-columns:1fr;}}
+</style>
+
+<style>
+  /* Remove hamburger shadow/background */
+  .site-nav-mobile-btn {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    padding: 8px !important;
+    cursor: pointer !important;
+    outline: none !important;
+  }
+  .site-nav-mobile-btn:focus,
+  .site-nav-mobile-btn:active {
+    background: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  /* Mobile general fixes */
+  html, body { overflow-x: hidden !important; max-width: 100vw !important; }
+
+  /* Nav clean on mobile */
+  @media(max-width: 960px) {
+    .site-nav { padding: 0 20px !important; }
+    .site-nav-links { display: none !important; }
+    .site-nav-cta { display: none !important; }
+    .site-nav-mobile-btn { display: block !important; }
+  }
+
+  /* Images don't overflow */
+  img { max-width: 100% !important; height: auto; }
+
+  /* Sections don't overflow on mobile */
+  @media(max-width: 768px) {
+    section, .section, [class*="section"] { max-width: 100vw !important; overflow-x: hidden !important; }
+    .book-feature, .about, .closing-inner, .contact-wrap, .cart-wrap { grid-template-columns: 1fr !important; }
+    .hero-btns, .cta-btns { flex-direction: column !important; align-items: center !important; width: 100% !important; ;border-radius:50px}
+    .hero-btns a, .cta-btns a { width: 100% !important; text-align: center !important; box-sizing: border-box !important; ;border-radius:50px}
+    .test-grid { grid-template-columns: 1fr !important; }
+    .book-features { grid-template-columns: 1fr 1fr !important; }
+  }
+</style>
+
+
+<style>
+  /* NAV BASE */
+  .site-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: rgba(248,246,243,0.97) !important;
+    backdrop-filter: blur(8px) !important;
+    border-bottom: none !important;
+    height: 64px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 56px !important;
+  }
+  .site-nav-links { display: flex !important; align-items: center !important; gap: 32px !important; list-style: none !important; }
+  .site-nav-links a { font-family: 'Jost', sans-serif !important; font-size: 10px !important; letter-spacing: .2em !important; text-transform: uppercase !important; color: #6A6058 !important; text-decoration: none !important; }
+  .site-nav-links a:hover { color: #7C6A54 !important; }
+  .site-nav-cta { display: block !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; letter-spacing: .2em !important; text-transform: uppercase !important; background: #141210 !important; color: #fff !important; padding: 10px 22px !important; text-decoration: none !important; white-space: nowrap !important; }
+  .site-nav-mobile-btn { display: none !important; }
+  @media(max-width: 960px) {
+    .site-nav { padding: 0 20px !important; }
+    .site-nav-links { display: none !important; }
+    .site-nav-cta { display: none !important; }
+    .site-nav-mobile-btn { display: block !important; }
+  }
+</style>
+
+
+  <meta property="og:title" content="Get Your Copy — Forever Yours: 24 Days With Jesus"/>
+  <meta property="og:description" content="Choose your edition of Forever Yours. Hardcover $20 or Digital Download $10."/>
+  <meta property="og:image" content="https://jesusforeveryours.com/images/book-cover.jpg"/>
+  <meta property="og:url" content="https://jesusforeveryours.com/cart.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Jesus Forever Yours"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Get Your Copy — Forever Yours: 24 Days With Jesus"/>
+  <meta name="twitter:description" content="Choose your edition of Forever Yours. Hardcover $20 or Digital Download $10."/>
+  <meta name="twitter:image" content="https://jesusforeveryours.com/images/book-cover.jpg"/>
+  <meta name="author" content="Rose Renuu"/>
+  <link rel="canonical" href="https://jesusforeveryours.com/cart.html"/>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html"><img src="images/logo.png" alt="Forever Yours" class="site-nav-logo"/></a>
+    <ul class="site-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hardcover.html">Hardcover</a></li>
+      <li><a href="digital.html">Digital</a></li>
+      <li><a href="testimony.html">My Testimony</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="hardcover.html" class="site-nav-cta">Get the Book</a>
+    <button class="site-nav-mobile-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" fill="#141210"/><rect y="7" width="22" height="2" fill="#141210"/><rect y="14" width="22" height="2" fill="#141210"/></svg>
+    </button>
+  </nav>
+  <div class="site-nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="hardcover.html">Hardcover $20</a>
+    <a href="digital.html">Digital $10</a>
+    <a href="testimony.html">My Testimony</a>
+    <a href="contact.html">Contact</a>
+    <a href="sample.html">Read a Sample</a>
+  </div>
+  <div class="site-nav-spacer"></div>
+  <section class="hero">
+    <p class="eyebrow">Your Cart</p>
+    <h1>Almost <em>there.</em></h1>
+  </section>
+  <div class="cart-wrap">
+    <div>
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="images/book-cover.jpg" alt="Forever Yours Hardcover"/>
+          <div>
+            <p class="cart-item-title">Forever Yours</p>
+            <p class="cart-item-sub">Hardcover Edition</p>
+            <span class="cart-item-remove">Remove</span>
+          </div>
+          <p class="cart-item-price">$20</p>
+        </div>
+      </div>
+      <div class="upsell">
+        <p>Want to start reading today while you wait for your hardcover?</p>
+        <a href="https://buy.stripe.com/9B6bJ10FU3Me5cCfKv38402">Add the Digital Version for $10 →</a>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p class="summary-title">Order Summary</p>
+      <div class="summary-row"><span>Subtotal</span><span>$20.00</span></div>
+      <div class="summary-row"><span>Shipping</span><span>Calculated at checkout</span></div>
+      <div class="summary-total"><span>Total</span><span>$20.00</span></div>
+      <a href="https://buy.stripe.com/3cI3cvagu4Qi48yeGr38401" class="checkout-btn">Proceed to Checkout</a>
+      <a href="index.html" class="continue">Continue Shopping</a>
+      <div class="trust">
+        <span class="trust-item">🔒 Secure Checkout</span>
+        <span class="trust-item">✓ 500 Reviews</span>
+        <span class="trust-item">♥ Made with Love</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div style="text-align:center;margin-bottom:24px;">
+        <p class="site-footer-tagline">24 intimate love letters from God's heart to yours.</p>
+      </div>
+      <div style="text-align:center;margin-bottom:24px;">
+        <a href="hardcover.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Hardcover</a>
+        <a href="digital.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Digital</a>
+        <a href="sample.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Sample</a>
+        <a href="testimony.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Testimony</a>
+        <a href="contact.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Contact</a>
+      </div>
+      <div style="text-align:center;margin-bottom:24px;">
+        <a href="privacy.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Privacy</a>
+        <a href="terms.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Terms</a>
+        <a href="shipping.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Shipping</a>
+      </div>
+      <div class="site-footer-bottom" style="border-top:1px solid #E8E0D5;padding-top:20px;text-align:center;">
+        <p class="site-footer-copy">&copy; 2026 Rose Renuu LLC</p>
+        <div class="site-footer-social">
+          <a href="https://instagram.com/jesusforeveryours" target="_blank">@jesusforeveryours</a>
+          <a href="https://instagram.com/roserenuu" target="_blank">@roserenuu</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<style>
+@media(max-width: 480px) {
+  .site-footer-social { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
+}
+</style>
+<style>
+.site-footer { padding-bottom: 80px !important; }
+</style>
+
+<!-- EMAIL POPUP -->
+<div id="emailPopup" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(20,18,16,0.6);z-index:10000;align-items:center;justify-content:center;padding:24px;">
+  <div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;position:relative;border-radius:2px;">
+    <button onclick="closePopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;color:#9A9080;cursor:pointer;font-family:'Jost',sans-serif;">&times;</button>
+    <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#7C6A54;margin-bottom:20px;">Free Gift</p>
+    <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:#141210;line-height:1.2;margin-bottom:8px;">Get a free Love Letter<br/><em style="font-style:italic;color:#7C6A54;">delivered to your inbox.</em></h3>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#6A6058;margin-bottom:32px;line-height:1.6;">Sign up and receive a personal love letter from God straight to your inbox.</p>
+    <input id="popupEmail" type="email" placeholder="Your email address" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#fff;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;margin-bottom:12px;box-sizing:border-box;outline:none;"/>
+    <button onclick="submitPopup()" style="width:100%;padding:16px;background:#141210;color:#fff;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s;;border-radius:50px" onmouseover="this.style.background='#7C6A54'" onmouseout="this.style.background='#141210'">Send Me a Love Letter</button>
+    <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;margin-top:12px;">No spam. Just love letters.</p>
+  </div>
+</div>
+<script>
+function showPopup(){
+  if(localStorage.getItem('jfy_popup_shown'))return;
+  document.getElementById('emailPopup').style.display='flex';
+}
+function closePopup(){
+  document.getElementById('emailPopup').style.display='none';
+  localStorage.setItem('jfy_popup_shown','1');
+}
+function submitPopup(){
+  var e=document.getElementById('popupEmail').value;
+  if(!e||!e.includes('@'))return;
+  var _learnq=window._learnq||[];
+  _learnq.push(['identify',{$email:e}]);
+  _learnq.push(['track','Signed Up',{source:'popup'}]);
+  fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'g=V55Ssm&email='+encodeURIComponent(e)});
+  document.getElementById('emailPopup').innerHTML='<div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;border-radius:2px;"><p style="font-family:\'Playfair Display\',serif;font-size:28px;font-weight:400;color:#141210;margin-bottom:12px;">Thank you <em style=\'font-style:italic;color:#7C6A54\'>so much.</em></p><p style=\'font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:#6A6058;\'>Your love letter is on its way.</p></div>';
+  localStorage.setItem('jfy_popup_shown','1');
+  setTimeout(function(){document.getElementById('emailPopup').style.display='none';},3000);
+}
+setTimeout(showPopup,8000);
+</script>
+
+<style>
+.btn-dark, .btn-white, .btn-primary, .btn-secondary, .btn-outline,
+.book-btn, .cta-btn-dark, .cta-btn-outline, .checkout-btn,
+.form-submit, .sticky-bar-btn, .related-btn, .hero-cta, .buy-btn, .product-btn {
+  border-radius: 50px !important;
+}
+</style>
+</body>
+</html>
