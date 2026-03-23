@@ -12,17 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
   },{threshold:.1});
   els.forEach(el=>obs.observe(el));
 
-  // Sticky bar show after scrolling past hero
+  // Nav scroll effect + sticky bar
+  const nav = document.querySelector('nav');
   const stickyBar = document.getElementById('stickyBar');
-  if (stickyBar) {
-    window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
+    if (nav) {
+      if (window.scrollY > 80) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+    if (stickyBar) {
       if (window.scrollY > 500) {
         stickyBar.classList.add('visible');
       } else {
         stickyBar.classList.remove('visible');
       }
-    }, {passive: true});
-  }
+    }
+  }, {passive: true});
 });
 
 // Email signup handler
@@ -48,8 +56,12 @@ function toggleFaq(el) {
 function openMobileMenu() {
   document.getElementById('mobileOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+  var nav = document.querySelector('nav');
+  if (nav) nav.style.display = 'none';
 }
 function closeMobileMenu() {
   document.getElementById('mobileOverlay').classList.remove('open');
   document.body.style.overflow = '';
+  var nav = document.querySelector('nav');
+  if (nav) nav.style.display = '';
 }
