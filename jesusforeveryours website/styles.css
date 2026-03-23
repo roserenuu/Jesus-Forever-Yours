@@ -44,9 +44,9 @@
     .hero h1 em{font-style:italic;display:block}
     .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);font-style:italic;font-weight:300;line-height:1.55;color:rgba(255,255,255,0.72);margin:0 auto 40px;max-width:460px;letter-spacing:.02em}
     .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-    .btn-white{background:var(--linen);color:var(--black);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:background .3s,transform .2s;display:inline-block}
+    .btn-white{background:var(--linen);color:var(--black);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:background .3s,transform .2s;display:inline-block;border-radius:50px}
     .btn-white:hover{background:var(--linen2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,18,16,0.1)}
-    .btn-ghost-w{color:var(--white);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.4);padding:14px 36px;display:inline-block;transition:all .3s}
+    .btn-ghost-w{color:var(--white);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.4);padding:14px 36px;display:inline-block;transition:all .3s;border-radius:50px}
     .btn-ghost-w:hover{border-color:var(--white);background:rgba(255,255,255,0.1)}
     .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
     .hero-scroll span{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
@@ -170,9 +170,9 @@
     .cta h2 em{font-style:italic;color:var(--walnut)}
     .cta>div>p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);line-height:1.6;max-width:420px;position:relative;z-index:1}
     .cta-btns{display:flex;flex-direction:column;gap:10px;flex-shrink:0;position:relative;z-index:1}
-    .cta-btn-w{background:var(--black);color:var(--white);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:14px 36px;text-decoration:none;white-space:nowrap;transition:background .3s,transform .2s}
+    .cta-btn-w{background:var(--black);color:var(--white);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:14px 36px;text-decoration:none;white-space:nowrap;transition:background .3s,transform .2s;border-radius:50px}
     .cta-btn-w:hover{background:var(--walnut);transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,18,16,0.12)}
-    .cta-btn-o{background:transparent;border:1px solid rgba(20,18,16,0.25);color:var(--text-m);font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 36px;text-decoration:none;white-space:nowrap;text-align:center;transition:all .3s}
+    .cta-btn-o{background:transparent;border:1px solid rgba(20,18,16,0.25);color:var(--text-m);font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 36px;text-decoration:none;white-space:nowrap;text-align:center;transition:all .3s;border-radius:50px}
     .cta-btn-o:hover{border-color:var(--walnut);color:var(--walnut)}
 
     /* FOOTER */
@@ -246,7 +246,7 @@
   .sample-cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.6vw,44px);font-weight:400;line-height:1.1;color:var(--black);margin-bottom:14px}
   .sample-cta h2 em{font-style:italic;color:var(--walnut)}
   .sample-cta p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);line-height:1.65;max-width:520px;margin:0 auto 36px}
-  .sample-cta-btn{display:inline-block;background:var(--black);color:var(--white);font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:background .3s,transform .2s,box-shadow .3s}
+  .sample-cta-btn{display:inline-block;background:var(--black);color:var(--white);font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:16px 40px;text-decoration:none;transition:background .3s,transform .2s,box-shadow .3s;border-radius:50px}
   .sample-cta-btn:hover{background:var(--walnut);transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,18,16,0.12)}
 
   /* TRUST BADGES */
@@ -266,8 +266,16 @@
   .mobile-overlay a{font-family:'Jost',sans-serif;font-size:14px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--text);text-decoration:none}
   .mobile-overlay a:hover{color:var(--walnut)}
   .mobile-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:32px;cursor:pointer;color:var(--text);padding:8px}
+  /* Product page nav (always white background) */
+  nav.nav-product{background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(20,18,16,0.06)}
+  nav.nav-product .nav-logo img{filter:none;mix-blend-mode:multiply}
+  nav.nav-product .nav-links a{color:var(--text-m)}
+  nav.nav-product .nav-links a:hover{color:var(--black)}
+  nav.nav-product .nav-cta{background:var(--linen);color:var(--black)}
+  nav.nav-product .nav-burger span{background:var(--black)}
   @media(max-width:960px){
     nav{padding:0 20px}
     .nav-burger{display:block}
+    .nav-links{display:none}
     .nav-cta{display:none}
   }
