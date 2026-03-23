@@ -1,0 +1,21 @@
+{
+  "name": "forever-yours-videos",
+  "version": "1.0.0",
+  "description": "Remotion video compositions for Forever Yours: 24 Days With Jesus",
+  "scripts": {
+    "studio": "remotion studio src/index.js",
+    "render:promo": "remotion render src/index.js BookPromo out/book-promo.mp4",
+    "render:clip": "remotion render src/index.js ScriptureClip-Day1 out/scripture-clip-day1.mp4",
+    "render:all-clips": "node scripts/render-all.js"
+  },
+  "keywords": [],
+  "author": "Rose Renuu",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.438",
+    "@remotion/cli": "^4.0.438",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.438"
+  }
+}
