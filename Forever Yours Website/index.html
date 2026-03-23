@@ -1332,7 +1332,8 @@
     window.addEventListener('scroll', function() {
       var sy = window.scrollY;
       if (siteNav) {
-        if (sy > 80) { siteNav.classList.add('scrolled'); }
+        var menuOpen = document.getElementById('mobileMenu') && document.getElementById('mobileMenu').classList.contains('open');
+        if (sy > 80 || menuOpen) { siteNav.classList.add('scrolled'); }
         else { siteNav.classList.remove('scrolled'); }
       }
       if (stickyBar) {
@@ -1422,7 +1423,16 @@
   }
   function toggleMenu() {
     var menu = document.getElementById('mobileMenu');
-    if (menu) menu.classList.toggle('open');
+    var nav = document.querySelector('.site-nav');
+    if (menu) {
+      menu.classList.toggle('open');
+      // Force solid nav background when menu is open (so it matches the dropdown)
+      if (menu.classList.contains('open')) {
+        nav.classList.add('scrolled');
+      } else if (window.scrollY <= 80) {
+        nav.classList.remove('scrolled');
+      }
+    }
   }
 </script>
 <!-- Back to Top -->
