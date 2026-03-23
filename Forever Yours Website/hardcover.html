@@ -70,7 +70,7 @@
     .price-note { font-size: 11px; letter-spacing: .1em; color: var(--text-l) }
     .btn-primary { display: block; width: 100%; background: var(--black); color: var(--white); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 18px; text-align: center; text-decoration: none; transition: background .3s; margin-bottom: 12px ;border-radius:50px}
     .btn-primary:hover { background: var(--walnut) }
-    .btn-secondary { display: block; width: 100%; background: transparent; color: var(--text-m); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 17px; text-align: center; text-decoration: none; border: 1px solid var(--linen2); transition: border-color .3s, color .3s ;border-radius:50px}
+    .btn-secondary { display: block; width: 100%; background: transparent; color: var(--black); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 17px; text-align: center; text-decoration: none; border: 1.5px solid var(--stone); transition: border-color .3s, color .3s ;border-radius:50px}
     .btn-secondary:hover { border-color: var(--walnut); color: var(--walnut) }
     .shipping-note { font-size: 11px; color: var(--text-l); letter-spacing: .08em; text-align: center; margin-top: 16px }
 
@@ -80,8 +80,8 @@
     .details-block h2 em { font-style: italic; color: var(--walnut) }
     .details-block p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.75; margin-bottom: 20px }
     .details-list { list-style: none; margin-top: 8px }
-    .details-list li { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: .08em; color: var(--text-m); padding: 14px 0; border-bottom: 1px solid var(--linen2); display: flex; justify-content: space-between; gap: 24px }
-    .details-list li span { color: var(--black); font-weight: 400 }
+    .details-list li { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: .08em; color: var(--text-m); padding: 14px 0; border-bottom: 1px solid var(--linen2); display: flex; justify-content: space-between; gap: 24px; align-items: baseline }
+    .details-list li span { color: var(--black); font-weight: 400; text-align: right; max-width: 60% }
 
     /* SCRIPTURE */
     .scripture-strip { background: var(--linen); padding: 80px 56px; text-align: center }
@@ -96,7 +96,7 @@
     .sections-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; grid-template-rows: auto auto }
     .section-card:nth-child(5) { grid-column: 2 / 4; }
     .section-card { background: var(--linen); padding: 36px 24px; text-align: center }
-    .section-num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; color: var(--linen2); line-height: 1; margin-bottom: 12px }
+    .section-num { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 400; color: var(--walnut); opacity: .35; line-height: 1; margin-bottom: 12px }
     .section-title { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--walnut) }
 
     /* REVIEWS */
@@ -118,7 +118,7 @@
     .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
     .cta-btn-dark { background: var(--black); color: var(--white); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 18px 40px; text-decoration: none; transition: background .3s ;border-radius:50px}
     .cta-btn-dark:hover { background: var(--walnut) }
-    .cta-btn-outline { background: transparent; color: var(--text-m); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 17px 40px; text-decoration: none; border: 1px solid var(--linen2); transition: border-color .3s, color .3s ;border-radius:50px}
+    .cta-btn-outline { background: transparent; color: var(--black); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 17px 40px; text-decoration: none; border: 1.5px solid var(--stone); transition: border-color .3s, color .3s ;border-radius:50px}
     .cta-btn-outline:hover { border-color: var(--walnut); color: var(--walnut) }
 
 
@@ -207,6 +207,7 @@
     .about-section { background: var(--white); padding: 100px 56px }
     .about-inner { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px }
     .about-img { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); overflow: hidden }
+    .about-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to bottom, transparent, var(--white)); pointer-events: none }
     .about-img img { width: 100%; display: block; object-fit: cover; max-height: 700px }
     .about-txt .eyebrow { margin-bottom: 16px; justify-content: center }
     .about-txt h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px,3vw,36px); font-weight: 400; color: var(--black); line-height: 1.2; margin-bottom: 20px; text-align: center }
