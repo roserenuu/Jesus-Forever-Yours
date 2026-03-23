@@ -265,7 +265,10 @@
     /* TRUST BADGES */
     .trust-badges{display:flex;justify-content:center;gap:40px;padding:20px 56px;background:var(--linen)}
     .trust-badge{display:flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--stone)}
-    .trust-badge svg{width:16px;height:16px;fill:var(--walnut)}
+    .trust-badge svg{width:16px;height:16px}
+    .trust-badge:nth-child(1) svg{fill:#2E8B57}
+    .trust-badge:nth-child(2) svg{fill:#4A90D9}
+    .trust-badge:nth-child(3) svg{fill:#D4A843}
 
     /* SAMPLE CTA */
     .sample-cta{padding:100px 56px;background:var(--linen);text-align:center}
@@ -1478,7 +1481,7 @@
       }, {passive:true});
 
       window.moveHomeCarousel = function(dir) { goTo(current + dir); };
-      setInterval(function(){ goTo(current + 1); }, 8000);
+      setInterval(function(){ goTo(current + 1); }, 15000);
     }
   });
 </script>
@@ -1522,18 +1525,7 @@
           </a>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:48px;margin-bottom:48px;">
-        <div>
-          <p style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,237,230,0.4);margin-bottom:18px;">Shop</p>
-          <a href="hardcover.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">Hardcover $20</a>
-          <a href="digital.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">Digital $10</a>
-          <a href="sample.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;transition:color .3s;">Free Sample</a>
-        </div>
-        <div>
-          <p style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,237,230,0.4);margin-bottom:18px;">About</p>
-          <a href="testimony.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">My Testimony</a>
-          <a href="contact.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;transition:color .3s;">Contact</a>
-        </div>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;margin-bottom:48px;">
         <div>
           <p style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,237,230,0.4);margin-bottom:18px;">Legal</p>
           <a href="privacy.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">Privacy</a>
