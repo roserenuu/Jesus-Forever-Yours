@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /downloads/
+Disallow: /cart.html
+Disallow: /thankyou-digital.html
+Disallow: /thankyou-hardcover.html
+Disallow: /404.html
 
 Sitemap: https://jesusforeveryours.com/sitemap.xml
