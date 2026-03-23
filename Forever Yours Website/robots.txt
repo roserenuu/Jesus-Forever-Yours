@@ -7,3 +7,8 @@ Disallow: /thankyou-hardcover.html
 Disallow: /404.html
 
 Sitemap: https://jesusforeveryours.com/sitemap.xml
+
+# AI/LLM Discoverability
+# https://llmstxt.org
+Allow: /llms.txt
+Allow: /llms-full.txt
