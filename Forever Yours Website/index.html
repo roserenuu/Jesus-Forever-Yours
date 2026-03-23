@@ -1346,6 +1346,31 @@
   </div>
 </section>
 
+<!-- SHARE YOUR STORY -->
+<section id="share" style="padding:100px 56px;background:var(--white);text-align:center;">
+  <div class="reveal" style="max-width:600px;margin:0 auto;">
+    <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--walnut);display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;">
+      Your Story Matters
+    </p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.6vw,42px);font-weight:400;line-height:1.1;color:var(--black);margin-bottom:12px;">
+      How did Forever Yours<br/><em style="font-style:italic;color:var(--walnut);">touch your heart?</em>
+    </h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);margin-bottom:40px;line-height:1.65;">
+      We would love to hear how God spoke to you through these love letters. Share your story and encourage someone else who needs to hear it.
+    </p>
+    <div id="storyFormWrap" style="max-width:480px;margin:0 auto;">
+      <input type="text" id="storyName" placeholder="Your first name" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:12px;text-align:center;transition:border-color .3s;border-radius:50px;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"/>
+      <input type="email" id="storyEmail" placeholder="Your email address" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:12px;text-align:center;transition:border-color .3s;border-radius:50px;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"/>
+      <textarea id="storyText" placeholder="Share how Forever Yours impacted your life..." rows="5" style="width:100%;padding:20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:16px;text-align:center;transition:border-color .3s;border-radius:20px;resize:vertical;line-height:1.6;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"></textarea>
+      <button id="storyBtn" onclick="handleStorySubmit()" style="width:100%;padding:16px 20px;background:#141210;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s;border-radius:50px" onmouseover="this.style.background='#7C6A54'" onmouseout="this.style.background='#141210'">Share My Story</button>
+    </div>
+    <div id="storySuccess" style="display:none;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--walnut);line-height:1.6;margin-bottom:8px;">Thank you for sharing your heart.</p>
+      <p style="font-family:'Jost',sans-serif;font-size:11px;color:var(--text-l);letter-spacing:.15em;text-transform:uppercase;">Your story may be featured with your permission.</p>
+    </div>
+  </div>
+</section>
+
 <!-- EMAIL -->
 <section style="padding:100px 56px;background:#F1EDE6;text-align:center;">
   <div class="reveal" style="max-width:520px;margin:0 auto;">
@@ -1439,6 +1464,34 @@
       setTimeout(function() {
         document.getElementById('emailFormWrap').style.display = 'none';
         document.getElementById('emailSuccess').style.display = 'block';
+      }, 500);
+    };
+
+    // Share Your Story submit
+    window.handleStorySubmit = function() {
+      var name = document.getElementById('storyName');
+      var email = document.getElementById('storyEmail');
+      var story = document.getElementById('storyText');
+      var btn = document.getElementById('storyBtn');
+      var nameVal = name ? name.value.trim() : '';
+      var emailVal = email ? email.value.trim() : '';
+      var storyVal = story ? story.value.trim() : '';
+      if (!nameVal) { name.style.borderColor = '#c0392b'; name.setAttribute('placeholder','Please enter your name'); return; }
+      if (!emailVal || emailVal.indexOf('@') === -1) { email.style.borderColor = '#c0392b'; email.setAttribute('placeholder','Please enter a valid email'); return; }
+      if (!storyVal || storyVal.length < 10) { story.style.borderColor = '#c0392b'; story.setAttribute('placeholder','Please share a bit more (at least a sentence)'); return; }
+      btn.textContent = 'Sending...';
+      btn.style.background = '#7C6A54';
+      var _learnq = window._learnq || [];
+      _learnq.push(['identify', { '$email': emailVal, '$first_name': nameVal }]);
+      _learnq.push(['track', 'Shared Story', { source: 'Homepage', name: nameVal, story: storyVal }]);
+      fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'g=V55Ssm&email=' + encodeURIComponent(emailVal) + '&$fields=$first_name&$first_name=' + encodeURIComponent(nameVal)
+      });
+      setTimeout(function() {
+        document.getElementById('storyFormWrap').style.display = 'none';
+        document.getElementById('storySuccess').style.display = 'block';
       }, 500);
     };
 
