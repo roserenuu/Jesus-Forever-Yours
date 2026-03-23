@@ -54,7 +54,8 @@
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
 
     /* PRODUCT HERO */
-    .product-hero { background: var(--linen); padding: 80px 56px 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto }
+    .product-hero { background: var(--linen); padding: 80px 56px 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; position: relative; overflow: hidden }
+    .product-hero::after { content: ''; position: absolute; inset: 0; opacity: 0.06; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size: 200px 200px }
     .product-hero-img { position: relative }
     .product-hero-img img { width: 100%; display: block; max-width: 420px; margin: 0 auto; filter: drop-shadow(0 20px 40px rgba(20,18,16,0.12)); position: relative; top: -40px }
     .product-hero-txt { padding-bottom: 0 }
@@ -62,7 +63,7 @@
     .product-hero-txt h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 400; line-height: 1.08; color: var(--black); margin-bottom: 20px }
     .product-hero-txt h1 em { font-style: italic; color: var(--walnut) }
     .product-hero-txt .sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.6; margin-bottom: 36px }
-    .stars { color: var(--walnut); font-size: 14px; letter-spacing: 2px; margin-bottom: 8px }
+    .stars { color: #D4A843; font-size: 14px; letter-spacing: 2px; margin-bottom: 8px }
     .review-count { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-l); margin-bottom: 40px }
     .price-row { display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px }
     .price { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 400; color: var(--black) }
@@ -116,7 +117,7 @@
     .carousel-track { display: flex; transition: transform .5s cubic-bezier(.16,1,.3,1) }
     .carousel-slide { min-width: 100%; padding: 0 8px; box-sizing: border-box }
     .carousel-card { background: var(--linen); padding: 52px 56px; text-align: center }
-    .carousel-stars { color: var(--walnut); font-size: 14px; letter-spacing: 3px; margin-bottom: 28px }
+    .carousel-stars { color: #D4A843; font-size: 14px; letter-spacing: 3px; margin-bottom: 28px }
     .carousel-quote { font-family: 'Cormorant Garamond', serif; font-size: clamp(20px,2.4vw,28px); font-style: italic; font-weight: 300; color: var(--text); line-height: 1.65; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto }
     .carousel-author { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--stone); margin-bottom: 4px }
     .carousel-tag { font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; color: var(--walnut) }
@@ -648,7 +649,7 @@
         <p class="sub reveal d2">Readers say these letters brought them back to God, gave them peace in seasons of grief and anxiety, and helped them feel His presence again. PDF format. Instant delivery, read on any device. Perfect as a gift or a journal-on-the-go companion.</p>
         <div class="reveal d2">
           <div class="stars">★★★★★</div>
-          <p class="review-count">500+ Five-Star Reviews</p>
+          <p class="review-count"><span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
         </div>
         <div class="price-row reveal d3">
           <span class="price">$10</span>
@@ -724,7 +725,7 @@
     <div class="carousel-inner reveal">
       <div class="carousel-header">
         <h2>What readers are <em>saying</em></h2>
-        <p>★★★★★ &nbsp; 500+ Verified Reviews</p>
+        <p>★★★★★ &nbsp; <span class="count-up" data-target="500">0</span>+ Verified Reviews</p>
       </div>
       <div class="carousel-track-wrap">
         <div class="carousel-track" id="carouselTrack">
@@ -1117,5 +1118,30 @@ setTimeout(showPopup,8000);
   border-radius: 50px !important;
 }
 </style>
+<script>
+(function(){
+  var counters = document.querySelectorAll('.count-up');
+  if (!counters.length) return;
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      observer.unobserve(el);
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 1800;
+      var start = performance.now();
+      function tick(now) {
+        var t = Math.min((now - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.floor(ease * target);
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+    });
+  }, {threshold: 0.5});
+  counters.forEach(function(c){ observer.observe(c); });
+})();
+</script>
 </body>
 </html>
