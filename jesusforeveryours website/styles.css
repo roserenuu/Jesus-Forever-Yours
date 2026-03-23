@@ -243,4 +243,5 @@
   .mobile-close{position:absolute;top:20px;right:24px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--text);padding:8px}
   @media(max-width:960px){
     .nav-burger{display:block}
+    .nav-cta{display:none}
   }
