@@ -85,6 +85,16 @@
       );
       z-index: 0;
     }
+    .hero-cinema::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
     .hero-cinema .hero-logo,
     .hero-cinema .hero-eyebrow { position: relative; z-index: 1; }
     .hero-cinema .hero-logo {
@@ -144,7 +154,7 @@
 
     /* SCRIPTURE */
     .scripture{padding:100px 56px;text-align:center;background:var(--linen);position:relative;overflow:hidden}
-    .scripture::before{content:'';}
+    .scripture::before{content:'';position:absolute;inset:0;opacity:0.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px;}
     .scripture q{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.6vw,48px);font-style:italic;font-weight:300;line-height:1.45;color:var(--black);display:block;quotes:none;margin-bottom:22px;position:relative;z-index:1}
     .scripture q span{color:var(--walnut)}
     .scripture-ref{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--stone);position:relative;z-index:1}
@@ -1131,7 +1141,7 @@
   <div style="max-width:1200px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:56px;">
       <h2 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:400;color:var(--black);margin-bottom:8px;">Words from <em style="font-style:italic;color:var(--walnut);">readers like you.</em></h2>
-      <p class="reveal" style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);white-space:nowrap;">★★★★★ &nbsp; 500+ Five-Star Reviews</p>
+      <p class="reveal" style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);white-space:nowrap;">★★★★★ &nbsp; <span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
     </div>
     <div class="reveal d2" style="overflow:hidden;position:relative;">
       <div id="homeCarouselTrack" style="display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1);">
@@ -1529,5 +1539,30 @@ setTimeout(showPopup,8000);
   border-radius: 50px !important;
 }
 </style>
+<script>
+(function(){
+  var counters = document.querySelectorAll('.count-up');
+  if (!counters.length) return;
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      observer.unobserve(el);
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 1800;
+      var start = performance.now();
+      function tick(now) {
+        var t = Math.min((now - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.floor(ease * target);
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+    });
+  }, {threshold: 0.5});
+  counters.forEach(function(c){ observer.observe(c); });
+})();
+</script>
 </body>
 </html>
