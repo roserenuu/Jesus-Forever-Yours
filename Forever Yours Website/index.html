@@ -64,26 +64,331 @@
 
     /* NAV */
 
-    /* HERO full bleed book photo */
-    .hero{height:460px;min-height:360px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;z-index:0;background:url('images/hero.jpg') center/cover no-repeat}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,18,16,0.35) 0%,rgba(20,18,16,0.52) 55%,rgba(20,18,16,0.72) 100%)}
-    .hero-content{position:relative;z-index:2;padding:0 24px;max-width:680px;text-align:center}
-    .hero-logo{display:none!important;height:clamp(60px,9vw,110px);width:auto;margin:0 auto 28px;filter:brightness(0) invert(1);opacity:.95}
-    .hero-divider{display:none}
-    .hero-tag{display:inline-block;font-size:10px;font-weight:400;letter-spacing:.35em;text-transform:uppercase;color:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.3);padding:7px 20px;margin-bottom:32px}
-    .hero h1{font-family:'Playfair Display',serif;font-size:clamp(60px,10vw,130px);line-height:.92;font-weight:400;letter-spacing:-.02em;color:var(--white);margin-bottom:8px}
-    .hero h1 em{font-style:italic;display:block}
-    .hero-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2vw,22px);font-style:italic;font-weight:300;line-height:1.55;color:rgba(255,255,255,0.72);margin:0 auto 40px;max-width:460px;letter-spacing:.02em}
-    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;border-radius:50px}
-    .btn-white{background:var(--linen);color:var(--black);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:background .3s,transform .2s;display:inline-block;border-radius:50px}
-    .btn-white:hover{background:var(--linen2);transform:translateY(-2px)}
-    .btn-ghost-w{color:var(--white);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,255,255,0.4);padding:14px 36px;display:inline-block;transition:all .3s}
-    .btn-ghost-w:hover{border-color:var(--white);background:rgba(255,255,255,0.1)}
-    .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
-    .hero-scroll span{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,0.45)}
-    .scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,rgba(255,255,255,0.6),transparent);animation:sp 2s ease-in-out infinite}
-    @keyframes sp{0%,100%{opacity:.4;transform:scaleY(.8)}50%{opacity:1;transform:scaleY(1)}}
+    /* ANIMATED HERO — 5-scene cinematic slideshow */
+    .hero-cinema {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 920px;
+      overflow: hidden;
+    }
+
+    /* Each scene */
+    .hero-scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 32px;
+      opacity: 0;
+      transition: opacity 1.2s cubic-bezier(.4,0,.2,1);
+      pointer-events: none;
+      will-change: opacity;
+    }
+    .hero-scene.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Scene 1: Title — warm linen */
+    .scene-title { background: var(--linen); }
+    .scene-title h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(52px, 10vw, 120px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--black);
+      line-height: .92;
+      letter-spacing: -.02em;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(.16,1,.3,1) .3s, transform 1s cubic-bezier(.16,1,.3,1) .3s;
+    }
+    .scene-title.active h1 { opacity: 1; transform: translateY(0); }
+    .scene-title .hero-line {
+      width: 0;
+      height: 1px;
+      background: var(--walnut);
+      margin: 28px auto;
+      transition: width 1s cubic-bezier(.16,1,.3,1) .7s;
+    }
+    .scene-title.active .hero-line { width: 120px; }
+    .scene-title .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .8s ease .9s, transform .8s ease .9s;
+    }
+    .scene-title.active .hero-eyebrow { opacity: 1; transform: translateY(0); }
+
+    /* Scene 2: Love letter quote — soft snow */
+    .scene-quote { background: var(--snow); }
+    .scene-quote .quote-mark {
+      position: absolute;
+      top: 12%;
+      left: 8%;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(200px, 30vw, 400px);
+      color: var(--walnut);
+      opacity: 0;
+      line-height: 1;
+      transition: opacity 1.5s ease .2s;
+      pointer-events: none;
+    }
+    .scene-quote.active .quote-mark { opacity: .06; }
+    .scene-quote blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3.2vw, 42px);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.55;
+      max-width: 720px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(.16,1,.3,1) .4s, transform 1s cubic-bezier(.16,1,.3,1) .4s;
+    }
+    .scene-quote.active blockquote { opacity: 1; transform: translateY(0); }
+    .scene-quote .quote-day {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 28px;
+      opacity: 0;
+      transition: opacity .8s ease .9s;
+    }
+    .scene-quote.active .quote-day { opacity: 1; }
+
+    /* Scene 3: Scripture — linen */
+    .scene-scripture { background: var(--linen); }
+    .scene-scripture q {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 3.4vw, 44px);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.5;
+      max-width: 740px;
+      display: block;
+      quotes: none;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(.16,1,.3,1) .3s, transform 1s cubic-bezier(.16,1,.3,1) .3s;
+    }
+    .scene-scripture q span { color: var(--walnut); }
+    .scene-scripture.active q { opacity: 1; transform: translateY(0); }
+    .scene-scripture .ref {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: .35em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 28px;
+      opacity: 0;
+      transition: opacity .8s ease .8s;
+    }
+    .scene-scripture.active .ref { opacity: 1; }
+
+    /* Scene 4: Testimonial — white */
+    .scene-review { background: var(--white); }
+    .scene-review .review-stars {
+      font-size: 16px;
+      letter-spacing: 6px;
+      color: var(--walnut);
+      margin-bottom: 32px;
+      opacity: 0;
+      transition: opacity .8s ease .3s;
+    }
+    .scene-review.active .review-stars { opacity: 1; }
+    .scene-review .review-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 3vw, 38px);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--black);
+      line-height: 1.6;
+      max-width: 700px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1s cubic-bezier(.16,1,.3,1) .4s, transform 1s cubic-bezier(.16,1,.3,1) .4s;
+    }
+    .scene-review.active .review-text { opacity: 1; transform: translateY(0); }
+    .scene-review .review-author {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 32px;
+      opacity: 0;
+      transition: opacity .8s ease .9s;
+    }
+    .scene-review .review-tag {
+      font-family: 'Jost', sans-serif;
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      margin-top: 6px;
+      opacity: 0;
+      transition: opacity .8s ease 1s;
+    }
+    .scene-review.active .review-author,
+    .scene-review.active .review-tag { opacity: 1; }
+
+    /* Scene 5: CTA — dark */
+    .scene-cta { background: var(--black); }
+    .scene-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 7vw, 80px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--linen);
+      line-height: 1.1;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(.16,1,.3,1) .3s, transform 1s cubic-bezier(.16,1,.3,1) .3s;
+    }
+    .scene-cta.active h2 { opacity: 1; transform: translateY(0); }
+    .scene-cta .cta-divider {
+      width: 0;
+      height: 1px;
+      background: var(--walnut);
+      margin: 24px auto 28px;
+      transition: width .8s cubic-bezier(.16,1,.3,1) .7s;
+    }
+    .scene-cta.active .cta-divider { width: 60px; }
+    .scene-cta .cta-price {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      margin-bottom: 40px;
+      opacity: 0;
+      transition: opacity .8s ease .8s;
+    }
+    .scene-cta.active .cta-price { opacity: 1; }
+    .scene-cta .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 320px;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .8s ease .9s, transform .8s ease .9s;
+    }
+    .scene-cta.active .cta-buttons { opacity: 1; transform: translateY(0); }
+    .scene-cta .btn-hero-primary {
+      background: var(--linen);
+      color: var(--black);
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      padding: 18px 36px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 50px;
+      transition: background .3s, transform .2s;
+    }
+    .scene-cta .btn-hero-primary:hover { background: var(--linen2); transform: translateY(-2px); }
+    .scene-cta .btn-hero-secondary {
+      background: transparent;
+      color: rgba(241,237,230,0.6);
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      padding: 17px 36px;
+      text-decoration: none;
+      text-align: center;
+      border: 1px solid rgba(124,106,84,0.4);
+      border-radius: 50px;
+      transition: all .3s;
+    }
+    .scene-cta .btn-hero-secondary:hover { border-color: var(--walnut); color: var(--linen); }
+
+    /* Progress dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      gap: 10px;
+    }
+    .hero-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--stone-l);
+      cursor: pointer;
+      transition: background .4s, transform .3s;
+      border: none;
+      padding: 0;
+    }
+    .hero-dot.active {
+      background: var(--walnut);
+      transform: scale(1.3);
+    }
+    /* Dots color on dark scene */
+    .hero-cinema[data-scene="4"] .hero-dot { background: rgba(160,152,136,0.3); }
+    .hero-cinema[data-scene="4"] .hero-dot.active { background: var(--walnut); }
+
+    /* Scroll hint */
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-scroll-hint span {
+      font-family: 'Jost', sans-serif;
+      font-size: 8px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--stone-l);
+      transition: color .6s;
+    }
+    .hero-cinema[data-scene="4"] .hero-scroll-hint span { color: rgba(160,152,136,0.35); }
+    .hero-scroll-line {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--stone-l), transparent);
+      animation: scrollPulse 2.2s ease-in-out infinite;
+    }
+    .hero-cinema[data-scene="4"] .hero-scroll-line { background: linear-gradient(to bottom, rgba(124,106,84,0.4), transparent); }
+    @keyframes scrollPulse { 0%,100%{opacity:.3;transform:scaleY(.7)} 50%{opacity:.8;transform:scaleY(1)} }
+
+    @media(max-width:768px) {
+      .hero-cinema { height: 90vh; min-height: 520px; max-height: none; }
+      .hero-scene { padding: 60px 24px 80px; }
+      .scene-quote .quote-mark { font-size: 180px; top: 8%; left: 4%; }
+      .scene-cta .cta-buttons { max-width: 280px; }
+      .hero-scroll-hint { bottom: 48px; }
+    }
 
     /* MARQUEE */
     .marquee-wrap{overflow:hidden;padding:15px 0;background:var(--linen)}
@@ -356,9 +661,6 @@
       
       /* Email section */
       .email-section { padding: 56px 24px !important; }
-      
-      /* Hero */
-      .hero { height: 90vh !important; }
       
 
       /* FAQ accordion fix */
@@ -992,23 +1294,63 @@
   <div class="site-nav-spacer"></div>
 
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <!-- Logo as main hero element -->
-    <img class="hero-logo" style="display:none!important;">
-    <!-- Divider line -->
-    <div class="hero-divider" style="display:none!important;"></div>
-    <!-- Tagline -->
-    <p class="hero-sub">24 intimate love letters from God's heart to yours</p>
-    <!-- Buttons -->
-    <div class="hero-btns">
-      <a href="#book" class="btn-white">Start Your 24 Days</a>
-      <a href="sample.html" class="btn-ghost-w">Read a Love Letter</a>
+<!-- HERO — 5-Scene Cinematic Animated -->
+<section class="hero-cinema" id="heroCinema" data-scene="0">
+
+  <!-- Scene 1: Title Reveal -->
+  <div class="hero-scene scene-title active" data-index="0">
+    <h1>Forever<br/>Yours</h1>
+    <div class="hero-line"></div>
+    <p class="hero-eyebrow">24 Days With Jesus &mdash; A Devotional by Rose Renuu</p>
+  </div>
+
+  <!-- Scene 2: Love Letter Quote -->
+  <div class="hero-scene scene-quote" data-index="1">
+    <div class="quote-mark">&ldquo;</div>
+    <blockquote>&ldquo;I came down to earth to show you the way. Not to watch from a distance, but to walk with you, to feel what you feel, and to carry what you could not carry.&rdquo;</blockquote>
+    <p class="quote-day">Day 24 &mdash; Forever Yours</p>
+  </div>
+
+  <!-- Scene 3: Scripture -->
+  <div class="hero-scene scene-scripture" data-index="2">
+    <q>&ldquo;I have loved you with <span>an everlasting love</span>; I have drawn you with unfailing kindness.&rdquo;</q>
+    <p class="ref">Jeremiah 31:3</p>
+  </div>
+
+  <!-- Scene 4: Reader Review -->
+  <div class="hero-scene scene-review" data-index="3">
+    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="review-text">&ldquo;This book brought me back to a deeper relationship with God. The words in these pages helped me feel His presence again.&rdquo;</p>
+    <p class="review-author">Sarah M.</p>
+    <p class="review-tag">Verified Reader</p>
+  </div>
+
+  <!-- Scene 5: CTA -->
+  <div class="hero-scene scene-cta" data-index="4">
+    <h2>Forever<br/>Yours</h2>
+    <div class="cta-divider"></div>
+    <p class="cta-price">Hardcover $20 &nbsp;&bull;&nbsp; Digital $10</p>
+    <div class="cta-buttons">
+      <a href="https://buy.stripe.com/3cI3cvagu4Qi48yeGr38401" class="btn-hero-primary">Start Your 24 Days</a>
+      <a href="sample.html" class="btn-hero-secondary">Read a Love Letter Free</a>
     </div>
   </div>
+
+  <!-- Progress Dots -->
+  <div class="hero-dots" id="heroDots">
+    <button class="hero-dot active" data-goto="0" aria-label="Scene 1"></button>
+    <button class="hero-dot" data-goto="1" aria-label="Scene 2"></button>
+    <button class="hero-dot" data-goto="2" aria-label="Scene 3"></button>
+    <button class="hero-dot" data-goto="3" aria-label="Scene 4"></button>
+    <button class="hero-dot" data-goto="4" aria-label="Scene 5"></button>
   </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+
 </section>
 
 <!-- MARQUEE -->
@@ -1277,6 +1619,65 @@
 
 
 <script>
+  // Hero Cinema — 5-scene animated slideshow
+  (function() {
+    var cinema = document.getElementById('heroCinema');
+    if (!cinema) return;
+    var scenes = cinema.querySelectorAll('.hero-scene');
+    var dots = cinema.querySelectorAll('.hero-dot');
+    var current = 0;
+    var total = scenes.length;
+    var interval = 5500; // 5.5 seconds per scene
+    var timer;
+    var paused = false;
+
+    function goTo(n) {
+      scenes[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (n + total) % total;
+      scenes[current].classList.add('active');
+      dots[current].classList.add('active');
+      cinema.setAttribute('data-scene', current);
+    }
+
+    function next() { goTo(current + 1); }
+
+    function startTimer() { timer = setInterval(next, interval); }
+    function resetTimer() { clearInterval(timer); if (!paused) startTimer(); }
+
+    // Dot clicks
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        goTo(parseInt(this.getAttribute('data-goto')));
+        resetTimer();
+      });
+    });
+
+    // Touch swipe
+    var tx = 0;
+    cinema.addEventListener('touchstart', function(e) { tx = e.touches[0].clientX; }, { passive: true });
+    cinema.addEventListener('touchend', function(e) {
+      var diff = tx - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        goTo(current + (diff > 0 ? 1 : -1));
+        resetTimer();
+      }
+    }, { passive: true });
+
+    // Pause on hover (desktop)
+    cinema.addEventListener('mouseenter', function() { paused = true; clearInterval(timer); });
+    cinema.addEventListener('mouseleave', function() { paused = false; startTimer(); });
+
+    // Keyboard
+    cinema.setAttribute('tabindex', '0');
+    cinema.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight') { goTo(current + 1); resetTimer(); }
+      if (e.key === 'ArrowLeft') { goTo(current - 1); resetTimer(); }
+    });
+
+    startTimer();
+  })();
+
   // Reveal animations
   document.addEventListener('DOMContentLoaded', function() {
     var els = document.querySelectorAll('.reveal');
