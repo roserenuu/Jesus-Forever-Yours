@@ -258,18 +258,15 @@
 
     /* Scene 5: CTA — dark */
     .scene-cta { background: radial-gradient(ellipse at center, #1E1B17 0%, #141210 100%); }
-    .scene-cta h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 7vw, 80px);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--linen);
-      line-height: 1.1;
+    .scene-cta .cta-logo-img {
+      width: clamp(140px, 24vw, 280px);
+      height: auto;
+      filter: brightness(0) invert(1);
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 1s cubic-bezier(.16,1,.3,1) .3s, transform 1s cubic-bezier(.16,1,.3,1) .3s;
     }
-    .scene-cta.active h2 { opacity: 1; transform: translateY(0); }
+    .scene-cta.active .cta-logo-img { opacity: 1; transform: translateY(0); }
     .scene-cta .cta-divider {
       width: 0;
       height: 1px;
@@ -1351,7 +1348,7 @@
 
   <!-- Scene 5: CTA -->
   <div class="hero-scene scene-cta" data-index="4">
-    <h2>Forever<br/>Yours</h2>
+    <img src="images/logo.png" alt="Forever Yours" class="cta-logo-img"/>
     <div class="cta-divider"></div>
     <p class="cta-price">Hardcover $20 &nbsp;&bull;&nbsp; Digital $10</p>
     <div class="cta-buttons">
