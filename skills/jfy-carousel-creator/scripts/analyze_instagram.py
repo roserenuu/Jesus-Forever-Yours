@@ -5,7 +5,7 @@ import sys
 
 def run_mcp_tool(server, tool, args):
     cmd = ["manus-mcp-cli", "tool", "call", tool, "--server", server, "--input", json.dumps(args)]
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
     if result.returncode != 0:
         return None
     
