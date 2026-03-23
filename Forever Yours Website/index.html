@@ -374,8 +374,6 @@
       .about-txt { padding: 48px 24px; }
       .about-stats { flex-direction: column; align-items: center; gap: 20px; }
 
-      /* Footer stacks to 1 column on small screens */
-      .site-footer > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 28px !important; text-align: center !important; }
     }
 
   </style>
@@ -437,16 +435,6 @@
       .book-info h2 { font-size: 28px !important; }
       .about-txt h2 { font-size: 26px !important; }
 
-      /* Homepage review carousel - wider on mobile */
-      .testimonials-section { padding: 56px 16px !important; }
-      .testimonials-section > div { max-width: 100% !important; }
-      #homeCarouselTrack > div > div { padding: 36px 20px !important; }
-
-      /* Homepage footer - stack columns on mobile */
-      .site-footer { padding: 40px 24px 32px !important; }
-      .site-footer > div > div[style*="grid-template-columns"] { grid-template-columns: 1fr 1fr !important; gap: 32px 24px !important; }
-      .site-footer > div > div[style*="justify-content:space-between"] { gap: 16px !important; }
-      .site-footer > div > div[style*="border-top"] { flex-direction: column !important; text-align: center !important; gap: 8px !important; }
     }
   </style>
 
@@ -1546,6 +1534,49 @@ setTimeout(showPopup,8000);
 .book-btn, .cta-btn-dark, .cta-btn-outline, .checkout-btn,
 .form-submit, .sticky-bar-btn, .related-btn, .hero-cta, .buy-btn, .product-btn {
   border-radius: 50px !important;
+}
+
+/* ===== MOBILE OVERRIDES — MUST BE LAST ===== */
+@media(max-width: 768px) {
+  .testimonials-section {
+    padding: 48px 12px !important;
+  }
+  .testimonials-section > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  #homeCarouselTrack > div {
+    padding: 0 4px !important;
+  }
+  #homeCarouselTrack > div > div {
+    padding: 32px 16px !important;
+  }
+  .site-footer {
+    padding: 40px 24px 32px !important;
+  }
+  .site-footer > div > div:nth-child(2) {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px 20px !important;
+  }
+  .site-footer > div > div:last-child {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+@media(max-width: 480px) {
+  .testimonials-section {
+    padding: 40px 8px !important;
+  }
+  #homeCarouselTrack > div > div {
+    padding: 28px 12px !important;
+  }
+  .site-footer > div > div:nth-child(2) {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
 }
 </style>
 <script>
