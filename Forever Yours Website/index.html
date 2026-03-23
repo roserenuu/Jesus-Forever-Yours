@@ -341,35 +341,12 @@
     .hero-cinema[data-scene="4"] .hero-dot { background: rgba(160,152,136,0.3); }
     .hero-cinema[data-scene="4"] .hero-dot.active { background: var(--walnut); }
 
-    /* Scroll hint */
-    .hero-scroll-hint {
-      position: absolute;
-      bottom: 56px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-    .hero-scroll-hint span {
-      font-family: 'Jost', sans-serif;
-      font-size: 8px;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--stone-l);
-      transition: color .6s;
-    }
-    .hero-cinema[data-scene="0"] .hero-scroll-hint span { color: rgba(255,255,255,0.5); }
-    .hero-cinema[data-scene="4"] .hero-scroll-hint span { color: rgba(160,152,136,0.35); }
 
     @media(max-width:768px) {
       .hero-cinema { height: 100vh; min-height: 520px; }
       .hero-scene { padding: 60px 24px 80px; }
       .scene-quote .quote-mark { font-size: 180px; top: 8%; left: 4%; }
       .scene-cta .cta-buttons { max-width: 280px; }
-      .hero-scroll-hint { bottom: 48px; }
     }
 
     /* MARQUEE */
@@ -1338,10 +1315,6 @@
     <button class="hero-dot" data-goto="4" aria-label="Scene 5"></button>
   </div>
 
-  <!-- Scroll hint -->
-  <div class="hero-scroll-hint">
-    <span>Scroll</span>
-  </div>
 
 </section>
 
