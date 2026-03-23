@@ -1399,7 +1399,6 @@
     // Nav scroll effect + Sticky bar + Back to top
     var siteNav = document.querySelector('.site-nav');
     var stickyBar = document.getElementById('stickyBar');
-    var btt = document.getElementById('backToTop');
     window.addEventListener('scroll', function() {
       var sy = window.scrollY;
       if (siteNav) {
@@ -1410,10 +1409,6 @@
       if (stickyBar) {
         if (sy > 500) { stickyBar.classList.add('visible'); }
         else { stickyBar.classList.remove('visible'); }
-      }
-      if (btt) {
-        if (sy > 800) { btt.style.display = 'flex'; }
-        else { btt.style.display = 'none'; }
       }
     }, {passive: true});
 
@@ -1508,7 +1503,6 @@
   }
 </script>
 <!-- Back to Top -->
-<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top" style="position:fixed;bottom:24px;right:24px;z-index:9990;width:44px;height:44px;border-radius:50%;background:var(--black);color:#fff;border:none;cursor:pointer;font-size:18px;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(20,18,16,0.2);transition:opacity .3s,transform .3s;">&#8593;</button>
 
 <footer class="site-footer" style="padding:64px 56px 48px;background:var(--black);color:var(--linen);">
     <div style="max-width:1000px;margin:0 auto;">
