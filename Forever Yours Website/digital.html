@@ -48,7 +48,7 @@
       --stone: #9A9080;
       --text: #141210;
       --text-m: #6A6058;
-      --text-l: #A09888;
+      --text-l: #7A7062;
     }
     html { scroll-behavior: smooth; scroll-padding-top: 80px }
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
@@ -138,6 +138,19 @@
     .cta-btn-dark:hover { background: var(--walnut) }
     .cta-btn-outline { background: transparent; color: var(--black); font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .25em; text-transform: uppercase; padding: 17px 40px; text-decoration: none; border: 1.5px solid var(--stone); transition: border-color .3s, color .3s ;border-radius:50px}
     .cta-btn-outline:hover { border-color: var(--walnut); color: var(--walnut) }
+
+    /* SKIP LINK */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--black); color: var(--white); padding: 12px 24px; z-index: 99999; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: .1em; text-decoration: none; border-radius: 0 0 8px 8px; transition: top .2s }
+    .skip-link:focus { top: 0 }
+    /* SR ONLY */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0 }
+    /* FOCUS STYLES */
+    *:focus-visible { outline: 2px solid var(--walnut); outline-offset: 2px }
+    /* REDUCED MOTION */
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important }
+    }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease }
@@ -345,13 +358,16 @@
     appearance: none !important;
     padding: 8px !important;
     cursor: pointer !important;
-    outline: none !important;
   }
-  .site-nav-mobile-btn:focus,
+  .site-nav-mobile-btn:focus-visible {
+    background: none !important;
+    box-shadow: none !important;
+    outline: 2px solid #7C6A54 !important;
+    outline-offset: 2px !important;
+  }
   .site-nav-mobile-btn:active {
     background: none !important;
     box-shadow: none !important;
-    outline: none !important;
   }
 
   /* Mobile general fixes */
@@ -630,7 +646,8 @@
 
 </head>
 <body>
-  <nav class="site-nav">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html"><img src="images/logo.png" alt="Forever Yours" class="site-nav-logo"/></a>
     <ul class="site-nav-links">
       <li><a href="index.html">Home</a></li>
@@ -653,6 +670,7 @@
     <a href="sample.html">Read a Sample</a>
   </div>
   <div class="site-nav-spacer"></div>
+  <main id="main-content">
 
   <!-- PRODUCT HERO -->
   <section class="product-hero">
@@ -674,7 +692,7 @@
         <h1 class="reveal d1">Start reading<br/><em>in seconds.</em></h1>
         <p class="sub reveal d2">Readers say these letters brought them back to God, gave them peace in seasons of grief and anxiety, and helped them feel His presence again. PDF format. Instant delivery, read on any device. Perfect as a gift or a journal-on-the-go companion.</p>
         <div class="reveal d2">
-          <div class="stars">★★★★★</div>
+          <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p class="review-count"><span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
         </div>
         <div class="price-row reveal d3">
@@ -751,14 +769,14 @@
     <div class="carousel-inner reveal">
       <div class="carousel-header">
         <h2>What readers are <em>saying</em></h2>
-        <p><span style="color:#D4A843">★★★★★</span> &nbsp; <span class="count-up" data-target="500">0</span>+ Verified Reviews</p>
+        <p><span style="color:#D4A843" role="img" aria-label="5 out of 5 stars">★★★★★</span> &nbsp; <span class="count-up" data-target="500">0</span>+ Verified Reviews</p>
       </div>
       <div class="carousel-track-wrap">
         <div class="carousel-track" id="carouselTrack">
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"Got this for my wife but ended up reading it myself. The daily letters spoke to my heart in a deep way. This book is for anyone who loves Jesus."</p>
               <p class="carousel-author">David R.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -767,7 +785,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"This book brought me back to a deeper relationship with God. I had been going through the motions for a while, but the words in these pages helped me feel His presence again."</p>
               <p class="carousel-author">James W.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -776,7 +794,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"A friend recommended this and I'm so grateful. It's now part of my morning routine with God. Starting each day with these letters and Scripture has honestly changed everything for me."</p>
               <p class="carousel-author">Daniel H.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -785,7 +803,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"Our small group went through this together and it was incredible. The conversations that came from each daily reading brought us closer as a community."</p>
               <p class="carousel-author">Marcus J.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -794,7 +812,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"I wasn't sure what to expect but this devotional exceeded every expectation. The writing is gentle and encouraging without being preachy. It meets you right where you are."</p>
               <p class="carousel-author">Lisa M.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -803,7 +821,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"Finally a devotional that doesn't feel generic. Every word feels intentional and heartfelt. You can tell the author poured her soul into this."</p>
               <p class="carousel-author">Hannah G.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -812,7 +830,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"I have a hard time sitting still for devotionals but this one grabbed my attention from day one. The writing is warm and honest. It feels like a friend reminding you how loved you are."</p>
               <p class="carousel-author">Olivia C.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -821,7 +839,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"I keep highlighting passages and running out of room. The Scripture selections are so intentional and really complement each daily letter. It's clear so much prayer went into creating this."</p>
               <p class="carousel-author">Lauren Q.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -830,7 +848,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"So much heart and warmth in every page. This 24 day journey reminded me that God's love never changes, even in my hardest seasons."</p>
               <p class="carousel-author">Amanda L.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -839,7 +857,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"Bought two copies, one for me and one for my sister. We text each other about the daily readings now. It's become our thing!"</p>
               <p class="carousel-author">Natalie F.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -848,7 +866,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"This was the first devotional I have ever actually finished. Something about the way it's written kept me coming back every single day. The 24 day format is the perfect length."</p>
               <p class="carousel-author">Jasmine K.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -857,7 +875,7 @@
 
           <div class="carousel-slide">
             <div class="carousel-card">
-              <div class="carousel-stars">★★★★★</div>
+              <div class="carousel-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
               <p class="carousel-quote">"Gave this to my best friend going through a breakup and she said it reminded her that God's love is the only love that never fails. Now she's buying copies for everyone she knows."</p>
               <p class="carousel-author">Nicole H.</p>
               <p class="carousel-tag">Verified Reader</p>
@@ -1034,6 +1052,7 @@
       document.getElementById('mobileMenu').classList.toggle('open');
     }
   </script>
+  </main>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
