@@ -1,5 +1,5 @@
 [build]
-  publish = "jesusforeveryours website/"
+  publish = "Forever Yours Website/"
 
 [[redirects]]
   from = "/*"
