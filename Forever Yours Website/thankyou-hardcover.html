@@ -40,7 +40,7 @@
       --stone: #9A9080;
       --text: #141210;
       --text-m: #6A6058;
-      --text-l: #A09888;
+      --text-l: #7A7062;
     }
     html { scroll-behavior: smooth }
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
@@ -82,6 +82,19 @@
     .cta-btn-dark:hover { background: var(--walnut) }
     .cta-btn-outline { background: transparent; color: var(--black); font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .25em; text-transform: uppercase; padding: 17px 40px; text-decoration: none; border: 1.5px solid var(--stone); transition: border-color .3s, color .3s ;border-radius:50px}
     .cta-btn-outline:hover { border-color: var(--walnut); color: var(--walnut) }
+
+    /* SKIP LINK */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--black, #141210); color: var(--white, #FFFFFF); padding: 12px 24px; z-index: 99999; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: .1em; text-decoration: none; border-radius: 0 0 8px 8px; transition: top .2s }
+    .skip-link:focus { top: 0 }
+    /* SR ONLY */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0 }
+    /* FOCUS STYLES */
+    *:focus-visible { outline: 2px solid var(--walnut, #7C6A54); outline-offset: 2px }
+    /* REDUCED MOTION */
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important }
+    }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease }
@@ -222,11 +235,15 @@
     cursor: pointer !important;
     outline: none !important;
   }
-  .site-nav-mobile-btn:focus,
+  .site-nav-mobile-btn:focus-visible {
+    background: none !important;
+    box-shadow: none !important;
+    outline: 2px solid #7C6A54 !important;
+    outline-offset: 2px !important;
+  }
   .site-nav-mobile-btn:active {
     background: none !important;
     box-shadow: none !important;
-    outline: none !important;
   }
 
   /* Mobile general fixes */
@@ -479,7 +496,8 @@
 </style>
 </head>
 <body>
-  <nav class="site-nav">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html"><img src="images/logo.png" alt="Forever Yours" class="site-nav-logo"/></a>
     <ul class="site-nav-links">
       <li><a href="index.html">Home</a></li>
@@ -502,6 +520,7 @@
     <a href="sample.html">Read a Sample</a>
   </div>
   <div class="site-nav-spacer"></div>
+  <main id="main-content">
   <section class="hero">
     <div class="checkmark reveal">✓</div>
     <p class="eyebrow reveal">Order Confirmed</p>
@@ -568,6 +587,7 @@
     }
   </script>
 
+  </main>
   <footer class="site-footer">
     <div class="site-footer-inner">
       <div style="text-align:center;margin-bottom:24px;">

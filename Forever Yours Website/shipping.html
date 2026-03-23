@@ -34,7 +34,7 @@
       --stone: #9A9080;
       --text: #141210;
       --text-m: #6A6058;
-      --text-l: #A09888;
+      --text-l: #7A7062;
     }
     html { scroll-behavior: smooth }
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
@@ -51,6 +51,19 @@
     .content a { color: var(--walnut); text-decoration: underline; text-underline-offset: 3px }
     .divider { width: 48px; height: 1px; background: var(--linen2); margin: 40px 0 }
     @media(max-width:768px) { .hero { padding: 56px 24px 40px } .content { padding: 56px 24px 72px } }
+
+    /* SKIP LINK */
+    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--black); color: var(--white); padding: 12px 24px; z-index: 99999; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: .1em; text-decoration: none; border-radius: 0 0 8px 8px; transition: top .2s }
+    .skip-link:focus { top: 0 }
+    /* SR ONLY */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0 }
+    /* FOCUS STYLES */
+    *:focus-visible { outline: 2px solid var(--walnut); outline-offset: 2px }
+    /* REDUCED MOTION */
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important }
+      .reveal { opacity: 1 !important; transform: none !important; transition: none !important }
+    }
 
   /* NAV */
   .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: rgba(248,246,243,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linen2); padding: 0 56px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
@@ -173,13 +186,14 @@
     appearance: none !important;
     padding: 8px !important;
     cursor: pointer !important;
-    outline: none !important;
   }
-  .site-nav-mobile-btn:focus,
+  .site-nav-mobile-btn:focus-visible {
+    outline: 2px solid var(--walnut);
+    outline-offset: 2px;
+  }
   .site-nav-mobile-btn:active {
     background: none !important;
     box-shadow: none !important;
-    outline: none !important;
   }
 
   /* Mobile general fixes */
@@ -253,7 +267,8 @@
   <link rel="canonical" href="https://jesusforeveryours.com/shipping"/>
 </head>
 <body>
-  <nav class="site-nav">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Main navigation">
     <a href="index.html"><img src="images/logo.png" alt="Forever Yours" class="site-nav-logo"/></a>
     <ul class="site-nav-links">
       <li><a href="index.html">Home</a></li>
@@ -276,6 +291,7 @@
     <a href="sample.html">Read a Sample</a>
   </div>
   <div class="site-nav-spacer"></div>
+  <main id="main-content">
   <section class="hero">
     <p class="eyebrow">Orders</p>
     <h1>Shipping <em>Policy</em></h1>
@@ -294,6 +310,9 @@
     <p>If your order arrives damaged or you have not received it within 6 weeks please contact us at <a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a> and we will do our best to make it right.</p>
     <h2>Returns</h2>
     <p>Because our hardcover books are printed on demand we are unable to accept returns unless the item arrives damaged or defective. If your book arrives in poor condition please contact us at <a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a> within 14 days of delivery and we will send a replacement at no cost to you. Digital PDF purchases are non-refundable as they are delivered instantly.</p>
+  </div>
+
+  </main>
 
   <script>
     function toggleMenu() {
