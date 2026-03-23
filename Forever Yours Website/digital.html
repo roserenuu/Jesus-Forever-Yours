@@ -1129,10 +1129,15 @@ function submitPopup(){
   var _learnq=window._learnq||[];
   _learnq.push(['identify',{$email:e}]);
   _learnq.push(['track','Signed Up',{source:'popup'}]);
-  fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'g=V55Ssm&email='+encodeURIComponent(e)});
-  document.getElementById('emailPopup').innerHTML='<div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;border-radius:2px;"><p style="font-family:\'Playfair Display\',serif;font-size:28px;font-weight:400;color:#141210;margin-bottom:12px;">Thank you <em style=\'font-style:italic;color:#7C6A54\'>so much.</em></p><p style=\'font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:#6A6058;\'>Your love letter is on its way.</p></div>';
-  localStorage.setItem('jfy_popup_shown','1');
-  setTimeout(function(){document.getElementById('emailPopup').style.display='none';},3000);
+  var ac=new AbortController();
+  setTimeout(function(){ac.abort();},10000);
+  fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'g=V55Ssm&email='+encodeURIComponent(e),signal:ac.signal}).then(function(){
+    document.getElementById('emailPopup').innerHTML='<div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;border-radius:2px;"><p style="font-family:\'Playfair Display\',serif;font-size:28px;font-weight:400;color:#141210;margin-bottom:12px;">Thank you <em style=\'font-style:italic;color:#7C6A54\'>so much.</em></p><p style=\'font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:#6A6058;\'>Your love letter is on its way.</p></div>';
+    localStorage.setItem('jfy_popup_shown','1');
+    setTimeout(function(){document.getElementById('emailPopup').style.display='none';},3000);
+  }).catch(function(){
+    alert('Something went wrong. Please try again or email support@jesusforeveryours.com');
+  });
 }
 setTimeout(showPopup,8000);
 </script>

@@ -6,7 +6,7 @@ import shutil
 
 def run_command(command, cwd=None):
     try:
-        result = subprocess.run(command, shell=True, check=True, capture_output=True, text=True, cwd=cwd)
+        result = subprocess.run(command, shell=True, check=True, capture_output=True, text=True, cwd=cwd, timeout=60)
         return result.stdout.strip()
     except subprocess.CalledProcessError as e:
         print(f"Error running command: {command}\n{e.stderr}")
