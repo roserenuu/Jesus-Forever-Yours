@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /cart.html
+Disallow: /thankyou-digital.html
+Disallow: /thankyou-hardcover.html
+Disallow: /email-order-confirmation.html
+Disallow: /email-welcome.html
+Disallow: /404.html
 
 Sitemap: https://jesusforeveryours.com/sitemap.xml
