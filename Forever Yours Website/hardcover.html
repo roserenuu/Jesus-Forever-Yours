@@ -48,7 +48,7 @@
       --text-m: #6A6058;
       --text-l: #A09888;
     }
-    html { scroll-behavior: smooth }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px }
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
 
 
@@ -640,6 +640,48 @@
   }
 </style>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Forever Yours: 24 Days With Jesus — Hardcover",
+    "description": "A 24-day devotional of intimate love letters from God, paired with Scripture and journaling space. Hardcover edition.",
+    "image": "https://jesusforeveryours.com/images/book-cover.jpg",
+    "brand": {"@type": "Brand", "name": "Rose Renuu"},
+    "offers": {
+      "@type": "Offer",
+      "price": "20.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://jesusforeveryours.com/hardcover.html",
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": "28", "maxValue": "42", "unitCode": "DAY"}}
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "500",
+      "bestRating": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Michelle K."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Forever Yours is the devotional I did not know I needed. The way Scripture comes alive in these pages is something special."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Sarah M."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "This book brought me back to a deeper relationship with God. The words in these pages helped me feel His presence again."
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <nav class="site-nav">
@@ -684,7 +726,7 @@
       <div class="product-hero-txt">
         <p class="eyebrow reveal">Hardcover Edition</p>
         <h1 class="reveal d1">24 days.<br/>One love story<br/><em>that never ends.</em></h1>
-        <p class="sub reveal d2">A devotional written as intimate love letters from God's heart to yours paired with Scripture and space to journal.</p>
+        <p class="sub reveal d2">Readers say these letters brought them back to God, gave them peace in seasons of grief and anxiety, and opened conversations about faith they had been praying for. Each love letter is paired with Scripture and journaling space.</p>
         <div class="reveal d2">
           <div class="stars">★★★★★</div>
           <p class="review-count">500+ Five-Star Reviews</p>
@@ -698,9 +740,7 @@
           <a href="https://buy.stripe.com/9B6bJ10FU3Me5cCfKv38402" class="btn-secondary">Get the Digital Version $10</a>
         <a href="sample.html" class="btn-sample">Read a Sample</a>
         </div>
-        
-        <div style="display:none">
-        </div>
+        <p class="reveal d3" style="font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:var(--text-l);margin-top:14px;max-width:380px;">Many readers get both — the hardcover to hold and the digital to start right away. <span style="color:var(--walnut);font-weight:500">Most popular choice.</span></p>
       </div>
   </section>
 
@@ -895,23 +935,23 @@
     <div class="faq-inner reveal">
       <h2>Questions <em>answered.</em></h2>
       <p class="faq-sub">Everything you need to know</p>
-      <div class="faq-item">
+      <div class="faq-item" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this.querySelector('.faq-q'))}">
         <div class="faq-q" onclick="toggleFaq(this)">How long does each day take? <span>+</span></div>
         <div class="faq-a">Each daily reading takes about 10 to 15 minutes. It is designed to fit into your morning routine without feeling rushed.</div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this.querySelector('.faq-q'))}">
         <div class="faq-q" onclick="toggleFaq(this)">Is this devotional for men too? <span>+</span></div>
         <div class="faq-a">Absolutely. Forever Yours is written for anyone who wants to draw closer to Jesus. The love letters speak to the heart and are not written for a specific gender.</div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this.querySelector('.faq-q'))}">
         <div class="faq-q" onclick="toggleFaq(this)">Can I go through this with a friend or small group? <span>+</span></div>
         <div class="faq-a">Yes and many readers do. The 24 day format works beautifully for small groups, accountability partners, or couples going through it together.</div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this.querySelector('.faq-q'))}">
         <div class="faq-q" onclick="toggleFaq(this)">When will my order arrive? <span>+</span></div>
         <div class="faq-a">Hardcover orders ship within 4 to 6 weeks. You will receive a tracking confirmation once your order is on its way.</div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this.querySelector('.faq-q'))}">
         <div class="faq-q" onclick="toggleFaq(this)">Can I also get the digital version? <span>+</span></div>
         <div class="faq-a">Yes. The digital PDF is available for $10 and delivers instantly to your inbox. Many readers get both so they can start right away while they wait for the hardcover.</div>
       </div>
@@ -926,8 +966,8 @@
   <div class="about-txt">
     <p class="eyebrow reveal">Meet Rose</p>
     <h2 class="reveal d1">Written from<br/><em>her darkest</em><br/>season.</h2>
-    <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. The words God placed on her heart became the foundation of Forever Yours.</p>
-    <p class="reveal d2">She shares God's love through healing words and faith-filled content, reaching hundreds of thousands of people around the world from Los Angeles.</p>
+    <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. Forever Yours is the book she wishes someone had given her — words that remind you God is close, even when He feels far away.</p>
+    <p class="reveal d2">From Los Angeles, Rose shares God's love through healing words and faith-filled content, reaching over 250,000 people around the world. Her mission is simple: to help you feel how deeply and personally God loves you.</p>
     </div>
 </section>
 

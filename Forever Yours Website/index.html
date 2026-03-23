@@ -59,7 +59,7 @@
       --text-m:#6A6058;
       --text-l:#A09888;
     }
-    html{scroll-behavior:smooth;overflow-x:hidden;}body{overflow-x:hidden;}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden;}body{overflow-x:hidden;}
     body{background:var(--white);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
 
     /* NAV */
@@ -212,6 +212,27 @@
     .footer-links a{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-m);text-decoration:none;transition:color .3s}
     .footer-links a:hover{color:var(--black)}
     .footer-copy{font-size:10px;color:var(--text-l)}
+
+    /* HOVER LIFTS */
+    .btn-white:hover,.btn-dark:hover,.btn-outline:hover,.book-btn:hover,.cta-btn-w:hover,.cta-btn-o:hover,.sticky-bar-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,18,16,0.12)}
+    .site-nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(20,18,16,0.1)}
+    .intro-visual img:hover{box-shadow:0 50px 100px rgba(20,18,16,0.2),0 12px 32px rgba(20,18,16,0.12)}
+
+    /* TRUST BADGES */
+    .trust-badges{display:flex;justify-content:center;gap:40px;padding:20px 56px;background:var(--white);border-top:1px solid var(--linen2)}
+    .trust-badge{display:flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--stone)}
+    .trust-badge svg{width:16px;height:16px;fill:var(--walnut)}
+
+    /* SAMPLE CTA */
+    .sample-cta{padding:80px 56px;background:var(--linen);text-align:center}
+    .sample-cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.2vw,40px);font-weight:400;color:var(--black);margin-bottom:12px}
+    .sample-cta h2 em{font-style:italic;color:var(--walnut)}
+    .sample-cta p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
+
+    @media(max-width:768px){
+      .trust-badges{flex-direction:column;align-items:center;gap:14px;padding:20px 24px}
+      .sample-cta{padding:56px 24px}
+    }
 
     /* REVEAL */
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
@@ -798,6 +819,26 @@
     "description": "A 24-day devotional of intimate love letters written from God's heart to yours, paired with Scripture and journaling space.",
     "genre": "Christian Devotional",
     "numberOfPages": "24",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "500",
+      "bestRating": "5"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Michelle K."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Forever Yours is the devotional I did not know I needed. The way Scripture comes alive in these pages is something special."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Sarah M."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "This book brought me back to a deeper relationship with God. The words in these pages helped me feel His presence again."
+      }
+    ],
     "offers": [
       {
         "@type": "Offer",
@@ -983,6 +1024,13 @@
 </div>
 
 
+<!-- TRUST BADGES -->
+<div class="trust-badges reveal">
+  <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> Secure Checkout</div>
+  <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> 500+ Readers</div>
+  <div class="trust-badge"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Satisfaction Guaranteed</div>
+</div>
+
 <!-- SCRIPTURE -->
 <section class="scripture">
   <div style="position:relative;z-index:1;max-width:760px;margin:0 auto" class="reveal">
@@ -1028,7 +1076,7 @@
   <div class="book-info">
     <p class="eyebrow reveal">Order Today</p>
     <h2 class="reveal d1">24 days.<br/><em>One love story</em><br/>that never ends.</h2>
-    <p class="reveal d2">Each of the 24 love letters is paired with Scripture and dedicated journaling space. An invitation to rest in His promises and discover the comfort of His unchanging love.</p>
+    <p class="reveal d2">Readers say these letters brought them back to God, gave them peace in seasons of grief and anxiety, and opened conversations about faith they had been praying for. Each love letter is paired with Scripture and journaling space to help you draw closer to Jesus every single day.</p>
     <div class="bfeats reveal d2">
       <div class="bf">24 personal love letters from God to you</div>
       <div class="bf">Scripture paired with each daily reading</div>
@@ -1044,7 +1092,7 @@
 </section>
 
 <!-- TESTIMONIALS -->
-<section style="background:var(--snow);padding:100px 56px;">
+<section style="background:var(--snow);padding:100px 56px;" aria-label="Reader Reviews">
   <div style="max-width:1000px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:56px;">
       <h2 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:400;color:var(--black);margin-bottom:8px;">Words from <em style="font-style:italic;color:var(--walnut);">readers like you.</em></h2>
@@ -1121,8 +1169,8 @@
   <div class="about-txt">
     <p class="eyebrow reveal" style="justify-content:center;">Meet Rose</p>
     <h2 class="reveal d1">Written from<br/><em>her darkest</em><br/>season.</h2>
-    <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. The words God placed on her heart became the foundation of Forever Yours.</p>
-    <p class="reveal d2">She shares God's love through healing words and faith-filled content, reaching hundreds of thousands of people around the world from Los Angeles.</p>
+    <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. Forever Yours is the book she wishes someone had given her — words that remind you God is close, even when He feels far away.</p>
+    <p class="reveal d2">From Los Angeles, Rose shares God's love through healing words and faith-filled content, reaching over 250,000 people around the world. Her mission is simple: to help you feel how deeply and personally God loves you.</p>
     </div>
 </section>
 
@@ -1140,6 +1188,16 @@
   </div>
 </section>
 
+<!-- SAMPLE CTA -->
+<section class="sample-cta">
+  <div class="reveal" style="max-width:600px;margin:0 auto;">
+    <p class="eyebrow" style="justify-content:center">Free Preview</p>
+    <h2>Read a love letter <em>before you buy.</em></h2>
+    <p>Experience Day 1 of Forever Yours completely free. See why hundreds of readers say these words changed everything.</p>
+    <a href="sample.html" class="btn-dark" style="display:inline-block;">Read a Free Sample</a>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section style="padding:90px 56px;background:var(--white);">
   <div style="max-width:680px;margin:0 auto;">
@@ -1148,27 +1206,27 @@
       Everything you need to know
     </h2>
 
-    <div class="faq-item reveal" onclick="toggleFaq(this)">
+    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">Is this devotional for men too?</div>
       <div class="faq-icon">+</div>
       <div class="faq-a">Absolutely. The love letters are written from God to His child, and they speak to anyone who wants to draw closer to Jesus, regardless of gender.</div>
     </div>
-    <div class="faq-item reveal" onclick="toggleFaq(this)">
+    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">How long does each day take?</div>
       <div class="faq-icon">+</div>
       <div class="faq-a">Each daily reading takes about 10 to 15 minutes, perfect for busy mornings. The journaling space lets you go deeper if you have more time.</div>
     </div>
-    <div class="faq-item reveal" onclick="toggleFaq(this)">
+    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">What is the difference between hardcover and digital?</div>
       <div class="faq-icon">+</div>
       <div class="faq-a">The hardcover ($20) is a beautiful physical book you can hold, write in, and gift. The digital version ($10) is a PDF you can read on any device immediately after purchase.</div>
     </div>
-    <div class="faq-item reveal" onclick="toggleFaq(this)">
+    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">Can I go through this with a friend or small group?</div>
       <div class="faq-icon">+</div>
       <div class="faq-a">Yes! Many readers go through Forever Yours with a friend, sister, or small group. The 24-day format makes it easy to stay on the same page and share what God is speaking.</div>
     </div>
-    <div class="faq-item reveal" onclick="toggleFaq(this)">
+    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
       <div class="faq-q">When will my order arrive?</div>
       <div class="faq-icon">+</div>
       <div class="faq-a">Hardcover orders typically arrive within 4 to 6 weeks. Digital orders are available immediately after purchase.</div>
