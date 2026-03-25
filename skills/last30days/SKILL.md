@@ -2,12 +2,63 @@
 name: last30days
 description: "When the user wants to research what's trending in Christian content, faith-based communities, devotional topics, or the Jesus Forever Yours niche over the past 30 days. Also use when the user mentions 'what's trending,' 'research topic,' 'what are people saying about,' 'trending in faith,' 'Christian content trends,' 'what's working on Instagram,' 'devotional trends,' 'faith community buzz,' 'competitor research,' 'what's viral in Christian TikTok,' 'BookTok Christian,' 'faith influencer trends,' or 'last 30 days.' Use this to gather real-time social intelligence across Reddit, X, YouTube, TikTok, Instagram, and the web to inform JFY content strategy. For creating social posts, see social-content. For content planning, see content-strategy. For carousel creation, see jfy-carousel-creator."
 metadata:
-  version: 1.0.0
+  version: 2.0.0
+  requires:
+    env:
+      - SCRAPECREATORS_API_KEY
+    optional_env:
+      - OPENAI_API_KEY
+      - XAI_API_KEY
+      - BRAVE_API_KEY
+      - BSKY_HANDLE
+      - BSKY_APP_PASSWORD
+    bins:
+      - python3
 ---
 
 # Last 30 Days Research
 
 You are an expert social media researcher specializing in Christian content, faith-based communities, and devotional brands. Your goal is to research what people are saying, sharing, and engaging with across multiple platforms over the past 30 days, then synthesize findings into actionable insights for the @jesusforeveryours brand.
+
+## Setup & Prerequisites
+
+This skill uses the [last30days research engine](https://github.com/mvanhorn/last30days-skill) for real platform data with actual engagement metrics.
+
+### Installation (one-time)
+
+If the research engine is not yet installed, run:
+```bash
+git clone https://github.com/mvanhorn/last30days-skill.git ~/.claude/skills/last30days-engine
+```
+
+### API Keys
+
+Configure in `~/.config/last30days/.env`:
+
+| Key | Unlocks | Required? |
+|-----|---------|-----------|
+| `SCRAPECREATORS_API_KEY` | Reddit, TikTok, Instagram (real engagement data) | Yes |
+| `OPENAI_API_KEY` | Reddit fallback discovery | Optional |
+| `XAI_API_KEY` | X/Twitter search via Grok | Optional |
+| `BRAVE_API_KEY` | Web search | Optional |
+| `BSKY_HANDLE` + `BSKY_APP_PASSWORD` | Bluesky | Optional |
+
+Without any keys, the skill falls back to WebSearch-only mode (less data, no engagement metrics).
+
+### Locate the Engine
+
+The skill auto-discovers the engine at first run:
+```bash
+for dir in "$HOME/.claude/skills/last30days-engine" \
+           "$HOME/.claude/plugins/last30days-skill" \
+           "$HOME/.claude/skills/last30days"; do
+  [ -f "$dir/scripts/last30days.py" ] && SKILL_ROOT="$dir" && break
+done
+```
+
+If not found, fall back to WebSearch-only mode (see Step 1b).
+
+---
 
 ## Before Researching
 
@@ -45,60 +96,64 @@ Display parsing before proceeding:
 
 ## Step 1: Multi-Platform Research
 
-Execute searches across these platforms in this priority order. Use WebSearch for each, adapting queries to the platform.
+### Step 1a: Research Engine (Primary — if installed)
 
-### 1a. Reddit (Highest Signal)
+Run the last30days Python engine in **foreground** with a 300-second timeout:
 
-Search these communities and keywords:
+```bash
+python3 "${SKILL_ROOT}/scripts/last30days.py" "{TOPIC}" --emit=compact --save-dir=~/Documents/Last30Days
+```
 
-**Key Subreddits**: r/Christianity, r/Christian, r/TrueChristian, r/Devotional, r/Bible, r/ChristianWomen, r/Reformed, r/Journaling, r/BookSuggestions
+For COMPARISON queries, run three passes:
+```bash
+# Pass 1 + 2 (parallel)
+python3 "${SKILL_ROOT}/scripts/last30days.py" "{TOPIC_A}" --emit=compact --save-dir=~/Documents/Last30Days
+python3 "${SKILL_ROOT}/scripts/last30days.py" "{TOPIC_B}" --emit=compact --save-dir=~/Documents/Last30Days
 
-**Search Queries** (run 2-3):
-- `site:reddit.com {TOPIC} 2026`
-- `site:reddit.com Christian devotional {TOPIC}`
-- `site:reddit.com r/Christianity OR r/Christian {TOPIC}`
+# Pass 3 (after passes complete)
+python3 "${SKILL_ROOT}/scripts/last30days.py" "{TOPIC_A} vs {TOPIC_B}" --emit=compact --save-dir=~/Documents/Last30Days
+```
 
-**Extract**: Post titles, upvote counts, top comment insights, subreddit names, recurring themes.
+**What the engine returns**: Ranked items from Reddit, X, YouTube, TikTok, Instagram, Hacker News, Bluesky, Polymarket, and web — each with real engagement metrics (upvotes, likes, views, comments), dates, authors, and relevance scores.
 
-### 1b. X / Twitter
+**Critical**: YouTube transcript highlights are pre-extracted quotable moments. Treat them like Reddit top comments — quote directly in synthesis, attributed to channel name.
 
-**Search Queries** (run 2-3):
-- `{TOPIC} Christian site:x.com`
-- `Christian devotional {TOPIC} 2026`
-- `faith content creator {TOPIC}`
+### Step 1b: WebSearch Fallback (if engine not installed)
 
-**Key Accounts to Watch**: Look for posts from faith influencers, Christian authors, devotional brands, BookTok/BookStagram crossover accounts.
+If the Python engine is not found, fall back to WebSearch queries across platforms:
 
-**Extract**: Post text, like/repost counts, @handles of top voices, trending hashtags.
+**Reddit** (highest signal):
+- Key subs: r/Christianity, r/Christian, r/TrueChristian, r/Devotional, r/Bible, r/ChristianWomen, r/Journaling, r/BookSuggestions
+- Queries: `site:reddit.com {TOPIC}`, `site:reddit.com Christian devotional {TOPIC}`
 
-### 1c. YouTube
+**X / Twitter**:
+- Queries: `{TOPIC} Christian site:x.com`, `faith content creator {TOPIC}`
+- Look for: faith influencers, Christian authors, devotional brands
 
-**Search Queries** (run 1-2):
-- `{TOPIC} Christian YouTube 2026`
-- `Christian devotional {TOPIC} review`
+**YouTube**:
+- Queries: `{TOPIC} Christian YouTube`, `Christian devotional {TOPIC} review`
 
-**Extract**: Video titles, view counts, channel names, key quotes from descriptions.
+**TikTok / Instagram**:
+- Queries: `{TOPIC} Christian TikTok`, `BookTok Christian devotional {TOPIC}`
+- Hashtags: #ChristianTikTok, #FaithContent, #DevotionalLife, #JesusIsKing, #ChristianBookstagram, #FaithJournal, #PrayerJournal, #BibleStudy, #ChristianCreator, #FaithInfluencer
 
-### 1d. TikTok / Instagram
+**Web** (supplemental):
+- Target: Christianity Today, Relevant Magazine, Desiring God, The Gospel Coalition, Publishers Weekly
+- Queries: `{TOPIC} Christian`, `Christian publishing devotional trends`
 
-**Search Queries** (run 2-3):
-- `{TOPIC} Christian TikTok 2026`
-- `{TOPIC} faith Instagram content`
-- `BookTok Christian devotional {TOPIC}`
+### Step 1c: WebSearch Supplementation (always run)
 
-**Key Hashtags to Track**: #ChristianTikTok, #FaithContent, #DevotionalLife, #JesusIsKing, #ChristianBookstagram, #FaithJournal, #PrayerJournal, #BibleStudy, #ChristianCreator, #FaithInfluencer
+After the engine completes (or after WebSearch fallback), supplement with targeted web searches. Exclude reddit.com, x.com, twitter.com (already covered).
 
-**Extract**: Trending formats, viral hooks, engagement patterns, creator names.
+**Adapt queries to QUERY_TYPE:**
+- **TRENDS**: `"Christian content trends {TOPIC}"`, `"faith viral {TOPIC}"`
+- **COMPETITOR**: `"{TOPIC} Instagram strategy"`, `"{TOPIC} content creator"`
+- **CONTENT_IDEAS**: `"Christian content ideas {TOPIC}"`, `"faith Instagram what to post"`
+- **AUDIENCE**: `"Christian women {TOPIC} discussion"`, `"faith community {TOPIC}"`
+- **GENERAL**: `"{TOPIC} Christian"`, `"{TOPIC} faith community"`
 
-### 1e. Hacker News / Web (Supplemental)
-
-**Search Queries** (run 1-2):
-- `{TOPIC} Christian 2026` (general web)
-- `Christian publishing devotional trends 2026`
-
-**Target Sources**: Christianity Today, Relevant Magazine, Desiring God, The Gospel Coalition, Publishers Weekly (religion), Amazon bestseller lists (Christian Living).
-
-**Extract**: Articles, data points, expert opinions, industry trends.
+Include: blogs, Christian publications, industry analysis, Amazon trends.
+**Do NOT** output a separate "Sources:" block — place source names inline on the Web stats line.
 
 ---
 
