@@ -204,7 +204,7 @@
     /* ABOUT */
     .about{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0;background:var(--linen)}
     .about-img{margin-bottom:0;width:100%;overflow:hidden;position:relative}
-    .about-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to bottom,transparent,var(--linen));pointer-events:none}
+    .about-img::after{content:none}
     .about-img img{width:100%;display:block;object-fit:cover;max-height:700px}
     .about-txt{max-width:600px;padding:80px 56px}
     .about-txt h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.4vw,46px);font-weight:400;line-height:1.1;color:var(--black);margin-bottom:22px}
@@ -660,6 +660,8 @@
     .book-split { grid-template-columns: 1fr !important; }
     .book-split-text { padding: 48px 24px !important; }
     .book-split-img { padding: 48px 24px !important; min-height: 360px !important; }
+    .love-letter { padding: 56px 24px !important; }
+    .ll-inner { grid-template-columns: 1fr !important; gap: 32px !important; }
   }
 </style>
 
@@ -682,9 +684,12 @@
 
 <style>
   @media(max-width: 768px) {
-    .about { padding: 0 !important; }
-    
-    .about-img img { width: 100% !important; max-width: none !important; display: block !important; margin: 0 !important; }
+    .about { padding: 0 !important; grid-template-columns: 1fr !important; text-align: center !important; }
+    .about .about-txt { padding: 48px 24px !important; text-align: center !important; }
+    .about .about-txt .eyebrow { justify-content: center !important; }
+    .about .about-txt h2 { text-align: center !important; }
+    .about .about-img { min-height: auto !important; height: auto !important; }
+    .about-img img { width: 100% !important; max-width: none !important; display: block !important; margin: 0 !important; height: auto !important; }
   }
 </style>
 
@@ -1207,8 +1212,10 @@
 
 
 <!-- BOOK FEATURE -->
-<section class="book-feature" id="book" style="grid-template-columns:1fr;">
-  
+<section class="book-feature" id="book">
+  <div class="book-img reveal">
+    <img src="images/book-cover-2.jpg" alt="Forever Yours devotional book"/>
+  </div>
   <div class="book-info">
     <p class="eyebrow reveal">Order Today</p>
     <h2 class="reveal d1">24 days.<br/><em>One love story</em><br/>that never ends.</h2>
@@ -1297,17 +1304,32 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-img reveal">
-    <img src="images/rose-photo.jpg" alt="Rose Renuu"/>
+<!-- LOVE LETTER PREVIEW -->
+<section class="love-letter">
+  <div class="ll-inner reveal">
+    <div class="ll-label">
+      <p class="eyebrow">From the pages</p>
+      <h3>A love letter<br/>written for <em style="color:var(--walnut);">you.</em></h3>
+    </div>
+    <div class="ll-card">
+      <p class="ll-greeting">My beloved,</p>
+      <p class="ll-text">Before you opened this book, I was already here. Before you whispered that prayer, I already heard it. I am not a God who watches from a distance. I am the One who <strong>walks beside you</strong>, who catches every tear and holds every broken piece. You do not have to earn My love. You already have it. You always have.</p>
+      <p class="ll-sign">— Forever Yours, Jesus</p>
+    </div>
   </div>
-  <div class="about-txt">
-    <p class="eyebrow reveal" style="justify-content:center;">Meet Rose</p>
-    <h2 class="reveal d1">Written from<br/><em>her darkest</em><br/>season.</h2>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about" style="display:grid;grid-template-columns:1fr 1fr;text-align:left;">
+  <div class="about-img reveal" style="margin-bottom:0;height:100%;min-height:560px;">
+    <img src="images/rose-photo.jpg" alt="Rose Renuu" style="width:100%;height:100%;object-fit:cover;"/>
+  </div>
+  <div class="about-txt" style="display:flex;flex-direction:column;justify-content:center;padding:80px 64px;max-width:none;">
+    <p class="eyebrow reveal">Meet Rose</p>
+    <h2 class="reveal d1" style="text-align:left;">Written from<br/><em>her darkest</em><br/>season.</h2>
     <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. Forever Yours is the book she wishes someone had given her. Words that remind you God is close, even when He feels far away.</p>
     <p class="reveal d2">From Los Angeles, Rose shares God's love through healing words and faith-filled content, reaching millions of people around the world. Her mission is simple: to help you feel how deeply and personally God loves you.</p>
-    </div>
+  </div>
 </section>
 
 <!-- INSTAGRAM -->
@@ -1367,6 +1389,19 @@
       <div class="faq-icon">+</div>
       <div class="faq-a">Hardcover orders typically arrive within 4 to 6 weeks. Digital orders are available immediately after purchase.</div>
     </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div>
+    <div class="cta-logo"><img src="images/logo.png" alt="Forever Yours" style="mix-blend-mode:multiply;"/></div>
+    <h2 class="reveal">Your 24 days<br/><em>start today.</em></h2>
+    <p class="reveal d1">Open the pages. Meet Him there. Let these love letters remind you that you were never alone.</p>
+  </div>
+  <div class="cta-btns reveal d2">
+    <a href="https://buy.stripe.com/3cI3cvagu4Qi48yeGr38401" class="cta-btn-w" style="border-radius:50px;">Get the Hardcover $20</a>
+    <a href="https://buy.stripe.com/9B6bJ10FU3Me5cCfKv38402" class="cta-btn-o" style="border-radius:50px;">Download Digital $10</a>
   </div>
 </section>
 
