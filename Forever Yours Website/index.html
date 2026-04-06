@@ -64,7 +64,7 @@
       min-height: 600px;
       overflow: hidden;
       margin-top: -64px;
-      background: url('images/hero.jpg') center/cover no-repeat;
+      background: url('images/hero.jpg') top center/cover no-repeat;
       background-attachment: fixed;
       display: flex;
       flex-direction: column;
@@ -1177,11 +1177,11 @@
 
 <!-- BOOK SOLO -->
 <section style="background:var(--linen);padding:0;">
-  <div class="book-split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:580px;align-items:center;">
-    
+  <div class="book-split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:580px;align-items:stretch;">
+
     <!-- Book image -->
-    <div class="book-split-img" style="background:var(--linen);display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
-      <img src="images/book-cover.jpg" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;animation:bookFloat 4s ease-in-out infinite;" class="reveal"/>
+    <div class="book-split-img" style="overflow:hidden;min-height:580px;">
+      <img src="images/book-cover.jpg" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" class="reveal"/>
     </div>
 
     <!-- Quote + CTA -->
