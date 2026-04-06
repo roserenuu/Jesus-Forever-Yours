@@ -65,7 +65,6 @@
       overflow: hidden;
       margin-top: -64px;
       background: url('images/hero.jpg') center/cover no-repeat;
-      background-attachment: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -130,6 +129,7 @@
 
     /* MARQUEE */
     .marquee-wrap{overflow:hidden;padding:15px 0;background:var(--linen)}
+    @media(min-width:769px){.marquee-wrap{display:none;}}
     .marquee-track{display:flex;animation:mq 15s linear infinite;width:max-content}
     @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
     .marquee-item{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(20,18,16,0.7);padding:0 48px;white-space:nowrap;display:flex;align-items:center;gap:48px}
@@ -215,6 +215,14 @@
     .a-l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-top:4px}
     .about-sig{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--black);margin-top:28px}
     .about-sig-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-top:5px}
+    @media(min-width: 769px) {
+      .about { flex-direction: row; align-items: flex-start; text-align: left; }
+      .about-img { width: 50%; }
+      .about-img img { width: 100%; height: auto; max-height: none; object-fit: unset; display: block; }
+      .about-img::after { display: none; }
+      .about-txt { max-width: none; width: 50%; padding: 80px 72px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; }
+      .about-txt .eyebrow { justify-content: flex-start; }
+    }
 
     /* INSTAGRAM */
     .ig-section{padding:90px 56px;background:var(--snow)}
@@ -388,7 +396,8 @@
       .love-letter { padding: 56px 24px; }
       .ll-inner { grid-template-columns: 1fr; gap: 32px; }
       .about-txt { padding: 48px 24px; }
-      .about-stats { flex-direction: column; align-items: center; gap: 20px; }
+      .about-stats { display: none; }
+      .about-testimony-link { display: none; }
 
     }
 
@@ -457,7 +466,6 @@
 
   <style>
     html, body { overflow-x: clip; max-width: 100%; }
-    * { max-width: 100%; }
     
     .sticky-bar {
       position: fixed !important;
@@ -964,9 +972,8 @@
 
 <style>
   @media(min-width: 769px) {
-    .site-footer { 
-      padding: 64px 80px 48px !important; 
-      background: #F1EDE6 !important;
+    .site-footer {
+      padding: 64px 80px 48px !important;
     }
     .site-footer-inner { 
       max-width: 1200px !important; 
@@ -1171,11 +1178,11 @@
 
 <!-- BOOK SOLO -->
 <section style="background:var(--linen);padding:0;">
-  <div class="book-split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:580px;align-items:center;">
-    
+  <div class="book-split" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;min-height:580px;align-items:stretch;">
+
     <!-- Book image -->
-    <div class="book-split-img" style="background:var(--linen);display:flex;align-items:center;justify-content:center;padding:0;overflow:hidden;">
-      <img src="images/book-cover.jpg" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;animation:bookFloat 4s ease-in-out infinite;" class="reveal"/>
+    <div class="book-split-img" style="overflow:hidden;min-height:580px;">
+      <img src="images/book-cover.jpg" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" class="reveal"/>
     </div>
 
     <!-- Quote + CTA -->
@@ -1207,7 +1214,7 @@
 
 
 <!-- BOOK FEATURE -->
-<section class="book-feature" id="book" style="grid-template-columns:1fr;">
+<section class="book-feature" id="book" style="grid-template-columns:1fr;max-width:1100px;margin:0 auto;">
   
   <div class="book-info">
     <p class="eyebrow reveal">Order Today</p>
