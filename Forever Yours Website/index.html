@@ -215,11 +215,11 @@
     .about-sig{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--black);margin-top:28px}
     .about-sig-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-top:5px}
     @media(min-width: 769px) {
-      .about { flex-direction: row; align-items: flex-start; text-align: left; }
-      .about-img { width: 50%; }
-      .about-img img { width: 100%; height: auto; max-height: none; object-fit: unset; display: block; }
+      .about { flex-direction: row; align-items: stretch; text-align: left; }
+      .about-img { width: 50%; max-height: 520px; overflow: hidden; position: relative; }
+      .about-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 12%; max-height: none; display: block; }
       .about-img::after { display: none; }
-      .about-txt { max-width: none; width: 50%; padding: 80px 72px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; }
+      .about-txt { max-width: none; width: 50%; padding: 60px 72px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; text-align: left; }
       .about-txt .eyebrow { justify-content: flex-start; }
     }
 
