@@ -150,7 +150,31 @@
       background-size: 200px 200px;
     }
     .hero-cinema .hero-logo,
-    .hero-cinema .hero-eyebrow { position: relative; z-index: 1; }
+    .hero-cinema .hero-eyebrow,
+    .hero-cinema .hero-cta { position: relative; z-index: 1; }
+    .hero-cinema .hero-cta {
+      margin-top: 28px;
+      display: inline-block;
+      background: rgba(255,255,255,0.95);
+      color: #141210;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 6px 20px rgba(20,18,16,0.2);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: heroFadeIn .8s ease 1.2s forwards;
+      transition: background .3s, transform .2s;
+    }
+    .hero-cinema .hero-cta:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
     .hero-cinema .hero-logo {
       width: clamp(180px, 30vw, 360px);
       height: auto;
@@ -179,7 +203,15 @@
     }
 
     @media(max-width:768px) {
-      .hero-cinema { background-attachment: scroll; min-height: 520px; }
+      .hero-cinema {
+        background-attachment: scroll;
+        height: 70vh;
+        min-height: 420px;
+        max-height: 560px;
+        padding: 32px 24px;
+      }
+      .hero-cinema .hero-logo { width: clamp(140px, 48vw, 220px); }
+      .hero-cinema .hero-cta { font-size: 10px; padding: 14px 28px; margin-top: 20px; }
     }
 
     /* MARQUEE */
@@ -1212,6 +1244,7 @@
 <section class="hero-cinema">
   <img src="images/logo.png" alt="Forever Yours" class="hero-logo" width="360" height="120"/>
   <p class="hero-eyebrow">24 DAYS WITH JESUS OUT NOW</p>
+  <a href="hardcover.html" class="hero-cta">Start Your 24 Days</a>
 </section>
 
 <!-- SCRIPTURE -->

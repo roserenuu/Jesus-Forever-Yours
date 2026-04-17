@@ -38,10 +38,18 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
     :root {
+      /* Backgrounds */
       --white: #FFFFFF;
       --snow: #F8F6F3;
       --linen: #F1EDE6;
       --linen2: #E8E0D5;
+      /* Ink (3 neutrals) */
+      --ink: #141210;
+      --ink-muted: #6A6058;
+      --ink-soft: #9A9080;
+      /* Accent */
+      --accent: #7C6A54;
+      /* Legacy aliases */
       --black: #141210;
       --walnut: #7C6A54;
       --walnut-l: #A89278;
@@ -49,6 +57,28 @@
       --text: #141210;
       --text-m: #6A6058;
       --text-l: #7A7062;
+      /* Type scale */
+      --fs-eyebrow: 10px;
+      --fs-meta: 11px;
+      --fs-body: 16px;
+      --fs-body-lg: 19px;
+      --fs-h3: clamp(22px, 2.4vw, 28px);
+      --fs-h2: clamp(30px, 3.6vw, 50px);
+      --fs-h1: clamp(36px, 5vw, 64px);
+      --lh-tight: 1.1;
+      --lh-body: 1.7;
+      /* Spacing scale */
+      --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 40px;
+      --sp-5: 60px; --sp-6: 80px; --sp-7: 100px; --sp-8: 120px;
+      /* Section rhythm */
+      --section-y: 100px;
+      --section-x: 56px;
+    }
+    @media(min-width:1024px){
+      :root{ --section-y: 120px; --section-x: 72px; }
+    }
+    @media(max-width:768px){
+      :root{ --section-y: 72px; --section-x: 24px; }
     }
     html { scroll-behavior: smooth; scroll-padding-top: 80px }
     body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
@@ -77,8 +107,8 @@
     .shipping-note { font-size: 11px; color: var(--text-l); letter-spacing: .08em; text-align: center; margin-top: 16px }
 
     /* DETAILS */
-    .product-details { max-width: 1200px; margin: 0 auto; padding: 100px 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px }
-    .details-block h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 3vw, 36px); font-weight: 400; color: var(--black); margin-bottom: 24px; line-height: 1.2 }
+    .product-details { max-width: 1200px; margin: 0 auto; padding: var(--section-y) var(--section-x); display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-6) }
+    .details-block h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); margin-bottom: var(--sp-3); line-height: var(--lh-tight) }
     .details-block h2 em { font-style: italic; color: var(--walnut) }
     .details-block p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.75; margin-bottom: 20px }
     .details-list { list-style: none; margin-top: 8px }
@@ -86,14 +116,14 @@
     .details-list li span { color: var(--black); font-weight: 400; text-align: right; max-width: 60% }
 
     /* SCRIPTURE */
-    .scripture-strip { background: var(--linen); padding: 80px 56px; text-align: center }
+    .scripture-strip { background: var(--linen); padding: var(--section-y) var(--section-x); text-align: center }
     .scripture-strip blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(22px, 3vw, 34px); font-style: italic; font-weight: 300; line-height: 1.5; color: var(--text); max-width: 720px; margin: 0 auto 16px }
     .scripture-strip blockquote em { color: var(--walnut); font-style: italic }
     .scripture-ref { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: var(--stone) }
 
     /* SECTIONS */
-    .sections { max-width: 1200px; margin: 0 auto; padding: 100px 56px }
-    .sections h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3.2vw, 40px); font-weight: 400; color: var(--black); margin-bottom: 48px; text-align: center }
+    .sections { max-width: 1200px; margin: 0 auto; padding: var(--section-y) var(--section-x) }
+    .sections h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); margin-bottom: var(--sp-5); text-align: center }
     .sections h2 em { font-style: italic; color: var(--walnut) }
     .sections-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; grid-template-rows: auto auto }
     .section-card:nth-child(5) { grid-column: 2 / 4; }
@@ -102,9 +132,9 @@
     .section-title { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--walnut) }
 
     /* REVIEWS */
-    .reviews { background: var(--snow); padding: 100px 56px }
+    .reviews { background: var(--snow); padding: var(--section-y) var(--section-x) }
     .reviews-inner { max-width: 1000px; margin: 0 auto }
-    .reviews h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 38px); font-weight: 400; color: var(--black); text-align: center; margin-bottom: 8px }
+    .reviews h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); text-align: center; margin-bottom: var(--sp-1) }
     .reviews-sub { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--stone); text-align: center; margin-bottom: 56px }
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px }
     .review-card { background: var(--white); padding: 36px 28px }
@@ -113,8 +143,8 @@
     .review-author { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--stone) }
 
     /* CTA */
-    .product-cta { background: var(--linen); padding: 100px 56px; text-align: center }
-    .product-cta h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 4vw, 52px); font-weight: 400; color: var(--black); line-height: 1.1; margin-bottom: 16px }
+    .product-cta { background: var(--linen); padding: var(--section-y) var(--section-x); text-align: center }
+    .product-cta h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); line-height: var(--lh-tight); margin-bottom: var(--sp-2) }
     .product-cta h2 em { font-style: italic; color: var(--walnut) }
     .product-cta p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; font-weight: 300; color: var(--text-m); margin-bottom: 40px }
     .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap }
@@ -164,10 +194,10 @@
     }
   
     /* REVIEW CAROUSEL */
-    .carousel-section { background: var(--white); padding: 100px 56px }
+    .carousel-section { background: var(--white); padding: var(--section-y) var(--section-x) }
     .carousel-inner { max-width: 1000px; margin: 0 auto }
     .carousel-header { text-align: center; margin-bottom: 56px }
-    .carousel-header h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px,3vw,40px); font-weight: 400; color: var(--black); margin-bottom: 8px }
+    .carousel-header h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); margin-bottom: var(--sp-1) }
     .carousel-header h2 em { font-style: italic; color: var(--walnut) }
     .carousel-header p { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--stone) }
     .carousel-track-wrap { overflow: hidden; position: relative }
@@ -206,9 +236,9 @@
     .btn-sample:hover { color: var(--black) }
 
     /* FAQ */
-    .faq-section { background: var(--snow); padding: 100px 56px }
+    .faq-section { background: var(--snow); padding: var(--section-y) var(--section-x) }
     .faq-inner { max-width: 720px; margin: 0 auto }
-    .faq-section h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px,3vw,38px); font-weight: 400; color: var(--black); text-align: center; margin-bottom: 8px }
+    .faq-section h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); text-align: center; margin-bottom: var(--sp-1) }
     .faq-section h2 em { font-style: italic; color: var(--walnut) }
     .faq-sub { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .25em; text-transform: uppercase; color: var(--stone); text-align: center; margin-bottom: 52px }
     .faq-item { border-bottom: 1px solid var(--linen2) }
@@ -219,20 +249,20 @@
     .faq-a.open { max-height: 300px; padding-bottom: 20px }
 
     /* ABOUT */
-    .about-section { background: var(--white); padding: 100px 56px }
+    .about-section { background: var(--white); padding: var(--section-y) var(--section-x) }
     .about-inner { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px }
     .about-img { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); overflow: hidden }
     .about-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(to bottom, transparent, var(--white)); pointer-events: none }
     .about-img img { width: 100%; display: block; object-fit: cover; max-height: 700px }
     .about-txt .eyebrow { margin-bottom: 16px; justify-content: center }
-    .about-txt h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px,3vw,36px); font-weight: 400; color: var(--black); line-height: 1.2; margin-bottom: 20px; text-align: center }
+    .about-txt h2 { font-family: 'Playfair Display', serif; font-size: var(--fs-h2); font-weight: 400; color: var(--ink); line-height: var(--lh-tight); margin-bottom: var(--sp-3); text-align: center }
     .about-txt h2 em { font-style: italic; color: var(--walnut) }
     .about-txt p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.75; margin-bottom: 16px; text-align: center }
     .about-sig { font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; color: var(--walnut); margin-top: 24px; text-align: center }
     .about-sig-sub { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--stone); margin-top: 4px; text-align: center }
 
     /* RELATED PRODUCT */
-    .related-section { background: var(--linen); padding: 80px 56px; text-align: center }
+    .related-section { background: var(--linen); padding: var(--section-y) var(--section-x); text-align: center }
     .related-inner { max-width: 600px; margin: 0 auto }
     .related-section h3 { font-family: 'Playfair Display', serif; font-size: clamp(22px,2.5vw,32px); font-weight: 400; color: var(--black); margin-bottom: 12px }
     .related-section h3 em { font-style: italic; color: var(--walnut) }
