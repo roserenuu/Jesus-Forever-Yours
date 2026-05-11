@@ -744,7 +744,8 @@
       .hero-book-wrap {
         position: relative;
         width: 128%;
-        margin-right: -14%;
+        margin-left: -14%;
+        margin-right: 0;
         height: auto;
         bottom: auto;
         left: auto;
@@ -784,12 +785,15 @@
       .edition-title { font-size: 22px; }
       .edition-price { font-size: 32px; margin: 12px 0; }
       .reviews-grid { grid-template-columns: 1fr; }
-      .rose-section { grid-template-columns: 1fr; gap: 18px; text-align: left; }
+      .rose-section { grid-template-columns: 1fr; gap: 20px; text-align: left; justify-items: center; }
+      .rose-section > div:first-child { display: flex; justify-content: center; width: 100%; }
+      .rose-section > div:last-child { text-align: left; width: 100%; }
       .rose-photo, .rose-photo-placeholder {
-        width: 120px !important; height: 120px !important;
-        border-radius: 24px !important; aspect-ratio: 1 / 1 !important;
+        width: 140px !important; height: 140px !important;
+        border-radius: 28px !important; aspect-ratio: 1 / 1 !important;
+        margin: 0 auto;
       }
-      .rose-photo-placeholder { font-size: 48px; }
+      .rose-photo-placeholder { font-size: 56px; }
       .email-form { flex-direction: column; }
       .cta-strip { flex-direction: column; text-align: center; padding: 28px 18px; }
       .book-preview { padding: 28px 18px; }
@@ -798,7 +802,9 @@
       /* App section */
       .app-section { padding: 36px 0 !important; }
       .app-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
-      .app-grid .app-icon-img { width: 132px !important; height: 132px !important; border-radius: 30px !important; }
+      .app-grid > div:first-child { order: 2; }
+      .app-grid > div:last-child { order: 1; }
+      .app-grid .app-icon-img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
 
       /* Editions section */
       .editions-section { padding: 36px 0 28px !important; }
