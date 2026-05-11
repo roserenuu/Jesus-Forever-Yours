@@ -720,32 +720,37 @@
     }
 
     @media (max-width: 900px) {
-      /* HERO — two columns; book floats next to title, kept large */
+      /* HERO — two columns; tight, no dead space; bold book on the right */
       .hero {
-        grid-template-columns: 50% 50%;
-        min-height: 88vh;
+        grid-template-columns: 52% 48%;
+        min-height: 0;
         padding-top: var(--nav-h);
         gap: 0;
         align-items: center;
       }
-      .hero-left { padding: 24px 4px 24px 18px; max-width: 100%; }
+      .hero-left {
+        padding: 24px 4px 28px 18px;
+        max-width: 100%;
+      }
       .hero-right {
-        height: 100%;
+        height: auto;
         min-height: 0;
-        align-items: flex-end;
-        justify-content: center;
-        padding: 0;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 12px 0 12px 0;
         overflow: visible;
+        position: relative;
       }
       .hero-book-wrap {
         position: relative;
-        width: 120%;
+        width: 128%;
+        margin-right: -14%;
         height: auto;
         bottom: auto;
         left: auto;
-        transform: translateX(-4%);
+        transform: none;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
       }
       .hero-book {
@@ -757,17 +762,17 @@
       }
       .hero-scripture-pill, .hero-days-pill, .hero-star-pill { display: none; }
       .hero-title {
-        font-size: clamp(34px, 10vw, 48px) !important;
-        line-height: 0.98;
-        margin-bottom: 18px;
-        letter-spacing: -0.035em;
+        font-size: clamp(26px, 7.2vw, 34px) !important;
+        line-height: 1.02;
+        margin-bottom: 16px;
+        letter-spacing: -0.03em;
       }
-      .hero-title .ht-line { display: block; }
-      .hero-bullets { margin-bottom: 20px; gap: 5px; }
+      .hero-title .ht-line { display: block; white-space: nowrap; }
+      .hero-bullets { margin-bottom: 18px; gap: 5px; }
       .hero-bullets li { font-size: 13px; gap: 8px; }
       .hero-bullets li::before { width: 4px; height: 4px; }
-      .hero-actions { flex-direction: column; gap: 10px; margin-bottom: 20px; align-items: flex-start; }
-      .hero-actions .btn-lg { padding: 13px 22px; font-size: 13px; }
+      .hero-actions { flex-direction: column; gap: 9px; margin-bottom: 18px; align-items: flex-start; }
+      .hero-actions .btn-lg { padding: 12px 20px; font-size: 13px; }
       .hero-social-proof { gap: 10px; flex-wrap: nowrap; align-items: center; }
       .hero-avatars span { width: 22px; height: 22px; font-size: 10px; border-width: 1.5px; margin-left: -5px; }
       .hero-proof-text { font-size: 12px; line-height: 1.3; }
@@ -813,11 +818,11 @@
     }
 
     @media (max-width: 380px) {
-      .hero { grid-template-columns: 52% 48%; min-height: 84vh; }
-      .hero-left { padding: 18px 4px 18px 14px; }
-      .hero-title { font-size: 30px !important; }
+      .hero { grid-template-columns: 54% 46%; min-height: 0; }
+      .hero-left { padding: 20px 4px 22px 14px; }
+      .hero-title { font-size: 24px !important; }
       .hero-bullets li { font-size: 12px; }
-      .hero-actions .btn-lg { font-size: 12px; padding: 12px 18px; }
+      .hero-actions .btn-lg { font-size: 12px; padding: 11px 16px; }
       .hero-avatars span { width: 20px; height: 20px; font-size: 9px; }
       .hero-proof-text { font-size: 11px; }
     }
