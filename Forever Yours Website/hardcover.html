@@ -31,27 +31,27 @@
     .hero-book-side {
       position: relative;
       align-self: start;
-      height: calc(100vh - var(--nav-h));
-      min-height: 640px;
+      height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       overflow: hidden;
-      padding: 36px 48px 52px 0;
     }
     .hero-book-wrap {
-      position: relative;
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
-      width: auto;
-      height: auto;
+      width: 90%;
+      height: 115%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
     }
     .hero-book {
       width: auto;
-      height: min(90vh, 840px);
-      max-height: calc(100vh - var(--nav-h) - 32px);
+      height: 100%;
       max-width: 100%;
       object-fit: contain;
       object-position: bottom center;
