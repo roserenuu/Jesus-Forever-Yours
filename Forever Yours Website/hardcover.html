@@ -183,18 +183,23 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-book-side {
-        height: clamp(380px, 98vw, 520px);
+        height: auto;
         min-height: 0;
         order: -1;
+        padding: 28px 0 0;
       }
       .hero-book-wrap {
-        width: min(100%, 500px);
-        height: 100%;
-        bottom: -16px;
+        position: relative;
+        width: min(70vw, 310px);
+        height: auto;
+        bottom: auto;
+        left: auto;
+        transform: none;
       }
+      .hero-book { width: 100%; height: auto; max-width: none; }
       .hero-info {
         min-height: auto;
-        padding: 26px 24px 52px;
+        padding: 22px 24px 52px;
       }
       .hero-info .section-title {
         font-size: clamp(36px, 10vw, 48px) !important;
