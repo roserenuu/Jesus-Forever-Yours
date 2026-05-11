@@ -1,359 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Terms of Service | Jesus Forever Yours</title>
-  <meta name="description" content="Terms of Service for jesusforeveryours.com and Rose Renuu LLC."/>
-  <meta name="keywords" content="Forever Yours terms of service, Rose Renuu terms, jesusforeveryours.com terms"/>
-  <link rel="canonical" href="https://jesusforeveryours.com/terms"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="icon" type="image/png" href="images/logo.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | Forever Yours</title>
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
-    :root {
-      --white: #FFFFFF;
-      --snow: #F8F6F3;
-      --linen: #F1EDE6;
-      --linen2: #E8E0D5;
-      --black: #141210;
-      --walnut: #7C6A54;
-      --stone: #9A9080;
-      --text: #141210;
-      --text-m: #6A6058;
-      --text-l: #7A7062;
+    .legal-hero {
+      padding-top: calc(var(--nav-h) + 80px);
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border-light);
     }
-    html { scroll-behavior: smooth }
-    body { font-family: 'Jost', sans-serif; background: var(--white); color: var(--text); -webkit-font-smoothing: antialiased }
-    .hero { background: var(--white); padding: 72px 56px 56px; text-align: center; border-bottom: 1px solid var(--linen2) }
-    .eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .35em; text-transform: uppercase; color: var(--walnut); display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px }
-    
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px,4vw,52px); font-weight: 400; color: var(--black); line-height: 1.08; margin-bottom: 12px }
-    .hero h1 em { font-style: italic; color: var(--walnut) }
-    .hero .date { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-l) }
-    .content { max-width: 720px; margin: 0 auto; padding: 80px 56px 100px }
-    .content h2 { font-family: 'Playfair Display', serif; font-size: clamp(20px,2.5vw,28px); font-weight: 400; color: var(--black); margin-bottom: 16px; margin-top: 48px }
-    .content h2:first-child { margin-top: 0 }
-    .content p { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.8; margin-bottom: 16px }
-    .content a { color: var(--walnut); text-decoration: underline; text-underline-offset: 3px }
-    .divider { width: 48px; height: 1px; background: var(--linen2); margin: 40px 0 }
-    @media(max-width:768px) { .hero { padding: 56px 24px 40px } .content { padding: 56px 24px 72px } }
-
-    /* SKIP LINK */
-    .skip-link { position: absolute; top: -100px; left: 16px; background: var(--black, #141210); color: var(--white, #FFFFFF); padding: 12px 24px; z-index: 99999; font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: .1em; text-decoration: none; border-radius: 0 0 8px 8px; transition: top .2s }
-    .skip-link:focus { top: 0 }
-    /* SR ONLY */
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0 }
-    /* FOCUS STYLES */
-    *:focus-visible { outline: 2px solid var(--walnut, #7C6A54); outline-offset: 2px }
-    /* REDUCED MOTION */
-    @media(prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important }
-      .reveal { opacity: 1 !important; transform: none !important; transition: none !important }
+    .legal-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 64px 40px 100px;
     }
-
-  /* NAV */
-  .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: rgba(248,246,243,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linen2); padding: 0 56px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-  .site-nav-logo { height: 24px; width: auto; mix-blend-mode: multiply; text-decoration: none; }
-  .site-nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-  .site-nav-links a { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: var(--text-m); text-decoration: none; transition: color .3s; }
-  .site-nav-links a:hover { color: var(--walnut); }
-  .site-nav-cta { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; background: var(--black); color: var(--white); padding: 10px 22px; text-decoration: none; transition: background .3s; white-space: nowrap; border-radius: 50px; }
-  .site-nav-cta:hover { background: var(--walnut); }
-  .site-nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-  .site-nav-mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--snow); border-bottom: 1px solid var(--linen2); z-index: 999; padding: 24px 56px; flex-direction: column; gap: 20px; }
-  .site-nav-mobile-menu a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--text-m); text-decoration: none; padding: 8px 0; border-bottom: 1px solid var(--linen2); }
-  .site-nav-mobile-menu a:last-child { border-bottom: none; }
-  .site-nav-mobile-menu.open { display: flex; }
-  .site-nav-spacer { height: 64px; }
-  @media(max-width:960px) {
-    .site-nav { padding: 0 24px; }
-    .site-nav-links { display: none; }
-    .site-nav-cta { display: none; }
-    .site-nav-mobile-btn { display: block; }
-    .site-nav-mobile-menu { padding: 24px; }
-  }
-
-  /* FOOTER */
-  .site-footer { background: var(--linen); border-top: 1px solid var(--linen2); padding: 48px 56px 36px; }
-  .site-footer-inner { max-width: 1200px; margin: 0 auto; }
-  .site-footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 32px; }
-  .site-footer-logo { height: 28px; width: auto; mix-blend-mode: multiply; margin-bottom: 12px; display: block; }
-  .site-footer-tagline { font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic; font-weight: 300; color: var(--text-m); line-height: 1.65; }
-  .site-footer-col h4 { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: .25em; text-transform: uppercase; color: var(--stone); margin-bottom: 14px; }
-  .site-footer-col ul { list-style: none; }
-  .site-footer-col ul li { margin-bottom: 8px; }
-  .site-footer-col ul li a { font-family: 'Jost', sans-serif; font-size: 14px; color: var(--text-m); text-decoration: none; transition: color .3s; }
-  .site-footer-col ul li a:hover { color: var(--walnut); }
-  .site-footer-bottom { border-top: 1px solid var(--linen2); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
-  .site-footer-copy { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .1em; color: var(--text-l); }
-  .site-footer-social { display: flex; gap: 20px; }
-  .site-footer-social a { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--text-l); text-decoration: none; transition: color .3s; }
-  .site-footer-social a:hover { color: var(--walnut); }
-  @media(max-width:960px) {
-    .site-footer { padding: 40px 24px 28px; }
-    .site-footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
-    .site-footer-bottom { flex-direction: column; text-align: center; }
-  }
-  @media(max-width:480px) {
-    .site-footer-top { grid-template-columns: 1fr; }
-  }
-.site-footer
-.site-footer-social
-
-    a:visited { text-decoration: none; }
-    .site-nav-links a:visited { color: #6A6058 !important; }
-    .site-nav-cta:visited { color: #FFFFFF !important; }
-    .site-nav-mobile-menu a:visited { color: #6A6058 !important; }
-    .btn-primary:visited, .cta-btn-dark:visited { color: #FFFFFF !important; }
-    .btn-secondary:visited, .cta-btn-outline:visited { color: #6A6058 !important; }
-    .btn-dark:visited, .book-btn:visited, .related-btn:visited { color: #141210 !important; }
-    .btn-ghost-w:visited { color: #FFFFFF !important; }
-    .site-footer a, .site-footer a:link, .site-footer a:visited, .site-footer a:active { color: #6A6058 !important; text-decoration: none !important; }
-    .site-footer-social a, .site-footer-social a:link, .site-footer-social a:visited, .site-footer-social a:active { color: #A09888 !important; }
-    .hero-sub a:visited { color: inherit !important; }
-    .contact-detail-value a:visited { color: #7C6A54 !important; }
-    .form-submit:visited { color: #FFFFFF !important; }
-    .sticky-bar a:visited { color: #FFFFFF !important; }
-
+    .legal-body h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      margin: 40px 0 12px;
+    }
+    .legal-body h2:first-child { margin-top: 0; }
+    .legal-body p, .legal-body li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+    .legal-body ul { padding-left: 20px; margin-bottom: 14px; }
+    .legal-body a { color: var(--accent); text-decoration: none; }
+    .legal-body a:hover { text-decoration: underline; }
+    .legal-meta { font-size: 13px; color: var(--ink-muted); margin-bottom: 40px; }
+    .legal-toc {
+      background: var(--cream-light);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .legal-toc h3 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 12px;
+    }
+    .legal-toc ol { padding-left: 18px; }
+    .legal-toc li { font-size: 14px; margin-bottom: 6px; }
+    .legal-toc a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .legal-toc a:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .legal-body { padding: 40px 0 80px; } }
   </style>
-<style>
-    .site-nav{position:fixed;top:0;left:0;right:0;z-index:9999;background:rgba(248,246,243,0.97);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid #E8E0D5;padding:0 56px;height:64px;display:flex;align-items:center;justify-content:space-between;}
-    .site-nav-logo{height:24px;width:auto;mix-blend-mode:multiply;text-decoration:none;display:block;}
-    .site-nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
-    .site-nav-links a{font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#6A6058;text-decoration:none;transition:color .3s;}
-    .site-nav-links a:hover{color:#7C6A54;}
-    .site-nav-cta{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;background:#141210;color:#fff;padding:10px 22px;text-decoration:none;transition:background .3s;white-space:nowrap;}
-    .site-nav-cta:hover{background:#7C6A54;}
-    .site-nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;padding:8px;}
-    .site-nav-mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:#F8F6F3;border-bottom:1px solid #E8E0D5;z-index:9998;padding:24px;flex-direction:column;gap:20px;}
-    .site-nav-mobile-menu a{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#6A6058;text-decoration:none;padding:16px 0;border-bottom:1px solid #E8E0D5;display:block;}
-    .site-nav-mobile-menu a:last-child{border-bottom:none;}
-    .site-nav-mobile-menu.open{display:flex;}
-    .site-nav-spacer{height:64px;display:block;}
-    .site-footer{background:#F1EDE6;border-top:1px solid #E8E0D5;padding:48px 56px 36px;}
-    .site-footer-inner{max-width:1200px;margin:0 auto;}
-    .site-footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;margin-bottom:32px;}
-    .site-footer-logo{height:28px;width:auto;mix-blend-mode:multiply;margin-bottom:12px;display:block;}
-    .site-footer-tagline{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;font-weight:300;color:#6A6058;line-height:1.65;}
-    .site-footer-col h4{font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:#9A9080;margin-bottom:14px;}
-    .site-footer-col ul{list-style:none;}
-    .site-footer-col ul li{margin-bottom:8px;}
-    .site-footer-col ul li a{font-family:'Jost',sans-serif;font-size:14px;color:#6A6058;text-decoration:none;transition:color .3s;}
-    .site-footer-col ul li a:hover{color:#7C6A54;}
-    .site-footer-bottom{border-top:1px solid #E8E0D5;padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-    .site-footer-copy{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.1em;color:#A09888;}
-    .site-footer-social{display:flex;gap:20px;}
-    .site-footer-social a{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;transition:color .3s;}
-    .site-footer-social a:hover{color:#7C6A54;}
-    
-    @media(max-width:960px){
-      .site-nav{padding:0 24px;}
-      .site-nav-links{display:none;}
-      .site-nav-cta{display:none;}
-      .site-nav-mobile-btn{display:block;}
-      .site-footer{padding:40px 24px 28px;}
-      .site-footer-top{grid-template-columns:1fr;gap:24px;text-align:center;}
-      .site-footer-col h4{margin-bottom:12px;}
-      .site-footer-col ul li{margin-bottom:6px;}
-      .site-footer-logo{margin:0 auto 12px;}
-      .site-footer-bottom{flex-direction:column;text-align:center;gap:16px;}
-      .site-footer-social{justify-content:center;}
-    }
-    @media(max-width:480px){.site-footer-top{grid-template-columns:1fr;}}
-</style>
+  <link rel="icon" type="image/png" href="app-icon.png">
 
-<style>
-  /* Remove hamburger shadow/background */
-  .site-nav-mobile-btn {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    padding: 8px !important;
-    cursor: pointer !important;
-    outline: none !important;
-  }
-  .site-nav-mobile-btn:focus-visible {
-    background: none !important;
-    box-shadow: none !important;
-    outline: 2px solid #7C6A54 !important;
-    outline-offset: 2px !important;
-  }
-  .site-nav-mobile-btn:active {
-    background: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Mobile general fixes */
-  html, body { overflow-x: clip; max-width: 100%; }
-
-  /* Nav clean on mobile */
-  @media(max-width: 960px) {
-    .site-nav { padding: 0 20px !important; }
-    .site-nav-links { display: none !important; }
-    .site-nav-cta { display: none !important; }
-    .site-nav-mobile-btn { display: block !important; }
-  }
-
-  /* Images don't overflow */
-  img { max-width: 100% !important; height: auto; }
-
-  /* Sections don't overflow on mobile */
-  @media(max-width: 768px) {
-    section, .section, [class*="section"] { max-width: 100%; }
-    .book-feature, .about, .closing-inner, .contact-wrap { grid-template-columns: 1fr !important; }
-    .hero-btns, .cta-btns { flex-direction: column !important; align-items: center !important; width: 100% !important; ;border-radius:50px}
-    .hero-btns a, .cta-btns a { width: 100% !important; text-align: center !important; box-sizing: border-box !important; ;border-radius:50px}
-    .test-grid { grid-template-columns: 1fr !important; }
-    .book-features { grid-template-columns: 1fr 1fr !important; }
-  }
-</style>
-
-
-<style>
-  /* NAV BASE */
-  .site-nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    z-index: 9999 !important;
-    background: rgba(248,246,243,0.97) !important;
-    backdrop-filter: blur(8px) !important;
-    border-bottom: none !important;
-    height: 64px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 0 56px !important;
-  }
-  .site-nav-links { display: flex !important; align-items: center !important; gap: 32px !important; list-style: none !important; }
-  .site-nav-links a { font-family: 'Jost', sans-serif !important; font-size: 10px !important; letter-spacing: .2em !important; text-transform: uppercase !important; color: #6A6058 !important; text-decoration: none !important; }
-  .site-nav-links a:hover { color: #7C6A54 !important; }
-  .site-nav-cta { display: block !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; letter-spacing: .2em !important; text-transform: uppercase !important; background: #141210 !important; color: #fff !important; padding: 10px 22px !important; text-decoration: none !important; white-space: nowrap !important; }
-  .site-nav-mobile-btn { display: none !important; }
-  @media(max-width: 960px) {
-    .site-nav { padding: 0 20px !important; }
-    .site-nav-links { display: none !important; }
-    .site-nav-cta { display: none !important; }
-    .site-nav-mobile-btn { display: block !important; }
-  }
-</style>
-
-
-  <meta property="og:title" content="Terms of Service | Jesus Forever Yours"/>
-  <meta property="og:description" content="Terms of service for jesusforeveryours.com by Rose Renuu LLC."/>
-  <meta property="og:image" content="https://jesusforeveryours.com/images/logo.png"/>
-  <meta property="og:url" content="https://jesusforeveryours.com/terms.html"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Forever Yours by Rose Renuu"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Terms of Service | Jesus Forever Yours"/>
-  <meta name="twitter:description" content="Terms of service for jesusforeveryours.com by Rose Renuu LLC."/>
-  <meta name="twitter:image" content="https://jesusforeveryours.com/images/logo.png"/>
-  <meta name="author" content="Rose Renuu"/>
-  <link rel="canonical" href="https://jesusforeveryours.com/terms"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Terms of Service | Jesus Forever Yours">
+  <meta property="og:description" content="Terms of service for Jesus Forever Yours.">
+  <meta property="og:image" content="https://jesusforeveryours.com/app-icon.png">
+  <meta property="og:site_name" content="Jesus Forever Yours">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service | Jesus Forever Yours">
+  <meta name="twitter:description" content="Terms of service for Jesus Forever Yours.">
+  <meta name="twitter:image" content="https://jesusforeveryours.com/app-icon.png">
+  <!-- Meta description -->
+  <meta name="description" content="Terms of service for Jesus Forever Yours.">
 </head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html"><img src="images/logo.png" alt="Forever Yours" class="site-nav-logo"/></a>
-    <ul class="site-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="hardcover.html">Hardcover</a></li>
-      <li><a href="digital.html">Digital</a></li>
-      <li><a href="testimony.html">My Testimony</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="hardcover.html" class="site-nav-cta">Get the Book</a>
-    <button class="site-nav-mobile-btn" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
-      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" fill="#141210"/><rect y="7" width="22" height="2" fill="#141210"/><rect y="14" width="22" height="2" fill="#141210"/></svg>
-    </button>
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-text.png" alt="Jesus Forever Yours"/>
+        
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hardcover.html">Hardcover</a></li>
+        <li><a href="digital.html">Digital</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hardcover.html" class="nav-cta">Get the Book</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
   </nav>
-  <div class="site-nav-mobile-menu" id="mobileMenu">
+  <div class="nav-mobile" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="hardcover.html">Hardcover $20</a>
     <a href="digital.html">Digital $10</a>
-    <a href="testimony.html">My Testimony</a>
     <a href="contact.html">Contact</a>
-    <a href="sample.html">Read a Sample</a>
+    <a href="hardcover.html" class="nav-cta-mobile">Get the Book</a>
   </div>
-  <div class="site-nav-spacer"></div>
-  <main id="main-content">
-  <section class="hero">
-    <p class="eyebrow">Legal</p>
-    <h1>Terms of <em>Service</em></h1>
-    <p class="date">Last updated March 2026</p>
-  </section>
-  <div class="content">
-    <p>By visiting our site and purchasing from us you agree to be bound by the following terms and conditions. Please read them carefully.</p>
-    <div class="divider"></div>
-    <h2>General</h2>
-    <p>This website is operated by Rose Renuu LLC. By using our site you agree to these terms of service. We reserve the right to update or change these terms at any time.</p>
-    <h2>Products</h2>
-    <p>We reserve the right to discontinue any product at any time. Prices for our products are subject to change without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuance of our products.</p>
-    <h2>Digital Products</h2>
-    <p>Digital downloads are delivered to your email address immediately after purchase. All digital sales are final. Due to the nature of digital products we do not offer refunds on downloads once they have been delivered.</p>
-    <h2>Hardcover Orders</h2>
-    <p>Hardcover orders are printed and shipped through IngramSpark. Please allow 4 to 6 weeks for delivery. Once an order has been submitted it cannot be cancelled or modified.</p>
-    <h2>Accuracy of Information</h2>
-    <p>We are not responsible if information made available on this site is not accurate, complete, or current. The material on this site is provided for general information only and should not be relied upon as the sole basis for decisions.</p>
-    <h2>Intellectual Property</h2>
-    <p>All content on this site including text, images, logos, and the Forever Yours devotional is the property of Rose Renuu LLC and may not be reproduced, distributed, or used without written permission.</p>
-    <h2>Contact</h2>
-    <p>Questions about our terms? Email us at <a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a>.</p>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
-  </script>
-  </main>
-<footer class="site-footer">
-    <div class="site-footer-inner">
-      <div style="text-align:center;margin-bottom:24px;">
-        <p class="site-footer-tagline">24 intimate love letters from God's heart to yours.</p>
+  <section class="legal-hero">
+    <div class="container">
+      <span class="eyebrow">Legal</span>
+      <h1 class="section-title" style="margin-bottom:8px;">Terms of Service</h1>
+      <p class="legal-meta">Last updated: May 3, 2026</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="legal-body">
+      <div class="legal-toc">
+        <h3>Table of Contents</h3>
+        <ol>
+          <li><a href="#agreement">Agreement to Terms</a></li>
+          <li><a href="#products">Products and Orders</a></li>
+          <li><a href="#digital">Digital Products</a></li>
+          <li><a href="#intellectual">Intellectual Property</a></li>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+          <li><a href="#limitation">Limitation of Liability</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
       </div>
-      <div style="text-align:center;margin-bottom:24px;">
-        <a href="hardcover.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Hardcover</a>
-        <a href="digital.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Digital</a>
-        <a href="sample.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Sample</a>
-        <a href="testimony.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Testimony</a>
-        <a href="contact.html" style="margin:0 8px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;text-decoration:none;">Contact</a>
-      </div>
-      <div style="text-align:center;margin-bottom:24px;">
-        <a href="privacy.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Privacy</a>
-        <a href="terms.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Terms</a>
-        <a href="shipping.html" style="margin:0 8px;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;">Shipping</a>
-      </div>
-      <div class="site-footer-bottom" style="border-top:1px solid #E8E0D5;padding-top:20px;text-align:center;">
-        <p class="site-footer-copy">&copy; 2026 Rose Renuu LLC</p>
-        <div class="site-footer-social">
-          <a href="https://instagram.com/jesusforeveryours" target="_blank">@jesusforeveryours</a>
-          <a href="https://instagram.com/roserenuu" target="_blank">@roserenuu</a>
+
+      <p>Please read these Terms of Service carefully before using <strong>jesusforeveryours.com</strong> or purchasing any products from Rose Renuu LLC. By accessing our website or making a purchase, you agree to be bound by these terms.</p>
+
+      <h2 id="agreement">1. Agreement to Terms</h2>
+      <p>By using this website, you confirm that you are at least 13 years old and agree to comply with these Terms of Service. If you do not agree, please do not use our website or purchase our products.</p>
+
+      <h2 id="products">2. Products and Orders</h2>
+      <p>All prices are listed in US dollars. We reserve the right to change prices at any time without notice. Once an order is placed and payment is processed, the price is locked in for that order.</p>
+      <p>We make every effort to display our products accurately. If a product is unavailable after your order is placed, we will notify you and issue a full refund.</p>
+      <p><strong>Hardcover books</strong> ship within 4–6 weeks of purchase. We are not responsible for delays caused by shipping carriers once the order has left our facility.</p>
+
+      <h2 id="digital">3. Digital Products</h2>
+      <p>Digital purchases (PDF downloads) are delivered to the email address provided at checkout. Once a digital product has been delivered, all sales are final. We do not offer refunds on digital products except in cases where the file is defective or fails to deliver.</p>
+      <p>By purchasing a digital product, you agree to use it for personal use only. You may not reproduce, resell, or distribute our digital content without express written permission.</p>
+
+      <h2 id="intellectual">4. Intellectual Property</h2>
+      <p>All content on this website and within our products including text, images, design, and the devotional content is the property of Rose Renuu LLC and is protected by copyright law. You may not reproduce or redistribute any content without our written consent.</p>
+
+      <h2 id="disclaimer">5. Disclaimer</h2>
+      <p>Our products are spiritual and inspirational in nature. The content within <em>Forever Yours</em> is not a substitute for professional counseling, mental health support, or medical advice. If you are in crisis, please reach out to a qualified professional or contact the <a href="https://www.crisistextline.org" target="_blank">Crisis Text Line</a>.</p>
+
+      <h2 id="limitation">6. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Rose Renuu LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of our website or products.</p>
+
+      <h2 id="contact">7. Contact</h2>
+      <p>Questions about these Terms? Contact us at <a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a>.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand"><img src="app-icon.png" alt="Jesus Forever Yours"/>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;">
+            <a href="https://instagram.com/jesusforeveryours" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@jesusforeveryours</a>
+            <a href="https://instagram.com/roserenuu" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@roserenuu</a>
+          </div>
         </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="hardcover.html">Hardcover</a>
+          <a href="digital.html">Digital</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="shipping.html">Shipping</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Rose Renuu LLC. All rights reserved.</span>
       </div>
     </div>
   </footer>
-<style>
-@media(max-width: 480px) {
-  .site-footer-social { flex-direction: column !important; align-items: center !important; gap: 12px !important; }
-}
-</style>
-<style>
-.site-footer { padding-bottom: 36px !important; }
-</style>
-<style>
-.btn-dark, .btn-white, .btn-primary, .btn-secondary, .btn-outline,
-.book-btn, .cta-btn-dark, .cta-btn-outline, .checkout-btn,
-.form-submit, .sticky-bar-btn, .related-btn, .hero-cta, .buy-btn, .product-btn {
-  border-radius: 50px !important;
-}
-</style>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileNav').classList.toggle('open'));
+  </script>
 </body>
 </html>
