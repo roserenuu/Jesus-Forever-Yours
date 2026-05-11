@@ -1,1821 +1,1029 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <!-- SEO -->
-  <title>Forever Yours | 24 Days With Jesus | A Devotional by Rose Renuu</title>
-  <meta name="description" content="Forever Yours is a 24-day devotional of intimate love letters written from God's heart to yours. Written by Rose Renuu. Available in hardcover and digital."/>
-  <meta name="keywords" content="Christian devotional, love letters from God, 24 day devotional, Rose Renuu, faith devotional, Jesus devotional, Christian book, Christian book for men, Christian book for women, Christian gift for teens, devotional for all ages"/>
-  <meta name="author" content="Rose Renuu"/>
-  <link rel="canonical" href="https://jesusforeveryours.com/"/>
-
-  <!-- Open Graph (Facebook, Instagram) -->
-  <meta property="og:title" content="Forever Yours | 24-Day Devotional by Rose Renuu"/>
-  <meta property="og:description" content="24 intimate love letters from God's heart to yours. A faith devotional by Rose Renuu."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://jesusforeveryours.com/"/>
-  <meta property="og:image" content="https://jesusforeveryours.com/images/logo.png"/>
-  <meta property="og:site_name" content="Forever Yours by Rose Renuu"/>
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Forever Yours | 24-Day Devotional by Rose Renuu"/>
-  <meta name="twitter:description" content="24 intimate love letters from God's heart to yours. A faith devotional by Rose Renuu."/>
-  <meta name="twitter:image" content="https://jesusforeveryours.com/images/logo.png"/>
-
-  <!-- Schema.org for Google -->
-  <meta name="robots" content="index, follow"/>
-  <meta name="googlebot" content="index, follow"/>
-
-  <link rel="icon" type="image/png" href="images/logo.png"/>
-  <link rel="apple-touch-icon" href="images/logo.png"/>
-  <link rel="preload" href="images/hero.jpg" as="image"/>
-
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forever Yours | 24-Day Devotional by Rose Renuu</title>
+  <meta name="description" content="24 Days With Jesus. Love letters from God to you. A devotional by Rose Renuu." />
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{
-      /* Backgrounds */
-      --white:#FFFFFF;
-      --snow:#F8F6F3;
-      --linen:#F1EDE6;
-      --linen2:#E8E0D5;
-      /* Ink (3 neutrals) */
-      --ink:#141210;
-      --ink-muted:#6A6058;
-      --ink-soft:#9A9080;
-      /* Accent (single) */
-      --accent:#7C6A54;
-      /* Legacy aliases — keep for compat */
-      --black:#141210;
-      --black2:#1E1B17;
-      --walnut:#7C6A54;
-      --walnut-l:#A89278;
-      --stone:#9A9080;
-      --stone-l:#C0B8AE;
-      --text:#141210;
-      --text-m:#6A6058;
-      --text-l:#7A7062;
-
-      /* Type scale */
-      --fs-eyebrow:10px;
-      --fs-meta:11px;
-      --fs-body:16px;
-      --fs-body-lg:19px;
-      --fs-h3:clamp(22px, 2.4vw, 28px);
-      --fs-h2:clamp(30px, 3.6vw, 50px);
-      --fs-h1:clamp(36px, 5vw, 64px);
-      --lh-tight:1.1;
-      --lh-body:1.7;
-
-      /* Spacing scale (8px base) */
-      --sp-1:8px;
-      --sp-2:16px;
-      --sp-3:24px;
-      --sp-4:40px;
-      --sp-5:60px;
-      --sp-6:80px;
-      --sp-7:100px;
-      --sp-8:120px;
-
-      /* Section rhythm */
-      --section-y:100px;
-      --section-x:56px;
-    }
-    @media(min-width:1024px){
-      :root{
-        --section-y:120px;
-        --section-x:72px;
-      }
-    }
-    @media(max-width:768px){
-      :root{
-        --section-y:72px;
-        --section-x:24px;
-      }
-    }
-
-    /* === Utility classes === */
-    .section-pad{padding:var(--section-y) var(--section-x);}
-    .container{max-width:1100px;margin:0 auto;}
-    .heading-xl{font-family:'Playfair Display',serif;font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-tight);color:var(--ink);}
-    .heading-lg{font-family:'Playfair Display',serif;font-size:var(--fs-h2);font-weight:400;line-height:var(--lh-tight);color:var(--ink);}
-    .heading-md{font-family:'Playfair Display',serif;font-size:var(--fs-h3);font-weight:400;line-height:1.2;color:var(--ink);}
-    .body-lg{font-family:'Cormorant Garamond',serif;font-size:var(--fs-body-lg);font-weight:300;line-height:var(--lh-body);color:var(--ink-muted);}
-    .meta{font-family:'Jost',sans-serif;font-size:var(--fs-meta);letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);}
-    .card{background:var(--white);border:1px solid var(--linen2);padding:var(--sp-4);}
-    html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden;}body{overflow-x:hidden;}
-    body{background:var(--white);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden}
-
-    /* NAV */
-
-    /* HERO — static sunset image */
-    .hero-cinema {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      min-height: 600px;
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 55% 45%;
+      align-items: center;
+      gap: 0;
+      padding-top: var(--nav-h);
       overflow: hidden;
-      margin-top: -64px;
-      background: url('images/hero 2.jpg') center/cover no-repeat;
+      position: relative;
+      /* Unified gradient across full hero */
+      background: linear-gradient(135deg, #FAF6F1 0%, #F5EFE8 40%, #F0E9DF 70%, #EDE5D8 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(139, 106, 82, 0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -100px; left: 10%;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(139, 106, 82, 0.04) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-left {
+      padding: 80px 60px 80px 64px;
+      max-width: 640px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cream-light);
+      border: 1px solid var(--border);
+      border-radius: var(--r-pill);
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-title {
+      font-size: clamp(44px, 6vw, 72px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .hero-title em {
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      color: var(--accent);
+    }
+    .hero-scripture {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      padding-left: 16px;
+      border-left: 2px solid var(--accent);
+    }
+    .hero-scripture cite {
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-top: 10px;
+    }
+    .hero-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+    .hero-bullets li {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-bullets li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .hero-avatars {
+      display: flex;
+    }
+    .hero-avatars span {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--cream-mid);
+      border: 2px solid var(--white);
+      margin-left: -8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    .hero-avatars span:first-child { margin-left: 0; }
+    .hero-proof-text {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+    .hero-proof-text strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* ── HERO RIGHT / BOOK ── */
+    .hero-right {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: transparent;
+      overflow: hidden;
+    }
+    .hero-right::before { display: none; }
+
+    /* Decorative elements in hero-right */
+    .hero-glow { display: none; }
+    .hero-scripture-pill {
+      position: absolute;
+      top: 18%; left: 8%;
+      background: var(--white);
+      border-radius: var(--r-lg);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+      max-width: 160px;
+      animation: floatTag1 7s ease-in-out infinite;
+    }
+    @keyframes floatTag1 {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .hsp-quote {
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+    .hsp-ref {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-days-pill {
+      position: absolute;
+      bottom: 22%; left: 6%;
+      background: var(--ink);
+      border-radius: var(--r-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-md);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: floatTag2 8s ease-in-out infinite;
+    }
+    @keyframes floatTag2 {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .hdp-num {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--cream-light);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .hdp-text {
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(245,239,232,0.6);
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hero-star-pill {
+      position: absolute;
+      top: 14%; right: 6%;
+      background: var(--white);
+      border-radius: var(--r-md);
+      padding: 12px 16px;
+      box-shadow: var(--shadow-sm);
+      z-index: 2;
+      text-align: center;
+      animation: floatTag1 9s ease-in-out infinite 1s;
+    }
+    .hero-book-wrap {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 90%;
+      height: 115%;
+    }
+    .hero-book {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: saturate(1.2) contrast(1.03) brightness(1.01) drop-shadow(0 -4px 40px rgba(44,36,22,0.06));
+      animation: floatBook 6s ease-in-out infinite;
+      display: block;
+    }
+    @keyframes floatBook {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    .hero-book-placeholder {
+      width: 260px;
+      height: 360px;
+      border-radius: 4px 16px 16px 4px;
+      background: linear-gradient(160deg, #2C1810 0%, #6B2D47 50%, #8B6A52 100%);
+      box-shadow: var(--shadow-book);
+      animation: floatBook 6s ease-in-out infinite;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 32px;
       text-align: center;
-      padding: 40px 32px;
+      gap: 8px;
     }
-    .hero-cinema::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(20,18,16,0.25) 0%,
-        rgba(20,18,16,0.15) 40%,
-        rgba(20,18,16,0.35) 100%
-      );
-      z-index: 0;
-    }
-    .hero-cinema::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0.08;
-      z-index: 0;
-      pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 200px 200px;
-    }
-    .hero-cinema .hero-logo,
-    .hero-cinema .hero-eyebrow,
-    .hero-cinema .hero-cta { position: relative; z-index: 1; }
-    .hero-cinema .hero-cta {
-      margin-top: 28px;
-      display: inline-block;
-      background: rgba(255,255,255,0.95);
-      color: #141210;
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      padding: 16px 36px;
-      text-decoration: none;
-      border-radius: 50px;
-      box-shadow: 0 6px 20px rgba(20,18,16,0.2);
-      opacity: 0;
-      transform: translateY(16px);
-      animation: heroFadeIn .8s ease 1.2s forwards;
-      transition: background .3s, transform .2s;
-    }
-    .hero-cinema .hero-cta:hover {
-      background: #fff;
-      transform: translateY(-2px);
-    }
-    .hero-cinema .hero-logo {
-      width: clamp(180px, 30vw, 360px);
-      height: auto;
-      filter: brightness(0) invert(1);
-      opacity: 0;
-      transform: translateY(40px);
-      animation: heroFadeIn 1s cubic-bezier(.16,1,.3,1) .3s forwards;
-    }
-    .hero-cinema .hero-eyebrow {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
+    .hero-book-placeholder .book-title {
+      font-family: var(--font-sans);
+      font-size: 28px;
       font-weight: 400;
-      letter-spacing: 0.25em;
+      font-style: normal;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.2;
+    }
+    .hero-book-placeholder .book-sub {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      text-shadow: 0 1px 8px rgba(20,18,16,0.3);
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+    .hero-book-placeholder .book-author {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      margin-top: 24px;
+    }
+    .hero-book-placeholder .book-deco {
+      width: 40px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .book-float-tag {
+      position: absolute;
+      background: var(--white);
+      border-radius: var(--r-md);
+      padding: 10px 16px;
+      box-shadow: var(--shadow-md);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .tag-reviews {
+      top: 25%;
+      right: -20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tag-reviews .stars-sm { color: var(--accent); font-size: 11px; }
+    .tag-days {
+      bottom: 28%;
+      left: -40px;
+    }
+    .tag-days span { color: var(--accent); }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      padding: 28px 0;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 30s linear infinite;
+      width: max-content;
+    }
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 32px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--cream-dark); }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── BOOK PREVIEW ── */
+    .book-preview {
+      background: var(--white);
+      border-radius: var(--r-xl);
+      padding: 72px;
+      border: 1px solid var(--border-light);
+      position: relative;
+      overflow: hidden;
+    }
+    .book-preview::before {
+      content: '\201C';
+      position: absolute;
+      top: 40px; left: 60px;
+      font-family: var(--font-sans);
+      font-size: 200px;
+      line-height: 1;
+      color: var(--cream-mid);
+      z-index: 0;
+    }
+    .book-preview-content { position: relative; z-index: 1; }
+    .book-preview-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+    .book-preview blockquote {
+      font-family: var(--font-sans);
+      font-size: clamp(20px, 3vw, 28px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.55;
+      color: var(--ink);
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+    .book-preview-meta {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── WHAT'S INSIDE ── */
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .inside-card {
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--r-lg);
+      padding: 32px 24px;
+      transition: all 0.3s;
+    }
+    .inside-card:hover {
+      border-color: var(--cream-dark);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .inside-icon {
+      width: 48px; height: 48px;
+      border-radius: var(--r-md);
+      background: var(--cream-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 22px;
+    }
+    .inside-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .inside-card p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ── EDITIONS ── */
+    .editions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .edition-card {
+      border-radius: var(--r-xl);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .edition-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .edition-card-hardcover {
+      background: var(--ink);
+      color: var(--white);
+    }
+    .edition-card-digital {
+      background: var(--cream-light);
+      border: 1px solid var(--border);
+    }
+    .edition-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .edition-card-hardcover .edition-label { color: rgba(255,255,255,0.6); }
+    .edition-card-digital .edition-label { color: var(--accent); }
+    .edition-title {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .edition-card-hardcover .edition-title { color: var(--white); }
+    .edition-card-digital .edition-title { color: var(--ink); }
+    .edition-price {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      margin: 20px 0;
+    }
+    .edition-card-hardcover .edition-price { color: var(--cream-dark); }
+    .edition-card-digital .edition-price { color: var(--accent); }
+    .edition-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+    .edition-features li {
+      font-size: 14px;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .edition-card-hardcover .edition-features li { color: rgba(255,255,255,0.8); }
+    .edition-card-digital .edition-features li { color: var(--ink-soft); }
+    .edition-features li::before {
+      content: '✓';
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(139, 106, 82, 0.2);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .edition-card-hardcover .edition-features li::before {
+      background: rgba(139, 106, 82, 0.1);
+      color: var(--cream-dark);
+    }
+    .edition-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: var(--r-pill);
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+    .edition-card-hardcover .edition-btn {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .edition-card-hardcover .edition-btn:hover { background: var(--accent-dark); }
+    .edition-card-digital .edition-btn {
+      background: var(--ink);
+      color: var(--white);
+    }
+    .edition-card-digital .edition-btn:hover { background: var(--accent); }
+
+    /* ── REVIEWS ── */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    /* ── ROSE SECTION ── */
+    .rose-section {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .rose-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 48px;
+      object-fit: cover;
+      box-shadow: 0 32px 80px rgba(44,36,22,0.15);
+      flex-shrink: 0;
+    }
+    .rose-photo-placeholder {
+      width: 220px;
+      height: 220px;
+      border-radius: 48px;
+      background: linear-gradient(160deg, var(--cream-mid) 0%, var(--cream-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      flex-shrink: 0;
+    }
+
+    /* ── EMAIL SECTION ── */
+    .email-section {
+      background: var(--ink);
+      border-radius: var(--r-xl);
+      padding: 72px;
       text-align: center;
-      width: 100%;
-      margin-top: 12px;
-      opacity: 0;
-      transform: translateY(16px);
-      animation: heroFadeIn .8s ease .9s forwards;
+      position: relative;
+      overflow: hidden;
     }
+    .email-section::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: radial-gradient(ellipse, rgba(139, 106, 82, 0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .email-section-content { position: relative; z-index: 1; }
+    .email-section h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .email-section h2 em {
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      color: var(--cream-dark);
+    }
+    .email-section p {
+      color: rgba(255,255,255,0.6);
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+    .email-form {
+      display: flex;
+      gap: 12px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .email-form input {
+      flex: 1;
+      padding: 14px 20px;
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: var(--r-pill);
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .email-form input::placeholder { color: rgba(255,255,255,0.4); }
+    .email-form input:focus { border-color: var(--accent); }
+    .email-form button {
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: var(--r-pill);
+      padding: 14px 24px;
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .email-form button:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .email-note { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 12px; }
+    .email-success { display: none; color: rgba(255,255,255,0.8); font-size: 15px; margin-top: 16px; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: var(--cream-mid);
+      border-radius: 0;
+      padding: 48px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 48px 40px;
+    }
+    .cta-strip h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .cta-strip h2 em {
+      font-style: normal;
+      font-family: var(--font-sans);
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .cta-strip-actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+    /* Hero bypass shared reveal system entirely */
+    .hero .reveal {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: none !important;
+      animation: none !important;
+    }
+    /* Staggered fade-in for hero children using a wrapper animation */
+    .hero-badge  { animation: heroFadeIn 0.6s ease 0.05s both !important; }
+    .hero-title  { animation: heroFadeIn 0.6s ease 0.15s both !important; }
+    .hero-bullets { animation: heroFadeIn 0.6s ease 0.25s both !important; }
+    .hero-scripture { animation: heroFadeIn 0.6s ease 0.25s both !important; }
+    .hero-actions { animation: heroFadeIn 0.6s ease 0.35s both !important; }
+    .hero-social-proof { animation: heroFadeIn 0.6s ease 0.45s both !important; }
     @keyframes heroFadeIn {
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    @media(max-width:768px) {
-      .hero-cinema {
-        background-attachment: scroll;
-        height: 70vh;
-        min-height: 420px;
-        max-height: 560px;
-        padding: 32px 24px;
-      }
-      .hero-cinema .hero-logo { width: clamp(140px, 48vw, 220px); }
-      .hero-cinema .hero-cta { font-size: 10px; padding: 14px 28px; margin-top: 20px; }
-    }
-
-    /* MARQUEE */
-    .marquee-wrap{overflow:hidden;padding:15px 0;background:var(--linen)}
-    @media(min-width:769px){.marquee-wrap{display:none;}}
-    .marquee-track{display:flex;animation:mq 15s linear infinite;width:max-content}
-    @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .marquee-item{font-family:'Cormorant Garamond',serif;font-size:15px;font-style:italic;color:rgba(20,18,16,0.7);padding:0 48px;white-space:nowrap;display:flex;align-items:center;gap:48px}
-    .marquee-item::after{content:'·';font-style:normal;font-size:22px;opacity:.4}
-
-    /* EYEBROW */
-    .eyebrow{font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--walnut);display:flex;align-items:center;gap:12px;margin-bottom:16px}
-    /* INTRO */
-    .intro{padding:var(--section-y) var(--section-x);display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-6);align-items:center;background:var(--white)}
-    .intro-text h2{font-family:'Playfair Display',serif;font-size:var(--fs-h1);font-weight:400;line-height:var(--lh-tight);color:var(--ink);margin-bottom:var(--sp-3)}
-    .intro-text h2 em{font-style:italic;color:var(--accent)}
-    .intro-text p{font-family:'Cormorant Garamond',serif;font-size:var(--fs-body-lg);font-weight:300;line-height:var(--lh-body);color:var(--ink-muted);margin-bottom:var(--sp-3)}
-    .intro-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:16px}
-    .btn-dark{background:var(--linen);color:var(--black);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:14px 32px;text-decoration:none;transition:background .3s,transform .2s;display:inline-block;border-radius:50px}
-    .btn-dark:hover{background:var(--linen2);transform:translateY(-2px)}
-    .btn-outline{color:var(--black);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(20,18,16,0.22);padding:13px 32px;display:inline-block;transition:all .3s;border-radius:50px}
-    .btn-outline:hover{border-color:var(--walnut);color:var(--walnut)}
-    /* Book image in intro */
-    .intro-visual{position:relative;display:flex;justify-content:center;align-items:center;background:var(--linen);padding:60px 40px}
-    .intro-visual img{width:100%;max-width:300px;height:auto;display:block;border-radius:2px;box-shadow:0 40px 80px rgba(20,18,16,0.15),0 8px 24px rgba(20,18,16,0.08);animation:bookFloat 7s ease-in-out infinite}
-    @keyframes bookFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(-1deg)}}
-
-    /* SCRIPTURE */
-    .scripture{padding:var(--section-y) var(--section-x);text-align:center;background:var(--linen);position:relative;overflow:hidden}
-    .scripture::before{content:'';position:absolute;inset:0;opacity:0.06;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px;}
-    .scripture q{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,3.6vw,48px);font-style:italic;font-weight:300;line-height:1.45;color:var(--black);display:block;quotes:none;margin-bottom:22px;position:relative;z-index:1}
-    .scripture q span{color:var(--walnut)}
-    .scripture-ref{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--stone);position:relative;z-index:1}
-
-    /* BOOK FEATURE */
-    .book-feature{display:grid;grid-template-columns:1fr 1fr}
-    .book-img{overflow:hidden;position:relative;min-height:620px;background:var(--snow)}
-    .book-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .8s ease}
-    .book-img:hover img{transform:scale(1.03)}
-    .book-info{background:var(--white);padding:var(--section-y) var(--section-x);display:flex;flex-direction:column;justify-content:center}
-    .book-info h2{font-family:'Playfair Display',serif;font-size:var(--fs-h2);font-weight:400;line-height:var(--lh-tight);color:var(--ink);margin-bottom:var(--sp-3)}
-    .book-info h2 em{font-style:italic;color:var(--accent)}
-    .book-info>p{font-family:'Cormorant Garamond',serif;font-size:var(--fs-body-lg);font-weight:300;line-height:var(--lh-body);color:var(--ink-muted);margin-bottom:var(--sp-4)}
-    .bfeats{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
-    .bf{font-size:13px;letter-spacing:.04em;color:var(--text-m);display:flex;align-items:center;gap:12px}
-    .bf::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--walnut);flex-shrink:0}
-    .price-row{display:flex;gap:40px;margin-bottom:36px}
-    .ptag{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-l);margin-bottom:4px}
-    .pval{font-family:'Playfair Display',serif;font-size:34px;color:var(--black);line-height:1}
-    .book-btn{display:inline-block;background:var(--linen);color:var(--black);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:14px 36px;text-decoration:none;align-self:flex-start;transition:background .3s,transform .2s;border-radius:50px}
-    .book-btn:hover{background:var(--linen2);transform:translateY(-2px)}
-
-    /* LOVE LETTER */
-    .love-letter{padding:var(--section-y) var(--section-x);background:var(--snow)}
-    .ll-inner{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1.8fr;gap:72px;align-items:start}
-    .ll-label h3{font-family:'Playfair Display',serif;font-size:34px;font-style:italic;color:var(--black);line-height:1.25;margin-top:14px}
-    .ll-card{background:var(--white);border:1px solid var(--linen2);padding:var(--sp-5) var(--sp-5);position:relative}
-    .ll-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--walnut)}
-    .ll-greeting{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;letter-spacing:.1em;color:var(--walnut);margin-bottom:16px}
-    .ll-text{font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;font-weight:300;line-height:1.72;color:var(--text);margin-bottom:28px}
-    .ll-text strong{color:var(--black);font-weight:500;font-style:normal}
-    .ll-sign{font-family:'Playfair Display',serif;font-size:17px;font-style:italic;color:var(--walnut)}
-
-    /* TESTIMONIALS */
-    .testimonials{padding:var(--sp-4) 0 var(--section-y);background:var(--white)}
-    .test-head{padding:0 var(--section-x) var(--sp-5);display:flex;justify-content:space-between;align-items:flex-end}
-    .test-head h2{font-family:'Playfair Display',serif;font-size:var(--fs-h2);font-weight:400;line-height:var(--lh-tight);color:var(--ink)}
-    .test-head h2 em{font-style:italic;color:var(--accent);display:block}
-    .test-count{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone-l);padding-bottom:6px}
-    .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linen2)}
-    .test-card{background:var(--white);padding:var(--sp-5) var(--sp-4);transition:background .3s}
-    .test-card:hover{background:var(--snow)}
-    .test-stars{font-size:11px;letter-spacing:3px;color:var(--accent);margin-bottom:var(--sp-2)}
-    .test-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;font-weight:300;line-height:1.65;color:var(--ink-muted);margin-bottom:var(--sp-3)}
-    .test-author{font-size:var(--fs-eyebrow);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
-
-    /* ABOUT */
-    .about{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0;background:var(--linen)}
-    .about-img{margin-bottom:0;width:100%;overflow:hidden;position:relative}
-    .about-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:linear-gradient(to bottom,transparent,var(--linen));pointer-events:none}
-    .about-img img{width:100%;display:block;object-fit:cover;max-height:700px}
-    .about-txt{max-width:600px;padding:var(--section-y) var(--section-x)}
-    .about-txt h2{font-family:'Playfair Display',serif;font-size:var(--fs-h2);font-weight:400;line-height:var(--lh-tight);color:var(--ink);margin-bottom:var(--sp-3)}
-    .about-txt h2 em{font-style:italic;color:var(--accent)}
-    .about-txt p{font-family:'Cormorant Garamond',serif;font-size:var(--fs-body-lg);font-weight:300;line-height:var(--lh-body);color:var(--ink-muted);margin-bottom:var(--sp-2)}
-    .about-stats{display:flex;gap:32px;margin-top:32px;padding-top:28px;border-top:1px solid var(--linen2)}
-    .a-n{font-family:'Playfair Display',serif;font-size:30px;color:var(--black);line-height:1}
-    .a-l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-top:4px}
-    .about-sig{font-family:'Playfair Display',serif;font-size:26px;font-style:italic;color:var(--black);margin-top:28px}
-    .about-sig-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--stone);margin-top:5px}
-    @media(min-width: 769px) {
-      .about { flex-direction: row; align-items: flex-start; text-align: left; }
-      .about-img { width: 50%; }
-      .about-img img { width: 100%; height: auto; max-height: none; object-fit: unset; display: block; }
-      .about-img::after { display: none; }
-      .about-txt { max-width: none; width: 50%; padding: 80px 72px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; text-align: left; }
-      .about-txt .eyebrow { justify-content: flex-start; }
-    }
-
-    /* INSTAGRAM */
-    .ig-section{padding:var(--section-y) var(--section-x);background:var(--snow)}
-    .ig-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px}
-    .ig-head h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.2vw,42px);font-weight:400;color:var(--black);margin-top:10px}
-    .ig-sub{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:300;color:var(--text-m);margin-top:6px}
-    .ig-follow{background:var(--linen2);color:var(--black);font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:12px 28px;text-decoration:none;white-space:nowrap;align-self:flex-end;transition:background .3s}
-    .ig-follow:hover{background:var(--walnut);color:var(--white)}
-    .ig-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:12px}
-    .ig-track::-webkit-scrollbar{height:2px}
-    .ig-track::-webkit-scrollbar-track{background:var(--linen2)}
-    .ig-track::-webkit-scrollbar-thumb{background:var(--walnut)}
-    .ig-card{flex:0 0 320px;scroll-snap-align:start;background:var(--white);overflow:hidden;border:1px solid var(--linen2)}
-    .ig-card .instagram-media{width:320px!important;min-width:320px!important;border:0!important}
-    .ig-arrows{display:flex;gap:8px;margin-top:24px;justify-content:flex-end}
-    .ig-btn{background:var(--white);border:1px solid var(--linen2);color:var(--black);width:42px;height:42px;font-size:16px;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center}
-    .ig-btn:hover{background:var(--black);color:var(--white);border-color:var(--black)}
-    .ig-note{font-size:11px;color:var(--stone);text-align:center;margin-top:18px}
-    .ig-note a{color:var(--walnut);text-decoration:none}
-
-    /* CTA */
-    .cta{padding:var(--section-y) var(--section-x);background:var(--linen);display:grid;grid-template-columns:1fr auto;gap:var(--sp-6);align-items:center;position:relative;overflow:hidden}
-    .cta::after{content:'∞';position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-size:440px;line-height:1;color:rgba(255,255,255,0.025);pointer-events:none}
-    .cta-logo{margin-bottom:24px}
-    .cta-logo img{height:34px;display:block}
-    .cta h2{font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,48px);font-weight:400;line-height:1.1;color:var(--black);margin-bottom:14px;position:relative;z-index:1}
-    .cta h2 em{font-style:italic;color:var(--walnut)}
-    .cta>div>p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);line-height:1.6;max-width:420px;position:relative;z-index:1}
-    .cta-btns{display:flex;flex-direction:column;gap:10px;flex-shrink:0;position:relative;z-index:1}
-    .cta-btn-w{background:var(--black);color:var(--white);font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;padding:14px 36px;text-decoration:none;white-space:nowrap;transition:background .3s,transform .2s}
-    .cta-btn-w:hover{background:var(--walnut);transform:translateY(-2px)}
-    .cta-btn-o{background:transparent;border:1.5px solid var(--stone);color:var(--black);font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 36px;text-decoration:none;white-space:nowrap;text-align:center;transition:all .3s}
-    .cta-btn-o:hover{border-color:var(--walnut);color:var(--walnut)}
-
-    /* FOOTER */
-    footer{padding:36px 56px;background:var(--linen);display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.05)}
-    .footer-logo img{height:22px;display:block;mix-blend-mode:multiply}
-    .footer-links{display:flex;gap:28px;list-style:none}
-    .footer-links a{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-m);text-decoration:none;transition:color .3s}
-    .footer-links a:hover{color:var(--black)}
-    .footer-copy{font-size:10px;color:var(--text-l)}
-
-    /* HOVER LIFTS */
-    .btn-white:hover,.btn-dark:hover,.btn-outline:hover,.book-btn:hover,.cta-btn-w:hover,.cta-btn-o:hover,.sticky-bar-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(20,18,16,0.12)}
-    .site-nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(20,18,16,0.1)}
-    .intro-visual img:hover{box-shadow:0 50px 100px rgba(20,18,16,0.2),0 12px 32px rgba(20,18,16,0.12)}
-
-    /* TRUST BADGES */
-    .trust-badges{display:flex;justify-content:center;gap:40px;padding:20px 56px;background:var(--linen)}
-    .trust-badge{display:flex;align-items:center;gap:8px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--stone)}
-    .trust-badge svg{width:16px;height:16px}
-
-    /* SAMPLE CTA */
-    .sample-cta{padding:var(--section-y) var(--section-x);background:var(--linen);text-align:center}
-    .sample-cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,3.2vw,40px);font-weight:400;color:var(--black);margin-bottom:12px}
-    .sample-cta h2 em{font-style:italic;color:var(--walnut)}
-    .sample-cta p{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:var(--text-m);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto}
-    .sample-cta a{display:inline-block;background:var(--black);color:var(--white);font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:16px 36px;text-decoration:none;transition:background .3s;border-radius:50px}
-    .sample-cta a:hover{background:#7C6A54}
-
-    @media(max-width:768px){
-      .trust-badges{flex-direction:column;align-items:center;gap:14px;padding:20px 24px}
-      .sample-cta{padding:72px 24px}
-    }
-
-    /* SKIP LINK */
-    .skip-link{position:absolute;top:-100px;left:16px;background:var(--black);color:var(--white);padding:12px 24px;z-index:99999;font-family:'Jost',sans-serif;font-size:13px;letter-spacing:.1em;text-decoration:none;border-radius:0 0 8px 8px;transition:top .2s}
-    .skip-link:focus{top:0}
-    /* SR ONLY */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-
-    /* FOCUS STYLES */
-    *:focus-visible{outline:2px solid var(--walnut);outline-offset:2px}
-
-    /* REDUCED MOTION */
-    @media(prefers-reduced-motion:reduce){
-      *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
-      .marquee-track{animation:none!important}
-      .reveal{opacity:1!important;transform:none!important;transition:none!important}
-    }
-
-    /* REVEAL */
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-
-    /* RESPONSIVE */
-    
-    @media(max-width:960px){
-      .site-nav{padding:0 24px;}
-      .site-nav-links{display:none;}
-      .site-nav-cta{display:none;}
-      .site-nav-mobile-btn{display:block;}
-      .site-footer{padding:48px 24px 32px;}
-      .site-footer-top{grid-template-columns:1fr;gap:24px;text-align:center;}
-      .site-footer-col h4{margin-bottom:12px;}
-      .site-footer-col ul li{margin-bottom:8px;}
-      .site-footer-logo{margin:0 auto 12px;}
-      .site-footer-bottom{flex-direction:column;text-align:center;gap:16px;}
-      .site-footer-social{justify-content:center;}
-    }
-    @media(max-width:480px){.site-footer-top{grid-template-columns:1fr;}}
-
-    a{color:inherit;text-decoration:none;}
-.site-footer
-.site-footer-social
-.site-footer a{color:#6A6058!important;text-decoration:none!important;}
-    .site-footer a:hover{color:#7C6A54!important;}
-    .site-footer-social a{color:#A09888!important;}
-    .site-footer-social a:hover{color:#7C6A54!important;}
-
-
-    @media(max-width:768px){
-      .book-feature{grid-template-columns:1fr!important;gap:32px!important;padding:56px 24px!important;}
-      .about-section-inner{grid-template-columns:1fr!important;gap:32px!important;padding:56px 24px!important;}
-      .testimonials-grid{grid-template-columns:1fr!important;padding:56px 24px!important;}
-      .book-feature-img{max-width:280px!important;margin:0 auto!important;}
-      .about-img{margin:0!important;width:100%!important;}
-      .cta-section{padding:56px 24px!important;}
-      .book-features{grid-template-columns:1fr 1fr!important;}
-    }
-
-
-    a:visited { text-decoration: none; }
-    .site-nav-links a:visited { color: #6A6058 !important; }
-    .site-nav-cta:visited { color: #FFFFFF !important; }
-    .site-nav-mobile-menu a:visited { color: #6A6058 !important; }
-    .btn-primary:visited, .cta-btn-dark:visited { color: #FFFFFF !important; }
-    .btn-secondary:visited, .cta-btn-outline:visited { color: #6A6058 !important; }
-    .btn-dark:visited, .book-btn:visited, .related-btn:visited { color: #141210 !important; }
-    .btn-ghost-w:visited { color: #FFFFFF !important; }
-    .site-footer a, .site-footer a:link, .site-footer a:visited, .site-footer a:active { color: #6A6058 !important; text-decoration: none !important; }
-    .site-footer-social a, .site-footer-social a:link, .site-footer-social a:visited, .site-footer-social a:active { color: #A09888 !important; }
-    .hero-sub a:visited { color: inherit !important; }
-    .contact-detail-value a:visited { color: #7C6A54 !important; }
-    .form-submit:visited { color: #FFFFFF !important; }
-    .sticky-bar a:visited { color: #FFFFFF !important; }
-
-  
-    /* NAV - matches all pages */
-    .site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 1px solid transparent; padding: 0 56px; height: 64px; display: flex; align-items: center; justify-content: space-between; transition: background .4s, border-color .4s, backdrop-filter .4s; }
-    .site-nav.scrolled { background: rgba(248,246,243,0.97); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom-color: #E8E0D5; }
-    .site-nav-logo { height: 24px; width: auto; filter: brightness(0) invert(1); text-decoration: none; display: block; transition: filter .4s; }
-    .site-nav.scrolled .site-nav-logo { filter: none; mix-blend-mode: multiply; }
-    .site-nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-    .site-nav-links a { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 400; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none; transition: color .4s; }
-    .site-nav-links a:hover { color: #fff; }
-    .site-nav.scrolled .site-nav-links a { color: #6A6058; }
-    .site-nav.scrolled .site-nav-links a:hover { color: #7C6A54; }
-    .site-nav-cta { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; background: rgba(255,255,255,0.2); color: #fff; padding: 10px 22px; text-decoration: none; transition: background .4s, color .4s; white-space: nowrap; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); }
-    .site-nav-cta:hover { background: rgba(255,255,255,0.35); }
-    .site-nav.scrolled .site-nav-cta { background: #141210; color: #fff; border-color: #141210; }
-    .site-nav.scrolled .site-nav-cta:hover { background: #7C6A54; border-color: #7C6A54; }
-    .site-nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; transition: filter .4s; }
-    .site-nav-mobile-btn svg rect { fill: #fff; transition: fill .4s; }
-    .site-nav.scrolled .site-nav-mobile-btn svg rect { fill: #141210; }
-    .site-nav-mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #F8F6F3; border-bottom: 1px solid #E8E0D5; z-index: 9998; padding: 24px; flex-direction: column; gap: 0; }
-    .site-nav-mobile-menu a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #6A6058; text-decoration: none; padding: 16px 0; border-bottom: 1px solid #E8E0D5; display: block; }
-    .site-nav-mobile-menu a:last-child { border-bottom: none; }
-    .site-nav-mobile-menu.open { display: flex; }
-    .site-nav-spacer { height: 64px; display: block; }
-    @media(max-width:960px) {
-      .site-nav { padding: 0 24px; }
-      .site-nav-links { display: none; }
-      .site-nav-cta { display: none; }
-      .site-nav-mobile-btn { display: block; }
-    }
-    @media(max-width: 480px) {
-      .hero-cinema { height: 100vh; min-height: 480px; }
-      .intro { grid-template-columns: 1fr; padding: 56px 24px; gap: 40px; }
-      .love-letter { padding: 56px 24px; }
-      .ll-inner { grid-template-columns: 1fr; gap: 32px; }
-      .about-txt { padding: 48px 24px; }
-      .about-stats { display: none; }
-      .about-testimony-link { display: none; }
-
-    }
-
-  </style>
-
-  <style>
-    @media(max-width:768px) {
-      /* CTA section */
-      .cta { grid-template-columns: 1fr !important; padding: 56px 24px !important; gap: 32px !important; text-align: center !important; }
-      .cta-btns { flex-direction: column !important; align-items: center !important; width: 100% !important; }
-      .cta-btns a { width: 100% !important; text-align: center !important; }
-      
-      /* About section */
-      
-      
-      
-      
-      
-      /* Book feature */
-      .book-feature { grid-template-columns: 1fr !important; padding: 56px 24px !important; gap: 40px !important; }
-      .book-feature-img { max-width: 260px !important; margin: 0 auto !important; }
-      .book-features { grid-template-columns: 1fr 1fr !important; }
-      
-      /* About section */
-      
-      
-      
-      /* Testimonials */
-      .test-grid { grid-template-columns: 1fr !important; gap: 1px !important; }
-      .test-card { padding: 32px 24px !important; }
-      
-      /* Scripture */
-      .scripture-block { padding: 56px 24px !important; }
-      
-      /* CTA */
-      .cta-block { padding: 56px 24px !important; }
-      .cta-buttons { flex-direction: column !important; align-items: center !important; }
-      
-      /* Book solo image */
-      .book-solo img { max-height: 400px !important; object-fit: cover !important; }
-      
-      /* FAQ */
-      .faq-wrap { padding: 56px 24px !important; }
-      
-      /* Email section */
-      .email-section { padding: 56px 24px !important; }
-      
-
-      /* FAQ accordion fix */
-      .faq-item { border-bottom: 1px solid #E8E0D5 !important; }
-      .faq-q { display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 20px 0 !important; cursor: pointer !important; font-family: 'Jost', sans-serif !important; font-size: 13px !important; color: #141210 !important; }
-      .faq-a { max-height: 0 !important; overflow: hidden !important; transition: max-height .4s ease !important; font-family: 'Cormorant Garamond', serif !important; font-size: 18px !important; font-style: italic !important; color: #6A6058 !important; line-height: 1.7 !important; }
-      .faq-a.open { max-height: 300px !important; padding-bottom: 20px !important; }
-
-      /* General grid fixes */
-      [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important; }
-      [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
-      
-      /* Text sizing */
-      .book-info h2 { font-size: 28px !important; }
-      .about-txt h2 { font-size: 26px !important; }
-
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 40px 20px 40px; max-width: 100%; }
+      .hero-right { height: 70vw; min-height: 340px; }
+      .hero-book { width: auto; height: 100%; max-width: 100%; }
+      .hero-scripture-pill, .hero-days-pill, .hero-star-pill { display: none; }
+      .inside-grid { grid-template-columns: repeat(2, 1fr); }
+      .editions-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .rose-section { grid-template-columns: 1fr; }
+      .rose-photo-placeholder { aspect-ratio: 3/2; }
+      .email-form { flex-direction: column; }
+      .cta-strip { flex-direction: column; text-align: center; padding: 40px 24px; }
+      .book-preview { padding: 40px 28px; }
+      .book-preview::before { font-size: 120px; top: 20px; left: 20px; }
     }
   </style>
+  <link rel="icon" type="image/png" href="app-icon.png">
 
-
-  <style>
-    html, body { overflow-x: clip; max-width: 100%; }
-    
-    .sticky-bar {
-      position: fixed !important;
-      bottom: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      background: #4A4540 !important;
-      padding: 14px 24px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 16px !important;
-      z-index: 9000 !important;
-      transform: translateY(100%) !important;
-      transition: transform .4s ease !important;
-    }
-    .sticky-bar.visible { transform: translateY(0) !important; }
-    .sticky-bar-text {
-      font-family: 'Cormorant Garamond', serif !important;
-      font-size: 16px !important;
-      font-style: italic !important;
-      color: rgba(255,255,255,0.85) !important;
-      white-space: nowrap !important;
-    }
-    .sticky-bar-btn {
-      background: #7C6A54 !important;
-      color: #fff !important;
-      font-family: 'Jost', sans-serif !important;
-      font-size: 10px !important;
-      letter-spacing: .2em !important;
-      text-transform: uppercase !important;
-      padding: 12px 20px !important;
-      text-decoration: none !important;
-      white-space: nowrap !important;
-      flex-shrink: 0 !important;
-      border-radius:50px}
-    @media(max-width: 480px) {
-      .sticky-bar-text { font-size: 13px !important; }
-      .sticky-bar-btn { font-size: 9px !important; padding: 10px 14px !important; border-radius:50px}
-    }
-    @media(max-width: 768px) {
-      .sticky-bar { display: none !important; }
-    }
-  </style>
-
-<style>
-    @media(max-width:768px) {
-      .site-footer-bottom { flex-direction: column !important; align-items: center !important; text-align: center !important; gap: 16px !important; padding-top: 24px !important; }
-      .site-footer-social { justify-content: center !important; flex-wrap: wrap !important; gap: 16px !important; }
-      .site-footer-top { grid-template-columns: 1fr !important; text-align: center !important; }
-      .site-footer-logo { margin: 0 auto 12px !important; }
-      .site-footer { padding-bottom: 40px !important; }
-    }
-</style>
-
-<style>
-  .site-nav-mobile-menu {
-    display: none;
-    position: fixed;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: #F8F6F3;
-    border-bottom: 1px solid #E8E0D5;
-    z-index: 9998;
-    padding: 8px 24px;
-    flex-direction: column;
-  }
-  .site-nav-mobile-menu.open {
-    display: flex !important;
-  }
-  .site-nav-mobile-menu a {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: #6A6058 !important;
-    text-decoration: none !important;
-    padding: 16px 0;
-    border-bottom: 1px solid #E8E0D5;
-    display: block;
-  }
-  .site-nav-mobile-menu a:last-child { border-bottom: none; }
-</style>
-
-
-<style>
-  .site-footer-logo { height: 28px !important; width: auto !important; max-width: 120px !important; display: block !important; }
-  .site-footer-col ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
-  .site-footer-col ul li { list-style: none !important; }
-  .site-footer-col ul li::before { display: none !important; }
-  .site-footer-top { grid-template-columns: 1fr !important; text-align: center !important; gap: 32px !important; }
-  .site-footer-logo { margin: 0 auto 12px !important; }
-  .site-footer-bottom { flex-direction: column !important; text-align: center !important; gap: 12px !important; }
-  .site-footer-social { justify-content: center !important; gap: 20px !important; flex-wrap: wrap !important; }
-  .site-footer { padding-bottom: 40px !important; }
-</style>
-
-
-<style>
-  @media(max-width: 768px) {
-    .site-footer-top { display: block !important; }
-    .site-footer-top > div { margin-bottom: 28px !important; text-align: center !important; }
-    .site-footer-col h4 { font-family: 'Jost', sans-serif !important; font-size: 10px !important; font-weight: 600 !important; letter-spacing: .25em !important; text-transform: uppercase !important; color: #9A9080 !important; margin-bottom: 12px !important; }
-    .site-footer-col ul { list-style: none !important; padding: 0 !important; }
-    .site-footer-col ul li { margin-bottom: 8px !important; list-style: none !important; }
-    .site-footer-col ul li a { color: #6A6058 !important; text-decoration: none !important; font-family: 'Jost', sans-serif !important; font-size: 12px !important; letter-spacing: .1em !important; }
-    .site-footer-bottom { display: block !important; text-align: center !important; padding-top: 20px !important; }
-    .site-footer-copy { margin-bottom: 12px !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; color: #A09888 !important; }
-    .site-footer-social { display: flex !important; justify-content: center !important; gap: 16px !important; flex-wrap: wrap !important; }
-    .site-footer-social a { color: #A09888 !important; text-decoration: none !important; font-family: 'Jost', sans-serif !important; font-size: 10px !important; letter-spacing: .15em !important; text-transform: uppercase !important; }
-    .site-footer-tagline { font-family: 'Cormorant Garamond', serif !important; font-size: 15px !important; font-style: italic !important; color: #6A6058 !important; }
-  }
-</style>
-
-
-<style>
-  .site-footer { text-align: center !important; }
-  .site-footer-inner { text-align: center !important; margin: 0 auto !important; }
-  .site-footer-top { text-align: center !important; }
-  .site-footer-top > div { text-align: center !important; }
-  .site-footer-col { text-align: center !important; }
-  .site-footer-col ul { text-align: center !important; padding: 0 !important; list-style: none !important; }
-  .site-footer-col ul li { text-align: center !important; list-style: none !important; }
-  .site-footer-tagline { text-align: center !important; }
-  .site-footer-logo { margin-left: auto !important; margin-right: auto !important; }
-  .site-footer-bottom { text-align: center !important; justify-content: center !important; }
-  .site-footer-copy { text-align: center !important; }
-  .site-footer-social { justify-content: center !important; }
-</style>
-
-
-<style>
-  /* Remove hamburger shadow/background */
-  .site-nav-mobile-btn {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    -webkit-appearance: none !important;
-    appearance: none !important;
-    padding: 8px !important;
-    cursor: pointer !important;
-    outline: none !important;
-  }
-  .site-nav-mobile-btn:focus-visible {
-    background: none !important;
-    box-shadow: none !important;
-    outline: 2px solid #7C6A54 !important;
-    outline-offset: 2px !important;
-  }
-  .site-nav-mobile-btn:active {
-    background: none !important;
-    box-shadow: none !important;
-  }
-
-  /* Mobile general fixes */
-  html, body { overflow-x: clip; max-width: 100%; }
-
-  /* Nav clean on mobile */
-  @media(max-width: 960px) {
-    .site-nav { padding: 0 20px !important; }
-    .site-nav-links { display: none !important; }
-    .site-nav-cta { display: none !important; }
-    .site-nav-mobile-btn { display: block !important; }
-  }
-
-  /* Images don't overflow */
-  img { max-width: 100% !important; height: auto; }
-
-  /* Sections don't overflow on mobile */
-  @media(max-width: 768px) {
-    section, .section, [class*="section"] { max-width: 100%; }
-    .book-feature, .closing-inner, .contact-wrap { grid-template-columns: 1fr !important; }
-    .hero-btns, .cta-btns { flex-direction: column !important; align-items: center !important; width: 100% !important; border-radius:50px}
-    .hero-btns a, .cta-btns a { width: 100% !important; text-align: center !important; box-sizing: border-box !important; border-radius:50px}
-    .test-grid { grid-template-columns: 1fr !important; }
-    .book-features { grid-template-columns: 1fr 1fr !important; }
-  }
-</style>
-
-<script>
-  (() => {
-    const d=document,s=d.createElement("script");s.type="module";
-    s.src="https://w.behold.so/widget.js";d.head.append(s);
-  })();
-</script>
-
-<style>
-  @media(max-width: 768px) {
-    
-    .about-img { margin: 0 auto 40px !important; }
-    
-    
-  }
-</style>
-
-
-
-
-
-<style>
-  @media(max-width: 768px) {
-    .book-split { grid-template-columns: 1fr !important; }
-    .book-split-text { padding: 48px 24px !important; }
-    .book-split-img { padding: 48px 24px !important; min-height: 360px !important; }
-  }
-</style>
-
-<style>
-  @keyframes bookFloat {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-16px); }
-    100% { transform: translateY(0px); }
-  }
-</style>
-
-
-<style>
-  @media(max-width: 768px) {
-    
-    
-  }
-</style>
-
-
-<style>
-  @media(max-width: 768px) {
-    .about { padding: 0 !important; }
-    
-    .about-img img { width: 100% !important; max-width: none !important; display: block !important; margin: 0 !important; }
-  }
-</style>
-
-
-<style>
-  .faq-item {
-    border-bottom: 1px solid var(--linen2) !important;
-    cursor: pointer !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-  }
-  .faq-q {
-    font-family: 'Jost', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    color: var(--black) !important;
-    padding: 22px 40px 22px 0 !important;
-    position: relative !important;
-    display: block !important;
-    letter-spacing: .02em !important;
-  }
-  .faq-icon {
-    position: absolute !important;
-    right: 0 !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    font-size: 20px !important;
-    color: var(--walnut) !important;
-    transition: transform .3s !important;
-    line-height: 1 !important;
-  }
-  .faq-item { position: relative !important; }
-  .faq-a {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 18px !important;
-    font-style: italic !important;
-    font-weight: 300 !important;
-    color: var(--text-m) !important;
-    line-height: 1.7 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    transition: max-height .4s ease, padding .3s !important;
-    padding: 0 !important;
-  }
-  .faq-item.open .faq-a {
-    max-height: 300px !important;
-    padding-bottom: 20px !important;
-  }
-  .faq-item.open .faq-icon {
-    transform: translateY(-50%) rotate(45deg) !important;
-  }
-</style>
-
-
-<style>
-  /* FAQ */
-  .faq-item {
-    position: relative !important;
-    border-bottom: 1px solid var(--linen2) !important;
-    cursor: pointer !important;
-    overflow: hidden !important;
-  }
-  .faq-q {
-    font-family: 'Jost', sans-serif !important;
-    font-size: 14px !important;
-    font-weight: 400 !important;
-    color: var(--black) !important;
-    padding: 24px 48px 24px 0 !important;
-    display: block !important;
-    letter-spacing: .02em !important;
-  }
-  .faq-icon {
-    position: absolute !important;
-    right: 0 !important;
-    top: 24px !important;
-    font-size: 22px !important;
-    color: var(--walnut) !important;
-    transition: transform .3s ease !important;
-    line-height: 1 !important;
-    font-weight: 300 !important;
-  }
-  .faq-a {
-    font-family: 'Cormorant Garamond', serif !important;
-    font-size: 18px !important;
-    font-style: italic !important;
-    font-weight: 300 !important;
-    color: var(--text-m) !important;
-    line-height: 1.75 !important;
-    max-height: 0 !important;
-    overflow: hidden !important;
-    transition: max-height .4s ease, padding .3s ease !important;
-    padding: 0 !important;
-  }
-  .faq-item.open .faq-a {
-    max-height: 400px !important;
-    padding-bottom: 24px !important;
-  }
-  .faq-item.open .faq-icon {
-    transform: rotate(45deg) !important;
-  }
-</style>
-
-
-<style>
-  @media(max-width: 768px) {
-    .site-footer { padding: 40px 24px 60px !important; }
-    .site-footer-top > div { margin-bottom: 20px !important; }
-    .site-footer-col ul li { margin-bottom: 6px !important; }
-  }
-</style>
-
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Uq8T9v"></script>
-
-
-
-
-<style>
-  @media(max-width: 768px) {
-    .book-split { grid-template-columns: 1fr !important; }
-    .book-split-img {
-      width: 100vw !important;
-      max-width: 100vw !important;
-      padding: 0 !important;
-      height: 420px !important;
-      overflow: hidden !important;
-    }
-    .book-split-img img {
-      width: 100vw !important;
-      height: 420px !important;
-      object-fit: cover !important;
-      object-position: center !important;
-    }
-  }
-</style>
-
-
-
-
-
-<style>
-  @media(min-width: 769px) {
-    .site-footer { padding: 56px 56px 40px !important; text-align: left !important; }
-    .site-footer-inner { text-align: left !important; }
-    .site-footer-top { 
-      grid-template-columns: 1.5fr 1fr 1fr 1fr !important; 
-      gap: 48px !important;
-      text-align: left !important;
-      display: grid !important;
-    }
-    .site-footer-top > div { text-align: left !important; }
-    .site-footer-logo { margin: 0 0 16px !important; }
-    .site-footer-bottom { 
-      flex-direction: row !important; 
-      justify-content: space-between !important;
-      text-align: left !important;
-    }
-    .site-footer-social { justify-content: flex-end !important; }
-    .site-footer-col h4 { text-align: left !important; }
-    .site-footer-col ul { text-align: left !important; }
-    .site-footer-tagline { text-align: left !important; }
-  }
-</style>
-
-
-<style>
-  @media(min-width: 769px) {
-    /* About section desktop */
-    
-    
-    
-    
-
-    /* About section variant */
-    .about-section { min-height: 700px !important; }
-    .about-inner { 
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      min-height: 700px !important;
-      gap: 0 !important;
-    }
-    
-    
-
-    /* Closing section on testimony */
-    .closing { min-height: 640px !important; }
-    .closing-inner { 
-      grid-template-columns: 1fr 1fr !important;
-      min-height: 640px !important;
-      gap: 0 !important;
-    }
-    .closing-img {
-      width: 100% !important;
-      height: 640px !important;
-      object-fit: cover !important;
-      object-position: center 15% !important;
-      display: block !important;
-    }
-  }
-</style>
-
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "name": "Forever Yours: 24 Days With Jesus",
-    "author": {
-      "@type": "Person",
-      "name": "Rose Renuu",
-      "url": "https://jesusforeveryours.com/testimony"
-    },
-    "description": "A 24-day devotional of intimate love letters written from God's heart to yours, paired with Scripture and journaling space.",
-    "genre": "Christian Devotional",
-    "numberOfPages": "24",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "500",
-      "bestRating": "5"
-    },
-    "review": [
-      {
-        "@type": "Review",
-        "author": {"@type": "Person", "name": "Michelle K."},
-        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-        "reviewBody": "Forever Yours is the devotional I did not know I needed. The way Scripture comes alive in these pages is something special."
-      },
-      {
-        "@type": "Review",
-        "author": {"@type": "Person", "name": "Sarah M."},
-        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-        "reviewBody": "This book brought me back to a deeper relationship with God. The words in these pages helped me feel His presence again."
-      }
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "price": "20.00",
-        "priceCurrency": "USD",
-        "name": "Hardcover Edition",
-        "url": "https://jesusforeveryours.com/hardcover"
-      },
-      {
-        "@type": "Offer",
-        "price": "10.00",
-        "priceCurrency": "USD",
-        "name": "Digital Edition",
-        "url": "https://jesusforeveryours.com/digital"
-      }
-    ],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Rose Renuu LLC",
-      "url": "https://jesusforeveryours.com"
-    }
-  }
-  </script>
-
-  <!-- Person Schema for Rose -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rose Renuu",
-    "url": "https://jesusforeveryours.com",
-    "sameAs": [
-      "https://instagram.com/roserenuu",
-      "https://instagram.com/jesusforeveryours",
-      "https://tiktok.com/@roserenuu"
-    ],
-    "jobTitle": "Author, Content Creator",
-    "description": "Rose Renuu is a faith-based content creator and author of Forever Yours: 24 Days With Jesus."
-  }
-  </script>
-
-
-<style>
-  @media(min-width: 769px) {
-    .site-footer {
-      padding: 64px 80px 48px !important;
-    }
-    .site-footer-inner { 
-      max-width: 1200px !important; 
-      margin: 0 auto !important;
-      text-align: left !important;
-    }
-    .site-footer-top { 
-      display: grid !important;
-      grid-template-columns: 2fr 1fr 1fr 1fr !important;
-      gap: 60px !important;
-      margin-bottom: 48px !important;
-      text-align: left !important;
-    }
-    .site-footer-top > div { text-align: left !important; }
-    .site-footer-logo { 
-      height: 22px !important; 
-      width: auto !important; 
-      margin: 0 0 16px !important; 
-      display: block !important;
-    }
-    .site-footer-tagline { 
-      font-family: 'Cormorant Garamond', serif !important;
-      font-size: 16px !important;
-      font-style: italic !important;
-      color: #6A6058 !important;
-      text-align: left !important;
-    }
-    .site-footer-col h4 { 
-      font-family: 'Jost', sans-serif !important;
-      font-size: 10px !important;
-      font-weight: 500 !important;
-      letter-spacing: .25em !important;
-      text-transform: uppercase !important;
-      color: #9A9080 !important;
-      margin-bottom: 16px !important;
-      text-align: left !important;
-    }
-    .site-footer-col ul { 
-      list-style: none !important; 
-      padding: 0 !important;
-      text-align: left !important;
-    }
-    .site-footer-col ul li { margin-bottom: 10px !important; }
-    .site-footer-col ul li a { 
-      font-family: 'Jost', sans-serif !important;
-      font-size: 11px !important;
-      color: #6A6058 !important;
-      text-decoration: none !important;
-    }
-    .site-footer-bottom { 
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      border-top: 1px solid #E8E0D5 !important;
-      padding-top: 24px !important;
-      flex-direction: row !important;
-    }
-    .site-footer-copy { 
-      font-family: 'Jost', sans-serif !important;
-      font-size: 10px !important;
-      color: #A09888 !important;
-    }
-    .site-footer-social { 
-      display: flex !important;
-      gap: 20px !important;
-      justify-content: flex-end !important;
-    }
-    .site-footer-social a {
-      font-family: 'Jost', sans-serif !important;
-      font-size: 10px !important;
-      letter-spacing: .15em !important;
-      text-transform: uppercase !important;
-      color: #A09888 !important;
-      text-decoration: none !important;
-    }
-  }
-</style>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Rose Renuu LLC",
-      "url": "https://jesusforeveryours.com",
-      "logo": "https://jesusforeveryours.com/images/logo.png",
-      "sameAs": [
-        "https://instagram.com/jesusforeveryours",
-        "https://instagram.com/roserenuu",
-        "https://tiktok.com/@roserenuu",
-        "https://youtube.com/@roserenuu"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "name": "Forever Yours by Rose Renuu",
-      "url": "https://jesusforeveryours.com",
-      "description": "Forever Yours is a 24-day Christian devotional of intimate love letters written from God's heart to yours."
-    },
-    {
-      "@type": "Book",
-      "name": "Forever Yours: 24 Days With Jesus",
-      "author": {
-        "@type": "Person",
-        "name": "Rose Renuu"
-      },
-      "description": "A 24-day Christian devotional of intimate love letters from God paired with Scripture and journaling space. For men, women, and teens of all ages.",
-      "genre": ["Christian devotional", "Faith", "Spirituality", "Religion"],
-      "audience": {"@type": "Audience", "audienceType": "Men, women, and teens of all ages"},
-      "inLanguage": "en",
-      "numberOfPages": 24,
-      "bookFormat": ["Hardcover", "EBook"],
-      "image": "https://jesusforeveryours.com/images/book-cover.jpg",
-      "url": "https://jesusforeveryours.com",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "500",
-        "bestRating": "5"
-      },
-      "offers": [
-        {
-          "@type": "Offer",
-          "price": "20.00",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://jesusforeveryours.com/hardcover",
-          "itemCondition": "https://schema.org/NewCondition"
-        },
-        {
-          "@type": "Offer",
-          "price": "10.00",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://jesusforeveryours.com/digital",
-          "itemCondition": "https://schema.org/NewCondition"
-        }
-      ]
-    }
-  ]
-}
-</script>
-
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jesus Forever Yours | 24-Day Devotional by Rose Renuu">
+  <meta property="og:description" content="Love letters from God to you. 24 days with Jesus — available in hardcover and digital.">
+  <meta property="og:image" content="https://jesusforeveryours.com/app-icon.png">
+  <meta property="og:site_name" content="Jesus Forever Yours">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jesus Forever Yours | 24-Day Devotional by Rose Renuu">
+  <meta name="twitter:description" content="Love letters from God to you. 24 days with Jesus — available in hardcover and digital.">
+  <meta name="twitter:image" content="https://jesusforeveryours.com/app-icon.png">
+  <!-- Meta description -->
+  <meta name="description" content="Love letters from God to you. 24 days with Jesus — available in hardcover and digital.">
 </head>
 <body>
-  <!-- SKIP LINK -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- NAV -->
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html"><img class="site-nav-logo" src="images/logo.png" alt="Forever Yours"/></a>
-    <ul class="site-nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="hardcover.html">Hardcover</a></li>
-      <li><a href="digital.html">Digital</a></li>
-      <li><a href="testimony.html">My Testimony</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="hardcover.html" class="site-nav-cta">Get the Book</a>
-    <button class="site-nav-mobile-btn" onclick="toggleMenu()" aria-label="Menu">
-      <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" fill="#141210"/><rect y="7" width="22" height="2" fill="#141210"/><rect y="14" width="22" height="2" fill="#141210"/></svg>
-    </button>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo-text.png" alt="Jesus Forever Yours"/>
+        
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="hardcover.html">Hardcover</a></li>
+        <li><a href="digital.html">Digital</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="hardcover.html" class="nav-cta">Get the Book</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
-  <div class="site-nav-mobile-menu" id="mobileMenu">
-    <a href="index.html" onclick="toggleMenu()">Home</a>
-    <a href="hardcover.html" onclick="toggleMenu()">Hardcover $20</a>
-    <a href="digital.html" onclick="toggleMenu()">Digital $10</a>
-    <a href="testimony.html" onclick="toggleMenu()">My Testimony</a>
-    <a href="contact.html" onclick="toggleMenu()">Contact</a>
-    <a href="sample.html" onclick="toggleMenu()">Read a Sample</a>
+
+  <!-- MOBILE NAV -->
+  <div class="nav-mobile" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="hardcover.html">Hardcover $20</a>
+    <a href="digital.html">Digital $10</a>
+    <a href="contact.html">Contact</a>
+    <a href="hardcover.html" class="nav-cta-mobile">Get the Book</a>
   </div>
-  <div class="site-nav-spacer"></div>
 
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-left container">
 
-<main id="main-content">
+      <h1 class="hero-title reveal reveal-delay-1">
+        Love letters<br>from <em>God</em><br>to you.
+      </h1>
 
-<!-- HERO — Sunset -->
-<section class="hero-cinema">
-  <img src="images/logo.png" alt="Forever Yours" class="hero-logo" width="360" height="120"/>
-  <p class="hero-eyebrow">24 DAYS WITH JESUS OUT NOW</p>
-  <a href="hardcover.html" class="hero-cta">Start Your 24 Days</a>
-</section>
+      <ul class="hero-bullets reveal reveal-delay-2">
+        <li>24 Personal Love Letters</li>
+        <li>Daily Scripture</li>
+        <li>Journaling Space</li>
+        <li>Hardcover &amp; Digital</li>
+      </ul>
 
-<!-- SCRIPTURE -->
-<section class="scripture">
-  <div style="position:relative;z-index:1;max-width:760px;margin:0 auto" class="reveal">
-    <q>"I have loved you with <span>an everlasting love</span>; I have drawn you with unfailing kindness."</q>
-    <p class="scripture-ref">Jeremiah 31:3</p>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="marquee-item">Forever Yours</div><div class="marquee-item">24 Days With Jesus</div>
-    <div class="marquee-item">Love Letters from God</div><div class="marquee-item">Rose Renuu</div>
-    <div class="marquee-item">Renew Your Mind</div><div class="marquee-item">Draw Closer to Jesus</div>
-    <div class="marquee-item">Forever Yours</div><div class="marquee-item">24 Days With Jesus</div>
-    <div class="marquee-item">Love Letters from God</div><div class="marquee-item">Rose Renuu</div>
-    <div class="marquee-item">Renew Your Mind</div><div class="marquee-item">Draw Closer to Jesus</div>
-  </div>
-</div>
-
-<!-- BOOK SOLO -->
-<section style="background:var(--linen);padding:0;">
-  <div class="book-split" style="display:grid;grid-template-columns:1fr 1fr;min-height:460px;align-items:stretch;">
-
-    <!-- Book image -->
-    <div class="book-split-img" style="overflow:hidden;min-height:460px;">
-      <img src="images/book-cover.jpg" alt="Forever Yours" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;" class="reveal"/>
-    </div>
-
-    <!-- Quote + CTA -->
-    <div class="book-split-text reveal d1" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:72px 64px;">
-      <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--walnut);margin-bottom:24px;">From the book</p>
-      <blockquote style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.4vw,32px);font-weight:400;font-style:italic;color:var(--black);line-height:1.5;margin:0 0 20px;">
-        "I came down to earth to show you the way. Not to watch from a distance, but to walk with you, to feel what you feel, and to carry what you could not carry."
-      </blockquote>
-      <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);margin-bottom:48px;">Day 24</p>
-      <div style="display:flex;flex-direction:column;gap:12px;max-width:300px;width:100%;">
-        <a href="https://buy.stripe.com/3cI3cvagu4Qi48yeGr38401" style="background:var(--black);color:#fff;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;padding:18px 32px;text-decoration:none;text-align:center;transition:background .3s;display:block;border-radius:50px;">Get the Hardcover $20</a>
-        <a href="https://buy.stripe.com/9B6bJ10FU3Me5cCfKv38402" style="background:transparent;color:var(--black);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;padding:17px 32px;text-decoration:none;text-align:center;border:1.5px solid var(--stone);display:block;border-radius:50px;">Download Digital $10</a>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="hardcover.html" class="btn btn-primary btn-lg">Get the Hardcover $20</a>
+        <a href="digital.html" class="btn btn-outline-rose btn-lg">Download Digital $10</a>
       </div>
-      <div class="trust-badges" style="background:none;padding:52px 0 0;justify-content:center;gap:24px;">
-        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="#7C6A54"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg> Secure Checkout</div>
-        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="#4A90D9"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> 100K+ Readers</div>
-        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="#D4A843"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> Satisfaction Guaranteed</div>
+      <div class="hero-social-proof reveal reveal-delay-4">
+        <div class="hero-avatars">
+          <span>M</span><span>S</span><span>J</span><span>P</span><span>+</span>
+        </div>
+        <div class="hero-proof-text">
+          <strong>50K+ readers</strong> ★★★★★
+        </div>
       </div>
     </div>
-
-  </div>
-</section>
-
-<style>
-  @media(max-width: 768px) {
-    #book-split-grid { grid-template-columns: 1fr !important; }
-  }
-</style>
-
-
-<!-- BOOK FEATURE -->
-<section class="book-feature" id="book" style="grid-template-columns:1fr;max-width:1100px;margin:0 auto;">
-  
-  <div class="book-info">
-    <p class="eyebrow reveal">Order Today</p>
-    <h2 class="reveal d1">24 days.<br/><em>One love story</em><br/>that never ends.</h2>
-    <p class="reveal d2">Readers say these letters brought them back to God, gave them peace in seasons of grief and anxiety, and opened conversations about faith they had been praying for. Each love letter is paired with Scripture and journaling space to help you draw closer to Jesus every single day.</p>
-    <div class="bfeats reveal d2">
-      <div class="bf">24 personal love letters from God to you</div>
-      <div class="bf">Scripture paired with each daily reading</div>
-      <div class="bf">Journaling space for your reflections</div>
-      <div class="bf">Hardcover and digital editions available</div>
-    </div>
-    <div class="price-row reveal d3">
-      <div><div class="ptag">Digital</div><div class="pval">$10</div></div>
-      <div><div class="ptag">Hardcover</div><div class="pval">$20</div></div>
-    </div>
-    <a href="hardcover.html" class="book-btn reveal d3">Start Your 24 Days</a>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials-section reveal section-pad" style="background:var(--white);" aria-label="Reader Reviews">
-  <div style="max-width:1000px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:56px;">
-      <h2 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(26px,3vw,40px);font-weight:400;color:var(--black);margin-bottom:8px;">Words from <em style="font-style:italic;color:var(--walnut);">readers like you.</em></h2>
-      <p class="reveal" style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);white-space:nowrap;"><span style="color:#D4A843;" role="img" aria-label="5 out of 5 stars">★★★★★</span> &nbsp; <span class="count-up" data-target="500">0</span>+ Five-Star Reviews</p>
-    </div>
-    <div class="reveal d2" style="overflow:hidden;position:relative;">
-      <div id="homeCarouselTrack" style="display:flex;transition:transform .5s cubic-bezier(.16,1,.3,1);">
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"Forever Yours is the devotional I did not know I needed. The way Scripture comes alive in these pages is something special. I have already gifted it to three friends!"</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Michelle K.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
+    <div class="hero-right">
+      <div class="hero-book-wrap">
+        <img src="book-cover-cut.webp"
+             alt="Forever Yours Book Cover"
+             class="hero-book"
+             onerror="this.style.display='none';document.getElementById('bookPlaceholder').style.display='flex'"/>
+        <div class="hero-book-placeholder" id="bookPlaceholder" style="display:none">
+          <div class="book-title">Forever<br>Yours</div>
+          <div class="book-deco"></div>
+          <div class="book-sub">24 Days With Jesus</div>
+          <div class="book-author">Rose Renuu</div>
         </div>
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"This book brought me back to a deeper relationship with God. I had been going through the motions but the words in these pages helped me feel His presence again."</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Sarah M.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
-        </div>
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"Short, powerful, and straight to the heart. Perfect for busy mornings. I am on my second time reading through it and it is just as powerful every time."</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Jennifer L.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
-        </div>
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"I read a lot of Christian books and this one hits different. The love letters feel so personal, like God is speaking directly to you. I finished it in a week because I could not put it down."</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Stephanie R.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
-        </div>
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"My teenage daughter and I are going through this together. It has opened up conversations about faith that I have been praying for. Such a gift."</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Patricia E.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
-        </div>
-
-        <div style="min-width:100%;padding:0 8px;box-sizing:border-box;">
-          <div style="background:var(--linen);padding:52px 56px;text-align:center;">
-            <div style="color:#D4A843;font-size:14px;letter-spacing:3px;margin-bottom:28px;" role="img" aria-label="5 out of 5 stars">★★★★★</div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.4vw,28px);font-style:italic;font-weight:300;color:var(--text);line-height:1.65;margin-bottom:32px;max-width:700px;margin-left:auto;margin-right:auto;">"I have a hard time sitting still for devotionals but this one grabbed my attention from day one. It feels like a friend reminding you how loved you are."</p>
-            <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--stone);margin-bottom:4px;">Olivia C.</p>
-            <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--walnut);">Verified Reader</p>
-          </div>
-        </div>
-
       </div>
     </div>
-    <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:32px;" id="homeCarouselDots"></div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="about-img reveal">
-    <img src="images/rose-photo.jpg" alt="Rose Renuu"/>
-  </div>
-  <div class="about-txt">
-    <p class="eyebrow reveal" style="justify-content:center;">Meet Rose</p>
-    <h2 class="reveal d1">Written from<br/><em>her darkest</em><br/>season.</h2>
-    <p class="reveal d2">Rose Renuu is a writer and content creator whose life was transformed when she encountered the love of Jesus in her darkest season. Forever Yours is the book she wishes someone had given her. Words that remind you God is close, even when He feels far away.</p>
-    <p class="reveal d2">From Los Angeles, Rose shares God's love through healing words and faith-filled content, reaching millions of people around the world. Her mission is simple: to help you feel how deeply and personally God loves you.</p>
-    </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section class="section-pad" style="background:var(--white);text-align:center;">
-  <div class="reveal" style="max-width:900px;margin:0 auto;">
-    <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:var(--walnut);display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;">
-      Follow Along
-    </p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,3.6vw,42px);font-weight:400;line-height:1.1;color:var(--black);margin-bottom:8px;">
-      <em style="font-style:italic;color:var(--walnut);">@roserenuu</em>
-    </h2>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--text-m);margin-bottom:40px;">Daily love letters, scripture and faith for your feed.</p>
-    <behold-widget feed-id="e3hFghpTf5ZBtxQUYdAU"></behold-widget>
-  </div>
-</section>
-
-<!-- SAMPLE CTA -->
-<section class="sample-cta">
-  <div class="reveal" style="max-width:600px;margin:0 auto;">
-    <p class="eyebrow" style="justify-content:center">Free Preview</p>
-    <h2>Read a love letter <em>before you buy.</em></h2>
-    <p>Experience Forever Yours completely free. See why hundreds of readers say these words changed everything.</p>
-    <a href="sample.html">Read a Free Sample</a>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section-pad" style="background:var(--white);">
-  <div style="max-width:680px;margin:0 auto;">
-    <p class="eyebrow reveal" style="justify-content:center">Common Questions</p>
-    <h2 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(28px,3.6vw,44px);font-weight:400;color:var(--black);text-align:center;margin-top:12px;margin-bottom:52px;">
-      Everything you need to know
-    </h2>
-
-    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
-      <div class="faq-q">Is this devotional for men too?</div>
-      <div class="faq-icon">+</div>
-      <div class="faq-a">Absolutely. The love letters are written from God to His child, and they speak to anyone who wants to draw closer to Jesus, regardless of gender.</div>
-    </div>
-    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
-      <div class="faq-q">How long does each day take?</div>
-      <div class="faq-icon">+</div>
-      <div class="faq-a">Each daily reading takes about 10 to 15 minutes, perfect for busy mornings. The journaling space lets you go deeper if you have more time.</div>
-    </div>
-    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
-      <div class="faq-q">What is the difference between hardcover and digital?</div>
-      <div class="faq-icon">+</div>
-      <div class="faq-a">The hardcover ($20) is a beautiful physical book you can hold, write in, and gift. The digital version ($10) is a PDF you can read on any device immediately after purchase.</div>
-    </div>
-    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
-      <div class="faq-q">Can I go through this with a friend or small group?</div>
-      <div class="faq-icon">+</div>
-      <div class="faq-a">Yes! Many readers go through Forever Yours with a friend, sister, or small group. The 24-day format makes it easy to stay on the same page and share what God is speaking.</div>
-    </div>
-    <div class="faq-item reveal" tabindex="0" role="button" onclick="toggleFaq(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleFaq(this)}">
-      <div class="faq-q">When will my order arrive?</div>
-      <div class="faq-icon">+</div>
-      <div class="faq-a">Hardcover orders typically arrive within 4 to 6 weeks. Digital orders are available immediately after purchase.</div>
-    </div>
-  </div>
-</section>
-
-<!-- EMAIL -->
-<section class="section-pad" style="background:#F1EDE6;text-align:center;">
-  <div class="reveal" style="max-width:520px;margin:0 auto;">
-    <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#7C6A54;display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:16px;">
-      Free Gift
-    </p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,42px);font-weight:400;color:#141210;line-height:1.1;margin-bottom:12px;">
-      Get a free Love Letter<br/><em style="font-style:italic;color:#7C6A54;">delivered to your inbox</em>
-    </h2>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:300;color:#6A6058;margin-bottom:32px;line-height:1.65;">
-      Sign up and receive a personal love letter from God straight to your inbox.
-    </p>
-    <div id="emailFormWrap" style="max-width:420px;margin:0 auto;">
-      <label for="emailInput" class="sr-only">Email address</label>
-      <input type="email" id="emailInput" placeholder="Your email address" autocomplete="email" style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#FFFFFF;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;outline:none;margin-bottom:12px;text-align:center;transition:border-color .3s;border-radius:50px;" onfocus="this.style.borderColor='#7C6A54'" onblur="this.style.borderColor='#E8E0D5'"/>
-      <button id="emailBtn" onclick="handleEmailSubmit()" style="width:100%;padding:16px 20px;background:#141210;color:#FFFFFF;font-family:'Jost',sans-serif;font-size:10px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s;border-radius:50px" onmouseover="this.style.background='#7C6A54'" onmouseout="this.style.background='#141210'">Send Me a Love Letter</button>
-    </div>
-    <div id="emailSuccess" style="display:none;">
-      <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:#7C6A54;line-height:1.6;">A love letter is on its way to you.</p>
-    </div>
-    <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#A09888;margin-top:16px;">No spam. Just love letters.</p>
-  </div>
-</section>
-
-</main>
-
-<!-- STICKY BAR -->
-<div class="sticky-bar" id="stickyBar">
-  <span class="sticky-bar-text">24 Days With Jesus</span>
-  <a href="hardcover.html" class="sticky-bar-btn">Start Your 24 Days $20</a>
-</div>
-
-<script async src="https://www.instagram.com/embed.js"></script>
+  </section>
 
 
 
-  
-
-
-
-<script>
-
-  // Reveal animations
-  document.addEventListener('DOMContentLoaded', function() {
-    var els = document.querySelectorAll('.reveal');
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, {threshold: 0.08});
-    els.forEach(function(el) { obs.observe(el); });
-
-    // Nav scroll effect + Sticky bar + Back to top
-    var siteNav = document.querySelector('.site-nav');
-    var stickyBar = document.getElementById('stickyBar');
-    window.addEventListener('scroll', function() {
-      var sy = window.scrollY;
-      if (siteNav) {
-        var menuOpen = document.getElementById('mobileMenu') && document.getElementById('mobileMenu').classList.contains('open');
-        if (sy > 80 || menuOpen) { siteNav.classList.add('scrolled'); }
-        else { siteNav.classList.remove('scrolled'); }
-      }
-      if (stickyBar) {
-        if (sy > 500) { stickyBar.classList.add('visible'); }
-        else { stickyBar.classList.remove('visible'); }
-      }
-    }, {passive: true});
-
-
-
-
-
-    // Email submit
-    window.handleEmailSubmit = function() {
-      var btn = document.getElementById('emailBtn');
-      var input = document.getElementById('emailInput');
-      var email = input ? input.value.trim() : '';
-      if (!email || email.indexOf('@') === -1) {
-        input.style.borderColor = '#c0392b';
-        input.setAttribute('placeholder', 'Please enter a valid email');
-        return;
-      }
-      btn.textContent = 'Sending...';
-      btn.style.background = '#7C6A54';
-      // Send to Klaviyo - subscribe to Email List
-      var _learnq = window._learnq || [];
-      _learnq.push(['identify', { '$email': email }]);
-      _learnq.push(['track', 'Website Signup', { source: 'Homepage' }]);
-      var controller = new AbortController();
-      setTimeout(function() { controller.abort(); }, 10000);
-      fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'g=V55Ssm&email=' + encodeURIComponent(email),
-        signal: controller.signal
-      }).then(function() {
-        document.getElementById('emailFormWrap').style.display = 'none';
-        document.getElementById('emailSuccess').style.display = 'block';
-      }).catch(function() {
-        btn.textContent = 'Try Again';
-        btn.style.background = '#141210';
-      });
-    };
-
-    // Homepage review carousel
-    var track = document.getElementById('homeCarouselTrack');
-    if (track) {
-      var current = 0;
-      var slides = track.children;
-      var total = slides.length;
-      var dotsWrap = document.getElementById('homeCarouselDots');
-
-      function goTo(n) {
-        current = (n + total) % total;
-        track.style.transform = 'translateX(' + (-current * 100) + '%)';
-        var dots = document.querySelectorAll('.hc-dot');
-        dots.forEach(function(d, i) {
-          d.style.background = i === current ? '#D4A843' : '#E8E0D5';
-        });
-      }
-
-      if (dotsWrap) {
-        for (var i = 0; i < total; i++) {
-          var d = document.createElement('div');
-          d.className = 'hc-dot';
-          d.style.cssText = 'width:10px;height:10px;border-radius:50%;cursor:pointer;transition:background .3s;display:inline-block;background:' + (i===0?'#D4A843':'#E8E0D5');
-          (function(idx){ d.addEventListener('click', function(){ goTo(idx); }); })(i);
-          dotsWrap.appendChild(d);
-        }
-      }
-
-      var tx = 0;
-      track.addEventListener('touchstart', function(e){ tx = e.touches[0].clientX; }, {passive:true});
-      track.addEventListener('touchend', function(e){
-        var diff = tx - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-      }, {passive:true});
-
-      window.moveHomeCarousel = function(dir) { goTo(current + dir); };
-      // Keyboard arrow support
-      var carouselSection = track.closest('section');
-      if (carouselSection) {
-        carouselSection.setAttribute('role', 'region');
-        carouselSection.setAttribute('aria-label', 'Reader reviews carousel');
-        carouselSection.addEventListener('keydown', function(e) {
-          if (e.key === 'ArrowLeft') { goTo(current - 1); e.preventDefault(); }
-          if (e.key === 'ArrowRight') { goTo(current + 1); e.preventDefault(); }
-        });
-      }
-      setInterval(function(){ goTo(current + 1); }, 15000);
-    }
-  });
-</script>
-<script>
-  function toggleFaq(el) {
-    var isOpen = el.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-    if (!isOpen) el.classList.add('open');
-  }
-  function toggleMenu() {
-    var menu = document.getElementById('mobileMenu');
-    var nav = document.querySelector('.site-nav');
-    if (menu) {
-      menu.classList.toggle('open');
-      // Force solid nav background when menu is open (so it matches the dropdown)
-      if (menu.classList.contains('open')) {
-        nav.classList.add('scrolled');
-      } else if (window.scrollY <= 80) {
-        nav.classList.remove('scrolled');
-      }
-    }
-  }
-</script>
-<!-- Back to Top -->
-
-<footer class="site-footer" style="padding:64px 56px 120px;background:var(--black);color:var(--linen);">
-    <div style="max-width:1000px;margin:0 auto;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:48px;">
+  <!-- APP SECTION -->
+  <section style="padding: 80px 0; background: var(--white);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
-          <img src="images/logo.png" alt="Forever Yours Logo" style="height:28px;width:auto;display:block;filter:brightness(0) invert(1);"/>
+          <span class="eyebrow reveal">Now Available</span>
+          <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:16px;">Hear God's voice <em>every morning.</em></h2>
+          <p style="font-size:16px; line-height:1.75; color:var(--ink-soft); margin-bottom:28px;" class="reveal reveal-delay-2">
+            Every morning at 7:07 AM, receive a personal love letter written as if from your Heavenly Father paired with a verse for the day. No noise. No gimmicks. Just a quiet, intimate moment with the One who has loved you all along.
+          </p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-bottom:36px;" class="reveal reveal-delay-3">
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Daily Love Letters from God at 7:07 AM</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Daily Verse of the Day</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Christian Scripture Carousels</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Forever Yours Devotional Read in the App</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Scroll Through Scripture Full KJV Bible</li>
+            <li style="display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--ink-soft);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;"></span>Faith AI Friend Rooted in Scripture</li>          </ul>
+          <div class="reveal reveal-delay-4">
+            <a href="https://apps.apple.com/us/app/jesus-forever-yours/id6758735416" target="_blank" style="display:inline-flex;align-items:center;gap:12px;background:var(--ink);color:var(--white);padding:14px 28px;border-radius:var(--r-pill);text-decoration:none;font-weight:600;font-size:14px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              Download on the App Store
+            </a>
+          </div>
         </div>
-        <div style="display:flex;gap:12px;">
-          <a href="https://instagram.com/jesusforeveryours" target="_blank" aria-label="Instagram" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(241,237,230,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .3s;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(241,237,230,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(241,237,230,0.7)" stroke="none"/></svg>
-          </a>
-          <a href="https://tiktok.com/@roserenuu" target="_blank" aria-label="TikTok" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(241,237,230,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .3s;">
-            <svg width="14" height="16" viewBox="0 0 16 18" fill="rgba(241,237,230,0.7)"><path d="M11.5 0h-2.8v12.3c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5c.3 0 .5 0 .8.1V7c-.3 0-.5-.1-.8-.1C3.1 6.9.7 9.3.7 12.3S3.1 17.7 6.2 17.7s5.5-2.5 5.5-5.5V5.7c1.1.8 2.5 1.3 4 1.3V4.2c-2.3-.1-4.2-1.9-4.2-4.2z"/></svg>
-          </a>
-          <a href="https://youtube.com/@roserenuu" target="_blank" aria-label="YouTube" style="width:36px;height:36px;border-radius:50%;border:1px solid rgba(241,237,230,0.2);display:flex;align-items:center;justify-content:center;transition:border-color .3s;">
-            <svg width="18" height="12" viewBox="0 0 20 14" fill="rgba(241,237,230,0.7)"><path d="M19.6 2.2c-.2-.8-.8-1.4-1.6-1.6C16.4.1 10 .1 10 .1S3.6.1 2 .6c-.8.2-1.4.8-1.6 1.6C0 3.8 0 7 0 7s0 3.2.4 4.8c.2.8.8 1.4 1.6 1.6 1.6.5 8 .5 8 .5s6.4 0 8-.5c.8-.2 1.4-.8 1.6-1.6.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM8 10V4l5.2 3L8 10z"/></svg>
-          </a>
+        <div style="display:flex; align-items:center; justify-content:center;" class="reveal reveal-delay-2">
+          <div style="position:relative;">
+            <img src="app-icon.png" alt="Jesus Forever Yours App" style="width:220px;height:220px;border-radius:48px;box-shadow:0 32px 80px rgba(44,36,22,0.15);object-fit:cover;"/>
+            <div style="position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--white);border-radius:var(--r-pill);padding:8px 20px;box-shadow:0 4px 20px rgba(44,36,22,0.12);white-space:nowrap;display:flex;align-items:center;gap:8px;">
+              <span style="color:var(--accent);font-size:12px;">★★★★★</span>
+              <span style="font-size:12px;font-weight:600;color:var(--ink);">Jesus Forever Yours</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:48px;margin-bottom:48px;">
-        <div>
-          <p style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,237,230,0.4);margin-bottom:18px;">Legal</p>
-          <a href="privacy.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">Privacy</a>
-          <a href="terms.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">Terms</a>
-          <a href="shipping.html" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;transition:color .3s;">Shipping</a>
+    </div>
+  </section>
+
+  <!-- MEET ROSE -->
+  <section class="section" style="background: var(--white); padding: var(--section-gap) 0;">
+    <div class="container">
+      <div class="rose-section">
+        <div class="reveal">
+          <img src="https://jesusforeveryours.com/images/rose-photo.jpg"
+               alt="Rose Renuu"
+               class="rose-photo"
+               onerror="this.outerHTML='<div class=\'rose-photo-placeholder reveal\'>🌹</div>'"/>
         </div>
         <div>
-          <p style="font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:rgba(241,237,230,0.4);margin-bottom:18px;">Connect</p>
-          <a href="https://instagram.com/jesusforeveryours" target="_blank" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">@jesusforeveryours</a>
-          <a href="https://instagram.com/roserenuu" target="_blank" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;margin-bottom:12px;transition:color .3s;">@roserenuu</a>
-          <a href="mailto:support@jesusforeveryours.com" style="display:block;font-family:'Jost',sans-serif;font-size:11px;color:rgba(241,237,230,0.7);text-decoration:none;transition:color .3s;">support@jesusforeveryours.com</a>
+          <span class="eyebrow reveal">Meet the Author & Founder of Jesus Forever Yours</span>
+          <h2 class="section-title reveal reveal-delay-1">Written from <em>her darkest</em> season.</h2>
+          <p class="section-subtitle reveal reveal-delay-2" style="max-width: 100%; margin-bottom: 20px;">
+            Rose Renuu is a writer, content creator, and the founder of Jesus Forever Yours. What began as a personal encounter with God in her darkest season grew into an app, a devotional, and a growing community of people who wake up every morning to a love letter from their Heavenly Father.
+          </p>
+          <p style="font-size:15px; line-height:1.7; color:var(--ink-soft); margin-bottom:32px;" class="reveal reveal-delay-3">
+            Through her faith filled content, the Jesus Forever Yours app, and the Forever Yours devotional, Rose has built something rare. A space where people do not just read about God's love but actually feel it. Rooted in Los Angeles and reaching millions around the world, her mission has never changed: to remind you that God sees you, knows you, and has loved you all along.
+          </p>
+          <div class="reveal reveal-delay-4" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://instagram.com/roserenuu" target="_blank" class="btn btn-ghost">@roserenuu ↗</a>
+          </div>
         </div>
       </div>
-      <div style="border-top:1px solid rgba(241,237,230,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-        <p style="font-family:'Jost',sans-serif;font-size:10px;color:rgba(241,237,230,0.35);">&copy; 2026 Rose Renuu LLC. All rights reserved.</p>
-        <p style="font-family:'Jost',sans-serif;font-size:10px;font-style:italic;color:rgba(241,237,230,0.3);">Made with love in Los Angeles.</p>
+    </div>
+  </section>
+
+  <!-- EDITIONS -->
+  <section class="section" style="background: var(--cream-light); padding: 72px 0 56px;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:56px;">
+        <span class="eyebrow reveal">Choose Your Edition</span>
+        <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">Start your <em>24 days.</em></h2>
       </div>
+      <div class="editions-grid">
+        <a href="https://buy.stripe.com/3cI3cvagu4Qi48yeGr38401" class="edition-card edition-card-hardcover reveal reveal-delay-1">
+          <div class="edition-label">Hardcover Edition</div>
+          <div class="edition-title">Hold it. Write in it.<br>Gift it.</div>
+          <div class="edition-price">$20</div>
+          <ul class="edition-features">
+            <li>Beautiful physical hardcover book</li>
+            <li>24 love letters from God</li>
+            <li>Scripture + journaling space</li>
+            <li>Perfect to give as a gift</li>
+            <li>Ships within 4–6 weeks</li>
+          </ul>
+          <span class="edition-btn">Order Now →</span>
+        </a>
+        <a href="https://buy.stripe.com/9B6bJ10FU3Me5cCfKv38402" class="edition-card edition-card-digital reveal reveal-delay-2">
+          <div class="edition-label">Digital Edition</div>
+          <div class="edition-title">Start reading<br>right now.</div>
+          <div class="edition-price">$10</div>
+          <ul class="edition-features">
+            <li>Instant PDF download</li>
+            <li>Read on any device</li>
+            <li>24 love letters from God</li>
+            <li>Scripture for each day</li>
+            <li>Delivered immediately</li>
+          </ul>
+          <span class="edition-btn">Download Now →</span>
+        </a>
+      </div>
+      <p style="text-align:center; font-size:13px; color:var(--ink-muted); margin-top:24px; reveal">
+        Many readers get both the hardcover to hold and the digital to start right away.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER WITH EMAIL -->
+  <footer style="background: var(--ink);">
+    <div class="container">
+
+      <!-- Email row -->
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:32px; padding:52px 0 40px; border-bottom:1px solid rgba(245,239,232,0.08); flex-wrap:wrap;">
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Free Love Letter</div>
+          <h3 style="font-size:clamp(18px,2.5vw,26px);font-weight:700;letter-spacing:-0.03em;color:var(--white);line-height:1.2;">Get a love letter from God <em style="font-style:normal;font-family:var(--font-sans);font-weight:300;color:rgba(245,239,232,0.7);">delivered to your inbox.</em></h3>
+        </div>
+        <div style="flex-shrink:0; min-width:320px;">
+          <div style="display:flex; gap:12px; align-items:flex-start;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
+              <input type="email" id="emailInput" placeholder="Your email address" style="width:100%;padding:14px 20px;border:1.5px solid rgba(255,255,255,0.15);border-radius:var(--r-pill);background:rgba(255,255,255,0.08);color:var(--white);font-family:var(--font-sans);font-size:14px;outline:none;" />
+              <p style="font-size:11px;color:rgba(245,239,232,0.3);margin:0;text-align:center;">No spam. Just love letters.</p>
+            </div>
+            <button onclick="submitEmail()" style="background:var(--accent);color:var(--white);border:none;border-radius:var(--r-pill);padding:14px 24px;font-family:var(--font-sans);font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;">Send It</button>
+          </div>
+          <div class="email-success" id="emailSuccess" style="display:none;color:rgba(255,255,255,0.8);font-size:15px;margin-top:16px;">A love letter is on its way. 💌</div>
+        </div>
+      </div>
+
+      <!-- Footer links row -->
+      <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:40px; padding:36px 0 28px;">
+        <div>
+          <img src="app-icon.png" alt="Jesus Forever Yours" style="height:52px;width:52px;object-fit:cover;border-radius:12px;margin-bottom:16px;display:block;"/>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <a href="https://instagram.com/jesusforeveryours" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@jesusforeveryours</a>
+            <a href="https://instagram.com/roserenuu" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@roserenuu</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,232,0.3);margin-bottom:12px;">Pages</div>
+          <a href="hardcover.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;transition:color 0.2s;">Hardcover</a>
+          <a href="digital.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Digital</a>
+          <a href="contact.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Contact</a>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,232,0.3);margin-bottom:12px;">Legal</div>
+          <a href="privacy.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Privacy</a>
+          <a href="terms.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Terms</a>
+          <a href="shipping.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Shipping</a>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div style="border-top:1px solid rgba(245,239,232,0.07);padding:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+        <span style="font-size:12px;color:rgba(245,239,232,0.3);">© 2026 Rose Renuu LLC. All rights reserved. Made with love in Los Angeles.</span>
+        <a href="mailto:support@jesusforeveryours.com" style="font-size:12px;color:rgba(245,239,232,0.3);text-decoration:none;">support@jesusforeveryours.com</a>
+      </div>
+
     </div>
   </footer>
 
-<!-- EMAIL POPUP -->
-<div id="emailPopup" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(20,18,16,0.6);z-index:10000;align-items:center;justify-content:center;padding:24px;">
-  <div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;position:relative;border-radius:2px;">
-    <button onclick="closePopup()" style="position:absolute;top:16px;right:20px;background:none;border:none;font-size:24px;color:#9A9080;cursor:pointer;font-family:'Jost',sans-serif;">&times;</button>
-    <p style="font-family:'Jost',sans-serif;font-size:10px;font-weight:500;letter-spacing:.35em;text-transform:uppercase;color:#7C6A54;margin-bottom:20px;">Free Gift</p>
-    <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:#141210;line-height:1.2;margin-bottom:8px;">Get a free Love Letter<br/><em style="font-style:italic;color:#7C6A54;">delivered to your inbox.</em></h3>
-    <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:#6A6058;margin-bottom:32px;line-height:1.6;">Sign up and receive a personal love letter from God straight to your inbox.</p>
-    <input id="popupEmail" type="email" placeholder="Your email address" required style="width:100%;padding:16px 20px;border:1px solid #E8E0D5;background:#fff;font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#141210;margin-bottom:12px;box-sizing:border-box;outline:none;"/>
-    <button onclick="submitPopup()" style="width:100%;padding:16px;background:#141210;color:#fff;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s;border-radius:50px" onmouseover="this.style.background='#7C6A54'" onmouseout="this.style.background='#141210'">Send Me a Love Letter</button>
-    <p style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#A09888;margin-top:12px;">No spam. Just love letters.</p>
-  </div>
-</div>
-<script>
-function showPopup(){
-  if(localStorage.getItem('jfy_popup_shown'))return;
-  document.getElementById('emailPopup').style.display='flex';
-}
-function closePopup(){
-  document.getElementById('emailPopup').style.display='none';
-  localStorage.setItem('jfy_popup_shown','1');
-}
-function submitPopup(){
-  var e=document.getElementById('popupEmail').value;
-  if(!e||!e.includes('@'))return;
-  var _learnq=window._learnq||[];
-  _learnq.push(['identify',{$email:e}]);
-  _learnq.push(['track','Signed Up',{source:'popup'}]);
-  var ac=new AbortController();
-  setTimeout(function(){ac.abort();},10000);
-  fetch('https://a.klaviyo.com/ajax/subscriptions/subscribe',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'g=V55Ssm&email='+encodeURIComponent(e),signal:ac.signal}).then(function(){
-    document.getElementById('emailPopup').innerHTML='<div style="background:#F8F6F3;max-width:480px;width:100%;padding:56px 40px;text-align:center;border-radius:2px;"><p style="font-family:\'Playfair Display\',serif;font-size:28px;font-weight:400;color:#141210;margin-bottom:12px;">Thank you <em style=\'font-style:italic;color:#7C6A54\'>so much.</em></p><p style=\'font-family:Cormorant Garamond,serif;font-size:18px;font-style:italic;color:#6A6058;\'>Your love letter is on its way.</p></div>';
-    localStorage.setItem('jfy_popup_shown','1');
-    setTimeout(function(){document.getElementById('emailPopup').style.display='none';},3000);
-  }).catch(function(){
-    alert('Something went wrong. Please try again or email support@jesusforeveryours.com');
-  });
-}
-setTimeout(showPopup,8000);
-</script>
-
-<style>
-.btn-dark, .btn-white, .btn-primary, .btn-secondary, .btn-outline,
-.book-btn, .cta-btn-dark, .cta-btn-outline, .checkout-btn,
-.form-submit, .sticky-bar-btn, .related-btn, .hero-cta, .buy-btn, .product-btn {
-  border-radius: 50px !important;
-}
-
-/* ===== FOOTER: LIGHT THEME ===== */
-.site-footer {
-  background: #F1EDE6 !important;
-  color: #141210 !important;
-}
-.site-footer img {
-  filter: none !important;
-}
-.site-footer p {
-  color: rgba(20,18,16,0.5) !important;
-}
-.site-footer a:not([aria-label]) {
-  color: rgba(20,18,16,0.65) !important;
-}
-.site-footer a[aria-label] {
-  border-color: rgba(20,18,16,0.18) !important;
-}
-.site-footer a[aria-label] svg {
-  stroke: rgba(20,18,16,0.6) !important;
-}
-.site-footer a[aria-label] svg path,
-.site-footer a[aria-label] svg circle[fill] {
-  fill: rgba(20,18,16,0.6) !important;
-}
-.site-footer > div > div:last-child {
-  border-top-color: rgba(20,18,16,0.12) !important;
-}
-
-/* ===== MOBILE OVERRIDES — MUST BE LAST ===== */
-@media(max-width: 960px) {
-  /* Match hardcover page review padding exactly */
-  .testimonials-section {
-    padding: 72px 24px !important;
-  }
-  #homeCarouselTrack > div > div {
-    padding: 40px 28px !important;
-  }
-}
-@media(max-width: 768px) {
-  /* Footer: 4-col to 2x2 */
-  .site-footer {
-    padding: 40px 24px 32px !important;
-  }
-  .site-footer > div > div:nth-child(2) {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 28px 20px !important;
-  }
-  .site-footer > div > div:last-child {
-    flex-direction: column !important;
-    text-align: center !important;
-    align-items: center !important;
-  }
-}
-@media(max-width: 480px) {
-  /* Footer: 2-col to 1-col */
-  .site-footer > div > div:nth-child(2) {
-    grid-template-columns: 1fr !important;
-    text-align: center !important;
-    gap: 24px !important;
-  }
-}
-</style>
-<script>
-(function(){
-  var counters = document.querySelectorAll('.count-up');
-  if (!counters.length) return;
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if (!entry.isIntersecting) return;
-      var el = entry.target;
-      observer.unobserve(el);
-      var target = parseInt(el.getAttribute('data-target'), 10);
-      var duration = 1800;
-      var start = performance.now();
-      function tick(now) {
-        var t = Math.min((now - start) / duration, 1);
-        var ease = 1 - Math.pow(1 - t, 3);
-        el.textContent = Math.floor(ease * target);
-        if (t < 1) requestAnimationFrame(tick);
-        else el.textContent = target;
-      }
-      requestAnimationFrame(tick);
+  <script>
+    // NAV scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
     });
-  }, {threshold: 0.5});
-  counters.forEach(function(c){ observer.observe(c); });
-})();
-</script>
+
+    // Mobile nav toggle
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('revealed'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // FAQ
+    function toggleFaq(el) {
+      const item = el.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    // Email
+    function submitEmail() {
+      const val = document.getElementById('emailInput').value;
+      if (!val || !val.includes('@')) return;
+      document.querySelector('.email-form').style.display = 'none';
+      document.getElementById('emailSuccess').style.display = 'block';
+    }
+
+    // Hero reveals handled by CSS animation (see .hero .reveal rule above)
+  </script>
 </body>
 </html>
