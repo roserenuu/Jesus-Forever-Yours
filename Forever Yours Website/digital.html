@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Edition | Forever Yours</title>
-  <link rel="stylesheet" href="shared.css?v=5" />
+  <link rel="stylesheet" href="shared.css?v=7" />
   <style>
     .digital-hero {
       padding-top: 80px;
@@ -160,9 +160,16 @@
       /* Container padding bigger so nothing hugs the edges */
       .container { padding: 0 32px !important; }
 
-      /* APP section: more space at top, big gaps everywhere */
-      .digital-app-section { padding: calc(var(--nav-h) + 88px) 0 96px !important; }
-      .app-grid-d { grid-template-columns: 1fr !important; gap: 64px !important; }
+      /* APP section becomes a full-height hero so the icon sits in the middle
+         of the screen, never hugging the nav. */
+      .digital-app-section {
+        min-height: 100vh !important;
+        padding: calc(var(--nav-h) + 24px) 0 64px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .digital-app-section > .container { width: 100%; }
+      .app-grid-d { grid-template-columns: 1fr !important; gap: 56px !important; }
       .app-grid-d > div:first-child { order: 2; }
       .app-grid-d > div:last-child { order: 1; }
       .app-grid-d > div:first-child > div.reveal { text-align: center; margin-top: 8px; }
