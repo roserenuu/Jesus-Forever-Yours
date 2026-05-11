@@ -157,8 +157,12 @@
     .compare-table .highlight-col { background: var(--cream-light); }
     .compare-table th.highlight-col { color: var(--accent); }
     @media (max-width: 900px) {
-      .digital-grid { grid-template-columns: 1fr; }
-      .device-frame { width: 260px; height: 360px; }
+      .digital-grid { grid-template-columns: 1fr; gap: 32px !important; }
+      .device-frame { width: 220px; height: 300px; }
+      .app-grid-d { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .app-grid-d > div:last-child img { width: 160px !important; height: 160px !important; border-radius: 36px !important; }
+      .section { padding: 56px 0 !important; }
+      section[style*="padding: calc(var(--nav-h) + 80px)"] { padding: calc(var(--nav-h) + 32px) 0 56px !important; }
     }
     @keyframes floatBook {
       0%, 100% { transform: translateY(0); }
@@ -209,7 +213,7 @@
   <!-- APP SECTION -->
   <section style="padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--white);">
     <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+      <div class="app-grid-d" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
           <span class="eyebrow reveal">Now Available</span>
           <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:16px;">Hear God's voice <em>every morning.</em></h2>
