@@ -44,6 +44,7 @@
     .ci-value a:hover { text-decoration: underline; }
 
     /* Form */
+    .contact-form-wrap { padding-left: 40px; }
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -102,17 +103,16 @@
       .contact-grid { grid-template-columns: 1fr; gap: 24px; }
       .form-row { grid-template-columns: 1fr; }
       .contact-info-card { padding: 32px 24px !important; }
-      .contact-form { padding: 32px 24px !important; }
+      .contact-form { padding: 32px 24px !important; text-align: center !important; }
       .section { padding: 56px 0 !important; }
       .contact-grid > div:first-child { order: 2; }
-      .contact-grid > div:last-child { order: 1; padding-left: 0 !important; }
-      .contact-form .form-group { text-align: center; }
-      .contact-form label { display: block; text-align: center; width: 100%; }
-      .contact-form input,
-      .contact-form select,
-      .contact-form textarea { text-align: center; }
-      .contact-form input::placeholder,
-      .contact-form textarea::placeholder { text-align: center; }
+      .contact-grid > div:last-child { order: 1; }
+      .contact-form-wrap { padding-left: 0 !important; padding-right: 0 !important; }
+      .contact-form .form-group { text-align: center !important; align-items: center !important; }
+      .contact-form .form-group label { display: block !important; text-align: center !important; width: 100% !important; }
+      .contact-form .form-group input,
+      .contact-form .form-group select,
+      .contact-form .form-group textarea { text-align: center !important; width: 100% !important; }
     }
   </style>
   <link rel="icon" type="image/png" href="app-icon.png">
@@ -213,7 +213,7 @@
         </div>
 
         <!-- RIGHT FORM -->
-        <div style="padding-left: 40px;">
+        <div class="contact-form-wrap">
           <div class="contact-form reveal reveal-delay-1" id="contactForm">
             <div class="form-row">
               <div class="form-group">
