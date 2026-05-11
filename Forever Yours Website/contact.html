@@ -105,7 +105,14 @@
       .contact-form { padding: 32px 24px !important; }
       .section { padding: 56px 0 !important; }
       .contact-grid > div:first-child { order: 2; }
-      .contact-grid > div:last-child { order: 1; }
+      .contact-grid > div:last-child { order: 1; padding-left: 0 !important; }
+      .contact-form .form-group { text-align: center; }
+      .contact-form label { display: block; text-align: center; width: 100%; }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea { text-align: center; }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder { text-align: center; }
     }
   </style>
   <link rel="icon" type="image/png" href="app-icon.png">
