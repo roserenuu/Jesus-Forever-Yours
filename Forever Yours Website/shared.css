@@ -558,6 +558,44 @@ body {
   .footer-brand img { height: 44px; width: 44px; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; padding-top: 16px; }
 
+  /* Email footer (shared across pages) — centered on mobile */
+  .footer-email-row {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 16px !important;
+    padding: 32px 0 20px !important;
+    text-align: center;
+  }
+  .footer-email-row > div:first-child { width: 100%; }
+  .footer-email-row > div:last-child { min-width: 0 !important; width: 100%; }
+  .footer-email-row .email-row {
+    flex-direction: column;
+    gap: 10px !important;
+    align-items: center;
+  }
+  .footer-email-row button { width: 100%; }
+  .footer-links-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    padding: 24px 0 18px !important;
+    text-align: center;
+    justify-items: center;
+  }
+  .footer-links-row > div:first-child {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links-row > div:first-child .footer-logo-text { margin: 0 auto 14px !important; }
+  .footer-links-row > div:first-child > div { align-items: center; }
+  .footer-bottom-row {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 6px !important;
+    text-align: center;
+  }
+
   .pull-quote { font-size: clamp(18px, 4.5vw, 22px); }
 
   /* popup tighten on small screens */
