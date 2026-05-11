@@ -9,15 +9,22 @@
   <style>
     /* ── HERO ── */
     body {
-      background: linear-gradient(
-        to bottom,
-        #FAF6F1 0%,
-        #F5EFE8 25%,
-        #F0E9DF 55%,
-        #F5EFE8 80%,
-        #FAF6F1 100%
-      ) !important;
-      background-attachment: fixed !important;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, #FFFCF8 0%, transparent 55%),
+        radial-gradient(ellipse 90% 40% at 100% 25%, rgba(224, 213, 197, 0.55) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 35% at 0% 55%, rgba(224, 213, 197, 0.5) 0%, transparent 55%),
+        radial-gradient(ellipse 80% 35% at 100% 80%, rgba(224, 213, 197, 0.6) 0%, transparent 55%),
+        linear-gradient(
+          to bottom,
+          #FAF6F1 0%,
+          #F1E9DC 30%,
+          #E5D8C0 55%,
+          #EFE5D2 80%,
+          #FAF6F1 100%
+        ) !important;
+      background-attachment: scroll !important;
+      background-repeat: no-repeat !important;
+      background-size: 100% 100% !important;
     }
     .hero {
       min-height: 100vh;
