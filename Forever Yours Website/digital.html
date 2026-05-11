@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Edition | Forever Yours</title>
-  <link rel="stylesheet" href="shared.css?v=3" />
+  <link rel="stylesheet" href="shared.css?v=5" />
   <style>
     .digital-hero {
       padding-top: 80px;
@@ -157,38 +157,38 @@
     .compare-table .highlight-col { background: var(--cream-light); }
     .compare-table th.highlight-col { color: var(--accent); }
     @media (max-width: 900px) {
-      /* Generous container padding so content sits well inside the page */
+      /* Container padding bigger so nothing hugs the edges */
       .container { padding: 0 32px !important; }
 
-      /* App section: icon first, lots of breathing room */
-      section[style*="padding: calc(var(--nav-h) + 80px)"] { padding: calc(var(--nav-h) + 48px) 0 88px !important; }
-      .app-grid-d { grid-template-columns: 1fr !important; gap: 56px !important; }
+      /* APP section: more space at top, big gaps everywhere */
+      .digital-app-section { padding: calc(var(--nav-h) + 88px) 0 96px !important; }
+      .app-grid-d { grid-template-columns: 1fr !important; gap: 64px !important; }
       .app-grid-d > div:first-child { order: 2; }
-      .app-grid-d > div:last-child { order: 1; margin-top: -8px; }
+      .app-grid-d > div:last-child { order: 1; }
       .app-grid-d > div:first-child > div.reveal { text-align: center; margin-top: 8px; }
-      .app-grid-d > div:first-child .eyebrow { margin-bottom: 20px; }
-      .app-grid-d > div:first-child h2 { margin-bottom: 28px !important; font-size: clamp(28px, 7.5vw, 38px) !important; }
-      .app-grid-d > div:first-child p { margin-bottom: 36px !important; line-height: 1.8 !important; font-size: 15px !important; }
-      .app-grid-d > div:first-child ul { gap: 18px !important; margin-bottom: 44px !important; }
+      .app-grid-d > div:first-child .eyebrow { margin-bottom: 24px !important; }
+      .app-grid-d > div:first-child h2 { margin-bottom: 32px !important; font-size: clamp(28px, 7.5vw, 38px) !important; line-height: 1.1 !important; }
+      .app-grid-d > div:first-child p { margin-bottom: 40px !important; line-height: 1.85 !important; font-size: 15px !important; }
+      .app-grid-d > div:first-child ul { gap: 20px !important; margin-bottom: 48px !important; }
       .app-grid-d > div:first-child ul li { font-size: 14px !important; line-height: 1.5 !important; }
       .app-grid-d > div:last-child img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
 
       /* PDF section */
-      .digital-hero { padding: 48px 0 72px !important; }
-      .digital-grid { grid-template-columns: 1fr; gap: 36px !important; align-items: start !important; }
+      .digital-hero { padding: 56px 0 80px !important; }
+      .digital-grid { grid-template-columns: 1fr; gap: 40px !important; align-items: start !important; }
       .digital-grid > div:first-child { order: 2; }
       .digital-grid > div:last-child { order: 1; }
-      .digital-grid > div:first-child .eyebrow { margin-bottom: 18px; }
-      .digital-grid > div:first-child h1 { margin-bottom: 24px !important; }
-      .digital-grid > div:first-child p { margin-bottom: 32px !important; line-height: 1.75 !important; }
-      .digital-grid > div:first-child > div[style*="font-size:48px"] { margin-bottom: 32px !important; font-size: 38px !important; }
-      .digital-grid > div:first-child > div[style*="flex-direction:column"] { margin-bottom: 28px !important; gap: 12px !important; }
+      .digital-grid > div:first-child .eyebrow { margin-bottom: 20px; }
+      .digital-grid > div:first-child h1 { margin-bottom: 28px !important; }
+      .digital-grid > div:first-child p { margin-bottom: 36px !important; line-height: 1.8 !important; }
+      .digital-grid > div:first-child > div[style*="font-size:48px"] { margin-bottom: 36px !important; font-size: 38px !important; }
+      .digital-grid > div:first-child > div[style*="flex-direction:column"] { margin-bottom: 32px !important; gap: 14px !important; }
       .digital-mockup { padding: 0 !important; }
       .digital-mockup .device-glow { display: none; }
       .digital-mockup img { width: 200px !important; }
       .device-frame { width: 200px; height: 280px; }
 
-      .section { padding: 72px 0 !important; }
+      .section { padding: 80px 0 !important; }
     }
     @keyframes floatBook {
       0%, 100% { transform: translateY(0); }
@@ -237,7 +237,7 @@
   </div>
 
   <!-- APP SECTION -->
-  <section style="padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--white);">
+  <section class="digital-app-section" style="padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--white);">
     <div class="container">
       <div class="app-grid-d" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
