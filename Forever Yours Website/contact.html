@@ -100,19 +100,22 @@
     .form-success p { font-size: 14px; color: var(--ink-soft); }
 
     @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; gap: 24px; }
-      .form-row { grid-template-columns: 1fr; }
-      .contact-info-card { padding: 32px 24px !important; }
-      .contact-form { padding: 32px 24px !important; text-align: center !important; }
-      .section { padding: 56px 0 !important; }
+      .contact-hero { padding-top: calc(var(--nav-h) + 32px) !important; padding-bottom: 40px !important; }
+      .contact-hero > .container > div:first-child { margin-bottom: 24px !important; }
+      .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+      .form-row { grid-template-columns: 1fr; gap: 14px; }
+      .contact-info-card { padding: 28px 22px !important; }
+      .contact-form { padding: 0 !important; gap: 16px !important; text-align: center !important; }
+      .section { padding: 48px 0 !important; }
       .contact-grid > div:first-child { order: 2; }
       .contact-grid > div:last-child { order: 1; }
       .contact-form-wrap { padding-left: 0 !important; padding-right: 0 !important; }
-      .contact-form .form-group { text-align: center !important; align-items: center !important; }
+      .contact-form .form-group { text-align: center !important; align-items: center !important; gap: 8px !important; }
       .contact-form .form-group label { display: block !important; text-align: center !important; width: 100% !important; }
       .contact-form .form-group input,
       .contact-form .form-group select,
-      .contact-form .form-group textarea { text-align: center !important; width: 100% !important; }
+      .contact-form .form-group textarea { text-align: center !important; width: 100% !important; padding: 12px 14px !important; }
+      .contact-form .form-submit { margin-top: 8px !important; }
     }
   </style>
   <link rel="icon" type="image/png" href="app-icon.png">
