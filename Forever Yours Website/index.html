@@ -724,7 +724,7 @@
       .hero {
         grid-template-columns: 1fr;
         min-height: 0;
-        padding-top: calc(var(--nav-h) - 24px);
+        padding-top: 0;
         align-items: start;
       }
       .hero-left {
@@ -739,7 +739,8 @@
         min-height: 0;
         align-items: center;
         justify-content: center;
-        padding: 4px 0 0;
+        margin-top: -54px;
+        padding: 0;
         overflow: hidden;
         position: relative;
       }
@@ -764,9 +765,9 @@
       }
       .hero-scripture-pill, .hero-days-pill, .hero-star-pill { display: none; }
       .hero-title {
-        font-size: clamp(44px, 12vw, 56px) !important;
-        line-height: 0.98;
-        margin: -38px auto 24px;
+        font-size: clamp(40px, 10.8vw, 50px) !important;
+        line-height: 1;
+        margin: -64px auto 28px;
         letter-spacing: -0.03em;
         max-width: 360px;
       }
@@ -842,8 +843,8 @@
 
     @media (max-width: 380px) {
       .hero-left { padding: 0 16px 30px; }
-      .hero-right { padding-top: 2px; }
-      .hero-title { font-size: 40px !important; }
+      .hero-right { margin-top: -44px; padding-top: 0; }
+      .hero-title { font-size: 38px !important; margin-top: -56px; }
       .hero-bullets li { font-size: 13px; }
       .hero-actions .btn-lg { font-size: 12px; padding: 12px 16px; }
       .hero-avatars span { width: 20px; height: 20px; font-size: 9px; }
