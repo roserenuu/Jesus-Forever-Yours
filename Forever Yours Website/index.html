@@ -719,52 +719,100 @@
     }
 
     @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: var(--nav-h); }
-      .hero-left { padding: 24px 20px 8px; max-width: 100%; }
-      .hero-right { height: 62vw; min-height: 280px; max-height: 380px; margin-top: -8px; }
-      .hero-book-wrap { width: 88%; height: 108%; bottom: -8px; }
-      .hero-book { width: auto; height: 100%; max-width: 100%; }
+      /* HERO — keep two columns; book floats next to the title */
+      .hero {
+        grid-template-columns: 58% 42%;
+        min-height: auto;
+        padding-top: var(--nav-h);
+        gap: 4px;
+      }
+      .hero-left { padding: 20px 14px 24px 16px; max-width: 100%; }
+      .hero-right {
+        height: auto;
+        min-height: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 8px 16px 0;
+      }
+      .hero-book-wrap {
+        position: relative;
+        width: 100%;
+        height: auto;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-book {
+        width: 100%;
+        height: auto;
+        max-width: 220px;
+        object-fit: contain;
+        object-position: center;
+      }
       .hero-scripture-pill, .hero-days-pill, .hero-star-pill { display: none; }
-      .hero-title { font-size: clamp(36px, 10vw, 52px) !important; margin-bottom: 16px; }
-      .hero-bullets { margin-bottom: 20px; }
-      .hero-actions { gap: 10px; margin-bottom: 20px; }
-      .hero-actions .btn-lg { padding: 13px 18px; font-size: 13px; }
-      .hero-social-proof { gap: 12px; }
-      .hero-avatars span { width: 28px; height: 28px; font-size: 11px; }
+      .hero-title {
+        font-size: clamp(24px, 7.5vw, 34px) !important;
+        line-height: 1.05;
+        margin-bottom: 12px;
+      }
+      .hero-bullets { margin-bottom: 16px; gap: 5px; }
+      .hero-bullets li { font-size: 12px; gap: 8px; }
+      .hero-bullets li::before { width: 4px; height: 4px; }
+      .hero-actions { flex-direction: column; gap: 8px; margin-bottom: 16px; align-items: stretch; }
+      .hero-actions .btn-lg { padding: 11px 14px; font-size: 12px; justify-content: center; width: 100%; }
+      .hero-social-proof { gap: 8px; flex-wrap: wrap; }
+      .hero-avatars span { width: 22px; height: 22px; font-size: 9px; border-width: 1.5px; margin-left: -5px; }
+      .hero-proof-text { font-size: 11px; }
+
+      /* Sections below — tighter */
       .inside-grid { grid-template-columns: repeat(2, 1fr); }
-      .editions-grid { grid-template-columns: 1fr; gap: 16px; }
-      .edition-card { padding: 32px 24px; }
-      .edition-title { font-size: 24px; }
-      .edition-price { font-size: 34px; margin: 14px 0; }
+      .editions-grid { grid-template-columns: 1fr; gap: 14px; }
+      .edition-card { padding: 28px 22px; }
+      .edition-title { font-size: 22px; }
+      .edition-price { font-size: 32px; margin: 12px 0; }
       .reviews-grid { grid-template-columns: 1fr; }
-      .rose-section { grid-template-columns: 1fr; gap: 20px; text-align: left; }
-      .rose-photo, .rose-photo-placeholder { width: 132px !important; height: 132px !important; border-radius: 28px !important; aspect-ratio: 1 / 1 !important; }
-      .rose-photo-placeholder { font-size: 56px; }
+      .rose-section { grid-template-columns: 1fr; gap: 18px; text-align: left; }
+      .rose-photo, .rose-photo-placeholder {
+        width: 120px !important; height: 120px !important;
+        border-radius: 24px !important; aspect-ratio: 1 / 1 !important;
+      }
+      .rose-photo-placeholder { font-size: 48px; }
       .email-form { flex-direction: column; }
-      .cta-strip { flex-direction: column; text-align: center; padding: 32px 20px; }
-      .book-preview { padding: 32px 20px; }
-      .book-preview::before { font-size: 120px; top: 20px; left: 20px; }
+      .cta-strip { flex-direction: column; text-align: center; padding: 28px 18px; }
+      .book-preview { padding: 28px 18px; }
+      .book-preview::before { font-size: 100px; top: 16px; left: 16px; }
 
       /* App section */
-      .app-section { padding: 44px 0 !important; }
-      .app-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
-      .app-grid .app-icon-img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
+      .app-section { padding: 36px 0 !important; }
+      .app-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .app-grid .app-icon-img { width: 132px !important; height: 132px !important; border-radius: 30px !important; }
 
       /* Editions section */
-      .editions-section { padding: 44px 0 32px !important; }
-      .editions-section .editions-heading { margin-bottom: 28px !important; }
+      .editions-section { padding: 36px 0 28px !important; }
+      .editions-section .editions-heading { margin-bottom: 24px !important; }
 
       /* Meet Rose section */
-      .rose-wrap { padding: 44px 0 !important; }
+      .rose-wrap { padding: 36px 0 !important; }
 
       /* Footer email + links */
-      .footer-email-row { flex-direction: column; align-items: flex-start !important; gap: 20px !important; padding: 36px 0 24px !important; }
+      .footer-email-row { flex-direction: column; align-items: flex-start !important; gap: 16px !important; padding: 32px 0 20px !important; }
       .footer-email-row > div:last-child { min-width: 0 !important; width: 100%; }
       .footer-email-row .email-row { flex-direction: column; gap: 10px !important; }
       .footer-email-row button { width: 100%; }
-      .footer-links-row { grid-template-columns: 1fr 1fr !important; gap: 24px !important; padding: 24px 0 18px !important; }
+      .footer-links-row { grid-template-columns: 1fr 1fr !important; gap: 20px !important; padding: 20px 0 16px !important; }
       .footer-links-row > div:first-child { grid-column: 1 / -1; }
       .footer-bottom-row { flex-direction: column; align-items: flex-start !important; gap: 6px !important; }
+    }
+
+    @media (max-width: 380px) {
+      .hero { grid-template-columns: 60% 40%; }
+      .hero-left { padding: 16px 10px 20px 12px; }
+      .hero-title { font-size: 22px !important; }
+      .hero-actions .btn-lg { font-size: 11px; padding: 10px 12px; }
+      .hero-book { max-width: 180px; }
     }
   </style>
   <link rel="icon" type="image/png" href="app-icon.png">
