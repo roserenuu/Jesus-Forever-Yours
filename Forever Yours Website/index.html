@@ -729,7 +729,7 @@
         align-items: center;
       }
       .hero-left {
-        padding: 24px 4px 28px 18px;
+        padding: 32px 4px 44px 18px;
         max-width: 100%;
       }
       .hero-right {
@@ -765,14 +765,14 @@
       .hero-title {
         font-size: clamp(26px, 7.2vw, 34px) !important;
         line-height: 1.02;
-        margin-bottom: 16px;
+        margin-bottom: 22px;
         letter-spacing: -0.03em;
       }
       .hero-title .ht-line { display: block; white-space: nowrap; }
-      .hero-bullets { margin-bottom: 18px; gap: 5px; }
+      .hero-bullets { margin-bottom: 24px; gap: 8px; }
       .hero-bullets li { font-size: 13px; gap: 8px; }
       .hero-bullets li::before { width: 4px; height: 4px; }
-      .hero-actions { flex-direction: column; gap: 9px; margin-bottom: 18px; align-items: flex-start; }
+      .hero-actions { flex-direction: column; gap: 10px; margin-bottom: 22px; align-items: flex-start; }
       .hero-actions .btn-lg { padding: 12px 20px; font-size: 13px; }
       .hero-social-proof { gap: 10px; flex-wrap: nowrap; align-items: center; }
       .hero-avatars span { width: 22px; height: 22px; font-size: 10px; border-width: 1.5px; margin-left: -5px; }
@@ -785,9 +785,13 @@
       .edition-title { font-size: 22px; }
       .edition-price { font-size: 32px; margin: 12px 0; }
       .reviews-grid { grid-template-columns: 1fr; }
-      .rose-section { grid-template-columns: 1fr; gap: 20px; text-align: left; justify-items: center; }
+      .rose-section { grid-template-columns: 1fr; gap: 28px; text-align: left; justify-items: center; }
       .rose-section > div:first-child { display: flex; justify-content: center; width: 100%; }
       .rose-section > div:last-child { text-align: left; width: 100%; }
+      .rose-section .eyebrow { margin-bottom: 14px; }
+      .rose-section h2 { margin-bottom: 18px; }
+      .rose-section p { margin-bottom: 16px; }
+      .rose-section p:last-of-type { margin-bottom: 24px; }
       .rose-photo, .rose-photo-placeholder {
         width: 140px !important; height: 140px !important;
         border-radius: 28px !important; aspect-ratio: 1 / 1 !important;
@@ -800,18 +804,22 @@
       .book-preview::before { font-size: 100px; top: 16px; left: 16px; }
 
       /* App section */
-      .app-section { padding: 36px 0 !important; }
-      .app-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .app-section { padding: 56px 0 !important; }
+      .app-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
       .app-grid > div:first-child { order: 2; }
       .app-grid > div:last-child { order: 1; }
+      .app-grid > div:first-child .eyebrow { margin-bottom: 14px; }
+      .app-grid > div:first-child .section-title { margin-bottom: 20px !important; }
+      .app-grid > div:first-child p { margin-bottom: 24px !important; }
+      .app-grid > div:first-child ul { gap: 12px !important; margin-bottom: 32px !important; }
       .app-grid .app-icon-img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
 
       /* Editions section */
-      .editions-section { padding: 36px 0 28px !important; }
-      .editions-section .editions-heading { margin-bottom: 24px !important; }
+      .editions-section { padding: 56px 0 44px !important; }
+      .editions-section .editions-heading { margin-bottom: 32px !important; }
 
       /* Meet Rose section */
-      .rose-wrap { padding: 36px 0 !important; }
+      .rose-wrap { padding: 56px 0 !important; }
 
       /* Footer email + links */
       .footer-email-row { flex-direction: column; align-items: flex-start !important; gap: 16px !important; padding: 32px 0 20px !important; }
