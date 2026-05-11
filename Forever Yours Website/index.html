@@ -8,24 +8,6 @@
   <link rel="stylesheet" href="shared.css" />
   <style>
     /* ── HERO ── */
-    body {
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, #FFFCF8 0%, transparent 55%),
-        radial-gradient(ellipse 90% 40% at 100% 25%, rgba(224, 213, 197, 0.55) 0%, transparent 55%),
-        radial-gradient(ellipse 80% 35% at 0% 55%, rgba(224, 213, 197, 0.5) 0%, transparent 55%),
-        radial-gradient(ellipse 80% 35% at 100% 80%, rgba(224, 213, 197, 0.6) 0%, transparent 55%),
-        linear-gradient(
-          to bottom,
-          #FAF6F1 0%,
-          #F1E9DC 30%,
-          #E5D8C0 55%,
-          #EFE5D2 80%,
-          #FAF6F1 100%
-        ) !important;
-      background-attachment: scroll !important;
-      background-repeat: no-repeat !important;
-      background-size: 100% 100% !important;
-    }
     .hero {
       min-height: 100vh;
       display: grid;
@@ -35,7 +17,8 @@
       padding-top: var(--nav-h);
       overflow: hidden;
       position: relative;
-      background: transparent;
+      /* Unified gradient across full hero */
+      background: linear-gradient(135deg, #FAF6F1 0%, #F5EFE8 40%, #F0E9DF 70%, #EDE5D8 100%);
     }
     .hero::before {
       content: '';
@@ -959,7 +942,7 @@
 
 
   <!-- APP SECTION -->
-  <section class="app-section" style="padding: 80px 0; background: transparent;">
+  <section class="app-section" style="padding: 80px 0; background: var(--white);">
     <div class="container">
       <div class="app-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
@@ -996,7 +979,7 @@
   </section>
 
   <!-- MEET ROSE -->
-  <section class="section rose-wrap" style="background: transparent; padding: var(--section-gap) 0;">
+  <section class="section rose-wrap" style="background: var(--cream-light); padding: var(--section-gap) 0;">
     <div class="container">
       <div class="rose-section">
         <div class="reveal">
@@ -1023,7 +1006,7 @@
   </section>
 
   <!-- EDITIONS -->
-  <section class="section editions-section" style="background: transparent; padding: 72px 0 56px;">
+  <section class="section editions-section" style="background: var(--cream-light); padding: 72px 0 56px;">
     <div class="container">
       <div class="editions-heading" style="text-align:center; margin-bottom:56px;">
         <span class="eyebrow reveal">Choose Your Edition</span>
