@@ -165,11 +165,24 @@
       line-height: 1.6;
     }
     .sample-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .sample-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
     @media (max-width: 768px) {
+      .sample-hero {
+        padding-top: calc(var(--nav-h) + 56px);
+        padding-bottom: 44px;
+      }
       .letter-card { padding: 40px 28px; }
       .reflection-card { padding: 28px 24px; }
       .sample-cta { padding: 36px 24px; }
+      .sample-reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
     }
   </style>
   <link rel="icon" type="image/png" href="app-icon.png">
@@ -278,7 +291,7 @@
         <span class="eyebrow reveal">What Readers Say</span>
         <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">These words <em>changed everything.</em></h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <div class="sample-reviews-grid">
         <div class="review-card reveal reveal-delay-1">
           <div class="stars">★★★★★</div>
           <p>"This was the first devotional I have ever actually finished. Something about the way it's written kept me coming back every single day."</p>

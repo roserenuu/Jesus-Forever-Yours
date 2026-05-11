@@ -720,34 +720,34 @@
     }
 
     @media (max-width: 900px) {
-      /* HERO — two columns; tight, no dead space; bold book on the right */
+      /* HERO — stacked on phones so the copy can breathe and the book still leads. */
       .hero {
-        grid-template-columns: 52% 48%;
+        grid-template-columns: 1fr;
         min-height: 0;
         padding-top: var(--nav-h);
-        gap: 0;
-        align-items: center;
+        align-items: start;
       }
       .hero-left {
-        padding: 40px 4px 64px 18px;
+        padding: 10px 20px 44px;
         max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
       }
       .hero-right {
-        height: auto;
+        order: -1;
+        height: clamp(260px, 72vw, 360px);
         min-height: 0;
         align-items: center;
-        justify-content: flex-end;
-        padding: 12px 0 12px 0;
-        overflow: visible;
+        justify-content: center;
+        padding: 8px 0 0;
+        overflow: hidden;
         position: relative;
       }
       .hero-book-wrap {
         position: relative;
-        width: 128%;
-        margin-left: -14%;
-        margin-right: 0;
-        margin-top: -32px;
-        height: auto;
+        width: min(78vw, 330px);
+        margin: 0 auto;
+        height: 100%;
         bottom: auto;
         left: auto;
         transform: none;
@@ -756,26 +756,27 @@
         justify-content: center;
       }
       .hero-book {
-        width: 100%;
-        height: auto;
-        max-width: none;
+        width: auto;
+        height: 100%;
+        max-width: 100%;
         object-fit: contain;
         object-position: center;
       }
       .hero-scripture-pill, .hero-days-pill, .hero-star-pill { display: none; }
       .hero-title {
-        font-size: clamp(26px, 7.2vw, 34px) !important;
-        line-height: 1.02;
-        margin-bottom: 28px;
+        font-size: clamp(38px, 11vw, 48px) !important;
+        line-height: 0.98;
+        margin: 0 auto 24px;
         letter-spacing: -0.03em;
+        max-width: 360px;
       }
-      .hero-title .ht-line { display: block; white-space: nowrap; }
-      .hero-bullets { margin-bottom: 32px; gap: 10px; }
-      .hero-bullets li { font-size: 13px; gap: 8px; }
+      .hero-title .ht-line { display: block; white-space: normal; }
+      .hero-bullets { margin: 0 auto 28px; gap: 10px; max-width: 270px; align-items: flex-start; }
+      .hero-bullets li { font-size: 14px; gap: 9px; text-align: left; }
       .hero-bullets li::before { width: 4px; height: 4px; }
-      .hero-actions { flex-direction: column; gap: 12px; margin-bottom: 28px; align-items: flex-start; }
-      .hero-actions .btn-lg { padding: 12px 20px; font-size: 13px; }
-      .hero-social-proof { gap: 10px; flex-wrap: nowrap; align-items: center; }
+      .hero-actions { flex-direction: column; gap: 12px; margin: 0 auto 24px; align-items: stretch; max-width: 310px; }
+      .hero-actions .btn-lg { justify-content: center; padding: 13px 20px; font-size: 13px; width: 100%; }
+      .hero-social-proof { gap: 10px; flex-wrap: nowrap; align-items: center; justify-content: center; }
       .hero-avatars span { width: 22px; height: 22px; font-size: 10px; border-width: 1.5px; margin-left: -5px; }
       .hero-proof-text { font-size: 12px; line-height: 1.3; }
 
@@ -806,10 +807,10 @@
       .book-preview::before { font-size: 100px; top: 16px; left: 16px; }
 
       /* App section */
-      .app-section { padding: 80px 0 !important; }
-      .app-grid { grid-template-columns: 1fr !important; gap: 52px !important; }
+      .app-section { padding: 64px 0 !important; }
+      .app-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
       .app-grid > div:first-child { order: 2; }
-      .app-grid > div:last-child { order: 1; margin-top: -24px; }
+      .app-grid > div:last-child { order: 1; margin-top: 0; }
       .app-grid > div:first-child .eyebrow { margin-bottom: 16px; }
       .app-grid > div:first-child .section-title { margin-bottom: 24px !important; }
       .app-grid > div:first-child p { margin-bottom: 32px !important; }
@@ -818,11 +819,11 @@
       .app-grid .app-icon-img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
 
       /* Editions section */
-      .editions-section { padding: 80px 0 64px !important; }
-      .editions-section .editions-heading { margin-bottom: 40px !important; }
+      .editions-section { padding: 64px 0 56px !important; }
+      .editions-section .editions-heading { margin-bottom: 34px !important; }
 
       /* Meet Rose section */
-      .rose-wrap { padding: 80px 0 !important; }
+      .rose-wrap { padding: 64px 0 !important; }
 
       /* Footer email + links — centered on mobile */
       .footer-email-row { flex-direction: column; align-items: center !important; gap: 16px !important; padding: 32px 0 20px !important; text-align: center; }
@@ -840,11 +841,11 @@
     }
 
     @media (max-width: 380px) {
-      .hero { grid-template-columns: 54% 46%; min-height: 0; }
-      .hero-left { padding: 20px 4px 22px 14px; }
-      .hero-title { font-size: 24px !important; }
-      .hero-bullets li { font-size: 12px; }
-      .hero-actions .btn-lg { font-size: 12px; padding: 11px 16px; }
+      .hero-left { padding: 8px 16px 46px; }
+      .hero-right { height: clamp(248px, 70vw, 320px); }
+      .hero-title { font-size: 36px !important; }
+      .hero-bullets li { font-size: 13px; }
+      .hero-actions .btn-lg { font-size: 12px; padding: 12px 16px; }
       .hero-avatars span { width: 20px; height: 20px; font-size: 9px; }
       .hero-proof-text { font-size: 11px; }
     }

@@ -160,29 +160,27 @@
       /* Container padding bigger so nothing hugs the edges */
       .container { padding: 0 32px !important; }
 
-      /* APP section becomes a full-height hero so the icon sits in the middle
-         of the screen, never hugging the nav. */
       .digital-app-section {
-        min-height: 100vh !important;
-        padding: calc(var(--nav-h) + 24px) 0 64px !important;
+        min-height: auto !important;
+        padding: calc(var(--nav-h) + 54px) 0 64px !important;
         display: flex !important;
         align-items: center !important;
       }
       .digital-app-section > .container { width: 100%; }
-      .app-grid-d { grid-template-columns: 1fr !important; gap: 56px !important; }
+      .app-grid-d { grid-template-columns: 1fr !important; gap: 34px !important; }
       .app-grid-d > div:first-child { order: 2; }
       .app-grid-d > div:last-child { order: 1; }
-      .app-grid-d > div:first-child > div.reveal { text-align: center; margin-top: 8px; }
-      .app-grid-d > div:first-child .eyebrow { margin-bottom: 24px !important; }
-      .app-grid-d > div:first-child h2 { margin-bottom: 32px !important; font-size: clamp(28px, 7.5vw, 38px) !important; line-height: 1.1 !important; }
-      .app-grid-d > div:first-child p { margin-bottom: 40px !important; line-height: 1.85 !important; font-size: 15px !important; }
-      .app-grid-d > div:first-child ul { gap: 20px !important; margin-bottom: 48px !important; }
+      .app-grid-d > div:first-child > div.reveal { text-align: center; margin-top: 0; }
+      .app-grid-d > div:first-child .eyebrow { margin-bottom: 18px !important; }
+      .app-grid-d > div:first-child h2 { margin-bottom: 22px !important; font-size: clamp(28px, 7.5vw, 38px) !important; line-height: 1.1 !important; }
+      .app-grid-d > div:first-child p { margin-bottom: 30px !important; line-height: 1.75 !important; font-size: 15px !important; }
+      .app-grid-d > div:first-child ul { gap: 14px !important; margin-bottom: 34px !important; text-align: left; }
       .app-grid-d > div:first-child ul li { font-size: 14px !important; line-height: 1.5 !important; }
-      .app-grid-d > div:last-child img { width: 148px !important; height: 148px !important; border-radius: 34px !important; }
+      .app-grid-d > div:last-child img { width: 136px !important; height: 136px !important; border-radius: 31px !important; }
 
       /* PDF section */
-      .digital-hero { padding: 56px 0 80px !important; }
-      .digital-grid { grid-template-columns: 1fr; gap: 40px !important; align-items: start !important; }
+      .digital-hero { padding: 52px 0 68px !important; }
+      .digital-grid { grid-template-columns: 1fr; gap: 32px !important; align-items: start !important; }
       .digital-grid > div:first-child { order: 2; }
       .digital-grid > div:last-child { order: 1; }
       .digital-grid > div:first-child .eyebrow { margin-bottom: 20px; }
@@ -195,7 +193,7 @@
       .digital-mockup img { width: 200px !important; }
       .device-frame { width: 200px; height: 280px; }
 
-      .section { padding: 80px 0 !important; }
+      .section { padding: 64px 0 !important; }
     }
     @keyframes floatBook {
       0%, 100% { transform: translateY(0); }
