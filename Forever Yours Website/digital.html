@@ -162,19 +162,19 @@
 
       .digital-app-section {
         min-height: auto !important;
-        padding: calc(var(--nav-h) + 36px) 0 56px !important;
+        padding: calc(var(--nav-h) + 42px) 0 52px !important;
         display: flex !important;
         align-items: center !important;
       }
       .digital-app-section > .container { width: 100%; }
-      .app-grid-d { grid-template-columns: 1fr !important; gap: 26px !important; }
+      .app-grid-d { grid-template-columns: 1fr !important; gap: 48px !important; }
       .app-grid-d > div:first-child { order: 2; }
-      .app-grid-d > div:last-child { order: 1; }
+      .app-grid-d > div:last-child { order: 1; margin-top: 0; margin-bottom: 28px; }
       .app-grid-d > div:first-child > div.reveal { text-align: center; margin-top: 0; }
-      .app-grid-d > div:first-child .eyebrow { margin-bottom: 18px !important; }
-      .app-grid-d > div:first-child h2 { margin-bottom: 22px !important; font-size: clamp(34px, 9vw, 46px) !important; line-height: 1.05 !important; }
-      .app-grid-d > div:first-child p { margin-bottom: 30px !important; line-height: 1.75 !important; font-size: 15px !important; }
-      .app-grid-d > div:first-child ul { gap: 14px !important; margin-bottom: 34px !important; text-align: left; }
+      .app-grid-d > div:first-child .eyebrow { margin-bottom: 16px !important; }
+      .app-grid-d > div:first-child h2 { margin-bottom: 24px !important; font-size: clamp(34px, 9vw, 46px) !important; line-height: 1.05 !important; }
+      .app-grid-d > div:first-child p { margin-bottom: 24px !important; line-height: 1.75 !important; font-size: 15px !important; }
+      .app-grid-d > div:first-child ul { gap: 12px !important; margin-bottom: 30px !important; text-align: left; }
       .app-grid-d > div:first-child ul li { font-size: 14px !important; line-height: 1.5 !important; }
       .app-grid-d > div:last-child img { width: 178px !important; height: 178px !important; border-radius: 40px !important; }
 
@@ -246,7 +246,7 @@
   </div>
 
   <!-- APP SECTION -->
-  <section class="digital-app-section" style="padding: 220px 0 80px; background: var(--white);">
+  <section class="digital-app-section" style="padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--white);">
     <div class="container">
       <div class="app-grid-d" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
