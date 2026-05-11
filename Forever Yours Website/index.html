@@ -728,7 +728,7 @@
         align-items: start;
       }
       .hero-left {
-        padding: 10px 20px 24px;
+        padding: 0 20px 24px;
         max-width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -739,7 +739,7 @@
         min-height: 0;
         align-items: center;
         justify-content: center;
-        padding: 26px 0 6px;
+        padding: 8px 0 0;
         overflow: hidden;
         position: relative;
       }
@@ -766,12 +766,12 @@
       .hero-title {
         font-size: clamp(44px, 12vw, 56px) !important;
         line-height: 0.98;
-        margin: 0 auto 18px;
+        margin: -4px auto 18px;
         letter-spacing: -0.03em;
         max-width: 360px;
       }
       .hero-title .ht-line { display: block; white-space: normal; }
-      .hero-bullets { margin: 0 auto 22px; gap: 10px; max-width: 270px; align-items: flex-start; }
+      .hero-bullets { display: none; }
       .hero-bullets li { font-size: 14px; gap: 9px; text-align: left; }
       .hero-bullets li::before { width: 4px; height: 4px; }
       .hero-actions { flex-direction: column; gap: 12px; margin: 0 auto 18px; align-items: stretch; max-width: 310px; }
@@ -841,8 +841,8 @@
     }
 
     @media (max-width: 380px) {
-      .hero-left { padding: 8px 16px 24px; }
-      .hero-right { padding-top: 22px; }
+      .hero-left { padding: 0 16px 22px; }
+      .hero-right { padding-top: 6px; }
       .hero-title { font-size: 40px !important; }
       .hero-bullets li { font-size: 13px; }
       .hero-actions .btn-lg { font-size: 12px; padding: 12px 16px; }
