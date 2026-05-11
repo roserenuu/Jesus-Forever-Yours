@@ -22,6 +22,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      min-height: 520px;
+      overflow: hidden;
+    }
+    .digital-book-wrap {
+      width: min(48vw, 520px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .digital-book {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: saturate(1.2) contrast(1.03) brightness(1.01) drop-shadow(0 -4px 40px rgba(44,36,22,0.06));
+      animation: floatBook 6s ease-in-out infinite;
+      display: block;
     }
     /* Tablet / device mockup */
     .device-frame {
@@ -192,9 +209,10 @@
       .digital-grid > div:first-child p { margin-bottom: 36px !important; line-height: 1.8 !important; }
       .digital-grid > div:first-child > div[style*="font-size:48px"] { margin-bottom: 36px !important; font-size: 38px !important; }
       .digital-grid > div:first-child > div[style*="flex-direction:column"] { margin-bottom: 32px !important; gap: 14px !important; }
-      .digital-mockup { padding: 0 !important; }
+      .digital-mockup { padding: 0 !important; min-height: auto; }
       .digital-mockup .device-glow { display: none; }
-      .digital-mockup img { width: 260px !important; }
+      .digital-book-wrap { width: min(70vw, 310px); }
+      .digital-mockup img { width: 100% !important; }
       .device-frame { width: 270px; height: 370px; }
 
       .section { padding: 64px 0 !important; }
@@ -308,9 +326,11 @@
         </div>
         <div class="digital-mockup reveal reveal-delay-2">
           <div class="device-glow"></div>
-          <img src="book-cover-cut.webp" alt="Forever Yours Digital Edition"
-               style="width:300px;height:auto;object-fit:contain;animation:floatBook 6s ease-in-out infinite;display:block;"
-               onerror="this.style.display='none'"/>
+          <div class="digital-book-wrap">
+            <img src="book-cover-cut.webp" alt="Forever Yours Digital Edition"
+                 class="digital-book"
+                 onerror="this.style.display='none'"/>
+          </div>
         </div>
       </div>
     </div>
