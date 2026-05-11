@@ -571,8 +571,10 @@ body {
   .footer-email-row .email-row {
     flex-direction: column;
     gap: 10px !important;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
   }
+  .footer-email-row .email-row > div { width: 100%; align-items: center !important; }
   .footer-email-row button { width: 100%; }
   .footer-links-row {
     grid-template-columns: 1fr 1fr !important;
