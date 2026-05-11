@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="shared.css" />
   <style>
     /* ── HERO ── */
+    body {
+      background: linear-gradient(
+        to bottom,
+        #FAF6F1 0%,
+        #F5EFE8 25%,
+        #F0E9DF 55%,
+        #F5EFE8 80%,
+        #FAF6F1 100%
+      ) !important;
+      background-attachment: fixed !important;
+    }
     .hero {
       min-height: 100vh;
       display: grid;
@@ -17,8 +28,7 @@
       padding-top: var(--nav-h);
       overflow: hidden;
       position: relative;
-      /* Unified gradient across full hero */
-      background: linear-gradient(135deg, #FAF6F1 0%, #F5EFE8 40%, #F0E9DF 70%, #EDE5D8 100%);
+      background: transparent;
     }
     .hero::before {
       content: '';
@@ -942,7 +952,7 @@
 
 
   <!-- APP SECTION -->
-  <section class="app-section" style="padding: 80px 0; background: var(--white);">
+  <section class="app-section" style="padding: 80px 0; background: transparent;">
     <div class="container">
       <div class="app-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
         <div>
@@ -979,7 +989,7 @@
   </section>
 
   <!-- MEET ROSE -->
-  <section class="section rose-wrap" style="background: var(--cream-light); padding: var(--section-gap) 0;">
+  <section class="section rose-wrap" style="background: transparent; padding: var(--section-gap) 0;">
     <div class="container">
       <div class="rose-section">
         <div class="reveal">
@@ -1006,7 +1016,7 @@
   </section>
 
   <!-- EDITIONS -->
-  <section class="section editions-section" style="background: var(--cream-light); padding: 72px 0 56px;">
+  <section class="section editions-section" style="background: transparent; padding: 72px 0 56px;">
     <div class="container">
       <div class="editions-heading" style="text-align:center; margin-bottom:56px;">
         <span class="eyebrow reveal">Choose Your Edition</span>
