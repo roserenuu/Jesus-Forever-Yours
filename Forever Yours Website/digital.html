@@ -160,6 +160,9 @@
       .digital-grid { grid-template-columns: 1fr; gap: 32px !important; }
       .device-frame { width: 220px; height: 300px; }
       .app-grid-d { grid-template-columns: 1fr !important; gap: 32px !important; }
+      .app-grid-d > div:first-child { order: 2; }
+      .app-grid-d > div:last-child { order: 1; margin-top: -24px; }
+      .app-grid-d > div:first-child > div.reveal { text-align: center; }
       .app-grid-d > div:last-child img { width: 160px !important; height: 160px !important; border-radius: 36px !important; }
       .section { padding: 56px 0 !important; }
       section[style*="padding: calc(var(--nav-h) + 80px)"] { padding: calc(var(--nav-h) + 32px) 0 56px !important; }
