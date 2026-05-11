@@ -183,18 +183,22 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-book-side {
-        height: clamp(330px, 88vw, 440px);
+        height: clamp(380px, 98vw, 520px);
         min-height: 0;
         order: -1;
       }
       .hero-book-wrap {
-        width: min(100%, 420px);
+        width: min(100%, 500px);
         height: 100%;
-        bottom: -10px;
+        bottom: -16px;
       }
       .hero-info {
         min-height: auto;
         padding: 26px 24px 52px;
+      }
+      .hero-info .section-title {
+        font-size: clamp(36px, 10vw, 48px) !important;
+        line-height: 1.04 !important;
       }
       .reviews-grid { grid-template-columns: 1fr; }
       .product-info-price { font-size: 36px; }
