@@ -1,6 +1,187 @@
 [build]
   publish = "Forever Yours Website/"
 
+# Shopify-era URLs still indexed in Google Search Console.
+# Specific paths first; splats next; custom 404 last so live pages,
+# language folders, sitemap.xml, the site-verification file,
+# /downloads/, and Netlify Forms POSTs to / and /:lang/ are untouched.
+
+# Contact pages
+[[redirects]]
+  from = "/pages/contact"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/pages/contact-us"
+  to = "/contact"
+  status = 301
+
+# Shopify policy pages that have a live equivalent
+[[redirects]]
+  from = "/pages/privacy-policy"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/pages/privacy"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/pages/terms-of-service"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/pages/terms"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/pages/shipping-policy"
+  to = "/shipping"
+  status = 301
+
+[[redirects]]
+  from = "/pages/shipping"
+  to = "/shipping"
+  status = 301
+
+[[redirects]]
+  from = "/pages/refund-policy"
+  to = "/shipping"
+  status = 301
+
+[[redirects]]
+  from = "/policies/privacy-policy"
+  to = "/privacy"
+  status = 301
+
+[[redirects]]
+  from = "/policies/terms-of-service"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/policies/shipping-policy"
+  to = "/shipping"
+  status = 301
+
+[[redirects]]
+  from = "/policies/refund-policy"
+  to = "/shipping"
+  status = 301
+
+# Remaining informational pages (includes /pages/)
+[[redirects]]
+  from = "/pages"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/pages/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/policies"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/policies/*"
+  to = "/"
+  status = 301
+
+# Products, collections, and catalog feeds → primary book page
+[[redirects]]
+  from = "/collections/all.atom"
+  to = "/hardcover"
+  status = 301
+
+[[redirects]]
+  from = "/collections"
+  to = "/hardcover"
+  status = 301
+
+[[redirects]]
+  from = "/collections/*"
+  to = "/hardcover"
+  status = 301
+
+[[redirects]]
+  from = "/products"
+  to = "/hardcover"
+  status = 301
+
+[[redirects]]
+  from = "/products/*"
+  to = "/hardcover"
+  status = 301
+
+# Cart, account, blogs, checkout, and other Shopify system paths
+[[redirects]]
+  from = "/cart"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/cart/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/account"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/account/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blogs"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/blogs/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/checkout"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/checkouts"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/checkouts/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/search"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/discount/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/orders/*"
+  to = "/"
+  status = 301
+
+# Custom 404 for unmatched paths. Must remain last.
 [[redirects]]
   from = "/*"
   to = "/404.html"
