@@ -181,6 +181,78 @@
   to = "/"
   status = 301
 
+
+# Legacy Shopify leftovers still requested by crawlers
+[[redirects]]
+  from = "/cart.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/password"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/gift_cards"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/gift_cards/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/recommendations"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/recommendations/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/apps"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/apps/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/community"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/community/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap_products_1.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap_pages_1.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap_collections_1.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/sitemap_blogs_1.xml"
+  to = "/sitemap.xml"
+  status = 301
+
 # Custom 404 for unmatched paths. Must remain last.
 [[redirects]]
   from = "/*"
