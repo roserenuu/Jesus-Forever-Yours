@@ -3,7 +3,7 @@ body{background:var(--bg);-webkit-font-smoothing:antialiased}
 main{overflow:hidden}
 .h-hero,.h-book,.h-author,.h-letter{max-width:1120px;margin:0 auto;padding:128px 32px}
 .h-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-top:96px;padding-bottom:120px;position:relative}
-.h-hero h1{font:500 clamp(44px,6.2vw,84px)/1.02 var(--font-serif,"Cormorant Garamond",Georgia),serif;letter-spacing:-.025em;color:var(--ink);margin:0 0 44px;max-width:11ch}
+.h-hero h1{font:500 clamp(42px,5.4vw,76px)/1.02 var(--font-serif,"Cormorant Garamond",Georgia),serif;letter-spacing:-.025em;color:var(--ink);margin:0 0 44px;max-width:12.5ch}
 .h-badges{display:flex;flex-wrap:wrap;gap:12px}
 .h-badges .store-badge{background:var(--ink);color:#fff;border-radius:14px;padding:11px 20px 11px 16px;min-width:0;box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 8px 24px rgba(22,19,15,.14);transition:transform .2s ease,box-shadow .2s ease}
 .h-badges .store-badge:hover{transform:translateY(-1px);background:#000;box-shadow:0 12px 30px rgba(22,19,15,.2)}
