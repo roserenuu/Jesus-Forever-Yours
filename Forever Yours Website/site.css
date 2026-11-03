@@ -1,0 +1,15 @@
+/* Shared nav and footer. Loaded after shared.css on every English page. */
+.jn{position:sticky;top:0;z-index:50;background:rgba(250,247,243,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid rgba(20,18,16,.06)}
+.jn-in{max-width:1080px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.jn-logo img{height:22px;width:auto;display:block}
+.jn ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.jn a{color:#141210;text-decoration:none;font:500 14px/1 Jost,system-ui,sans-serif}
+.jn ul a{opacity:.6;transition:opacity .15s}
+.jn ul a:hover,.jn ul a[aria-current]{opacity:1}
+@media(max-width:640px){.jn-in{height:auto;flex-direction:column;gap:12px;padding:14px 16px}.jn ul{gap:20px}.jn a{font-size:13px}}
+.jf{border-top:1px solid rgba(20,18,16,.08);padding:40px 24px 48px;font:400 13px/1.6 Jost,system-ui,sans-serif;color:rgba(20,18,16,.55)}
+.jf-in{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px}
+.jf nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+.jf a{color:inherit;text-decoration:none}.jf a:hover{color:#141210}
+.jf-lang{max-width:1080px;margin:24px auto 0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px}
+.nav-mobile,.nav-hamburger{display:none!important}

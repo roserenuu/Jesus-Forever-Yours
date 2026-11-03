@@ -239,31 +239,11 @@
   <meta name="twitter:image" content="https://jesusforeveryours.com/app-icon.png">
   <!-- Meta description -->
   <meta name="description" content="Download the Forever Yours devotional instantly. 24 love letters from God as a beautiful PDF. $10.">
+  <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="logo-text.png" alt="Jesus Forever Yours"/>
-        
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hardcover.html">Hardcover</a></li>
-        <li><a href="digital.html" class="active">Digital</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="hardcover.html" class="nav-cta">Get the Book</a></li>
-      </ul>
-      <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
-  <div class="nav-mobile" id="mobileNav">
-    <a href="index.html">Home</a>
-    <a href="hardcover.html">Hardcover $20</a>
-    <a href="digital.html">Digital $10</a>
-    <a href="contact.html">Contact</a>
-    <a href="hardcover.html" class="nav-cta-mobile">Get the Book</a>
-  </div>
+  <nav class="jn" aria-label="Main"><div class="jn-in"><a href="/" class="jn-logo"><img src="/logo-text.png" alt="Jesus Forever Yours" width="160" height="22"></a><ul><li><a href="/">Home</a></li><li><a href="/#app">App</a></li><li><a href="/digital" aria-current="page">Book</a></li><li><a href="/verses/">Verses</a></li><li><a href="/contact">Contact</a></li></ul></div></nav>
+  
 
   <!-- APP SECTION -->
   <section class="digital-app-section" style="padding: calc(var(--nav-h) + 80px) 0 80px; background: var(--white);">
@@ -294,7 +274,7 @@
           <div style="position:relative;">
             <img src="app-icon.png" alt="Jesus Forever Yours App" style="width:220px;height:220px;border-radius:48px;box-shadow:0 32px 80px rgba(44,36,22,0.15);object-fit:cover;"/>
             <div style="position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);background:var(--white);border-radius:var(--r-pill);padding:8px 20px;box-shadow:0 4px 20px rgba(44,36,22,0.12);white-space:nowrap;display:flex;align-items:center;gap:8px;">
-              <span style="color:var(--accent);font-size:12px;">★★★★★</span>
+              <span style="color:var(--accent);font-size:12px;"></span>
               <span style="font-size:12px;font-weight:600;color:var(--ink);">Jesus Forever Yours</span>
             </div>
           </div>
@@ -352,38 +332,38 @@
           <tbody>
             <tr>
               <td>24 Love Letters</td>
-              <td class="highlight-col"><span class="compare-check">✓</span></td>
-              <td><span class="compare-check">✓</span></td>
+              <td class="highlight-col"><span class="compare-check"></span></td>
+              <td><span class="compare-check"></span></td>
             </tr>
             <tr>
               <td>Daily Scripture</td>
-              <td class="highlight-col"><span class="compare-check">✓</span></td>
-              <td><span class="compare-check">✓</span></td>
+              <td class="highlight-col"><span class="compare-check"></span></td>
+              <td><span class="compare-check"></span></td>
             </tr>
             <tr>
               <td>Instant delivery</td>
-              <td class="highlight-col"><span class="compare-check">✓</span></td>
+              <td class="highlight-col"><span class="compare-check"></span></td>
               <td><span class="compare-x">—</span></td>
             </tr>
             <tr>
               <td>Read on any device</td>
-              <td class="highlight-col"><span class="compare-check">✓</span></td>
+              <td class="highlight-col"><span class="compare-check"></span></td>
               <td><span class="compare-x">—</span></td>
             </tr>
             <tr>
               <td>Physical book to hold</td>
               <td class="highlight-col"><span class="compare-x">—</span></td>
-              <td><span class="compare-check">✓</span></td>
+              <td><span class="compare-check"></span></td>
             </tr>
             <tr>
               <td>Built-in journaling space</td>
               <td class="highlight-col"><span class="compare-x">—</span></td>
-              <td><span class="compare-check">✓</span></td>
+              <td><span class="compare-check"></span></td>
             </tr>
             <tr>
               <td>Perfect to gift</td>
               <td class="highlight-col"><span class="compare-x">—</span></td>
-              <td><span class="compare-check">✓</span></td>
+              <td><span class="compare-check"></span></td>
             </tr>
             <tr>
               <td>Price</td>
@@ -404,63 +384,12 @@
   </section>
 
   <!-- FOOTER WITH EMAIL -->
-  <footer style="background: var(--ink);">
-    <div class="container">
-
-      <!-- Email row -->
-      <div class="footer-email-row" style="display:flex; align-items:center; justify-content:space-between; gap:32px; padding:52px 0 40px; border-bottom:1px solid rgba(245,239,232,0.08); flex-wrap:wrap;">
-        <div>
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Free Love Letter</div>
-          <h3 style="font-size:clamp(18px,2.5vw,26px);font-weight:700;letter-spacing:-0.03em;color:var(--white);line-height:1.2;">Get a love letter from God <em style="font-style:normal;font-family:var(--font-sans);font-weight:300;color:rgba(245,239,232,0.7);">delivered to your inbox.</em></h3>
-        </div>
-        <div style="flex-shrink:0; min-width:320px;">
-          <div class="email-row" style="display:flex; gap:12px; align-items:flex-start;">
-            <div style="display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;">
-              <input type="email" id="emailInput" placeholder="Your email address" style="width:100%;padding:14px 20px;border:1.5px solid rgba(255,255,255,0.15);border-radius:var(--r-pill);background:rgba(255,255,255,0.08);color:var(--white);font-family:var(--font-sans);font-size:14px;outline:none;" />
-              <p style="font-size:11px;color:rgba(245,239,232,0.3);margin:0;text-align:center;">No spam. Just love letters.</p>
-            </div>
-            <button onclick="submitEmail()" style="background:var(--accent);color:var(--white);border:none;border-radius:var(--r-pill);padding:14px 24px;font-family:var(--font-sans);font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;">Send It</button>
-          </div>
-          <div class="email-success" id="emailSuccess" style="display:none;color:rgba(255,255,255,0.8);font-size:15px;margin-top:16px;">A love letter is on its way. 💌</div>
-        </div>
-      </div>
-
-      <!-- Footer links row -->
-      <div class="footer-links-row" style="display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:40px; padding:36px 0 28px;">
-        <div>
-          <img src="logo-text.png" alt="Jesus Forever Yours" class="footer-logo-text" style="height:30px;width:auto;max-width:240px;margin-bottom:16px;display:block;filter:brightness(0) invert(1);opacity:0.85;"/>
-          <div style="display:flex;flex-direction:column;gap:6px;">
-            <a href="https://instagram.com/jesusforeveryours" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@jesusforeveryours</a>
-            <a href="https://instagram.com/roserenuu" target="_blank" style="color:rgba(245,239,232,0.45);font-size:12px;text-decoration:none;">@roserenuu</a>
-          </div>
-        </div>
-        <div>
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,232,0.3);margin-bottom:12px;">Pages</div>
-          <a href="hardcover.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;transition:color 0.2s;">Hardcover</a>
-          <a href="digital.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Digital</a>
-          <a href="contact.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Contact</a>
-        </div>
-        <div>
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,239,232,0.3);margin-bottom:12px;">Legal</div>
-          <a href="privacy.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Privacy</a>
-          <a href="terms.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Terms</a>
-          <a href="shipping.html" style="display:block;font-size:13px;color:rgba(245,239,232,0.5);text-decoration:none;padding:3px 0;">Shipping</a>
-        </div>
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer-bottom-row" style="border-top:1px solid rgba(245,239,232,0.07);padding:16px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-        <span style="font-size:12px;color:rgba(245,239,232,0.3);">© 2026 Rose Renuu LLC. All rights reserved. Made with love in Los Angeles.</span>
-        <a href="mailto:support@jesusforeveryours.com" style="font-size:12px;color:rgba(245,239,232,0.3);text-decoration:none;">support@jesusforeveryours.com</a>
-      </div>
-
-    </div>
-  </footer>
+  <footer class="jf"><div class="jf-in"><span>&copy; 2026 Rose Renuu LLC</span><nav aria-label="Footer"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/shipping">Shipping</a><a href="https://instagram.com/jesusforeveryours" rel="noopener">Instagram</a><a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a></nav></div></footer>
 
   <script>
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
-    document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileNav').classList.toggle('open'));
+    document.getElementById('hamburger')?.addEventListener('click', () => document.getElementById('mobileNav')?.classList.toggle('open'));
     const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('revealed'); }), {threshold:0.1,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     document.querySelectorAll('.hero .reveal, .digital-hero .reveal').forEach((el, i) => {
