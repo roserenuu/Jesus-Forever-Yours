@@ -258,3 +258,10 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+# Paid digital edition: never index the delivery folder.
+[[headers]]
+  for = "/d/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "private, no-store"
