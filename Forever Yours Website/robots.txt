@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /downloads/
+Disallow: /d/
 Disallow: /cart.html
 Disallow: /thankyou-digital.html
 Disallow: /thankyou-hardcover.html
