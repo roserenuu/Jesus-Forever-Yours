@@ -186,3 +186,16 @@ h1, h2, h3, .section-title { text-wrap: balance; }
 p, li, blockquote { text-wrap: pretty; }
 .h-lead, .h-book p, .h-card p, .h-qa-row p, .h-end h2, .section-subtitle,
 [style*="text-align:center"] p, [style*="text-align: center"] p, .cta p, .note-txt blockquote { text-wrap: balance; }
+
+/* Quality pass (ui-ux-pro-max): contrast, focus, touch targets, interaction feedback */
+:root { --ink-muted: #5f5f5f; --mute: #5a5a5a; --ink-soft: #3f3f3f; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #111 !important; outline-offset: 3px; border-radius: 6px;
+}
+a, button, [role="button"], .store-badge { cursor: pointer; }
+a, button, .store-badge, .h-btn { transition: background-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease, opacity .2s ease; }
+.hd nav a, .jn ul a { display: inline-flex; align-items: center; min-height: 44px; }
+.store-badge { min-height: 48px; }
+@media (max-width: 760px) {
+  .hd-in, .jn-in { padding-top: 14px !important; padding-bottom: 4px !important; gap: 6px !important; }
+}

@@ -54,6 +54,10 @@ SCRIPT_FONTS = {
     "ar": ("Noto Naskh Arabic", "Noto Sans Arabic"),
 }
 
+# Real App Store rating (US), checked 2026-11-05 via itunes lookup: 4.97 from 37 ratings. Update when it changes.
+RATING = "5.0"
+RATING_COUNT = "37"
+
 APPSTORE = "https://apps.apple.com/us/app/jesus-forever-yours/id6758735416"
 PLAY = "https://play.google.com/store/apps/details?id=com.jesusforeveryours.foreveryours"
 APPLE_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>'
@@ -95,7 +99,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
         f'<a href="{"/" if c == "en" else "/" + c + "/"}" hreflang="{h}" lang="{h}"{current if c == code else ""}>{n}</a>'
         for c, h, _l, _o, n, _r in LANGS
     )
-    fonts = "family=Playfair+Display:ital,wght@0,400;0,500;1,700&family=Inter:wght@400;500;600"
+    fonts = "family=Playfair+Display:ital,wght@0,400;0,500;1,700;1,900&family=Inter:wght@400;500;600&family=Jost:wght@500;700"
     script_css = ""
     if code in SCRIPT_FONTS:
         serif, sans = SCRIPT_FONTS[code]
@@ -176,23 +180,36 @@ def page(code, hreflang, lang, locale, name, rtl, t):
       <h1>{e(t["h1"])}</h1>
       <p class="h-lead">{e(t["lead"])}</p>
       {badges(t)}
+      <p class="h-rating"><span class="h-stars" aria-hidden="true">★★★★★</span> <strong>{RATING}</strong> <span>· {RATING_COUNT} {e(t["rating_label"])}</span></p>
     </div>
     <div class="iph" role="img" aria-label="{e(t["phone_aria"])}">
       <span class="iph-btn iph-action"></span><span class="iph-btn iph-volup"></span><span class="iph-btn iph-voldn"></span><span class="iph-btn iph-side"></span><span class="iph-btn iph-cam"></span>
-      <div class="iph-bezel"><div class="iph-screen" data-theme="light">
-        <div class="iph-slides">
-          <img class="is-on" src="/images/screen-letter.webp" data-status="light" alt="" width="588" height="1280">
-          <img src="/images/screen-verse.webp" data-status="light" alt="" width="588" height="1280" loading="lazy">
-          <img src="/images/screen-prayer.webp" data-status="light" alt="" width="588" height="1280" loading="lazy">
-          <img src="/images/screen-carousel.webp" data-status="dark" alt="" width="588" height="1280" loading="lazy">
-          <img src="/images/screen-bible.webp" data-status="dark" alt="" width="588" height="1280" loading="lazy">
+      <div class="iph-screen" aria-hidden="true">
+        <div class="st-bg"></div>
+        <div class="st-bars"><i><b class="b1"></b></i><i><b class="b2"></b></i><i><b class="b3"></b></i></div>
+        <div class="st-slide st-letter">
+          <p class="st-greet">My child,</p>
+          <p class="st-body">I am the One who meets your every need. Even when the road ahead seems unclear, I am always making a way. I care for the birds. How much more will I care for you? Trust in My care, My timing, and My love.</p>
+          <p class="st-close">Forever Yours,<br>Heavenly Father</p>
         </div>
-        <div class="iph-status" aria-hidden="true">
+        <div class="st-slide st-verse">
+          <p class="st-label">Verse of the Day</p>
+          <p class="st-vtext">&ldquo;The Lord is my shepherd; I have all that I need.&rdquo;</p>
+          <p class="st-ref">Psalm 23:1</p>
+        </div>
+        <div class="st-slide st-prayer">
+          <img class="st-hands" src="/images/icons/prayer-white.webp" alt="" width="160" height="160">
+          <p class="st-ptext">Heavenly Father, thank You for meeting me right where I am today. Help me rest in Your care and receive Your peace one step at a time.</p>
+          <p class="st-amenline">In Jesus Name<br>Amen.</p>
+          <span class="st-amen"><svg viewBox="0 0 12 16" aria-hidden="true"><path d="M6 0c.6 3-3.9 4.9-3.9 9.2A3.9 3.9 0 0 0 6 13.1a3.9 3.9 0 0 0 3.9-3.9C9.9 6.6 8 5.2 7.6 3.4 7 4.9 6.6 5.6 5.8 6.1 6.6 4.2 6.8 2 6 0z" fill="#F08A24"/></svg>Amen</span>
+        </div>
+        <div class="iph-status">
           <span class="iph-time">9:41</span>
           <span class="iph-island"></span>
-          <span class="iph-icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".7"/><rect x="5" y="5.5" width="3" height="6.5" rx=".7"/><rect x="10" y="3" width="3" height="9" rx=".7"/><rect x="15" y="0" width="3" height="12" rx=".7"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.3c2.4 0 4.6.9 6.2 2.5l1.2-1.2C13.4 1.6 10.8.6 8 .6S2.6 1.6.6 3.6l1.2 1.2C3.4 3.2 5.6 2.3 8 2.3zm0 3.4c1.5 0 2.8.6 3.8 1.5L13 6c-1.3-1.3-3.1-2-5-2s-3.7.7-5 2l1.2 1.2c1-.9 2.3-1.5 3.8-1.5zm0 3.4c.6 0 1.1.2 1.5.6L8 11.2 6.5 9.7c.4-.4.9-.6 1.5-.6z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="8" rx="2"/><path d="M25 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" opacity=".45"/></svg></span>
+          <span class="iph-icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".7"/><rect x="5" y="5.5" width="3" height="6.5" rx=".7"/><rect x="10" y="3" width="3" height="9" rx=".7"/><rect x="15" y="0" width="3" height="12" rx=".7"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.3c2.4 0 4.6.9 6.2 2.5l1.2-1.2C13.4 1.6 10.8.6 8 .6S2.6 1.6.6 3.6l1.2 1.2C3.4 3.2 5.6 2.3 8 2.3zm0 3.4c1.5 0 2.8.6 3.8 1.5L13 6c-1.3-1.3-3.1-2-5-2s-3.7.7-5 2l1.2 1.2c1-.9 2.3-1.5 3.8-1.5zm0 3.4c.6 0 1.1.2 1.5.6L8 11.2 6.5 9.7c.4-.4.9-.6 1.5-.6z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".45"/><rect x="2" y="2" width="20" height="8" rx="2"/><path d="M25 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" opacity=".5"/></svg></span>
         </div>
-      </div></div>
+        <span class="iph-home"></span>
+      </div>
     </div>
   </section>
 
@@ -244,23 +261,8 @@ def page(code, hreflang, lang, locale, name, rtl, t):
       .then(function (r) {{ if (!r.ok) throw new Error('HTTP ' + r.status); form.style.display = 'none'; document.getElementById('emailSuccess').hidden = false; }})
       .catch(function () {{ btn.disabled = false; form.submit(); }});
   }});
-  // Phone: slide through the app screens like swiping on an iPhone.
-  (function () {{
-    var screen = document.querySelector('.iph-screen');
-    var slides = screen ? screen.querySelectorAll('.iph-slides img') : [];
-    if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var i = 0, visible = true, timer = null;
-    function go() {{
-      if (!visible || document.hidden) return;
-      var cur = slides[i]; i = (i + 1) % slides.length; var next = slides[i];
-      cur.classList.remove('is-on'); cur.classList.add('is-off');
-      next.classList.remove('is-off'); next.classList.add('is-on');
-      screen.setAttribute('data-theme', next.getAttribute('data-status'));
-      setTimeout(function () {{ cur.classList.remove('is-off'); }}, 900);
-    }}
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {{ visible = es[0].isIntersecting; }}).observe(screen);
-    timer = setInterval(go, 3600);
-  }})();
+  // Pause the phone animation while it is off screen.
+  (function () {{ var p = document.querySelector('.iph'); if (!p || !('IntersectionObserver' in window)) return; new IntersectionObserver(function (es) {{ p.classList.toggle('is-paused', !es[0].isIntersecting); }}).observe(p); }})();
 </script>
 </body>
 </html>

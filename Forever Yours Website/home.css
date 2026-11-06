@@ -60,29 +60,88 @@ main{overflow:hidden}
 .h-qa{padding:8px 24px}.h-qa-row{grid-template-columns:1fr;gap:10px;padding:26px 0}.h-qa-row h3{font-size:21px}
 .h-end{padding:88px 20px 80px}.h-letter form{flex-direction:column;background:transparent;box-shadow:none;padding:0}.h-letter input[type=email]{background:rgba(255,255,255,.08);border-radius:12px;padding:14px}}
 
-/* iPhone 16 Pro, Black Titanium (71.5 x 149.6 mm). Screens slide like an iOS swipe. */
-.iph{position:relative;justify-self:center;width:min(258px,60vw);aspect-ratio:71.5/149.6;border-radius:17.6%/8.4%;padding:1.6%;
-  background:linear-gradient(135deg,#5a5a5e 0%,#2b2b2e 18%,#1c1c1e 50%,#2b2b2e 82%,#4a4a4e 100%);
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 0 0 1px rgba(0,0,0,.5),0 40px 70px -28px rgba(0,0,0,.45),0 18px 36px -24px rgba(0,0,0,.35)}
-.iph-bezel{width:100%;height:100%;border-radius:16.4%/7.8%;background:#000;padding:3.3%}
-.iph-screen{position:relative;width:100%;height:100%;border-radius:12.6%/5.8%;overflow:hidden;background:#3a6ea5;isolation:isolate}
-.iph-slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;transform:translateX(100%);
-  transition:transform .85s cubic-bezier(.32,.72,0,1),filter .85s cubic-bezier(.32,.72,0,1)}
-.iph-slides img.is-on{transform:translateX(0);z-index:2}
-.iph-slides img.is-off{transform:translateX(-28%);filter:brightness(.82);z-index:1}
-.iph-status{position:absolute;inset:0 0 auto 0;height:6.4%;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:0 7.5% 0 11%;color:#fff;transition:color .5s ease}
-.iph-screen[data-theme="dark"] .iph-status{color:#111}
-.iph-time{font:600 13px/1 -apple-system,"SF Pro Text",system-ui,sans-serif;letter-spacing:-.01em;position:relative;top:4%}
-.iph-island{position:absolute;left:50%;top:20%;transform:translateX(-50%);width:31.5%;height:68%;background:#000;border-radius:999px}
-.iph-icons{display:flex;align-items:center;gap:4px;position:relative;top:4%}
-.iph-icons svg{height:9px;width:auto;fill:currentColor}
-.iph-icons svg:last-child{height:10px}
-.iph-btn{position:absolute;width:2.5px;background:linear-gradient(90deg,#1c1c1e,#4a4a4e);border-radius:2px}
-.iph-action{left:-2px;top:17.5%;height:4.2%}
-.iph-volup{left:-2px;top:25%;height:7%}
-.iph-voldn{left:-2px;top:33.5%;height:7%}
-.iph-side{right:-2px;top:27%;height:10.5%}
-.iph-cam{right:-2px;top:55%;height:6.2%;width:2px;background:#151517}
-@media(max-width:760px){.iph{width:min(236px,62vw)}.iph-time{font-size:12px}.iph-icons svg{height:8px}}
+/* iPhone 18 Pro, Silver (71.9 x 150 mm, slim bezels, smaller Dynamic Island).
+   The screen is the app's morning story built in HTML: letter -> verse of the day -> prayer. 18 s loop. */
+.iph{--w:min(272px,64vw);position:relative;justify-self:center;width:var(--w);aspect-ratio:71.9/150;border-radius:calc(var(--w)*.205);padding:calc(var(--w)*.019);
+  /* polished silver aluminium band with bright edge highlights, like Apple's product shots */
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 6%,rgba(255,255,255,0) 94%,rgba(0,0,0,.08)),
+    linear-gradient(90deg,#8f9296 0%,#e9eaec 3.5%,#bfc2c5 7%,#d9dbde 30%,#cfd1d4 50%,#d9dbde 70%,#bfc2c5 93%,#ecedef 96.5%,#8f9296 100%);
+  box-shadow:0 0 0 1px rgba(60,64,70,.45),inset 0 0 0 1px rgba(255,255,255,.75),inset 0 0 0 calc(var(--w)*.012) rgba(150,154,160,.18),
+    0 40px 70px -30px rgba(15,20,30,.42),0 14px 28px -20px rgba(15,20,30,.30)}
+.iph::before{display:none}
+.iph-screen{position:relative;width:100%;height:100%;border-radius:calc(var(--w)*.188);overflow:hidden;background:#0a0a0a;
+  box-shadow:0 0 0 calc(var(--w)*.0115) #060607,0 0 0 calc(var(--w)*.0125) rgba(255,255,255,.35);container-type:inline-size;isolation:isolate;transform:translateZ(0)}
+/* buttons protrude from the band */
+.iph-btn{position:absolute;width:3.5px;background:linear-gradient(90deg,#9ea1a5,#e4e5e7 55%,#b5b8bb);box-shadow:0 0 0 .5px rgba(60,64,70,.4)}
+.iph-action,.iph-volup,.iph-voldn{left:-3px;border-radius:2px 0 0 2px}
+.iph-side,.iph-cam{right:-3px;border-radius:0 2px 2px 0}
+.iph-action{top:18%;height:3.6%}.iph-volup{top:25%;height:6.4%}.iph-voldn{top:33%;height:6.4%}
+.iph-side{top:27%;height:10%}.iph-cam{top:55.5%;height:5.4%;background:linear-gradient(90deg,#c7c9cc,#8f9296)}
+
+/* status bar */
+.iph-status{position:absolute;inset:0 0 auto;height:12cqw;z-index:6;display:flex;align-items:center;justify-content:space-between;padding:0 7cqw 0 10cqw;color:#fff}
+.iph-time{font:600 4.1cqw/1 -apple-system,"SF Pro Text",system-ui,sans-serif;letter-spacing:-.01em}
+.iph-island{position:absolute;left:50%;top:2.7cqw;transform:translateX(-50%);width:21cqw;height:7.6cqw;border-radius:9cqw;background:#000}
+.iph-icons{display:flex;align-items:center;gap:1.3cqw}.iph-icons svg{height:2.8cqw;width:auto;fill:currentColor}.iph-icons svg:last-child{height:3.1cqw}
+.iph-home{position:absolute;left:50%;bottom:2cqw;transform:translateX(-50%);width:34cqw;height:1.25cqw;border-radius:2cqw;background:rgba(255,255,255,.85);z-index:6}
+
+/* story background: slow, gentle drift */
+.st-bg{position:absolute;inset:-4%;background:url(/images/story-bg.webp) center 40%/cover;animation:stDrift 18s ease-in-out infinite alternate}
+.st-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,34,64,.52) 0%,rgba(22,44,78,.40) 45%,rgba(30,24,16,.30) 100%)}
+@keyframes stDrift{from{transform:scale(1.06) translate3d(0,-1%,0)}to{transform:scale(1.0) translate3d(0,1%,0)}}
+
+/* story progress bars, like the app */
+.st-bars{position:absolute;top:13.5cqw;left:3.5cqw;right:3.5cqw;z-index:5;display:flex;gap:1.6cqw}
+.st-bars i{flex:1;height:.65cqw;border-radius:1cqw;background:rgba(255,247,234,.38);overflow:hidden}
+.st-bars b{display:block;height:100%;background:#FFF7EA;transform-origin:left;transform:scaleX(0)}
+.st-bars .b1{animation:stBar1 18s linear infinite}.st-bars .b2{animation:stBar2 18s linear infinite}.st-bars .b3{animation:stBar3 18s linear infinite}
+@keyframes stBar1{0%{transform:scaleX(0)}33.3%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes stBar2{0%,33.3%{transform:scaleX(0)}66.6%,96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes stBar3{0%,66.6%{transform:scaleX(0)}96%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+
+/* shared story type (app: Jost Bold + Playfair Display Black Italic, cream ink with soft depth) */
+.st-slide{position:absolute;inset:0;z-index:3;direction:ltr;color:#FFF7EA;text-shadow:0 .3cqw .9cqw rgba(10,8,6,.55),0 0 3cqw rgba(10,20,40,.25);opacity:0}
+.st-slide p{margin:0;color:inherit;text-wrap:pretty}
+.st-greet,.st-close,.st-amenline{font-family:"Playfair Display",Georgia,serif!important;font-style:italic;font-weight:900}
+.st-body,.st-vtext,.st-ptext,.st-label,.st-ref,.st-amen{font-family:"Jost",system-ui,sans-serif!important;font-weight:700}
+
+/* 1. love letter (0-6 s): greeting, then the body writes in line by line, then the signature */
+.st-letter{text-align:left;direction:ltr;padding:30cqw 7cqw 0;animation:stLetter 18s ease-in-out infinite}
+.st-greet{font-size:6.6cqw;margin-bottom:3.6cqw!important}
+.st-body{font-size:4.3cqw;line-height:1.62}
+.st-close{font-size:5.2cqw;line-height:1.35;text-align:right;margin-top:5cqw!important}
+.st-letter .st-greet{animation:stIn1 18s ease-out infinite}
+.st-letter .st-body{-webkit-mask-image:linear-gradient(180deg,#000 45%,transparent 55%);mask-image:linear-gradient(180deg,#000 45%,transparent 55%);-webkit-mask-size:100% 220%;mask-size:100% 220%;animation:stWrite 18s linear infinite}
+.st-letter .st-close{animation:stIn2 18s ease-out infinite}
+@keyframes stLetter{0%{opacity:0;transform:translateY(1.5%)}3%,30%{opacity:1;transform:none}34%,100%{opacity:0;transform:translateY(-2%)}}
+@keyframes stIn1{0%,1%{opacity:0;transform:translateY(6px)}5%,100%{opacity:1;transform:none}}
+@keyframes stWrite{0%,4%{-webkit-mask-position:0 100%;mask-position:0 100%}22%,100%{-webkit-mask-position:0 0;mask-position:0 0}}
+@keyframes stIn2{0%,21%{opacity:0;transform:translateY(6px)}25%,100%{opacity:1;transform:none}}
+
+/* 2. verse of the day (6-12 s) */
+.st-verse{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 9cqw;animation:stVerse 18s ease-in-out infinite}
+.st-label{font-size:2.7cqw;letter-spacing:.22em;text-transform:uppercase;margin-bottom:4.5cqw!important;opacity:.92}
+.st-vtext{font-size:6.4cqw;line-height:1.38}
+.st-ref{font-size:3.1cqw;letter-spacing:.16em;text-transform:uppercase;margin-top:4.5cqw!important;opacity:.92}
+@keyframes stVerse{0%,33%{opacity:0;transform:scale(.985)}37.5%,63%{opacity:1;transform:none}67%,100%{opacity:0;transform:scale(1.01)}}
+
+/* 3. prayer (12-18 s), ending on the Amen button */
+.st-prayer{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 9cqw 10cqw;animation:stPrayer 18s ease-in-out infinite}
+.st-hands{width:15cqw;height:15cqw;margin-bottom:5cqw;filter:drop-shadow(0 .4cqw .8cqw rgba(20,10,6,.4))}
+.st-ptext{font-size:4.6cqw;line-height:1.55}
+.st-amenline{font-size:5.4cqw;line-height:1.35;margin-top:5cqw!important}
+.st-amen{position:absolute;left:50%;bottom:9cqw;transform:translateX(-50%);display:inline-flex;align-items:center;gap:1.8cqw;padding:2.8cqw 6cqw;border-radius:20cqw;border:.35cqw solid rgba(255,247,234,.85);background:rgba(18,10,8,.3);font-size:3.4cqw;letter-spacing:.2em;text-transform:uppercase;text-shadow:none;animation:stAmen 18s ease-in-out infinite}
+.st-amen svg{width:2.8cqw;height:auto}
+@keyframes stPrayer{0%,66.5%{opacity:0;transform:translateY(1.5%)}71%,95%{opacity:1;transform:none}99%,100%{opacity:0}}
+@keyframes stAmen{0%,86%{background:rgba(18,10,8,.3);color:#FFF7EA;transform:translateX(-50%) scale(1)}88%{transform:translateX(-50%) scale(.95)}90%,100%{background:#FFF7EA;color:#3A3530;transform:translateX(-50%) scale(1)}}
+
+.iph.is-paused *{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.iph *{animation:none!important}.st-letter{opacity:1}.st-bars .b1{transform:scaleX(1)}}
+@media(max-width:760px){.iph{--w:min(244px,66vw)}}
 .h-ic-img{display:block;width:56px;height:56px;object-fit:contain;margin-bottom:18px}
 [dir=rtl] .h-ic-img{margin-left:auto}
+.h-rating{margin:18px 0 0;font:500 14px/1.4 var(--sans);color:#555}
+.h-rating strong{color:var(--ink);font-weight:600}
+.h-stars{color:#E9BA52;letter-spacing:2px;font-size:15px}
+@media(max-width:760px){.h-rating{text-align:center}}
