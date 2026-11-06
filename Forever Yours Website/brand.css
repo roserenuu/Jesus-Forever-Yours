@@ -1,0 +1,167 @@
+/* ==========================================================
+   Jesus Forever Yours — site-wide brand layer
+   Loaded LAST on every page so the whole site matches:
+   - one background: white
+   - headings in the logo font (Playfair Display)
+   - body text in Inter
+   - black and white accents, no beige or brown
+   - content always visible (no scroll fade-ins)
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700;1,800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --ink-soft: #444444;
+  --ink-muted: #777777;
+  --line: #ececec;
+
+  /* Remap the old cream/brown palette onto white and black */
+  --cream: #ffffff;
+  --cream-light: #ffffff;
+  --cream-mid: #f5f5f5;
+  --cream-dark: #e6e6e6;
+  --accent: #111111;
+  --accent-dark: #000000;
+  --accent-light: rgba(0, 0, 0, 0.05);
+  --white: #ffffff;
+  --border: #e6e6e6;
+  --border-light: #ececec;
+  --card: #ffffff;
+  --mute: #666666;
+
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, system-ui, sans-serif;
+
+  --shadow-sm: none;
+  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- One background ---------- */
+html, body { background: var(--bg) !important; }
+body {
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+body section, body main, body article, body aside, body header, body footer,
+body [class*="hero"], body [class*="section"], body [class*="band"], body [class*="wrap"] {
+  background-color: var(--bg);
+  background-image: none;
+}
+body footer, body .jf, body .jf-dark {
+  background: var(--bg) !important;
+  color: var(--ink-muted) !important;
+  border-top: 1px solid var(--line) !important;
+}
+footer a, footer p, footer span, footer li, footer h3, footer h4, footer div,
+.jf a, .jf span { color: var(--ink-muted) !important; }
+footer a:hover, .jf a:hover { color: var(--ink) !important; }
+footer img[src*="logo-text-white"], footer img[src*="white"] { filter: invert(1); }
+
+/* ---------- Type ---------- */
+h1, h2, h3,
+.section-title, [class*="hero-title"], [class*="-title"] {
+  font-family: var(--font-serif) !important;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+h1 *, h2 *, h3 * {
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor;
+  background: none !important;
+}
+
+/* Decorative glows and tinted blobs behind sections */
+section::before, section::after,
+[class*="hero"]::before, [class*="hero"]::after,
+[class*="stage"]::before, [class*="stage"]::after { background-image: none !important; }
+p, li, label, input, textarea, select, button, a, small, td, th {
+  font-family: var(--font-sans);
+}
+p { color: var(--ink-soft); }
+
+/* ---------- Header: the text logo, white, consistent ---------- */
+.jn, .nav, .nav.scrolled, .hd {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line) !important;
+}
+.jn-logo img, .nav-logo img { height: 24px !important; width: auto !important; }
+.jn a, .nav-links a { font-family: var(--font-sans) !important; color: var(--ink) !important; }
+.nav-links a:hover { background: transparent !important; }
+.nav-links a.nav-cta, .nav-cta-mobile { color: #fff !important; background: var(--ink) !important; }
+
+/* ---------- Buttons: black, simple ---------- */
+.btn, .btn-rose, .btn-primary, .nav-cta, .nav-cta-mobile, .h-btn,
+button[type="submit"], .buy-btn, [class*="btn-buy"], [class*="cta-btn"] {
+  background: var(--ink) !important;
+  color: #fff !important;
+  border-color: var(--ink) !important;
+  box-shadow: none !important;
+}
+.btn:hover, .btn-rose:hover, .btn-primary:hover, .nav-cta:hover, .h-btn:hover,
+button[type="submit"]:hover { background: #000 !important; }
+.btn-outline, .btn-outline-rose, .btn-secondary, [class*="btn-ghost"] {
+  background: #fff !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--ink) !important;
+}
+
+/* ---------- Cards: white with a hairline, no heavy shadows ---------- */
+[class*="card"], .h-qa, .h-book, .popup, .verse, [class*="panel"] {
+  background-color: #fff;
+  box-shadow: none !important;
+}
+.h-card, .h-qa, .h-book { border: 1px solid var(--line); }
+
+/* Accent text that used the old brown */
+.eyebrow, [class*="eyebrow"], [class*="kicker"] { color: var(--ink-muted) !important; }
+
+/* Book photos have a light backdrop baked in: blend it into the white page */
+.hero-book, .h-book img, img[src*="book-cover"] { mix-blend-mode: multiply; filter: none !important; }
+
+/* Form fields that were styled for the old dark footer */
+footer input:not([type="hidden"]), footer textarea {
+  background: #fff !important;
+  color: var(--ink) !important;
+  border: 1px solid #d9d9d9 !important;
+}
+footer input::placeholder { color: var(--ink-muted) !important; }
+footer button { background: var(--ink) !important; color: #fff !important; }
+footer h2, footer h3, footer [class*="title"] { color: var(--ink) !important; }
+
+/* ---------- Homepage specifics ---------- */
+.hd-logo img { width: auto !important; height: 24px !important; border-radius: 0 !important; box-shadow: none !important; }
+.hd nav a { color: var(--ink-muted) !important; }
+.hd nav a:hover, .hd nav a[aria-current] { color: var(--ink) !important; }
+.h-hero h1 { font-weight: 500; }
+.h-sec > h2, .h-end h2 { font-weight: 500; }
+.h-ic { background: var(--ink) !important; }
+.h-end { background: #fff !important; color: var(--ink) !important; border-top: 1px solid var(--line); }
+.h-end h2 { color: var(--ink) !important; }
+.h-end .store-badge, .h-end .store-badge:hover { background: #000 !important; color: #fff !important; }
+.h-letter form { background: #fff !important; box-shadow: 0 0 0 1px var(--line) !important; }
+.h-letter input[type=email] { color: var(--ink) !important; }
+.h-letter input::placeholder { color: var(--ink-muted) !important; }
+.h-letter button { background: var(--ink) !important; color: #fff !important; }
+.email-success { color: var(--ink-soft) !important; }
+.iph::before { display: none; }
+@media (max-width: 760px) {
+  .h-letter input[type=email] { background: #fff !important; border: 1px solid var(--line) !important; }
+}
+
+/* ---------- Never hide content behind scroll animations ---------- */
+.reveal, .reveal-up, .fade-in, [class*="reveal-delay"] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+[style*="heroFadeIn"], [class*="hero"] > *, .hero * { animation: none !important; opacity: 1; }
