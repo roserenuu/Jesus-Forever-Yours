@@ -200,24 +200,26 @@
 
         <!-- RIGHT FORM -->
         <div class="contact-form-wrap">
-          <div class="contact-form reveal reveal-delay-1" id="contactForm">
+          <form class="contact-form reveal reveal-delay-1" id="contactForm" name="contact" method="POST" action="/contact" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden aria-hidden="true"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
             <div class="form-row">
               <div class="form-group">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" placeholder="Your first name" />
+                <input type="text" id="fname" name="first_name" autocomplete="given-name" placeholder="Your first name" />
               </div>
               <div class="form-group">
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" placeholder="Your last name" />
+                <input type="text" id="lname" name="last_name" autocomplete="family-name" placeholder="Your last name" />
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" placeholder="you@email.com" />
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@email.com" />
             </div>
             <div class="form-group">
               <label for="subject">Subject</label>
-              <select id="subject">
+              <select id="subject" name="subject">
                 <option value="">Select a topic…</option>
                 <option>Order Question</option>
                 <option>Shipping & Delivery</option>
@@ -230,12 +232,13 @@
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" placeholder="Tell us how we can help…"></textarea>
+              <textarea id="message" name="message" required placeholder="Tell us how we can help…"></textarea>
             </div>
             <div class="form-submit">
-              <button class="btn btn-primary btn-lg" onclick="submitContact()" style="width:100%;justify-content:center;">Send Message</button>
+              <button type="submit" id="contactSubmit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Send Message</button>
             </div>
-          </div>
+            <p class="form-error" id="formError" hidden style="margin-top:12px;color:#b00020;font-size:14px;">Sorry, your message didn't send. Please try again or email support@jesusforeveryours.com.</p>
+          </form>
           <div class="form-success" id="formSuccess">
 
             <h3>Message received!</h3>
@@ -279,20 +282,31 @@
 
   <script>
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+    if (nav) window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
     document.getElementById('hamburger')?.addEventListener('click', () => document.getElementById('mobileNav')?.classList.toggle('open'));
     const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('revealed'); }), {threshold:0.1,rootMargin:'0px 0px -40px 0px'});
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     document.querySelectorAll('.contact-hero .reveal').forEach((el, i) => {
       setTimeout(() => el.classList.add('revealed'), 100 + i * 100);
     });
-    function submitContact() {
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      if (!email || !message) { alert('Please fill in your email and message.'); return; }
-      document.getElementById('contactForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    }
+    // Contact form -> Netlify Forms ("contact")
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      const form = e.target;
+      if (!window.fetch) return; // browser posts the form natively
+      e.preventDefault();
+      const btn = document.getElementById('contactSubmit');
+      const err = document.getElementById('formError');
+      btn.disabled = true; err.hidden = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }).catch(() => { btn.disabled = false; err.hidden = false; });
+    });
   </script>
 </body>
 </html>
