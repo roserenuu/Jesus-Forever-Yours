@@ -145,3 +145,23 @@ main{overflow:hidden}
 .h-rating strong{color:var(--ink);font-weight:600}
 .h-stars{color:#E9BA52;letter-spacing:2px;font-size:15px}
 @media(max-width:760px){.h-rating{text-align:center}}
+
+/* Phone screen polish: even line breaks (Safari otherwise rebalances these short lines) */
+.iph .st-slide p{text-wrap:wrap!important}
+.st-amenline,.st-close{white-space:nowrap}
+.iph-island{z-index:6}
+.st-bars{top:12.5cqw}
+.st-letter{padding-top:32cqw}
+
+/* Header always solid white so nothing shows through it; flat download buttons */
+.hd,.jn{background:#fff!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.h-badges .store-badge,.h-badges .store-badge:hover{box-shadow:none!important}
+.h-badges .store-badge:hover{transform:translateY(-1px);opacity:.88}
+
+/* Tighter vertical rhythm on phones */
+@media(max-width:760px){
+  .h-hero{padding:36px 20px 64px!important;gap:40px!important}
+  .h-sec{padding-bottom:72px!important}
+  .h-sec>h2{margin-bottom:28px!important}
+  .h-rating{margin-top:14px}
+}
