@@ -169,3 +169,20 @@ footer h2, footer h3, footer [class*="title"] { color: var(--ink) !important; }
 /* Download page note band */
 .note, .note-inner { background: #fff !important; }
 .note { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+/* Book page: no gray glow behind the cover */
+.device-glow { display: none !important; }
+
+/* Mobile header: more room between the logo and the menu */
+@media (max-width: 760px) {
+  .hd-in, .jn-in { gap: 16px !important; padding: 18px 16px 14px !important; height: auto !important; }
+  .hd-logo img, .jn-logo img { height: 26px !important; }
+  .hd nav, .jn ul { gap: 22px !important; }
+  .hd nav a, .jn a { font-size: 14px !important; }
+}
+
+/* No lonely last words: balance headings and short centered text, avoid orphans in paragraphs */
+h1, h2, h3, .section-title { text-wrap: balance; }
+p, li, blockquote { text-wrap: pretty; }
+.h-lead, .h-book p, .h-card p, .h-qa-row p, .h-end h2, .section-subtitle,
+[style*="text-align:center"] p, [style*="text-align: center"] p, .cta p, .note-txt blockquote { text-wrap: balance; }

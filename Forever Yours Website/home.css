@@ -84,3 +84,5 @@ main{overflow:hidden}
 .iph-side{right:-2px;top:27%;height:10.5%}
 .iph-cam{right:-2px;top:55%;height:6.2%;width:2px;background:#151517}
 @media(max-width:760px){.iph{width:min(236px,62vw)}.iph-time{font-size:12px}.iph-icons svg{height:8px}}
+.h-ic-img{display:block;width:56px;height:56px;object-fit:contain;margin-bottom:18px}
+[dir=rtl] .h-ic-img{margin-left:auto}
