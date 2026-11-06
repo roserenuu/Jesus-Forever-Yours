@@ -165,3 +165,43 @@ main{overflow:hidden}
   .h-sec>h2{margin-bottom:28px!important}
   .h-rating{margin-top:14px}
 }
+
+/* v3 layout: each screen fills the phone; bars sit just under the island; bars never rewind on screen */
+.st-bars{top:15.5cqw;left:4.5cqw;right:4.5cqw;gap:1.8cqw;animation:stBarsFade 18s linear infinite}
+.st-bars i{height:.75cqw}
+@keyframes stBarsFade{0%{opacity:0}1.5%,96%{opacity:1}98.5%,100%{opacity:0}}
+@keyframes stBar1{0%{transform:scaleX(0)}33.3%,99.4%{transform:scaleX(1)}99.5%,100%{transform:scaleX(0)}}
+@keyframes stBar2{0%,33.3%{transform:scaleX(0)}66.6%,99.4%{transform:scaleX(1)}99.5%,100%{transform:scaleX(0)}}
+@keyframes stBar3{0%,66.6%{transform:scaleX(0)}96%,99.4%{transform:scaleX(1)}99.5%,100%{transform:scaleX(0)}}
+
+/* love letter: bigger type, centered in the screen */
+.st-letter{display:flex;flex-direction:column;justify-content:center;padding:22cqw 8cqw 14cqw!important}
+.st-greet{font-size:8.4cqw!important;margin-bottom:5cqw!important}
+.st-body{font-size:5.15cqw!important;line-height:1.6!important}
+.st-close{font-size:6.6cqw!important;margin-top:7cqw!important;line-height:1.3!important}
+
+/* verse of the day: large and centered */
+.st-verse{padding:0 8cqw 6cqw!important}
+.st-label{font-size:3.3cqw!important;margin-bottom:7cqw!important}
+.st-vtext{font-size:8.6cqw!important;line-height:1.32!important}
+.st-ref{font-size:3.8cqw!important;margin-top:7cqw!important}
+
+/* prayer: bigger hands and text, Amen button above the home bar */
+.st-prayer{padding:0 8cqw 22cqw!important}
+.st-hands{width:21cqw!important;height:21cqw!important;margin-bottom:7cqw!important}
+.st-ptext{font-size:5.5cqw!important;line-height:1.55!important}
+.st-amenline{font-size:7cqw!important;margin-top:7cqw!important;line-height:1.3!important}
+.st-amen{bottom:12cqw!important;font-size:4cqw!important;padding:3.4cqw 8cqw!important;gap:2.2cqw!important}
+.st-amen svg{width:3.4cqw!important}
+
+/* Mobile hero: more air between headline, subline, buttons, rating and phone */
+@media(max-width:760px){
+  .h-hero{padding:52px 28px 72px!important;gap:56px!important}
+  .h-hero h1{font-size:clamp(34px,10vw,42px)!important;line-height:1.1!important;margin:0 auto 20px!important}
+  .h-lead{font-size:17px!important;line-height:1.6!important;max-width:21em;margin:0 auto 34px!important}
+  .h-badges{gap:12px!important}
+  .h-badges .store-badge{padding:9px 16px 9px 14px!important;border-radius:12px!important}
+  .h-badges .store-badge-text strong{font-size:16px!important}
+  .h-rating{margin-top:22px!important;font-size:13px!important}
+  .hd-in{padding-left:24px!important;padding-right:24px!important}
+}

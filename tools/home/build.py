@@ -173,7 +173,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
   <link rel="stylesheet" href="/brand.css">{script_css}
 </head>
 <body>
-<header class="hd"><div class="hd-in"><a href="{path}" class="hd-logo"><img src="/logo-text.png" alt="Jesus Forever Yours" width="177" height="24"></a><nav aria-label="{e(t["nav_label"])}"><a href="{path}" aria-current="page">{e(t["nav_home"])}</a><a href="{path}#app">{e(t["nav_app"])}</a><a href="/digital">{e(t["nav_book"])}</a><a href="/verses/">{e(t["nav_verses"])}</a><a href="/contact">{e(t["nav_contact"])}</a></nav></div></header>
+<header class="hd"><div class="hd-in"><a href="{path}" class="hd-logo"><img src="/logo-text.png" alt="Jesus Forever Yours" width="177" height="24"></a><nav aria-label="{e(t["nav_label"])}"><a href="{path}" aria-current="page">{e(t["nav_home"])}</a><a href="/digital">{e(t["nav_book"])}</a><a href="/verses/">{e(t["nav_verses"])}</a><a href="/contact">{e(t["nav_contact"])}</a></nav></div></header>
 <main>
   <section class="h-hero" id="app">
     <div class="h-copy">
