@@ -178,12 +178,20 @@ def page(code, hreflang, lang, locale, name, rtl, t):
       {badges(t)}
     </div>
     <div class="iph" role="img" aria-label="{e(t["phone_aria"])}">
-      <span class="iph-btn iph-a"></span><span class="iph-btn iph-b"></span><span class="iph-btn iph-c"></span><span class="iph-btn iph-d"></span>
-      <div class="iph-bezel"><div class="iph-screen">
-        <video class="iph-video" autoplay muted loop playsinline preload="auto" poster="/images/app-demo-poster.webp" width="488" height="1062" aria-hidden="true">
-          <source src="/images/app-demo.webm" type="video/webm">
-          <source src="/images/app-demo.mp4" type="video/mp4">
-        </video>
+      <span class="iph-btn iph-action"></span><span class="iph-btn iph-volup"></span><span class="iph-btn iph-voldn"></span><span class="iph-btn iph-side"></span><span class="iph-btn iph-cam"></span>
+      <div class="iph-bezel"><div class="iph-screen" data-theme="light">
+        <div class="iph-slides">
+          <img class="is-on" src="/images/screen-letter.webp" data-status="light" alt="" width="588" height="1280">
+          <img src="/images/screen-verse.webp" data-status="light" alt="" width="588" height="1280" loading="lazy">
+          <img src="/images/screen-prayer.webp" data-status="light" alt="" width="588" height="1280" loading="lazy">
+          <img src="/images/screen-carousel.webp" data-status="dark" alt="" width="588" height="1280" loading="lazy">
+          <img src="/images/screen-bible.webp" data-status="dark" alt="" width="588" height="1280" loading="lazy">
+        </div>
+        <div class="iph-status" aria-hidden="true">
+          <span class="iph-time">9:41</span>
+          <span class="iph-island"></span>
+          <span class="iph-icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".7"/><rect x="5" y="5.5" width="3" height="6.5" rx=".7"/><rect x="10" y="3" width="3" height="9" rx=".7"/><rect x="15" y="0" width="3" height="12" rx=".7"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.3c2.4 0 4.6.9 6.2 2.5l1.2-1.2C13.4 1.6 10.8.6 8 .6S2.6 1.6.6 3.6l1.2 1.2C3.4 3.2 5.6 2.3 8 2.3zm0 3.4c1.5 0 2.8.6 3.8 1.5L13 6c-1.3-1.3-3.1-2-5-2s-3.7.7-5 2l1.2 1.2c1-.9 2.3-1.5 3.8-1.5zm0 3.4c.6 0 1.1.2 1.5.6L8 11.2 6.5 9.7c.4-.4.9-.6 1.5-.6z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="23" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="20" height="8" rx="2"/><path d="M25 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2z" opacity=".45"/></svg></span>
+        </div>
       </div></div>
     </div>
   </section>
@@ -236,8 +244,23 @@ def page(code, hreflang, lang, locale, name, rtl, t):
       .then(function (r) {{ if (!r.ok) throw new Error('HTTP ' + r.status); form.style.display = 'none'; document.getElementById('emailSuccess').hidden = false; }})
       .catch(function () {{ btn.disabled = false; form.submit(); }});
   }});
-  // Respect reduced motion: show the still image instead of the app video.
-  (function () {{ var v = document.querySelector('.iph-video'); if (v && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {{ v.removeAttribute('autoplay'); v.pause(); }} }})();
+  // Phone: slide through the app screens like swiping on an iPhone.
+  (function () {{
+    var screen = document.querySelector('.iph-screen');
+    var slides = screen ? screen.querySelectorAll('.iph-slides img') : [];
+    if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var i = 0, visible = true, timer = null;
+    function go() {{
+      if (!visible || document.hidden) return;
+      var cur = slides[i]; i = (i + 1) % slides.length; var next = slides[i];
+      cur.classList.remove('is-on'); cur.classList.add('is-off');
+      next.classList.remove('is-off'); next.classList.add('is-on');
+      screen.setAttribute('data-theme', next.getAttribute('data-status'));
+      setTimeout(function () {{ cur.classList.remove('is-off'); }}, 900);
+    }}
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {{ visible = es[0].isIntersecting; }}).observe(screen);
+    timer = setInterval(go, 3600);
+  }})();
 </script>
 </body>
 </html>
