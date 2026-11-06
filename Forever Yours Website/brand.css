@@ -165,3 +165,7 @@ footer h2, footer h3, footer [class*="title"] { color: var(--ink) !important; }
   transition: none !important;
 }
 [style*="heroFadeIn"], [class*="hero"] > *, .hero * { animation: none !important; opacity: 1; }
+
+/* Download page note band */
+.note, .note-inner { background: #fff !important; }
+.note { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }

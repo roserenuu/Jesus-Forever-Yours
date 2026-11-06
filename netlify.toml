@@ -40,17 +40,17 @@
 
 [[redirects]]
   from = "/pages/shipping-policy"
-  to = "/shipping"
+  to = "/terms"
   status = 301
 
 [[redirects]]
   from = "/pages/shipping"
-  to = "/shipping"
+  to = "/terms"
   status = 301
 
 [[redirects]]
   from = "/pages/refund-policy"
-  to = "/shipping"
+  to = "/terms#digital"
   status = 301
 
 [[redirects]]
@@ -65,12 +65,12 @@
 
 [[redirects]]
   from = "/policies/shipping-policy"
-  to = "/shipping"
+  to = "/terms"
   status = 301
 
 [[redirects]]
   from = "/policies/refund-policy"
-  to = "/shipping"
+  to = "/terms#digital"
   status = 301
 
 # Remaining informational pages (includes /pages/)
@@ -94,30 +94,61 @@
   to = "/"
   status = 301
 
+# Hardcover is no longer sold: old hardcover and shipping pages go to the digital book / terms
+[[redirects]]
+  from = "/hardcover"
+  to = "/digital"
+  status = 301
+
+[[redirects]]
+  from = "/hardcover.html"
+  to = "/digital"
+  status = 301
+
+[[redirects]]
+  from = "/thankyou-hardcover"
+  to = "/digital"
+  status = 301
+
+[[redirects]]
+  from = "/thankyou-hardcover.html"
+  to = "/digital"
+  status = 301
+
+[[redirects]]
+  from = "/shipping"
+  to = "/terms"
+  status = 301
+
+[[redirects]]
+  from = "/shipping.html"
+  to = "/terms"
+  status = 301
+
 # Products, collections, and catalog feeds → primary book page
 [[redirects]]
   from = "/collections/all.atom"
-  to = "/hardcover"
+  to = "/digital"
   status = 301
 
 [[redirects]]
   from = "/collections"
-  to = "/hardcover"
+  to = "/digital"
   status = 301
 
 [[redirects]]
   from = "/collections/*"
-  to = "/hardcover"
+  to = "/digital"
   status = 301
 
 [[redirects]]
   from = "/products"
-  to = "/hardcover"
+  to = "/digital"
   status = 301
 
 [[redirects]]
   from = "/products/*"
-  to = "/hardcover"
+  to = "/digital"
   status = 301
 
 # Cart, account, blogs, checkout, and other Shopify system paths
