@@ -130,7 +130,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
         "sameAs": [APPSTORE, PLAY],
     }
     cards = "".join(
-        f'<article class="h-card"><img class="h-ic-img" src="/images/icons/{k}.webp" alt="" width="56" height="56" loading="lazy"><h3>{e(t["card_" + k + "_h"])}</h3><p>{e(t["card_" + k + "_p"])}</p></article>'
+        f'<article class="h-card"><img class="h-ic-img" src="/images/icons/{k}.webp" alt="" width="56" height="56" loading="lazy" decoding="async"><h3>{e(t["card_" + k + "_h"])}</h3><p>{e(t["card_" + k + "_p"])}</p></article>'
         for k in ["letter", "prayer", "bible", "buddy", "carousel", "devotional"]
     )
     qa = "".join(

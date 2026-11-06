@@ -199,3 +199,49 @@ a, button, .store-badge, .h-btn { transition: background-color .2s ease, color .
 @media (max-width: 760px) {
   .hd-in, .jn-in { padding-top: 14px !important; padding-bottom: 4px !important; gap: 6px !important; }
 }
+
+/* ===== Verse Library in the app's Deep Study tones =====
+   Background #E3E8EC, Key word #E6E9E1, Apply it #F1E6E2, Pray #EFEADF, Cross refs #F5F5F6, ink #272322 */
+body.vl { --ds-ink: #272322; --ds-muted: #6b6870; --ds-blue: #E3E8EC; --ds-sage: #E6E9E1; --ds-blush: #F1E6E2; --ds-sand: #EFEADF; --ds-gray: #F5F5F6; }
+body.vl .vl-hero { padding-top: 56px; }
+body.vl .vl-h1, body.vl .vl-sec-h { color: var(--ds-ink); font-weight: 500; }
+body.vl .vl-h1 em, body.vl .vl-sec-h em { color: var(--ds-ink); font-style: italic; font-weight: 500; }
+body.vl .vl-lead { color: #46424a; }
+body.vl .vl-eyebrow, body.vl .vl-q b, body.vl .vl-ref {
+  font-family: var(--font-sans) !important; font-size: 11px !important; font-weight: 600 !important;
+  letter-spacing: .16em !important; text-transform: uppercase; color: var(--ds-muted) !important;
+}
+body.vl .vl-chip { background: #fff; border-color: #e7e5e8; color: var(--ds-ink); }
+body.vl a.vl-chip:hover { border-color: var(--ds-ink); color: var(--ds-ink); }
+
+/* verse card: the passage on white, then tinted study blocks */
+body.vl .vl-card { background: #fff; border: 1px solid #eeedf0; border-radius: 24px; box-shadow: 0 8px 28px rgba(41,34,29,.06) !important; padding: 36px 32px 32px; }
+body.vl .vl-verse { color: var(--ds-ink); font-size: clamp(23px, 3vw, 28px); line-height: 1.45; }
+body.vl .vl-ref { margin-top: 18px; }
+body.vl .vl-rule { display: none; }
+body.vl .vl-refl, body.vl .vl-q { border-radius: 18px; padding: 22px 22px 22px; color: var(--ds-ink); font-size: 16.5px; line-height: 1.75; }
+body.vl .vl-refl { background: var(--ds-blue); margin-top: 26px; }
+body.vl .vl-refl::before { content: "Background"; display: block; margin-bottom: 10px; font: 600 11px/1.3 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--ds-muted); }
+body.vl .vl-q { background: var(--ds-blush) !important; margin-top: 14px; }
+body.vl .vl-q b { margin-bottom: 10px; }
+
+/* going deeper, ways to keep, prayer, newsletter */
+body.vl .vl-prose { background: var(--ds-sage); border-radius: 22px; padding: 30px 28px 10px; }
+body.vl .vl-prose p { color: var(--ds-ink); font-size: 16.5px; line-height: 1.8; }
+body.vl .vl-keep { background: rgba(255,255,255,.62); border: 0; border-radius: 16px; padding: 20px; margin: 6px 0 20px; }
+body.vl .vl-keep p { color: var(--ds-ink); }
+body.vl .vl-prayer { background: var(--ds-sand) !important; color: var(--ds-ink) !important; border-radius: 24px; padding: 40px 34px 44px; }
+body.vl .vl-prayer p { color: var(--ds-ink) !important; font-style: italic; }
+body.vl .vl-news { background: var(--ds-gray) !important; }
+body.vl .vl-news h2 em { color: var(--ds-ink) !important; font-style: italic !important; }
+body.vl .vl-btn { background: var(--ds-ink) !important; }
+body.vl .vl-app { border-color: #eeedf0; box-shadow: none !important; }
+body.vl .vl-tile:hover { border-color: var(--ds-ink); }
+body.vl .vl-tile span { color: var(--ds-muted); }
+@media (max-width: 768px) {
+  body.vl .vl-hero { padding-top: 36px; }
+  body.vl .vl-card { padding: 28px 20px 22px; }
+  body.vl .vl-refl, body.vl .vl-q { padding: 18px; font-size: 16px; }
+  body.vl .vl-prose { padding: 24px 20px 6px; }
+  body.vl .vl-prayer { padding: 32px 24px 34px; }
+}

@@ -205,3 +205,7 @@ main{overflow:hidden}
   .h-rating{margin-top:22px!important;font-size:13px!important}
   .hd-in{padding-left:24px!important;padding-right:24px!important}
 }
+
+/* "Daily love letters" card uses the real app icon, with iOS-style rounded corners */
+.h-cards .h-card:first-child .h-ic-img{border-radius:22.4%;box-shadow:0 0 0 1px rgba(0,0,0,.06)}
+.h-ic-img[src*="devotional"]{mix-blend-mode:multiply}
