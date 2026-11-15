@@ -60,7 +60,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/"/>
   </url>
   <url>
-    <loc>https://jesusforeveryours.com/de/</loc><lastmod>2026-10-26</lastmod><priority>0.8</priority><changefreq>weekly</changefreq>
+    <loc>https://jesusforeveryours.com/de/</loc><lastmod>2026-11-15</lastmod><priority>0.8</priority><changefreq>weekly</changefreq>
     <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://jesusforeveryours.com/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/"/>
@@ -629,7 +629,18 @@
   <url><loc>https://jesusforeveryours.com/delete-account</loc><lastmod>2026-10-26</lastmod><priority>0.2</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/</loc><lastmod>2026-11-09</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/anxiety/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/strength/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url>
+    <loc>https://jesusforeveryours.com/verses/strength/</loc><lastmod>2026-11-15</lastmod><priority>0.8</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/strength/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/strength/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/strength/"/>
+  </url>
+  <url>
+    <loc>https://jesusforeveryours.com/de/verses/strength/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/strength/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/strength/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/strength/"/>
+  </url>
   <url><loc>https://jesusforeveryours.com/verses/healing/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/hope/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/protection/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>

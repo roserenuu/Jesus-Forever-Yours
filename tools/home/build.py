@@ -137,7 +137,14 @@ def page(code, hreflang, lang, locale, name, rtl, t):
         f'<div class="h-qa-row"><h3>{e(t["q" + str(i)])}</h3><p>{e(t["a" + str(i)])}</p></div>'
         for i in range(1, 5)
     )
-    pv = "" if code == "en" else ""  # placeholder for per-language tweaks
+    verse_teaser = ""
+    if code == "de":
+        verse_teaser = """
+  <section class="h-sec" id="verse">
+    <h2>Bibelverse zum Mitnehmen</h2>
+    <div class="h-qa"><div class="h-qa-row"><h3>Bibelverse über Stärke</h3><p>Wenn du Kraft für einen schweren Tag suchst, liegt unsere Sammlung <a href="/de/verses/strength/">Bibelverse über Stärke</a> in der Lutherbibel 1912 bereit. In der App wartet jeden Morgen außerdem ein Liebesbrief von Gott.</p></div></div>
+  </section>
+"""
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{' dir="rtl"' if rtl else ''}>
 <head>
@@ -225,7 +232,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
     <h2>{e(t["qa_h2"])}</h2>
     <div class="h-qa">{qa}</div>
   </section>
-
+{verse_teaser}
   <section class="h-end">
     <img src="/app-icon.png" alt="" width="64" height="64" class="h-end-ic">
     <h2>{e(t["end_h2"])}</h2>

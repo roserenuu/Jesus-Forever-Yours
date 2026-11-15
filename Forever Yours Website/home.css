@@ -35,6 +35,8 @@ main{overflow:hidden}
 .h-qa-row:first-child{border-top:0}
 .h-qa-row h3{font:400 24px/1.35 var(--serif);letter-spacing:-.02em;margin:0}
 .h-qa-row p{font:400 16px/1.65 var(--sans);color:var(--mute);margin:0}
+.h-qa-row a{color:var(--accent);font-weight:600;text-decoration:none}
+.h-qa-row a:hover{text-decoration:underline}
 .h-end{background:#000;color:#fff;text-align:center;padding:120px 24px 104px}
 .h-end-ic{width:64px;height:64px;border-radius:16px;margin:0 auto 28px;display:block}
 .h-end h2{max-width:16ch;margin:0 auto 36px}
