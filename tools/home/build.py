@@ -238,9 +238,9 @@ def page(code, hreflang, lang, locale, name, rtl, t):
     <h2>{e(t["end_h2"])}</h2>
     {badges(t)}
     <div class="h-letter">
-      <form action="{path}" class="email-form" id="newsletterForm" method="POST" name="newsletter" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="newsletter" />
+      <form action="/.netlify/functions/subscribe" class="email-form" id="newsletterForm" method="POST">
         <input type="hidden" name="language" value="{code}" />
+        <input type="hidden" name="referring_site" value="{url}" />
         <p class="hp-field" hidden aria-hidden="true"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
         <input type="email" id="emailInput" name="email" required autocomplete="email" placeholder="{e(t["email_placeholder"])}" aria-label="{e(t["email_placeholder"])}">
         <button type="submit" id="emailSubmit">{e(t["email_button"])}</button>
@@ -253,17 +253,36 @@ def page(code, hreflang, lang, locale, name, rtl, t):
 <nav class="jf-lang" aria-label="{e(t["lang_label"])}">{lang_nav}</nav>
 </footer>
 <script>
-  // Email signup -> Netlify Forms ("newsletter")
-  document.getElementById('newsletterForm').addEventListener('submit', function (e) {{
-    var form = e.target, input = document.getElementById('emailInput');
-    if (!input.checkValidity()) {{ e.preventDefault(); input.reportValidity(); return; }}
-    if (!window.fetch) return;
-    e.preventDefault();
-    var btn = document.getElementById('emailSubmit'); btn.disabled = true;
-    fetch('/', {{ method: 'POST', headers: {{ 'Content-Type': 'application/x-www-form-urlencoded' }}, body: new URLSearchParams(new FormData(form)).toString() }})
-      .then(function (r) {{ if (!r.ok) throw new Error('HTTP ' + r.status); form.style.display = 'none'; document.getElementById('emailSuccess').hidden = false; }})
-      .catch(function () {{ btn.disabled = false; form.submit(); }});
-  }});
+  // Email signup -> Beehiiv via /.netlify/functions/subscribe
+  (function () {{
+    var form = document.getElementById('newsletterForm');
+    var success = document.getElementById('emailSuccess');
+    if (!form) return;
+    if (/[?&]subscribed=1(?:&|$)/.test(location.search)) {{
+      form.style.display = 'none';
+      if (success) success.hidden = false;
+    }}
+    form.addEventListener('submit', function (e) {{
+      var input = document.getElementById('emailInput');
+      if (!input.checkValidity()) {{ e.preventDefault(); input.reportValidity(); return; }}
+      if (!window.fetch) return;
+      e.preventDefault();
+      var btn = document.getElementById('emailSubmit');
+      btn.disabled = true;
+      fetch(form.action, {{
+        method: 'POST',
+        headers: {{ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' }},
+        body: new URLSearchParams(new FormData(form)).toString()
+      }})
+        .then(function (r) {{ return r.json().then(function (d) {{ return {{ ok: r.ok, d: d }}; }}, function () {{ throw new Error('HTTP ' + r.status); }}); }})
+        .then(function (x) {{
+          if (x.d && x.d.redirect) {{ window.location = x.d.redirect; return; }}
+          if (x.ok && x.d && x.d.ok) {{ form.style.display = 'none'; if (success) success.hidden = false; return; }}
+          throw new Error('subscribe failed');
+        }})
+        .catch(function () {{ btn.disabled = false; form.submit(); }});
+    }});
+  }})();
   // Pause the phone animation while it is off screen.
   (function () {{ var p = document.querySelector('.iph'); if (!p || !('IntersectionObserver' in window)) return; new IntersectionObserver(function (es) {{ p.classList.toggle('is-paused', !es[0].isIntersecting); }}).observe(p); }})();
 </script>

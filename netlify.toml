@@ -4,7 +4,9 @@
 # Shopify-era URLs still indexed in Google Search Console.
 # Specific paths first; splats next; custom 404 last so live pages,
 # language folders, sitemap.xml, the site-verification file,
-# /downloads/, and Netlify Forms POSTs to / and /:lang/ are untouched.
+# /downloads/, and Netlify function routes are untouched.
+# Newsletter signup posts to /.netlify/functions/subscribe (Beehiiv).
+# The contact page still uses Netlify Forms.
 
 # Contact pages
 [[redirects]]
