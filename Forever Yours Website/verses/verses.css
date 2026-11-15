@@ -25,6 +25,8 @@ a.vl-chip:hover{border-color:var(--accent);color:var(--accent)}
 .vl-q{margin-top:22px;padding:18px 22px;background:var(--cream-light);border-radius:14px;font-size:15.5px;line-height:1.7;color:var(--ink-soft)}
 .vl-q b{display:block;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
 .vl-prose p{font-size:17px;line-height:1.85;color:var(--ink-soft);margin-bottom:20px}
+.vl-prose a,.vl-lead a,.vl-group-lead a{color:var(--accent);font-weight:600;text-decoration:none}
+.vl-prose a:hover,.vl-lead a:hover,.vl-group-lead a:hover{text-decoration:underline}
 .vl-keep{margin-top:32px;padding-left:22px;border-left:2px solid var(--accent)}
 .vl-keep p{font-size:16px;margin:0}
 .vl-prayer{background:var(--ink);border-radius:28px;padding:56px 56px 60px;color:var(--cream)}
@@ -48,6 +50,32 @@ a.vl-chip:hover{border-color:var(--accent);color:var(--accent)}
 .store-badge-text strong{font-size:16px;font-weight:600}
 .vl-more{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
 .vl-end{padding-bottom:104px}
+.vl-trans{font-size:14px;line-height:1.7;color:var(--ink-muted);margin-top:18px}
+.vl-group{margin-top:72px}
+.vl-group .vl-sec-h{margin-bottom:12px}
+.vl-group-lead{font-size:17px;line-height:1.85;color:var(--ink-soft);margin:0 0 28px;max-width:640px}
+.vl-group .vl-cards{margin-top:0}
+.vl-card.compact{padding:32px 36px}
+.vl-card.compact .vl-verse{font-size:clamp(20px,2.8vw,26px)}
+.vl-card.compact .vl-ref{margin-top:16px}
+.vl-cross{margin-top:28px;padding:22px 26px;background:var(--cream-mid);border-radius:16px;font-size:16.5px;line-height:1.75;color:var(--ink-soft)}
+.vl-cross a{color:var(--accent);font-weight:600;text-decoration:none}
+.vl-cross a:hover{text-decoration:underline}
+.vl-faq{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.vl-faq details{background:var(--white);border:1px solid var(--border-light);border-radius:18px;padding:22px 26px;box-shadow:0 2px 16px rgba(44,36,22,.04)}
+.vl-faq summary{cursor:pointer;font-size:17px;font-weight:650;letter-spacing:-.02em;line-height:1.4;color:var(--ink);list-style:none}
+.vl-faq summary::-webkit-details-marker{display:none}
+.vl-faq summary::after{content:"+";float:right;color:var(--accent);font-weight:500}
+.vl-faq details[open] summary::after{content:"–"}
+.vl-faq details p{margin-top:14px;font-size:16.5px;line-height:1.8;color:var(--ink-soft)}
+.vl-lang{margin-top:20px;font-size:13px}
+.vl-lang a{color:var(--ink-muted);text-decoration:none;margin-right:16px}
+.vl-lang a:hover,.vl-lang a[aria-current]{color:var(--accent)}
+@media(max-width:768px){
+ .vl-group{margin-top:48px}
+ .vl-card.compact{padding:26px 22px}
+ .vl-faq details{padding:18px 20px}
+}
 /* index */
 .vl-tools{margin-top:40px}
 .vl-search{width:100%;max-width:460px;font:inherit;font-size:16px;padding:15px 22px;border:1px solid var(--border);border-radius:var(--r-pill);background:var(--white);color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
