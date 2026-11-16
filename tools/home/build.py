@@ -142,7 +142,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
         verse_teaser = """
   <section class="h-sec" id="verse">
     <h2>Bibelverse zum Mitnehmen</h2>
-    <div class="h-qa"><div class="h-qa-row"><h3>Bibelverse über Stärke</h3><p>Wenn du Kraft für einen schweren Tag suchst, liegt unsere Sammlung <a href="/de/verses/strength/">Bibelverse über Stärke</a> in der Lutherbibel 1912 bereit. In der App wartet jeden Morgen außerdem ein Liebesbrief von Gott.</p></div><div class="h-qa-row"><h3>Bibelvers für den Morgen</h3><p>Ein <a href="/de/verses/morning/">Bibelvers für den Morgen</a> und der Tagesvers, mit einem kurzen Morgengebet — in der Lutherbibel 1912, und jeden Tag neu in der App.</p></div><div class="h-qa-row"><h3>Bibelverse zum Geburtstag</h3><p>Für Karten und Segenswünsche: <a href="/de/verses/birthday/">Bibelverse zum Geburtstag</a> aus der Lutherbibel 1912, bereit zum Abschreiben.</p></div></div>
+    <div class="h-qa"><div class="h-qa-row"><h3>Bibelverse über Stärke</h3><p>Wenn du Kraft für einen schweren Tag suchst, liegt unsere Sammlung <a href="/de/verses/strength/">Bibelverse über Stärke</a> in der Lutherbibel 1912 bereit. In der App wartet jeden Morgen außerdem ein Liebesbrief von Gott.</p></div><div class="h-qa-row"><h3>Bibelvers für den Morgen</h3><p>Ein <a href="/de/verses/morning/">Bibelvers für den Morgen</a> und der Tagesvers, mit einem kurzen Morgengebet: in der Lutherbibel 1912, und jeden Tag neu in der App.</p></div><div class="h-qa-row"><h3>Bibelverse zum Geburtstag</h3><p>Für Karten und Segenswünsche: <a href="/de/verses/birthday/">Bibelverse zum Geburtstag</a> aus der Lutherbibel 1912, bereit zum Abschreiben.</p></div></div>
   </section>
 """
     return f'''<!DOCTYPE html>
@@ -254,6 +254,7 @@ def page(code, hreflang, lang, locale, name, rtl, t):
 </main>
 <footer class="jf"><div class="jf-in"><span>&copy; 2026 Rose Renuu LLC</span><nav aria-label="{e(t["footer_label"])}"><a href="/privacy">{e(t["footer_privacy"])}</a><a href="/terms">{e(t["footer_terms"])}</a><a href="https://instagram.com/jesusforeveryours" rel="noopener">Instagram</a><a href="mailto:support@jesusforeveryours.com">support@jesusforeveryours.com</a></nav></div>
 <nav class="jf-lang" aria-label="{e(t["lang_label"])}">{lang_nav}</nav>
+<p class="nlt-credit">Scripture quotations are taken from the Holy Bible, New Living Translation, copyright © 1996, 2004, 2015 by Tyndale House Foundation. Used by permission of Tyndale House Publishers, Carol Stream, Illinois 60188. All rights reserved.</p>
 </footer>
 <script>
   // Email signup -> Beehiiv via /.netlify/functions/subscribe
