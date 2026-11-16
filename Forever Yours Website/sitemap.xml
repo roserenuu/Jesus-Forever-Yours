@@ -655,12 +655,34 @@
   <url><loc>https://jesusforeveryours.com/verses/love/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/trust/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/faith/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/morning/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url>
+    <loc>https://jesusforeveryours.com/verses/morning/</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/morning/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/morning/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/morning/"/>
+  </url>
+  <url>
+    <loc>https://jesusforeveryours.com/de/verses/morning/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/morning/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/morning/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/morning/"/>
+  </url>
   <url><loc>https://jesusforeveryours.com/verses/sleep/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/depression/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/marriage/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/wedding/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/birthday/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url>
+    <loc>https://jesusforeveryours.com/verses/birthday/</loc><lastmod>2026-11-16</lastmod><priority>0.8</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/birthday/"/>
+  </url>
+  <url>
+    <loc>https://jesusforeveryours.com/de/verses/birthday/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority><changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://jesusforeveryours.com/de/verses/birthday/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/birthday/"/>
+  </url>
   <url><loc>https://jesusforeveryours.com/verses/forgiveness/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/gratitude/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/patience/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -672,7 +694,7 @@
   <url><loc>https://jesusforeveryours.com/verses/anger/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/friendship/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/new-job/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/exams/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jesusforeveryours.com/verses/exams/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/new-home/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/joy/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/job-interview/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
