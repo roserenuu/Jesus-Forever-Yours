@@ -66,7 +66,7 @@ a.vl-chip:hover{border-color:var(--accent);color:var(--accent)}
 .vl-faq summary{cursor:pointer;font-size:17px;font-weight:650;letter-spacing:-.02em;line-height:1.4;color:var(--ink);list-style:none}
 .vl-faq summary::-webkit-details-marker{display:none}
 .vl-faq summary::after{content:"+";float:right;color:var(--accent);font-weight:500}
-.vl-faq details[open] summary::after{content:"–"}
+.vl-faq details[open] summary::after{content:"+";display:inline-block;transform:rotate(45deg)}
 .vl-faq details p{margin-top:14px;font-size:16.5px;line-height:1.8;color:var(--ink-soft)}
 .vl-lang{margin-top:20px;font-size:13px}
 .vl-lang a{color:var(--ink-muted);text-decoration:none;margin-right:16px}
