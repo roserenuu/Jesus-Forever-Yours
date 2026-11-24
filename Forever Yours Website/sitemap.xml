@@ -694,7 +694,27 @@
   <url><loc>https://jesusforeveryours.com/verses/anger/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/friendship/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/new-job/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/exams/</loc><lastmod>2026-11-16</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url>
+    <loc>https://jesusforeveryours.com/verses/exams/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority><changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://jesusforeveryours.com/hi/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://jesusforeveryours.com/fil/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/exams/"/>
+  </url>
+  <url>
+    <loc>https://jesusforeveryours.com/hi/verses/exams/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority><changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://jesusforeveryours.com/hi/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://jesusforeveryours.com/fil/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/exams/"/>
+  </url>
+  <url>
+    <loc>https://jesusforeveryours.com/fil/verses/exams/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority><changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jesusforeveryours.com/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://jesusforeveryours.com/hi/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="fil" href="https://jesusforeveryours.com/fil/verses/exams/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jesusforeveryours.com/verses/exams/"/>
+  </url>
   <url><loc>https://jesusforeveryours.com/verses/new-home/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/joy/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/job-interview/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -707,8 +727,8 @@
   <url><loc>https://jesusforeveryours.com/verses/teachers/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/men/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/gods-plan/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/kids/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://jesusforeveryours.com/verses/nurses/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jesusforeveryours.com/verses/kids/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://jesusforeveryours.com/verses/nurses/</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/new-year/</loc><lastmod>2026-11-15</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/kindness/</loc><lastmod>2026-10-27</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://jesusforeveryours.com/verses/heaven/</loc><lastmod>2026-11-09</lastmod><priority>0.7</priority><changefreq>monthly</changefreq></url>

@@ -145,6 +145,20 @@ def page(code, hreflang, lang, locale, name, rtl, t):
     <div class="h-qa"><div class="h-qa-row"><h3>Bibelverse über Stärke</h3><p>Wenn du Kraft für einen schweren Tag suchst, liegt unsere Sammlung <a href="/de/verses/strength/">Bibelverse über Stärke</a> in der Lutherbibel 1912 bereit. In der App wartet jeden Morgen außerdem ein Liebesbrief von Gott.</p></div><div class="h-qa-row"><h3>Bibelvers für den Morgen</h3><p>Ein <a href="/de/verses/morning/">Bibelvers für den Morgen</a> und der Tagesvers, mit einem kurzen Morgengebet: in der Lutherbibel 1912, und jeden Tag neu in der App.</p></div><div class="h-qa-row"><h3>Bibelverse zum Geburtstag</h3><p>Für Karten und Segenswünsche: <a href="/de/verses/birthday/">Bibelverse zum Geburtstag</a> aus der Lutherbibel 1912, bereit zum Abschreiben.</p></div></div>
   </section>
 """
+    elif code == "hi":
+        verse_teaser = """
+  <section class="h-sec" id="verse">
+    <h2>साथ रखने योग्य बाइबल पद</h2>
+    <div class="h-qa"><div class="h-qa-row"><h3>परीक्षा के लिए बाइबल पद</h3><p>पढ़ाई और परीक्षा से पहले शान्ति चाहिए? हमारी सूची <a href="/hi/verses/exams/">परीक्षा के लिए बाइबल पद और पढ़ाई से पहले</a> हिंदी इंडियन रिवाइज्ड वर्जन में तैयार है। ऐप में हर सुबह परमेश्वर का एक पत्र भी मिलता है।</p></div></div>
+  </section>
+"""
+    elif code == "fil":
+        verse_teaser = """
+  <section class="h-sec" id="verse">
+    <h2>Mga talata sa Bibliya na madadala mo</h2>
+    <div class="h-qa"><div class="h-qa-row"><h3>Mga talata para sa pagsusulit</h3><p>Kung kailangan mo ng kapayapaan bago mag-aral o bago ang pagsusulit, handa na ang aming talaan ng <a href="/fil/verses/exams/">mga talata sa Bibliya para sa pagsusulit at bago mag-aral</a> mula sa Ang Dating Biblia 1905. Sa app, may liham ng pag-ibig mula sa Diyos tuwing umaga.</p></div></div>
+  </section>
+"""
     return f'''<!DOCTYPE html>
 <html lang="{lang}"{' dir="rtl"' if rtl else ''}>
 <head>
